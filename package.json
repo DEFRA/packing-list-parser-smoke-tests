@@ -24,6 +24,7 @@
     "format": "prettier --write 'test/**/*.js' '**/*.{js,md,json,config.js}'",
     "format:check": "prettier --check 'test/**/*.js' '**/*.{js,md,json,config.js}'",
     "git:pre-commit-hook": "npm run format:check && npm run lint",
+    "prettier:fix": "npx prettier . --write",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "postinstall": "npm run setup:husky",
