@@ -1,4 +1,4 @@
-/* import { browser, expect } from '@wdio/globals'
+import { browser, expect } from '@wdio/globals'
 
 import HomePage from 'page-objects/home.page'
 
@@ -8,4 +8,3 @@ describe('Home page', () => {
     await expect(browser).toHaveTitle('Home')
   })
 })
- */

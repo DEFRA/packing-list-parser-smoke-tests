@@ -3,8 +3,9 @@ class Endpoint {
     this.baseUrl = baseUrl
   }
 
-  get(path) {
-    return fetch(`${this.baseUrl}/${path}`)
+  get(path = '') {
+    const url = `http://localhost:3001/${this.baseUrl}/${path}`
+    return fetch(url)
   }
 }
 
