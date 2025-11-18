@@ -4,7 +4,7 @@ class Endpoint {
   }
 
   get(path = '') {
-    const url = `http://localhost:3001/${this.baseUrl}/${path}`
+    const url = `${process.env.baseEndpointUrl}/${this.baseUrl}/${path}`
     return fetch(url)
   }
 }
