@@ -1,3 +1,8 @@
+/**
+ * Home page UI tests
+ *
+ * Simple smoke tests that verify the Home page loads correctly.
+ */
 import { browser, expect } from '@wdio/globals'
 
 import HomePage from 'page-objects/home.page'

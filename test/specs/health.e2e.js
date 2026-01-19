@@ -1,3 +1,8 @@
+/**
+ * Health endpoint integration tests
+ *
+ * Verifies the health endpoint returns expected responses.
+ */
 import { HealthEndpoint } from '../endpoint-objects/health.endpoint.js'
 
 describe('Health Endpoint', () => {
