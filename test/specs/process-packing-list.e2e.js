@@ -10,7 +10,7 @@ import {
 } from '../utilities/process-packing-list-utilities.js'
 
 const data = getTestCases()
-console.log(`Environment: ${process.env.ENVIRONMENT}`)
+
 data.forEach(({ name, tests }) => {
   describe(`${name} dynamic tests`, () => {
     tests.forEach(({ testName, inputs, expectedResults }) => {
