@@ -12,7 +12,7 @@ import {
 const data = getTestCases()
 
 data.forEach(({ name, tests }) => {
-  describe(`${name} dynamic tests`, () => {
+  describe(`${name} tests`, () => {
     tests.forEach(({ testName, inputs, expectedResults }) => {
       it(testName, async () => {
         const endpoint = new ProcessPackingListEndpoint()

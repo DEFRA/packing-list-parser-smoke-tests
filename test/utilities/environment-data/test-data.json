@@ -5,9 +5,8 @@
       {
         "testName": "Happy path",
         "inputs": {
-          "url": "1816178042830/supplementary-documents/happypath.xlsx",
-          "applicationId": "1816178042830",
-          "establishmentId": "30614e2b-b895-ee11-be37-000d3aba36b2"
+          "fileName": "happypath.xlsx",
+          "applicationId": "1816178042830"
         },
         "expectedResults": {
           "approvalStatus": "approved",
@@ -18,37 +17,35 @@
     ]
   },
   {
-    "name": "Iceland2",
-    "tests": [
-      {
-        "testName": "Happy path",
-        "inputs": {
-          "url": "1816178113045/supplementary-documents/happypath-pass.csv",
-          "applicationId": "1816178113045",
-          "establishmentId": "30614e2b-b895-ee11-be37-000d3aba36b2"
-        },
-        "expectedResults": {
-          "approvalStatus": "approved",
-          "reasonsForFailure": null,
-          "model": "ICELAND2"
-        }
-      }
-    ]
-  },
-  {
     "name": "Giovani3",
     "tests": [
       {
         "testName": "Happy path",
         "inputs": {
-          "url": "1816178135641/supplementary-documents/happypath.pdf",
-          "applicationId": "1816178135641",
-          "establishmentId": "30614e2b-b895-ee11-be37-000d3aba36b2"
+          "fileName": "happypath.pdf",
+          "applicationId": "1816178135641"
         },
         "expectedResults": {
           "approvalStatus": "approved",
           "reasonsForFailure": null,
           "model": "GIOVANNI3"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Iceland2",
+    "tests": [
+      {
+        "testName": "Happy path",
+        "inputs": {
+          "fileName": "happypath-pass.csv",
+          "applicationId": "1816178113045"
+        },
+        "expectedResults": {
+          "approvalStatus": "approved",
+          "reasonsForFailure": null,
+          "model": "ICELAND2"
         }
       }
     ]

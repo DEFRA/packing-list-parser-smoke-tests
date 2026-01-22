@@ -1,4 +1,5 @@
 import testData from './environment-data/test-data.json'
+import { baseUrl, defaultEstablishmentId } from './config.js'
 
 export function createProcessPackingListMessage(
   blobUrl,
@@ -29,14 +30,14 @@ export function getTestCases() {
 }
 
 function addBaseUrlToTests(data) {
-  const baseUrl = process.env.packingListBaseUrl || ''
   return data.map(({ name, tests }) => ({
     name,
     tests: tests.map((test) => ({
       ...test,
       inputs: {
         ...test.inputs,
-        url: `${baseUrl}/${test.inputs.url}`
+        url: `${baseUrl}/${test.inputs.applicationId}/supplementary-documents/${test.inputs.fileName}`,
+        establishmentId: test.inputs.establishmentId ?? defaultEstablishmentId
       }
     }))
   }))
