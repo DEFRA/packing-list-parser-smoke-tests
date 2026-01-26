@@ -1,4 +1,5 @@
-import testData from './environment-data/test-data.json'
+import testData from './environment-data/test/test-data.js'
+import perfTestData from './environment-data/perf-test/perf-test-data.json'
 import { baseUrl, defaultEstablishmentId } from './config.js'
 
 export function createProcessPackingListMessage(
@@ -24,6 +25,8 @@ export function getTestCases() {
     case 'test':
     case undefined:
       return addBaseUrlToTests(testData)
+    case 'perf-test':
+      return addBaseUrlToTests(perfTestData)
     default:
       return []
   }

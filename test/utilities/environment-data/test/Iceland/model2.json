@@ -1,0 +1,17 @@
+{
+  "name": "Iceland2",
+  "tests": [
+    {
+      "testName": "Happy path",
+      "inputs": {
+        "fileName": "happypath-pass.csv",
+        "applicationId": "1816178113045"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ICELAND2"
+      }
+    }
+  ]
+}
