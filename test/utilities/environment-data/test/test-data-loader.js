@@ -14,7 +14,14 @@ export function loadTestData() {
   const baseDir = __dirname
 
   // Define the model folders to load
-  const modelFolders = ['ASDA', 'Giovani', 'Iceland', 'M&S', 'Sainsburys']
+  const modelFolders = [
+    'ASDA',
+    'Giovani',
+    'Iceland',
+    'M&S',
+    'NISA',
+    'Sainsburys'
+  ]
 
   modelFolders.forEach((modelFolder) => {
     const folderPath = join(baseDir, modelFolder)
