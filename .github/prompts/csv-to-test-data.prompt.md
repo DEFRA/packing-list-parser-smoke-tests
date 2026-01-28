@@ -32,7 +32,11 @@ Apply these transformations:
    - Convert to lowercase
    - Replace underscores with hyphens (e.g., "Test_Case.xlsx" → "test-case.xlsx")
 
-3. **Approval status** (expectedResults.approvalStatus):
+3. **Row numbers**:
+   - For files ending in .xlsx, .xls, or .csv: increment all row numbers by 1
+   - This accounts for the header row in spreadsheet formats
+
+4. **Approval status** (expectedResults.approvalStatus):
    - "Pass" → "approved"
    - "Fail" with Message containing country of origin keywords → "rejected_coo"
      - Keywords: "Country of Origin", "CoO", "ISO Code"
@@ -41,22 +45,23 @@ Apply these transformations:
    - "Fail" (all other cases) → "rejected_other"
    - "Unparse" → "rejected_other"
 
-4. **Model assignment** (expectedResults.model):
+5. **Model assignment** (expectedResults.model):
+   - Use "NOREMOS" for:
+     - Any test with Message = "Check GB Establishment RMS Number."
    - Use "[MODEL_NOMATCH]" for:
      - Any test with Expected = "Unparse"
-     - Any test with Message = "Check GB Establishment RMS Number."
    - Use "[MODEL_NAME]" for all other tests
 
-5. **Reasons for failure** (expectedResults.reasonsForFailure):
+6. **Reasons for failure** (expectedResults.reasonsForFailure):
    - Copy the Message column value (preserve exact text including quotes and formatting)
    - Use `null` when Message is empty
 
-6. **File organization**:
+7. **File organization**:
    - Create directory: `test/utilities/environment-data/test/[MODEL_FOLDER]/`
    - Group tests into logical JSON files by category (e.g., basic.json, validation.json, etc.)
    - Use descriptive category names based on the test file groupings
 
-7. **Update loader**:
+8. **Update loader**:
    - Add "[MODEL_FOLDER]" to the modelFolders array in `test/utilities/environment-data/test/test-data-loader.js`
 
 8. **Update profile utils**:
