@@ -16,7 +16,7 @@ export function loadTestData() {
   // Define the model folders to load
   const modelFolders = [
     'ASDA',
-    'Giovani',
+    'Giovanni',
     'Iceland',
     'M&S',
     'NISA',

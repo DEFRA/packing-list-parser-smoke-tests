@@ -66,7 +66,7 @@ Test data files follow this JSON schema:
 
 **Test data organization:**
 
-- `test/utilities/environment-data/test/` contains model-specific folders (ASDA, Giovani, Iceland, M&S, Sainsburys)
+- `test/utilities/environment-data/test/` contains model-specific folders (ASDA, Giovanni, Iceland, M&S, Sainsburys)
 - Each folder contains JSON files (e.g., `model3.json`) with the schema above
 - `test-data-loader.js` dynamically loads all JSON files from model folders
 - The deprecated `test-data.json` contains a flattened array format (prefer modular approach)

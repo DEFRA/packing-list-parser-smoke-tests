@@ -1,6 +1,7 @@
 import testData from './environment-data/test/test-data.js'
 import perfTestData from './environment-data/perf-test/perf-test-data.json'
 import { baseUrl, defaultEstablishmentId } from './config.js'
+import { parseModelProfile } from './profile-utils.js'
 
 export function createProcessPackingListMessage(
   blobUrl,
@@ -21,15 +22,34 @@ export function createProcessPackingListMessage(
 }
 
 export function getTestCases() {
+  let data
   switch (process.env.ENVIRONMENT) {
     case 'test':
     case undefined:
-      return addBaseUrlToTests(testData)
+      data = addBaseUrlToTests(testData)
+      break
     case 'perf-test':
-      return addBaseUrlToTests(perfTestData)
+      data = addBaseUrlToTests(perfTestData)
+      break
     default:
-      return []
+      data = []
   }
+
+  // Filter by model profile if specified
+  const profile = process.env.PROFILE?.toLowerCase()
+  const parsed = parseModelProfile(profile)
+  if (parsed) {
+    data = data.filter(({ name }) => {
+      // Check retailer matches
+      if (!name.includes(parsed.retailer)) return false
+      // If model number specified, check it matches (e.g., 'NISA1 Basic' includes 'NISA1')
+      if (parsed.model && !name.includes(parsed.retailer + parsed.model))
+        return false
+      return true
+    })
+  }
+
+  return data
 }
 
 function addBaseUrlToTests(data) {

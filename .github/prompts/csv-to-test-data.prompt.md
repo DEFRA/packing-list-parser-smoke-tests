@@ -59,6 +59,11 @@ Apply these transformations:
 7. **Update loader**:
    - Add "[MODEL_FOLDER]" to the modelFolders array in `test/utilities/environment-data/test/test-data-loader.js`
 
+8. **Update profile utils**:
+   - Add the retailer prefix to `retailerPrefixes` in `test/utilities/profile-utils.js` if not already present
+   - Use lowercase key and proper case value (e.g., `tesco: 'Tesco'`)
+   - This enables running tests with `PROFILE=[retailer]` or `PROFILE=[retailer][model]` (e.g., `PROFILE=tesco2`)
+
 JSON structure for each file:
 ```json
 {
@@ -114,7 +119,11 @@ Apply these transformations:
    - Create directory: `test/utilities/environment-data/test/Tesco/`
      ...
 7. **Update loader**:
+
    - Add "Tesco" to the modelFolders array in test-data-loader.js
+
+8. **Update profile utils**:
+   - Add `tesco: 'Tesco'` to retailerPrefixes in profile-utils.js
 
 ```
 
