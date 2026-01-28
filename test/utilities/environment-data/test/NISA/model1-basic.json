@@ -22,7 +22,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Check GB Establishment RMS Number.",
-        "model": "NOMATCH"
+        "model": "NOREMOS"
       }
     },
     {
@@ -58,7 +58,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Check GB Establishment RMS Number.",
-        "model": "NOMATCH"
+        "model": "NOREMOS"
       }
     },
     {
@@ -81,7 +81,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Product code is invalid in sheet \"1060  I1007  RT813  15.05.25   \" row 47, sheet \"1060  I1007  RT813  15.05.25   \" row 51, sheet \"1060  I1007  RT813  15.05.25   \" row 53 in addition to 1 other locations. No of packages is invalid in sheet \"1060  I1007  RT813  15.05.25   \" row 47, sheet \"1060  I1007  RT813  15.05.25   \" row 49, sheet \"1060  I1007  RT813  15.05.25   \" row 51 in addition to 2 other locations. Total net weight is invalid in sheet \"1060  I1007  RT813  15.05.25   \" row 47, sheet \"1060  I1007  RT813  15.05.25   \" row 49, sheet \"1060  I1007  RT813  15.05.25   \" row 51 in addition to 2 other locations.",
+        "reasonsForFailure": "Product code is invalid in sheet \"1060  I1007  RT813  15.05.25   \" row 48, sheet \"1060  I1007  RT813  15.05.25   \" row 52, sheet \"1060  I1007  RT813  15.05.25   \" row 54 in addition to 1 other locations.\nNo of packages is invalid in sheet \"1060  I1007  RT813  15.05.25   \" row 48, sheet \"1060  I1007  RT813  15.05.25   \" row 50, sheet \"1060  I1007  RT813  15.05.25   \" row 52 in addition to 2 other locations.\nTotal net weight is invalid in sheet \"1060  I1007  RT813  15.05.25   \" row 48, sheet \"1060  I1007  RT813  15.05.25   \" row 50, sheet \"1060  I1007  RT813  15.05.25   \" row 52 in addition to 2 other locations.\n",
         "model": "NISA1"
       }
     },
@@ -136,12 +136,12 @@
     {
       "testName": "Incorrect Mandatory Header Tot Netweight KGS Fail",
       "inputs": {
-        "fileName": "incorrect-mandatoryheader-totnetweightkgs-fail.xlsx",
+        "fileName": "incorrect-mandatoryheader-totnetweightkgs-fail.xlsx// tesco 3?",
         "applicationId": "1816178156719"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
         "model": "NISA1"
       }
     },
@@ -149,7 +149,7 @@
       "testName": "Incorrect Mandatory Header Tot Netweight Unparse",
       "inputs": {
         "fileName": "incorrect-mandatoryheader-totnetweight-unparse.xlsx",
-        "applicationId": "1816178156836"
+        "applicationId": "1816178156719"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -165,7 +165,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Identifier is missing in sheet \"1060  I1007  RT813  15.05.25   \" row 47.",
+        "reasonsForFailure": "Identifier is missing in sheet \"1060  I1007  RT813  15.05.25   \" row 48.\n",
         "model": "NISA1"
       }
     },
@@ -177,7 +177,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Product description is missing in sheet \"1060  I1007  RT813  15.05.25   \" row 47.",
+        "reasonsForFailure": "Product description is missing in sheet \"1060  I1007  RT813  15.05.25   \" row 48.\n",
         "model": "NISA1"
       }
     },
@@ -189,7 +189,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Identifier is missing in sheet \"1060  I1007  RT813  15.05.25   \" row 47, sheet \"1060  I1007  RT813  15.05.25   \" row 49, sheet \"1060  I1007  RT813  15.05.25   \" row 51 in addition to 1 other locations. Product description is missing in sheet \"1060  I1007  RT813  15.05.25   \" row 40, sheet \"1060  I1007  RT813  15.05.25   \" row 42, sheet \"1060  I1007  RT813  15.05.25   \" row 44 in addition to 1 other locations. No of packages is missing in sheet \"1060  I1007  RT813  15.05.25   \" row 47, sheet \"1060  I1007  RT813  15.05.25   \" row 49, sheet \"1060  I1007  RT813  15.05.25   \" row 51 in addition to 1 other locations. Total net weight is missing in sheet \"1060  I1007  RT813  15.05.25   \" row 47, sheet \"1060  I1007  RT813  15.05.25   \" row 49, sheet \"1060  I1007  RT813  15.05.25   \" row 51 in addition to 1 other locations.",
+        "reasonsForFailure": "Identifier is missing in sheet \"1060  I1007  RT813  15.05.25   \" row 48, sheet \"1060  I1007  RT813  15.05.25   \" row 50, sheet \"1060  I1007  RT813  15.05.25   \" row 52 in addition to 1 other locations.\nProduct description is missing in sheet \"1060  I1007  RT813  15.05.25   \" row 41, sheet \"1060  I1007  RT813  15.05.25   \" row 43, sheet \"1060  I1007  RT813  15.05.25   \" row 45 in addition to 1 other locations.\nNo of packages is missing in sheet \"1060  I1007  RT813  15.05.25   \" row 48, sheet \"1060  I1007  RT813  15.05.25   \" row 50, sheet \"1060  I1007  RT813  15.05.25   \" row 52 in addition to 1 other locations.\nTotal net weight is missing in sheet \"1060  I1007  RT813  15.05.25   \" row 48, sheet \"1060  I1007  RT813  15.05.25   \" row 50, sheet \"1060  I1007  RT813  15.05.25   \" row 52 in addition to 1 other locations.\n",
         "model": "NISA1"
       }
     },
@@ -201,7 +201,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "No of packages is missing in sheet \"1060  I1007  RT813  15.05.25   \" row 47.",
+        "reasonsForFailure": "No of packages is missing in sheet \"1060  I1007  RT813  15.05.25   \" row 48.\n",
         "model": "NISA1"
       }
     },
@@ -213,7 +213,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Total net weight is missing in sheet \"1060  I1007  RT813  15.05.25   \" row 47.",
+        "reasonsForFailure": "Total net weight is missing in sheet \"1060  I1007  RT813  15.05.25   \" row 48.\n",
         "model": "NISA1"
       }
     },
@@ -281,7 +281,7 @@
       "testName": "Missing Mandatory Header Tot Netweight KGS Unit Col Fail",
       "inputs": {
         "fileName": "missing-mandatoryheader-totnetweightkgsunitcol-fail.xlsx",
-        "applicationId": "1816178157601"
+        "applicationId": "1816178157685"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -293,11 +293,11 @@
       "testName": "Missing Mandatory Header Tot Netweight KGS Fail",
       "inputs": {
         "fileName": "missing-mandatoryheader-totnetweightkgs-fail.xlsx",
-        "applicationId": "1816178157685"
+        "applicationId": "1816178157601"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
         "model": "NISA1"
       }
     },
@@ -334,7 +334,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Check GB Establishment RMS Number.",
-        "model": "NOMATCH"
+        "model": "NOREMOS"
       }
     },
     {
@@ -346,7 +346,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Check GB Establishment RMS Number.",
-        "model": "NOMATCH"
+        "model": "NOREMOS"
       }
     },
     {
@@ -358,7 +358,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Check GB Establishment RMS Number.",
-        "model": "NOMATCH"
+        "model": "NOREMOS"
       }
     },
     {
@@ -370,7 +370,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Check GB Establishment RMS Number.",
-        "model": "NOMATCH"
+        "model": "NOREMOS"
       }
     }
   ]

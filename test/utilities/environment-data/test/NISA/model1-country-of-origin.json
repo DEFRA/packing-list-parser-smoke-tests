@@ -5,7 +5,7 @@
       "testName": "ac10 x Co O Pass",
       "inputs": {
         "fileName": "ac10-xcoo-pass.xlsx",
-        "applicationId": "1816178159182"
+        "applicationId": "1816178159236"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -17,11 +17,11 @@
       "testName": "ac11 High Risk Co O Treatment Type Specified Fail",
       "inputs": {
         "fileName": "ac11-highriskcootreatmenttypespecified-fail.xlsx",
-        "applicationId": "1816178159188"
+        "applicationId": "1816178159242"
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Sheet1\" row 10.",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Sheet1\" row 11 and sheet \"Sheet1\" row 12.\n",
         "model": "NISA1"
       }
     },
@@ -29,11 +29,11 @@
       "testName": "ac12 High Risk Co O Treatment Type Specified Multiple Fail",
       "inputs": {
         "fileName": "ac12-highriskcootreatmenttypespecifiedmultiple-fail.xlsx",
-        "applicationId": "1816178159194"
+        "applicationId": "1816178159248"
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Sheet1\" row 10, sheet \"Sheet1\" row 11, sheet \"Sheet1\" row 13 in addition to 1 other locations.",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Sheet1\" row 11, sheet \"Sheet1\" row 12, sheet \"Sheet1\" row 13 in addition to 2 other locations.\n",
         "model": "NISA1"
       }
     },
@@ -41,23 +41,23 @@
       "testName": "ac13 High Risk Co O Treatment Type Not Specified Fail",
       "inputs": {
         "fileName": "ac13-highriskcootreatmenttypenotspecified-fail.xlsx",
-        "applicationId": "1816178159200"
+        "applicationId": "1816178159254"
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Sheet1\" row 10 and sheet \"Sheet1\" row 11.",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Sheet1\" row 11 and sheet \"Sheet1\" row 12.\n",
         "model": "NISA1"
       }
     },
     {
       "testName": "ac14 High Risk Co O Treatment Type Not Specified Multiple Fail Copy",
       "inputs": {
-        "fileName": "ac14-highriskcootreatmenttypenotspecifiedmultiple-fail-copy.xlsx",
-        "applicationId": "1816178159206"
+        "fileName": "ac14-highriskcootreatmenttypenotspecifiedmultiple-failcopy.xlsx",
+        "applicationId": "1816178159260"
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Multiple GB Place of Dispatch (Establishment) numbers found on packing list. Net Weight Unit of Measure (kg) not found. Product description is missing in sheet \"Sheet1\" row 11. Prohibited item identified on the packing list in sheet \"Sheet1\" row 10, sheet \"Sheet1\" row 11, sheet \"Sheet1\" row 13 in addition to 1 other locations.",
+        "reasonsForFailure": "Multiple GB Place of Dispatch (Establishment) numbers found on packing list.\nNet Weight Unit of Measure (kg) not found.\nProduct description is missing in sheet \"Sheet1\" row 12.\nProhibited item identified on the packing list in sheet \"Sheet1\" row 10, sheet \"Sheet1\" row 11, sheet \"Sheet1\" row 13 in addition to 1 other locations.\n",
         "model": "NISA1"
       }
     },
@@ -65,7 +65,7 @@
       "testName": "ac1 Not Nirms Pass",
       "inputs": {
         "fileName": "ac1-notnirms-pass.xlsx",
-        "applicationId": "1816178159212"
+        "applicationId": "1816178159182"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -77,11 +77,11 @@
       "testName": "ac2 Null Nirms Fail",
       "inputs": {
         "fileName": "ac2-nullnirms-fail.xlsx",
-        "applicationId": "1816178159218"
+        "applicationId": "1816178159188"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Sheet1\" row 10.",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Sheet1\" row 11.\n",
         "model": "NISA1"
       }
     },
@@ -89,11 +89,11 @@
       "testName": "ac3 Invalid Nirms Fail",
       "inputs": {
         "fileName": "ac3-invalidnirms-fail.xlsx",
-        "applicationId": "1816178159224"
+        "applicationId": "1816178159194"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Sheet1\" row 10.",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Sheet1\" row 11.\n",
         "model": "NISA1"
       }
     },
@@ -101,11 +101,11 @@
       "testName": "ac4 Null Nirms Multiple Fail",
       "inputs": {
         "fileName": "ac4-nullnirmsmultiple-fail.xlsx",
-        "applicationId": "1816178159227"
+        "applicationId": "1816178159200"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Sheet1\" row 10, sheet \"Sheet1\" row 11, sheet \"Sheet1\" row 12 in addition to 1 other locations.",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Sheet1\" row 11, sheet \"Sheet1\" row 12, sheet \"Sheet1\" row 13 in addition to 1 other locations.\n",
         "model": "NISA1"
       }
     },
@@ -113,11 +113,11 @@
       "testName": "ac5 Invalid Nirms Multiple Fail",
       "inputs": {
         "fileName": "ac5-invalidnirmsmultiple-fail.xlsx",
-        "applicationId": "1816178159236"
+        "applicationId": "1816178159206"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Sheet1\" row 10, sheet \"Sheet1\" row 11, sheet \"Sheet1\" row 12 in addition to 1 other locations.",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Sheet1\" row 11, sheet \"Sheet1\" row 12, sheet \"Sheet1\" row 13 in addition to 1 other locations.\n",
         "model": "NISA1"
       }
     },
@@ -125,11 +125,11 @@
       "testName": "ac6 Null Co O Fail",
       "inputs": {
         "fileName": "ac6-nullcoo-fail.xlsx",
-        "applicationId": "1816178159242"
+        "applicationId": "1816178159212"
       },
       "expectedResults": {
         "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in sheet \"Sheet1\" row 10, sheet \"Sheet1\" row 11 and sheet \"Sheet1\" row 12.",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Sheet1\" row 11, sheet \"Sheet1\" row 12 and sheet \"Sheet1\" row 13.\n",
         "model": "NISA1"
       }
     },
@@ -137,11 +137,11 @@
       "testName": "ac7 Invalid Co O Fail",
       "inputs": {
         "fileName": "ac7-invalidcoo-fail.xlsx",
-        "applicationId": "1816178159248"
+        "applicationId": "1816178159218"
       },
       "expectedResults": {
         "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Sheet1\" row 11 and sheet \"Sheet1\" row 12.",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Sheet1\" row 12 and sheet \"Sheet1\" row 13.\n",
         "model": "NISA1"
       }
     },
@@ -149,11 +149,11 @@
       "testName": "ac8 Null Co O Multiple Fail",
       "inputs": {
         "fileName": "ac8-nullcoomultiple-fail.xlsx",
-        "applicationId": "1816178159254"
+        "applicationId": "1816178159224"
       },
       "expectedResults": {
         "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in sheet \"Sheet1\" row 10, sheet \"Sheet1\" row 11, sheet \"Sheet1\" row 12 in addition to 1 other locations.",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Sheet1\" row 11, sheet \"Sheet1\" row 12, sheet \"Sheet1\" row 13 in addition to 1 other locations.\n",
         "model": "NISA1"
       }
     },
@@ -161,11 +161,11 @@
       "testName": "ac9 Invalid Co O Multiple Fail",
       "inputs": {
         "fileName": "ac9-invalidcoomultiple-fail.xlsx",
-        "applicationId": "1816178159260"
+        "applicationId": "1816178159227"
       },
       "expectedResults": {
         "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Sheet1\" row 10, sheet \"Sheet1\" row 11, sheet \"Sheet1\" row 12 in addition to 1 other locations.",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Sheet1\" row 11, sheet \"Sheet1\" row 12, sheet \"Sheet1\" row 13 in addition to 1 other locations.\n",
         "model": "NISA1"
       }
     }

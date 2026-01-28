@@ -21,7 +21,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
         "model": "NISA1"
       }
     },
@@ -93,7 +93,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Total net weight is invalid in sheet \"1060  I1007  RT813  15.05.25   \" row 2, sheet \"1060  I1007  RT813  15.05.25   \" row 3, sheet \"1060  I1007  RT813  15.05.25   \" row 4 in addition to 3 other locations.",
+        "reasonsForFailure": "Total net weight is invalid in sheet \"1060  I1007  RT813  15.05.25   \" row 3, sheet \"1060  I1007  RT813  15.05.25   \" row 4, sheet \"1060  I1007  RT813  15.05.25   \" row 5 in addition to 3 other locations.\n",
         "model": "NISA1"
       }
     },
@@ -105,7 +105,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
         "model": "NISA1"
       }
     },
@@ -165,7 +165,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
         "model": "NISA1"
       }
     },
@@ -177,7 +177,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
         "model": "NISA1"
       }
     },
@@ -213,7 +213,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
         "model": "NISA1"
       }
     },
@@ -249,7 +249,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
         "model": "NISA1"
       }
     },
@@ -257,7 +257,7 @@
       "testName": "UOM Weight Without Total Net Weight Unparse",
       "inputs": {
         "fileName": "uomweight-without-totalnetweight-unparse.xlsx",
-        "applicationId": "1816178158873"
+        "applicationId": "1816178158888"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -269,11 +269,11 @@
       "testName": "Unhandled Unit Type Fail",
       "inputs": {
         "fileName": "unhandled-unit-type-fail.xlsx",
-        "applicationId": "1816178158882"
+        "applicationId": "1816178158873"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
         "model": "NISA1"
       }
     },
@@ -281,11 +281,11 @@
       "testName": "Unit Missing Weight Present Fail",
       "inputs": {
         "fileName": "unit-missing-weight-present-fail.xlsx",
-        "applicationId": "1816178158888"
+        "applicationId": "1816178158882"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
         "model": "NISA1"
       }
     },
