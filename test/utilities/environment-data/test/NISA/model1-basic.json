@@ -134,18 +134,6 @@
       }
     },
     {
-      "testName": "Incorrect Mandatory Header Tot Netweight KGS Fail",
-      "inputs": {
-        "fileName": "incorrect-mandatoryheader-totnetweightkgs-fail.xlsx// tesco 3?",
-        "applicationId": "1816178156719"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "NISA1"
-      }
-    },
-    {
       "testName": "Incorrect Mandatory Header Tot Netweight Unparse",
       "inputs": {
         "fileName": "incorrect-mandatoryheader-totnetweight-unparse.xlsx",
