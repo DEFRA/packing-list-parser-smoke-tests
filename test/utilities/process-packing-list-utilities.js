@@ -40,10 +40,12 @@ export function getTestCases() {
   const parsed = parseModelProfile(profile)
   if (parsed) {
     data = data.filter(({ name }) => {
-      // Check retailer matches
-      if (!name.includes(parsed.retailer)) return false
-      // If model number specified, check it matches (e.g., 'NISA1 Basic' includes 'NISA1')
-      if (parsed.model && !name.includes(parsed.retailer + parsed.model))
+      const nameLower = name.toLowerCase()
+      const retailerLower = parsed.retailer.toLowerCase()
+      // Check retailer matches (case-insensitive)
+      if (!nameLower.includes(retailerLower)) return false
+      // If model number specified, check it matches (e.g., 'NISA1 Basic' includes 'nisa1')
+      if (parsed.model && !nameLower.includes(retailerLower + parsed.model))
         return false
       return true
     })
