@@ -269,7 +269,7 @@
       "testName": "RMS With Extra Dash Before Establishment Number Should Fail",
       "inputs": {
         "fileName": "rmswithextradashbeforeestablishmentnumbershould-fail.xlsx",
-        "applicationId": "1816178158318"
+        "applicationId": "1816178160877"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -281,7 +281,7 @@
       "testName": "RMS With Extra Dash Establishment Number At Startand End Fail",
       "inputs": {
         "fileName": "rmswithextradashestablishmentnumberatstartandend-fail.xlsx",
-        "applicationId": "1816178158321"
+        "applicationId": "1816178160886"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",

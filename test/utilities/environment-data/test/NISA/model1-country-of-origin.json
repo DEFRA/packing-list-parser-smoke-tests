@@ -57,7 +57,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Multiple GB Place of Dispatch (Establishment) numbers found on packing list.\nNet Weight Unit of Measure (kg) not found.\nProduct description is missing in sheet \"Sheet1\" row 12.\nProhibited item identified on the packing list in sheet \"Sheet1\" row 10, sheet \"Sheet1\" row 11, sheet \"Sheet1\" row 13 in addition to 1 other locations.\n",
+        "reasonsForFailure": "Multiple GB Place of Dispatch (Establishment) numbers found on packing list.\nNet Weight Unit of Measure (kg) not found.\nProduct description is missing in sheet \"Sheet1\" row 12.\nProhibited item identified on the packing list in sheet \"Sheet1\" row 11, sheet \"Sheet1\" row 12, sheet \"Sheet1\" row 13 in addition to 2 other locations.\n",
         "model": "NISA1"
       }
     },

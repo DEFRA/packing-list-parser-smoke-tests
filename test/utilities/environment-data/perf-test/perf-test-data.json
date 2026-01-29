@@ -1,1 +1,115 @@
-[]
+[
+  {
+    "name": "Smoke Tests",
+    "tests": [
+      {
+        "testName": "Excel Happy path",
+        "inputs": {
+          "fileName": "ac1-notnirms-pass.xlsx",
+          "applicationId": "1762431248564"
+        },
+        "expectedResults": {
+          "approvalStatus": "approved",
+          "reasonsForFailure": null,
+          "model": "ASDA3"
+        }
+      },
+      {
+        "testName": "Excel UnHappy path",
+        "inputs": {
+          "fileName": "ac3-invalidnirms-fail.xlsx",
+          "applicationId": "1762431248567"
+        },
+        "expectedResults": {
+          "approvalStatus": "rejected_other",
+          "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Page1_1\" row 3.\n",
+          "model": "ASDA3"
+        }
+      },
+      {
+        "testName": "Excel Unparsed",
+        "inputs": {
+          "fileName": "unparse.xlsx",
+          "applicationId": "1762431248561"
+        },
+        "expectedResults": {
+          "approvalStatus": "rejected_other",
+          "reasonsForFailure": null,
+          "model": "NOMATCH"
+        }
+      },
+      {
+        "testName": "Pdf Happy path",
+        "inputs": {
+          "fileName": "happypathgr.pdf",
+          "applicationId": "1762431244328"
+        },
+        "expectedResults": {
+          "approvalStatus": "approved",
+          "reasonsForFailure": null,
+          "model": "GIOVANNI3"
+        }
+      },
+      {
+        "testName": "Pdf UnHappy path",
+        "inputs": {
+          "fileName": "unhappypathgr.pdf",
+          "applicationId": "1762431244331"
+        },
+        "expectedResults": {
+          "approvalStatus": "rejected_other",
+          "reasonsForFailure": "Product code is invalid in page 1 row 2.\n",
+          "model": "GIOVANNI3"
+        }
+      },
+      {
+        "testName": "Pdf Unparsed",
+        "inputs": {
+          "fileName": "unparsedgr.pdf",
+          "applicationId": "1762431244334"
+        },
+        "expectedResults": {
+          "approvalStatus": "rejected_other",
+          "reasonsForFailure": null,
+          "model": "NOMATCH"
+        }
+      },
+      {
+        "testName": "AC2 Ineligible Items",
+        "inputs": {
+          "fileName": "ac2-ineligibleitems.xlsx",
+          "applicationId": "1762431245123"
+        },
+        "expectedResults": {
+          "approvalStatus": "rejected_ineligible",
+          "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Page1_1\" row 3.\n",
+          "model": "ASDA3"
+        }
+      },
+      {
+        "testName": "AC3 Missing CoO",
+        "inputs": {
+          "fileName": "ac3-missingcountryoforigin-fail.xlsx",
+          "applicationId": "1762431245126"
+        },
+        "expectedResults": {
+          "approvalStatus": "rejected_coo",
+          "reasonsForFailure": "Missing Country of Origin in sheet \"Page1_1\" row 3.\n",
+          "model": "ASDA3"
+        }
+      },
+      {
+        "testName": "AC4 Ineligible Item Other Failure",
+        "inputs": {
+          "fileName": "ac4-ineligibleitemsotherfailure-false.xlsx",
+          "applicationId": "1762431245129"
+        },
+        "expectedResults": {
+          "approvalStatus": "rejected_other",
+          "reasonsForFailure": "Check GB Establishment RMS Number.",
+          "model": "NOREMOS"
+        }
+      }
+    ]
+  }
+]

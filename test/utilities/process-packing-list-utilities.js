@@ -1,6 +1,7 @@
 import testData from './environment-data/test/test-data.js'
 import perfTestData from './environment-data/perf-test/perf-test-data.json'
-import { baseUrl, defaultEstablishmentId } from './config.js'
+import prodData from './environment-data/prod/prod-data.json'
+import { baseUrl, defaultEstablishmentId, environmentToTest } from './config.js'
 import { parseModelProfile } from './profile-utils.js'
 
 export function createProcessPackingListMessage(
@@ -23,13 +24,16 @@ export function createProcessPackingListMessage(
 
 export function getTestCases() {
   let data
-  switch (process.env.ENVIRONMENT) {
+  switch (environmentToTest) {
     case 'test':
     case undefined:
       data = addBaseUrlToTests(testData)
       break
     case 'perf-test':
       data = addBaseUrlToTests(perfTestData)
+      break
+    case 'prod':
+      data = addBaseUrlToTests(prodData)
       break
     default:
       data = []
