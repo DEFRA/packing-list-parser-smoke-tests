@@ -1,0 +1,173 @@
+{
+  "name": "SAINSBURYS1 CoO",
+  "tests": [
+    {
+      "testName": "ac10 xCoO Pass",
+      "inputs": {
+        "fileName": "ac10-xcoo-pass.xlsx",
+        "applicationId": "1816178136163"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "ac11 HighRiskCoOTreatmentTypeSpecified Fail",
+      "inputs": {
+        "fileName": "ac11-highriskcootreatmenttypespecified-fail.xlsx",
+        "applicationId": "1816178136166"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Sheet1\" row 4 and sheet \"Sheet1\" row 5.\n",
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "ac12 HighRiskCoOTreatmentTypeSpecifiedMultiple Fail",
+      "inputs": {
+        "fileName": "ac12-highriskcootreatmenttypespecifiedmultiple-fail.xlsx",
+        "applicationId": "1816178136169"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Sheet1\" row 4, sheet \"Sheet1\" row 5, sheet \"Sheet1\" row 6 in addition to 1 other locations.\n",
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "ac13 HighRiskCoOTreatmentTypeNotSpecified Fail",
+      "inputs": {
+        "fileName": "ac13-highriskcootreatmenttypenotspecified-fail.xlsx",
+        "applicationId": "1816178136172"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Sheet1\" row 4 and sheet \"Sheet1\" row 5.\n",
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "ac14 HighRiskCoOTreatmentTypeNotSpecifiedMultiple Fail",
+      "inputs": {
+        "fileName": "ac14-highriskcootreatmenttypenotspecifiedmultiple-fail.xlsx",
+        "applicationId": "1816178136175"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Sheet1\" row 4, sheet \"Sheet1\" row 5, sheet \"Sheet1\" row 6 in addition to 1 other locations.\n",
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "ac1 NotNirms Pass",
+      "inputs": {
+        "fileName": "ac1-notnirms-pass.xlsx",
+        "applicationId": "1816178136109"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "ac2 NullNirms Fail",
+      "inputs": {
+        "fileName": "ac2-nullnirms-fail.xlsx",
+        "applicationId": "1816178136124"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Sheet1\" row 4.\n",
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "ac3 InvalidNirms Fail",
+      "inputs": {
+        "fileName": "ac3-invalidnirms-fail.xlsx",
+        "applicationId": "1816178136133"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Sheet1\" row 4.\n",
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "ac4 NullNirmsMultiple Fail",
+      "inputs": {
+        "fileName": "ac4-nullnirmsmultiple-fail.xlsx",
+        "applicationId": "1816178136139"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Sheet1\" row 4, sheet \"Sheet1\" row 5, sheet \"Sheet1\" row 6 in addition to 1 other locations.\n",
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "ac5 InvalidNirmsMultiple Fail",
+      "inputs": {
+        "fileName": "ac5-invalidnirmsmultiple-fail.xlsx",
+        "applicationId": "1816178136148"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Sheet1\" row 4, sheet \"Sheet1\" row 5, sheet \"Sheet1\" row 6 in addition to 1 other locations.\n",
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "ac6 NullCoO Fail",
+      "inputs": {
+        "fileName": "ac6-nullcoo-fail.xlsx",
+        "applicationId": "1816178136151"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Sheet1\" row 4, sheet \"Sheet1\" row 5 and sheet \"Sheet1\" row 6.\n",
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "ac7 InvalidCoO Fail",
+      "inputs": {
+        "fileName": "ac7-invalidcoo-fail.xlsx",
+        "applicationId": "1816178136154"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Sheet1\" row 4, sheet \"Sheet1\" row 5 and sheet \"Sheet1\" row 6.\n",
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "ac8 NullCoOMultiple Fail",
+      "inputs": {
+        "fileName": "ac8-nullcoomultiple-fail.xlsx",
+        "applicationId": "1816178136157"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Sheet1\" row 4, sheet \"Sheet1\" row 5, sheet \"Sheet1\" row 6 in addition to 2 other locations.\n",
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "ac9 InvalidCoOMultiple Fail",
+      "inputs": {
+        "fileName": "ac9-invalidcoomultiple-fail.xlsx",
+        "applicationId": "1816178136160"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Sheet1\" row 4, sheet \"Sheet1\" row 5, sheet \"Sheet1\" row 6 in addition to 2 other locations.\n",
+        "model": "SAINSBURYS1"
+      }
+    }
+  ]
+}

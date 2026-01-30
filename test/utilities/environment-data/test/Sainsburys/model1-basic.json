@@ -1,32 +1,8 @@
 {
-  "name": "Sainsburys1 Basic",
+  "name": "SAINSBURYS1 Basic",
   "tests": [
     {
-      "testName": "Happy path",
-      "inputs": {
-        "fileName": "happypath-pass.xlsx",
-        "applicationId": "1816178135962"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "SAINSBURYS1"
-      }
-    },
-    {
-      "testName": "Empty RMS",
-      "inputs": {
-        "fileName": "empty-rms-fail.xlsx",
-        "applicationId": "1816178135965"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Check GB Establishment RMS Number.",
-        "model": "NOREMOS"
-      }
-    },
-    {
-      "testName": "All Mandatory Data Is Missing",
+      "testName": "AllMandatoryDataIsMissing Fail",
       "inputs": {
         "fileName": "allmandatorydataismissing-fail.xlsx",
         "applicationId": "1816178135968"
@@ -38,7 +14,7 @@
       }
     },
     {
-      "testName": "Description Has Double Quotes",
+      "testName": "DescriptionHasDoubleQuotesShould Pass",
       "inputs": {
         "fileName": "descriptionhasdoublequotesshould-pass.xlsx",
         "applicationId": "1816178135971"
@@ -50,7 +26,7 @@
       }
     },
     {
-      "testName": "Empty Multiple Rows Columns",
+      "testName": "Empty MultipleRowsColumns Pass",
       "inputs": {
         "fileName": "empty-multiplerowscolumns-pass.xlsx",
         "applicationId": "1816178135974"
@@ -62,7 +38,43 @@
       }
     },
     {
-      "testName": "Incorrect Mandatory Data Multiple Rows With Multiple Locations All",
+      "testName": "Empty RMS Fail",
+      "inputs": {
+        "fileName": "empty-rms-fail.xlsx",
+        "applicationId": "1816178135965"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "Happypath Pass",
+      "inputs": {
+        "fileName": "happypath-pass.xlsx",
+        "applicationId": "1816178135962"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatatypes Excl netandNopkgs ProductCode Pass",
+      "inputs": {
+        "fileName": "incorrect-mandatatypes-excl-netandnopkgs-productcode-pass.xlsx",
+        "applicationId": "1816178136073"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryData MultipleRowsWithMultipleLocations All Fail",
       "inputs": {
         "fileName": "incorrect-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
         "applicationId": "1816178135980"
@@ -74,7 +86,7 @@
       }
     },
     {
-      "testName": "Incorrect Mandatory Header All",
+      "testName": "Incorrect MandatoryHeader All Unparse",
       "inputs": {
         "fileName": "incorrect-mandatoryheader-all-unparse.xlsx",
         "applicationId": "1816178135983"
@@ -86,7 +98,7 @@
       }
     },
     {
-      "testName": "Incorrect Mandatory Header Commodity Code",
+      "testName": "Incorrect MandatoryHeader CommodityCode Unparse",
       "inputs": {
         "fileName": "incorrect-mandatoryheader-commoditycode-unparse.xlsx",
         "applicationId": "1816178135986"
@@ -98,7 +110,19 @@
       }
     },
     {
-      "testName": "Incorrect Mandatory Header Noofpackages",
+      "testName": "Incorrect MandatoryHeader Desc Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-desc-unparse.xlsx",
+        "applicationId": "1816178136076"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader Noofpackages Unparse",
       "inputs": {
         "fileName": "incorrect-mandatoryheader-noofpackages-unparse.xlsx",
         "applicationId": "1816178135989"
@@ -110,19 +134,7 @@
       }
     },
     {
-      "testName": "Incorrect Mandatory Header Tot Netweight",
-      "inputs": {
-        "fileName": "incorrect-mandatoryheader-totnetweight-unparse.xlsx",
-        "applicationId": "1816178135992"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Incorrect Mandatory Header Tot Netweight KGS",
+      "testName": "Incorrect MandatoryHeader TotNetweightKGS Fail",
       "inputs": {
         "fileName": "incorrect-mandatoryheader-totnetweightkgs-fail.xlsx",
         "applicationId": "1816178135995"
@@ -134,7 +146,19 @@
       }
     },
     {
-      "testName": "Incorrect Optional Data All",
+      "testName": "Incorrect MandatoryHeader TotNetweight Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-totnetweight-unparse.xlsx",
+        "applicationId": "1816178135992"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect OptionalData All Pass",
       "inputs": {
         "fileName": "incorrect-optionaldata-all-pass.xlsx",
         "applicationId": "1816178135998"
@@ -146,10 +170,46 @@
       }
     },
     {
-      "testName": "Missing Mandatory Data Commodity Code",
+      "testName": "Incorrect OptionalHeader All Pass",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-all-pass.xlsx",
+        "applicationId": "1816178160799"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "InvalidCommodityCode MultipleRows Fail",
+      "inputs": {
+        "fileName": "invalidcommoditycode-multiplerows-fail.xlsx",
+        "applicationId": "1816178160802"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product code is invalid in sheet \"Sheet1\" row 48, sheet \"Sheet1\" row 52, sheet \"Sheet1\" row 54 in addition to 1 other locations.\n",
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "MandatoryHeaders CaseInSensitive Pass",
+      "inputs": {
+        "fileName": "mandatoryheaders-caseinsensitive-pass.xlsx",
+        "applicationId": "1816178160805"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData CommodityCode Fail",
       "inputs": {
         "fileName": "missing-mandatorydata-commoditycode-fail.xlsx",
-        "applicationId": "1816178136001"
+        "applicationId": "1816178160808"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -158,7 +218,19 @@
       }
     },
     {
-      "testName": "Missing Mandatory Data Description",
+      "testName": "Missing MandatoryData CommodityCode Nature Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-commoditycode-nature-fail.xlsx",
+        "applicationId": "1816178160811"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in sheet \"Sheet1\" row 48.\n",
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData Desc Fail",
       "inputs": {
         "fileName": "missing-mandatorydata-desc-fail.xlsx",
         "applicationId": "1816178136004"
@@ -170,19 +242,7 @@
       }
     },
     {
-      "testName": "Missing Mandatory Data Description",
-      "inputs": {
-        "fileName": "missing-mandatorydata-desc-fail.xlsx",
-        "applicationId": "1816178136004"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Product description is missing in sheet \"Sheet1\" row 48.\n",
-        "model": "SAINSBURYS1"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Data Multiple Rows With Multiple Locations Except One",
+      "testName": "Missing MandatoryData MultipleRowsWithMultipleLocations ExceptOne Fail",
       "inputs": {
         "fileName": "missing-mandatorydata-multiplerowswithmultiplelocations-exceptone-fail.xlsx",
         "applicationId": "1816178136007"
@@ -194,7 +254,7 @@
       }
     },
     {
-      "testName": "Missing Mandatory Data Noofpkgs",
+      "testName": "Missing MandatoryData Noofpkgs Fail",
       "inputs": {
         "fileName": "missing-mandatorydata-noofpkgs-fail.xlsx",
         "applicationId": "1816178136010"
@@ -206,7 +266,7 @@
       }
     },
     {
-      "testName": "Missing Mandatory Data Remos No",
+      "testName": "Missing MandatoryData RemosNo Pass",
       "inputs": {
         "fileName": "missing-mandatorydata-remosno-pass.xlsx",
         "applicationId": "1816178136013"
@@ -218,7 +278,7 @@
       }
     },
     {
-      "testName": "Missing Mandatory Data Totnetweight",
+      "testName": "Missing MandatoryData Totnetweight Fail",
       "inputs": {
         "fileName": "missing-mandatorydata-totnetweight-fail.xlsx",
         "applicationId": "1816178136016"
@@ -230,7 +290,19 @@
       }
     },
     {
-      "testName": "Missing Mandatory Header Commodity Code",
+      "testName": "Missing MandatoryHeader All Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-all-unparse.xlsx",
+        "applicationId": "1816178136082"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader CommodityCode Unparse",
       "inputs": {
         "fileName": "missing-mandatoryheader-commoditycode-unparse.xlsx",
         "applicationId": "1816178136022"
@@ -242,7 +314,7 @@
       }
     },
     {
-      "testName": "Missing Mandatory Header Description",
+      "testName": "Missing MandatoryHeader Description Unparse",
       "inputs": {
         "fileName": "missing-mandatoryheader-description-unparse.xlsx",
         "applicationId": "1816178136025"
@@ -254,7 +326,7 @@
       }
     },
     {
-      "testName": "Missing Mandatory Header Noof Pacakges",
+      "testName": "Missing MandatoryHeader NoofPacakges Unparse",
       "inputs": {
         "fileName": "missing-mandatoryheader-noofpacakges-unparse.xlsx",
         "applicationId": "1816178136028"
@@ -266,7 +338,7 @@
       }
     },
     {
-      "testName": "Missing Mandatory Header Tot Net Weight",
+      "testName": "Missing MandatoryHeader TotNetWeight Unparse",
       "inputs": {
         "fileName": "missing-mandatoryheader-totnetweight-unparse.xlsx",
         "applicationId": "1816178136031"
@@ -278,7 +350,7 @@
       }
     },
     {
-      "testName": "Missing Mandatory Header Tot Netweight KGS",
+      "testName": "Missing MandatoryHeader TotNetweightKGS Fail",
       "inputs": {
         "fileName": "missing-mandatoryheader-totnetweightkgs-fail.xlsx",
         "applicationId": "1816178136034"
@@ -290,7 +362,7 @@
       }
     },
     {
-      "testName": "Missing Optional Data All",
+      "testName": "Missing OptionalData All Pass",
       "inputs": {
         "fileName": "missing-optionaldata-all-pass.xlsx",
         "applicationId": "1816178136037"
@@ -302,7 +374,7 @@
       }
     },
     {
-      "testName": "Missing Optional Header All",
+      "testName": "Missing OptionalHeader All Pass",
       "inputs": {
         "fileName": "missing-optionalheader-all-pass.xlsx",
         "applicationId": "1816178136040"
@@ -314,7 +386,7 @@
       }
     },
     {
-      "testName": "Missing Rms",
+      "testName": "Missing Rms Pass",
       "inputs": {
         "fileName": "missing-rms-pass.xlsx",
         "applicationId": "1816178136043"
@@ -326,7 +398,19 @@
       }
     },
     {
-      "testName": "Only Mandatory Data Is Filled",
+      "testName": "NoData ExceptSingleRMS Fail",
+      "inputs": {
+        "fileName": "nodata-exceptsinglerms-fail.xlsx",
+        "applicationId": "1816178136085"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No product line data found.",
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "OnlyMandatoryDataIsFilled Pass",
       "inputs": {
         "fileName": "onlymandatorydataisfilled-pass.xlsx",
         "applicationId": "1816178136046"
@@ -338,7 +422,7 @@
       }
     },
     {
-      "testName": "RMS Has Wrong Final 3 Digits Should",
+      "testName": "RMSHasWrongFinal3DigitsShould Pass",
       "inputs": {
         "fileName": "rmshaswrongfinal3digitsshould-pass.xlsx",
         "applicationId": "1816178136049"
@@ -350,7 +434,7 @@
       }
     },
     {
-      "testName": "RMS Has Wrong Middle 6 Digits Should Be",
+      "testName": "RMSHasWrongMiddle6DigitsShouldBe Fail",
       "inputs": {
         "fileName": "rmshaswrongmiddle6digitsshouldbe-fail.xlsx",
         "applicationId": "1816178136052"
@@ -362,7 +446,7 @@
       }
     },
     {
-      "testName": "RMS Has Wrong Regex With Additional Hyphen Should Be",
+      "testName": "RMSHasWrongRegexWithAdditionalHyphenShouldBe Fail",
       "inputs": {
         "fileName": "rmshaswrongregexwithadditionalhyphenshouldbe-fail.xlsx",
         "applicationId": "1816178136055"
@@ -374,7 +458,7 @@
       }
     },
     {
-      "testName": "RMS Has Wrong Regex With Value Removed At End Of Establishment Number Should",
+      "testName": "RMSHasWrongRegexWithValueRemovedAtEndOfEstablishmentNumberShould Fail",
       "inputs": {
         "fileName": "rmshaswrongregexwithvalueremovedatendofestablishmentnumbershould-fail.xlsx",
         "applicationId": "1816178136058"
@@ -386,7 +470,7 @@
       }
     },
     {
-      "testName": "RMS Is Present But No Header Text Should",
+      "testName": "RMSIsPresentButNoHeaderTextShould Pass",
       "inputs": {
         "fileName": "rmsispresentbutnoheadertextshould-pass.xlsx",
         "applicationId": "1816178136061"
@@ -398,7 +482,7 @@
       }
     },
     {
-      "testName": "RMS With 7 Digits Should",
+      "testName": "RMSWith7DigitsShould Fail",
       "inputs": {
         "fileName": "rmswith7digitsshould-fail.xlsx",
         "applicationId": "1816178136064"
@@ -410,10 +494,10 @@
       }
     },
     {
-      "testName": "RMS With Extra Dash Before Establishment Number Should",
+      "testName": "RMSWithExtraDashBeforeEstablishmentNumberShould Fail",
       "inputs": {
         "fileName": "rmswithextradashbeforeestablishmentnumbershould-fail.xlsx",
-        "applicationId": "1816178136067"
+        "applicationId": "1816178160814"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",

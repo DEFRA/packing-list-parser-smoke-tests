@@ -1,0 +1,221 @@
+{
+  "name": "SAINSBURYS1 NetWeight",
+  "tests": [
+    {
+      "testName": "Alpha Numeric UOM Weight Fail",
+      "inputs": {
+        "fileName": "alpha-numeric-uom-weight-fail.xlsx",
+        "applicationId": "1816178136187"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "Ambiguous Units in Header Pass",
+      "inputs": {
+        "fileName": "ambiguous-units-in-header-pass.xlsx",
+        "applicationId": "1816178136190"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "Happypath Pass",
+      "inputs": {
+        "fileName": "happypath-pass.xlsx",
+        "applicationId": "1816178136184"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "Header With Multiple Units Pass",
+      "inputs": {
+        "fileName": "header-with-multiple-units-pass.xlsx",
+        "applicationId": "1816178136193"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "Header With Unit And Symbols Pass",
+      "inputs": {
+        "fileName": "header-with-unit-and-symbols-pass.xlsx",
+        "applicationId": "1816178136196"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "Incorrect NetweightData Fail",
+      "inputs": {
+        "fileName": "incorrect-netweightdata-fail.xlsx",
+        "applicationId": "1816178136199"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Total net weight is invalid in sheet \"Sheet1\" row 3, sheet \"Sheet1\" row 4, sheet \"Sheet1\" row 5 in addition to 1 other locations.\n",
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "Invalid Unit Type Fail",
+      "inputs": {
+        "fileName": "invalid-unit-type-fail.xlsx",
+        "applicationId": "1816178136202"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "Malformed Header Unit Pass",
+      "inputs": {
+        "fileName": "malformed-header-unit-pass.xlsx",
+        "applicationId": "1816178136205"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "Missing Header TotalNetWeight Unparse",
+      "inputs": {
+        "fileName": "missing-header-totalnetweight-unparse.xlsx",
+        "applicationId": "1816178136208"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing UOM Weight Fail",
+      "inputs": {
+        "fileName": "missing-uom-weight-fail.xlsx",
+        "applicationId": "1816178136211"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "MixedCase Header Pass",
+      "inputs": {
+        "fileName": "mixedcase-header-pass.xlsx",
+        "applicationId": "1816178136214"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "MixedUnits And Casing Pass",
+      "inputs": {
+        "fileName": "mixedunits-and-casing-pass.xlsx",
+        "applicationId": "1816178136217"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "Netweight HasEmpty Parentheses Pass",
+      "inputs": {
+        "fileName": "netweight-hasempty-parentheses-pass.xlsx",
+        "applicationId": "1816178136220"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "Splcharacters Header Netweight Unparse",
+      "inputs": {
+        "fileName": "splcharacters-header-netweight-unparse.xlsx",
+        "applicationId": "1816178136223"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "TotalNetWeight Without UOMWeight Unparse",
+      "inputs": {
+        "fileName": "totalnetweight-without-uomweight-unparse.xlsx",
+        "applicationId": "1816178136229"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "UOMWeight Without TotalNetWeight Unparse",
+      "inputs": {
+        "fileName": "uomweight-without-totalnetweight-unparse.xlsx",
+        "applicationId": "1816178136241"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Unit Missing Weight Present Fail",
+      "inputs": {
+        "fileName": "unit-missing-weight-present-fail.xlsx",
+        "applicationId": "1816178136238"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "SAINSBURYS1"
+      }
+    },
+    {
+      "testName": "Zero Data TotalNetWeight Pass",
+      "inputs": {
+        "fileName": "zero-data-totalnetweight-pass.xlsx",
+        "applicationId": "1816178136244"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAINSBURYS1"
+      }
+    }
+  ]
+}
