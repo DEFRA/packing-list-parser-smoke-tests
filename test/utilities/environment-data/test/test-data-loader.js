@@ -21,7 +21,8 @@ export function loadTestData() {
     'MANDS',
     'NISA',
     'Sainsburys',
-    'Tesco'
+    'Tesco',
+    'TJMorris'
   ]
 
   modelFolders.forEach((modelFolder) => {
