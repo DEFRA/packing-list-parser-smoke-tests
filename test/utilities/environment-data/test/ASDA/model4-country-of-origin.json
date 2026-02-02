@@ -1,0 +1,185 @@
+{
+  "name": "ASDA4 Country of Origin",
+  "tests": [
+    {
+      "testName": "Missing Mandatory Fields",
+      "inputs": {
+        "fileName": "missing-mandatory-fields-fail.csv",
+        "applicationId": "1816178160667"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Identifier is missing in rows 3 and 7.\nTotal net weight is missing in row 3.\nMissing Country of Origin in row 4.\n",
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "ac10 x Co O",
+      "inputs": {
+        "fileName": "ac10-xcoo-pass.csv",
+        "applicationId": "1816178159470"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "ac11 High Risk Co OTreatment Type Specified",
+      "inputs": {
+        "fileName": "ac11-highriskcootreatmenttypespecified-fail.csv",
+        "applicationId": "1816178159473"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in rows 3, 4 and 5.\n",
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "ac12 High Risk Co OTreatment Type Specified Multiple",
+      "inputs": {
+        "fileName": "ac12-highriskcootreatmenttypespecifiedmultiple-fail.csv",
+        "applicationId": "1816178159476"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in rows 3, 4, 5 in addition to 1 other locations.\n",
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "ac13 High Risk Co OTreatment Type Not Specified",
+      "inputs": {
+        "fileName": "ac13-highriskcootreatmenttypenotspecified-fail.csv",
+        "applicationId": "1816178159479"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in row 3.\n",
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "ac14 High Risk Co OTreatment Type Not Specified COO Invalid Multiple",
+      "inputs": {
+        "fileName": "ac14-highriskcootreatmenttypenotspecified-coo-invalidmultiple-fail.csv",
+        "applicationId": "1816178160661"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in rows 3, 4, 5 in addition to 1 other locations.\n",
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "ac1 Not Nirms",
+      "inputs": {
+        "fileName": "ac1-notnirms-pass.csv",
+        "applicationId": "1816178159440"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "ac2 Null Nirms",
+      "inputs": {
+        "fileName": "ac2-nullnirms-fail.csv",
+        "applicationId": "1816178159446"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in rows 3, 4 and 5.\n",
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "ac3 Invalid Nirms",
+      "inputs": {
+        "fileName": "ac3-invalidnirms-fail.csv",
+        "applicationId": "1816178159449"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in rows 3, 4 and 5.\n",
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "ac4 Null Nirms Multiple",
+      "inputs": {
+        "fileName": "ac4-nullnirmsmultiple-fail.csv",
+        "applicationId": "1816178159452"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in rows 3, 4, 5 in addition to 1 other locations.\n",
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "ac5 Invalid Nirms Multiple",
+      "inputs": {
+        "fileName": "ac5-invalidnirmsmultiple-fail.csv",
+        "applicationId": "1816178159455"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in rows 3, 4, 5 in addition to 1 other locations.\n",
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "ac6 Null Co O",
+      "inputs": {
+        "fileName": "ac6-nullcoo-fail.csv",
+        "applicationId": "1816178159458"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in rows 3, 4 and 5.\n",
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "ac7 Invalid Co O",
+      "inputs": {
+        "fileName": "ac7-invalidcoo-fail.csv",
+        "applicationId": "1816178159461"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in rows 3, 4 and 5.\n",
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "ac8 Null Co OMultiple",
+      "inputs": {
+        "fileName": "ac8-nullcoomultiple-fail.csv",
+        "applicationId": "1816178159464"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in rows 3, 4, 5 in addition to 1 other locations.\n",
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "ac9 Invalid Co OMultiple",
+      "inputs": {
+        "fileName": "ac9-invalidcoomultiple-fail.csv",
+        "applicationId": "1816178159467"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in rows 3, 4, 5 in addition to 1 other locations.\n",
+        "model": "ASDA4"
+      }
+    }
+  ]
+}
