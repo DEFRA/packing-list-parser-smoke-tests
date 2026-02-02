@@ -10,7 +10,7 @@ export const retailerPrefixes = {
   nisa: 'NISA',
   sainsburys: 'Sainsburys',
   tesco: 'Tesco',
-  tjmorris: 'TJMorris',
+  tjmorris: 'TJMorris'
 }
 
 /**
