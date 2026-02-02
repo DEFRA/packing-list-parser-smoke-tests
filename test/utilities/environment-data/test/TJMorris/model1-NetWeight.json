@@ -1,0 +1,269 @@
+{
+  "name": "TJMORRIS2 NetWeight",
+  "tests": [
+    {
+      "testName": "Alpha Numeric TotalNetWeight Fail",
+      "inputs": {
+        "fileName": "alpha-numeric-totalnetweight-fail.xls",
+        "applicationId": "1816178161210"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "TJMORRIS2"
+      }
+    },
+    {
+      "testName": "Alpha Numeric UOM Weight Fail",
+      "inputs": {
+        "fileName": "alpha-numeric-uom-weight-fail.xls",
+        "applicationId": "1816178161213"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "TJMORRIS2"
+      }
+    },
+    {
+      "testName": "Ambiguous Units in Header Pass",
+      "inputs": {
+        "fileName": "ambiguous-units-in-header-pass.xls",
+        "applicationId": "1816178161216"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TJMORRIS2"
+      }
+    },
+    {
+      "testName": "Data empty Netweight Fail",
+      "inputs": {
+        "fileName": "data-empty-netweight-fail.xls",
+        "applicationId": "1816178161219"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Total net weight is missing in sheet \"sheet1\" row 9, sheet \"sheet1\" row 10, sheet \"sheet1\" row 11 in addition to 1 other locations.\n",
+        "model": "TJMORRIS2"
+      }
+    },
+    {
+      "testName": "Extra Spaces In Header Unparse",
+      "inputs": {
+        "fileName": "extra-spaces-in-header-unparse.xls",
+        "applicationId": "1816178161222"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Happypath Pass",
+      "inputs": {
+        "fileName": "happypath-pass.xls",
+        "applicationId": "1816178161225"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TJMORRIS2"
+      }
+    },
+    {
+      "testName": "Header Typos or SpecialCharacters Unparse",
+      "inputs": {
+        "fileName": "header-typos-or-specialcharacters-unparse.xls",
+        "applicationId": "1816178161231"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Header With Extra Parentheses Pass",
+      "inputs": {
+        "fileName": "header-with-extra-parentheses-pass.xls",
+        "applicationId": "1816178161234"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TJMORRIS2"
+      }
+    },
+    {
+      "testName": "Header With Unit And Symbols Pass",
+      "inputs": {
+        "fileName": "header-with-unit-and-symbols-pass.xls",
+        "applicationId": "1816178161237"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TJMORRIS2"
+      }
+    },
+    {
+      "testName": "Incorrect NetweightData All Fail",
+      "inputs": {
+        "fileName": "incorrect-netweightdata-all-fail.xls",
+        "applicationId": "1816178161240"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Total net weight is invalid in sheet \"sheet1\" row 9, sheet \"sheet1\" row 10, sheet \"sheet1\" row 11 in addition to 3 other locations.\n",
+        "model": "TJMORRIS2"
+      }
+    },
+    {
+      "testName": "Invalid Unit Type Fail",
+      "inputs": {
+        "fileName": "invalid-unit-type-fail.xls",
+        "applicationId": "1816178161243"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "TJMORRIS2"
+      }
+    },
+    {
+      "testName": "Malformed Header Unit Pass",
+      "inputs": {
+        "fileName": "malformed-header-unit-pass.xls",
+        "applicationId": "1816178161720"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TJMORRIS2"
+      }
+    },
+    {
+      "testName": "Missing Header Netweight Unparse",
+      "inputs": {
+        "fileName": "missing-header-netweight-unparse.xls",
+        "applicationId": "1816178161312"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Paranthesis in Uom Pass",
+      "inputs": {
+        "fileName": "missing-paranthesis-in-uom-pass.xls",
+        "applicationId": "1816178161723"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TJMORRIS2"
+      }
+    },
+    {
+      "testName": "Missing UOM Weight Fail",
+      "inputs": {
+        "fileName": "missing-uom-weight-fail.xls",
+        "applicationId": "1816178161315"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "TJMORRIS2"
+      }
+    },
+    {
+      "testName": "MixedCase Header Pass",
+      "inputs": {
+        "fileName": "mixedcase-header-pass.xls",
+        "applicationId": "1816178161726"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TJMORRIS2"
+      }
+    },
+    {
+      "testName": "MixedUnits And Casing Pass",
+      "inputs": {
+        "fileName": "mixedunits-and-casing-pass.xls",
+        "applicationId": "1816178161729"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TJMORRIS2"
+      }
+    },
+    {
+      "testName": "Netweight HasEmpty Parentheses Fail",
+      "inputs": {
+        "fileName": "netweight-hasempty-parentheses-fail.xls",
+        "applicationId": "1816178161732"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "TJMORRIS2"
+      }
+    },
+    {
+      "testName": "Splcharacters Header Netweight Unparse",
+      "inputs": {
+        "fileName": "splcharacters-header-netweight-unparse.xls",
+        "applicationId": "1816178161735"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "UOMWeight Without TotalNetWeight Unparse",
+      "inputs": {
+        "fileName": "uomweight-without-totalnetweight-unparse.xls",
+        "applicationId": "1816178161303"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Unit Missing Weight Present Fail",
+      "inputs": {
+        "fileName": "unit-missing-weight-present-fail.xls",
+        "applicationId": "1816178161333"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "TJMORRIS2"
+      }
+    },
+    {
+      "testName": "Zero Data TotalNetWeight Pass",
+      "inputs": {
+        "fileName": "zero-data-totalnetweight-pass.xls",
+        "applicationId": "1816178161345"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TJMORRIS2"
+      }
+    }
+  ]
+}

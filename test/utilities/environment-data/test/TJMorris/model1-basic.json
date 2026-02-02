@@ -1,0 +1,353 @@
+{
+  "name": "TJMORRIS2 Basic",
+  "tests": [
+    {
+      "testName": "AllMandatoryDataIsMissing Fail",
+      "inputs": {
+        "fileName": "allmandatorydataismissing-fail.xlsx",
+        "applicationId": "1816178160859"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "ChangeInColumnPosition Pass",
+      "inputs": {
+        "fileName": "changeincolumnposition-pass.xlsx",
+        "applicationId": "1816178160862"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TJMORRIS2"
+      }
+    },
+    {
+      "testName": "DescriptionHasDoubleQuotesShould Pass",
+      "inputs": {
+        "fileName": "descriptionhasdoublequotesshould-pass.xlsx",
+        "applicationId": "1816178160868"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TJMORRIS2"
+      }
+    },
+    {
+      "testName": "Empty MultipleRowsColumns Pass",
+      "inputs": {
+        "fileName": "empty-multiplerowscolumns-pass.xlsx",
+        "applicationId": "1816178160874"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TJMORRIS2"
+      }
+    },
+    {
+      "testName": "Happypath Pass",
+      "inputs": {
+        "fileName": "happypath-pass.xlsx",
+        "applicationId": "1816178160883"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TJMORRIS2"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatatypes Excl netandNopkgs ProductCode Pass",
+      "inputs": {
+        "fileName": "incorrect-mandatatypes-excl-netandnopkgs-productcode-pass.xlsx",
+        "applicationId": "1816178160889"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TJMORRIS2"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryData MultipleRowsWithMultipleLocations All Fail",
+      "inputs": {
+        "fileName": "incorrect-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
+        "applicationId": "1816178160895"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product code is invalid in sheet \"Sheet1\" row 9, sheet \"Sheet1\" row 11 and sheet \"Sheet1\" row 12.\nNo of packages is invalid in sheet \"Sheet1\" row 9, sheet \"Sheet1\" row 10, sheet \"Sheet1\" row 11 in addition to 2 other locations.\nTotal net weight is invalid in sheet \"Sheet1\" row 9, sheet \"Sheet1\" row 10, sheet \"Sheet1\" row 11 in addition to 3 other locations.\n",
+        "model": "TJMORRIS2"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader All Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-all-unparse.xlsx",
+        "applicationId": "1816178160901"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader CommodityCode Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-commoditycode-unparse.xlsx",
+        "applicationId": "1816178160907"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader Description Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-description-unparse.xlsx",
+        "applicationId": "1816178160916"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader NatureOfProduct Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-natureofproduct-unparse.xlsx",
+        "applicationId": "1816178160922"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader NoofPacakges Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-noofpacakges-unparse.xlsx",
+        "applicationId": "1816178160925"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader TotNetWeight Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-totnetweight-unparse.xlsx",
+        "applicationId": "1816178160931"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader TreatmentType Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-treatmenttype-unparse.xlsx",
+        "applicationId": "1816178160937"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect OptionalData All Pass Pass",
+      "inputs": {
+        "fileName": "incorrect-optionaldata-all-pass-pass.xlsx",
+        "applicationId": "1816178160943"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TJMORRIS2"
+      }
+    },
+    {
+      "testName": "Incorrect OptionalHeader All Pass",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-all-pass.xlsx",
+        "applicationId": "1816178160949"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TJMORRIS2"
+      }
+    },
+    {
+      "testName": "MandatoryHeaders CaseInSensitive Pass",
+      "inputs": {
+        "fileName": "mandatoryheaders-caseinsensitive-pass.xlsx",
+        "applicationId": "1816178160958"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TJMORRIS2"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData MultipleRowsWithMultipleLocations All Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
+        "applicationId": "1816178160964"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product description is missing in sheet \"Sheet1\" row 9 and sheet \"Sheet1\" row 11.\nNo of packages is missing in sheet \"Sheet1\" row 13, sheet \"Sheet1\" row 15 and sheet \"Sheet1\" row 17.\nTotal net weight is missing in sheet \"Sheet1\" row 13, sheet \"Sheet1\" row 15 and sheet \"Sheet1\" row 17.\n",
+        "model": "TJMORRIS2"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader All Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-all-unparse.xlsx",
+        "applicationId": "1816178160967"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader CommodityCode Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-commoditycode-unparse.xlsx",
+        "applicationId": "1816178160970"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader Description Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-description-unparse.xlsx",
+        "applicationId": "1816178160976"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader NatureOfProduct Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-natureofproduct-unparse.xlsx",
+        "applicationId": "1816178160985"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader NoofPacakges Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-noofpacakges-unparse.xlsx",
+        "applicationId": "1816178160991"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader TotNetWeight Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-totnetweight-unparse.xlsx",
+        "applicationId": "1816178160997"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader TreatmentType Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-treatmenttype-unparse.xlsx",
+        "applicationId": "1816178161000"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing OptionalData All Pass",
+      "inputs": {
+        "fileName": "missing-optionaldata-all-pass.xlsx",
+        "applicationId": "1816178161003"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TJMORRIS2"
+      }
+    },
+    {
+      "testName": "Missing OptionalHeader All Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-all-pass.xlsx",
+        "applicationId": "1816178161006"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TJMORRIS2"
+      }
+    },
+    {
+      "testName": "NoData ExceptSingleRMS Fail",
+      "inputs": {
+        "fileName": "nodata-exceptsinglerms-fail.xlsx",
+        "applicationId": "1816178161009"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No product line data found.",
+        "model": "TJMORRIS2"
+      }
+    },
+    {
+      "testName": "OnlyMandatoryDataIsFilled Pass",
+      "inputs": {
+        "fileName": "onlymandatorydataisfilled-pass.xlsx",
+        "applicationId": "1816178161015"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TJMORRIS2"
+      }
+    }
+  ]
+}
