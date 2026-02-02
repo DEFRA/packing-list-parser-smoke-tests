@@ -18,9 +18,10 @@ export function loadTestData() {
     'ASDA',
     'Giovanni',
     'Iceland',
-    'M&S',
+    'MANDS',
     'NISA',
-    'Sainsburys'
+    'Sainsburys',
+    'Tesco'
   ]
 
   modelFolders.forEach((modelFolder) => {

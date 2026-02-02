@@ -55,6 +55,13 @@ Apply these transformations:
 6. **Reasons for failure** (expectedResults.reasonsForFailure):
    - Copy the Message column value (preserve exact text including quotes and formatting)
    - Use `null` when Message is empty
+   - **Newline formatting**:
+     - **Multiple sentences** (containing multiple periods): Add `\n` between each sentence AND end with `\n`
+       - Example: `"Identifier is missing in rows 3, 4 and 5.\nProduct description is missing in rows 3, 4 and 5.\n"`
+     - **Single sentences** (one period only): End with `\n` EXCEPT for "Check GB Establishment RMS Number."
+       - Example: `"No product line data found.\n"`
+       - Exception: `"Check GB Establishment RMS Number."` (no `\n`)
+     - This formatting is critical for proper error message display
 
 7. **File organization**:
    - Create directory: `test/utilities/environment-data/test/[MODEL_FOLDER]/`

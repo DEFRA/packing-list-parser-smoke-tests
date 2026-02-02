@@ -1,0 +1,173 @@
+{
+  "name": "TESCO3 Country of Origin",
+  "tests": [
+    {
+      "testName": "ac10 x Co O Pass",
+      "inputs": {
+        "fileName": "ac10-xcoo-pass.xlsx",
+        "applicationId": "1816178160205"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "ac11 High Risk Co O Treatment Type Specified Fail",
+      "inputs": {
+        "fileName": "ac11-highriskcootreatmenttypespecified-fail.xlsx",
+        "applicationId": "1816178160211"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Input Data Sheet\" row 9.\n",
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "ac12 High Risk Co O Treatment Type Specified Multiple Fail",
+      "inputs": {
+        "fileName": "ac12-highriskcootreatmenttypespecifiedmultiple-fail.xlsx",
+        "applicationId": "1816178160250"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Input Data Sheet\" row 9 and sheet \"Input Data Sheet\" row 10.\n",
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "ac13 High Risk Co O Treatment Type Not Specified Fail",
+      "inputs": {
+        "fileName": "ac13-highriskcootreatmenttypenotspecified-fail.xlsx",
+        "applicationId": "1816178160217"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Input Data Sheet\" row 9 and sheet \"Input Data Sheet\" row 10.\n",
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "ac14 High Risk Co O Treatment Type Not Specified Multiple Fail",
+      "inputs": {
+        "fileName": "ac14-highriskcootreatmenttypenotspecifiedmultiple-fail.xlsx",
+        "applicationId": "1816178160223"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Input Data Sheet\" row 9, sheet \"Input Data Sheet\" row 10 and sheet \"Input Data Sheet\" row 11.\n",
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "ac1 Not Nirms Pass",
+      "inputs": {
+        "fileName": "ac1-notnirms-pass.xlsx",
+        "applicationId": "1816178160169"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "ac2 Null Nirms Fail",
+      "inputs": {
+        "fileName": "ac2-nullnirms-fail.xlsx",
+        "applicationId": "1816178160172"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Input Data Sheet\" row 20.\n",
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "ac3 Invalid Nirms Fail",
+      "inputs": {
+        "fileName": "ac3-invalidnirms-fail.xlsx",
+        "applicationId": "1816178160175"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Input Data Sheet\" row 20.\n",
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "ac4 Null Nirms Multiple Fail",
+      "inputs": {
+        "fileName": "ac4-nullnirmsmultiple-fail.xlsx",
+        "applicationId": "1816178160178"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Input Data Sheet\" row 20, sheet \"Input Data Sheet\" row 21, sheet \"Input Data Sheet\" row 22 in addition to 2 other locations.\n",
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "ac5 Invalid Nirms Multiple Fail",
+      "inputs": {
+        "fileName": "ac5-invalidnirmsmultiple-fail.xlsx",
+        "applicationId": "1816178160184"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Input Data Sheet\" row 20, sheet \"Input Data Sheet\" row 21, sheet \"Input Data Sheet\" row 22 in addition to 2 other locations.\n",
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "ac6 Null Co O Fail",
+      "inputs": {
+        "fileName": "ac6-nullcoo-fail.xlsx",
+        "applicationId": "1816178160190"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Input Data Sheet\" row 20.\n",
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "ac7 Invalid Co O Fail",
+      "inputs": {
+        "fileName": "ac7-invalidcoo-fail.xlsx",
+        "applicationId": "1816178160244"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Input Data Sheet\" row 20.\n",
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "ac8 Null Co O Multiple Fail",
+      "inputs": {
+        "fileName": "ac8-nullcoomultiple-fail.xlsx",
+        "applicationId": "1816178160196"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Input Data Sheet\" row 20, sheet \"Input Data Sheet\" row 21, sheet \"Input Data Sheet\" row 22 in addition to 3 other locations.\n",
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "ac9 Invalid Co O Multiple Fail",
+      "inputs": {
+        "fileName": "ac9-invalidcoomultiple-fail.xlsx",
+        "applicationId": "1816178160202"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Input Data Sheet\" row 20, sheet \"Input Data Sheet\" row 21, sheet \"Input Data Sheet\" row 22 in addition to 3 other locations.\n",
+        "model": "TESCO3"
+      }
+    }
+  ]
+}
