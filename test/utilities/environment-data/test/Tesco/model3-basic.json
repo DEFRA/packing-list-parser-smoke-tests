@@ -1,0 +1,437 @@
+{
+  "name": "TESCO3 Basic",
+  "tests": [
+    {
+      "testName": "All Mandatory Data Is Missing",
+      "inputs": {
+        "fileName": "allmandatorydataismissing-fail.xlsx",
+        "applicationId": "1816178160478"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "Description Has Double Quotes Should Pass",
+      "inputs": {
+        "fileName": "descriptionhasdoublequotesshould-pass.xlsx",
+        "applicationId": "1816178160484"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "Empty Multiple Rows Columns Pass",
+      "inputs": {
+        "fileName": "empty-multiplerowscolumns-pass.xlsx",
+        "applicationId": "1816178160487"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "Empty RMS Number Fail",
+      "inputs": {
+        "fileName": "empty-rmsnumber-fail.xlsx",
+        "applicationId": "1816178160490"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "Happypath Pass",
+      "inputs": {
+        "fileName": "happypath-pass.xlsx",
+        "applicationId": "1816178160493"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatatypes Excl netand Nopkgs Product Code Pass",
+      "inputs": {
+        "fileName": "incorrect-mandatatypes-excl-netandnopkgs-productcode-pass.xlsx",
+        "applicationId": "1816178160703"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Data Multiple Rows With Multiple Locations All Fail",
+      "inputs": {
+        "fileName": "incorrect-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
+        "applicationId": "1816178160499"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product code is invalid in sheet \"Input Data Sheet\" row 48, sheet \"Input Data Sheet\" row 50, sheet \"Input Data Sheet\" row 52 in addition to 2 other locations.\nNo of packages is invalid in sheet \"Input Data Sheet\" row 48, sheet \"Input Data Sheet\" row 50, sheet \"Input Data Sheet\" row 52 in addition to 3 other locations.\nTotal net weight is invalid in sheet \"Input Data Sheet\" row 48, sheet \"Input Data Sheet\" row 50, sheet \"Input Data Sheet\" row 52 in addition to 3 other locations.\n",
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header All Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-all-unparse.xlsx",
+        "applicationId": "1816178160502"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Commodity Code Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-commoditycode-unparse.xlsx",
+        "applicationId": "1816178160508"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Desc Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-desc-unparse.xlsx",
+        "applicationId": "1816178160706"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Noofpackages Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-noofpackages-unparse.xlsx",
+        "applicationId": "1816178160709"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Tot Netweight KGS Fail",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-totnetweightkgs-fail.xlsx",
+        "applicationId": "1816178160715"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Tot Netweight Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-totnetweight-unparse.xlsx",
+        "applicationId": "1816178160712"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Optional Data All Pass",
+      "inputs": {
+        "fileName": "incorrect-optionaldata-all-pass.xlsx",
+        "applicationId": "1816178160718"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "Incorrect Optional Header All Pass",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-all-pass.xlsx",
+        "applicationId": "1816178160532"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "Mandatory Headers Case In Sensitive Pass",
+      "inputs": {
+        "fileName": "mandatoryheaders-caseinsensitive-pass.xlsx",
+        "applicationId": "1816178160538"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Data Commodity Code Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-commoditycode-fail.xlsx",
+        "applicationId": "1816178160544"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in sheet \"Input Data Sheet\" row 48.\n",
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Data Desc Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-desc-fail.xlsx",
+        "applicationId": "1816178160721"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product description is missing in sheet \"Input Data Sheet\" row 48.\n",
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Data Multiple Rows With Multiple Locations Except One Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-multiplerowswithmultiplelocations-exceptone-fail.xlsx",
+        "applicationId": "1816178160553"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in sheet \"Input Data Sheet\" row 48, sheet \"Input Data Sheet\" row 50, sheet \"Input Data Sheet\" row 52 in addition to 1 other locations.\nProduct description is missing in sheet \"Input Data Sheet\" row 44 and sheet \"Input Data Sheet\" row 45.\nNo of packages is missing in sheet \"Input Data Sheet\" row 48, sheet \"Input Data Sheet\" row 50, sheet \"Input Data Sheet\" row 52 in addition to 1 other locations.\nTotal net weight is missing in sheet \"Input Data Sheet\" row 48, sheet \"Input Data Sheet\" row 50, sheet \"Input Data Sheet\" row 52 in addition to 1 other locations.\n",
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Data Noofpkgs Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-noofpkgs-fail.xlsx",
+        "applicationId": "1816178160559"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No of packages is missing in sheet \"Input Data Sheet\" row 48.\n",
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Data Remos No Pass",
+      "inputs": {
+        "fileName": "missing-mandatorydata-remosno-pass.xlsx",
+        "applicationId": "1816178160565"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Data Totnetweight Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-totnetweight-fail.xlsx",
+        "applicationId": "1816178160571"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Total net weight is missing in sheet \"Input Data Sheet\" row 48.\n",
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Data Treatment Type Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-treatmenttype-fail.xlsx",
+        "applicationId": "1816178160577"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in sheet \"Input Data Sheet\" row 7 and sheet \"Input Data Sheet\" row 8.\n",
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header All Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-all-unparse.xlsx",
+        "applicationId": "1816178160583"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Commodity Code Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-commoditycode-unparse.xlsx",
+        "applicationId": "1816178160589"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Description Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-description-unparse.xlsx",
+        "applicationId": "1816178160595"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Noof Pacakges Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-noofpacakges-unparse.xlsx",
+        "applicationId": "1816178160601"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Tot Net Weight Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-totnetweight-unparse.xlsx",
+        "applicationId": "1816178160607"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Tot Netweight KGS Fail",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-totnetweightkgs-fail.xlsx",
+        "applicationId": "1816178160610"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Treatment Type Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-treatmenttype-unparse.xlsx",
+        "applicationId": "1816178160616"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Optional Data All Pass",
+      "inputs": {
+        "fileName": "missing-optionaldata-all-pass.xlsx",
+        "applicationId": "1816178160622"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "Missing Optional Header All Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-all-pass.xlsx",
+        "applicationId": "1816178160724"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "No Data Except Single RMS Fail",
+      "inputs": {
+        "fileName": "nodata-exceptsinglerms-fail.xlsx",
+        "applicationId": "1816178160727"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No product line data found.",
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "Only Mandatory Data Is Filled Pass",
+      "inputs": {
+        "fileName": "onlymandatorydataisfilled-pass.xlsx",
+        "applicationId": "1816178160730"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "RMS Has Wrong Final 3 Digits Should Pass",
+      "inputs": {
+        "fileName": "rmshaswrongfinal3digitsshould-pass.xlsx",
+        "applicationId": "1816178160733"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO3"
+      }
+    },
+    {
+      "testName": "RMS Has Wrong Middle 6 Digits Should Be Unparse",
+      "inputs": {
+        "fileName": "rmshaswrongmiddle6digitsshouldbe-unparse.xlsx",
+        "applicationId": "1816178160634"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    }
+  ]
+}
