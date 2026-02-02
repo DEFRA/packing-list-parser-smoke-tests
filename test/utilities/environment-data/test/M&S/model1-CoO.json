@@ -1,0 +1,173 @@
+{
+  "name": "MANDS1 CoO",
+  "tests": [
+    {
+      "testName": "AC10 CoO X Pass",
+      "inputs": {
+        "fileName": "ac10-coo-x-pass.pdf",
+        "applicationId": "1816178160394"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MANDS1"
+      }
+    },
+    {
+      "testName": "AC1 NotNirms Pass",
+      "inputs": {
+        "fileName": "ac1-notnirms-pass.pdf",
+        "applicationId": "1816178161012"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MANDS1"
+      }
+    },
+    {
+      "testName": "AC2 NullNirms Fail",
+      "inputs": {
+        "fileName": "ac2-nullnirms-fail.pdf",
+        "applicationId": "1816178160403"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in page 1 row 1.\n",
+        "model": "MANDS1"
+      }
+    },
+    {
+      "testName": "AC3 InvalidNirms Fail",
+      "inputs": {
+        "fileName": "ac3-invalidnirms-fail.pdf",
+        "applicationId": "1816178160409"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in page 1 row 6.\n",
+        "model": "MANDS1"
+      }
+    },
+    {
+      "testName": "AC5 MultipleInvalids Fail",
+      "inputs": {
+        "fileName": "ac5-multipleinvalids-fail.pdf",
+        "applicationId": "1816178160418"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in page 1 row 3, page 1 row 4, page 1 row 5 in addition to 1 other locations.\n",
+        "model": "MANDS1"
+      }
+    },
+    {
+      "testName": "AC6 NullCoO Fail",
+      "inputs": {
+        "fileName": "ac6-nullcoo-fail.pdf",
+        "applicationId": "1816178183440"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in page 1 row 2, page 1 row 3, page 1 row 4 in addition to 1 other locations.\n",
+        "model": "MANDS1"
+      }
+    },
+    {
+      "testName": "AC7 InvalidCoO Fail",
+      "inputs": {
+        "fileName": "ac7-invalidcoo-fail.pdf",
+        "applicationId": "1816178160433"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in page 1 row 1, page 1 row 2 and page 1 row 3.\n",
+        "model": "MANDS1"
+      }
+    },
+    {
+      "testName": "AC8 MultipleNullCoO Fail",
+      "inputs": {
+        "fileName": "ac8-multiplenullcoo-fail.pdf",
+        "applicationId": "1816178160442"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 1 other locations.\n",
+        "model": "MANDS1"
+      }
+    },
+    {
+      "testName": "AC9 MultipleInvalidCoO Fail",
+      "inputs": {
+        "fileName": "ac9-multipleinvalidcoo-fail.pdf",
+        "applicationId": "1816178160451"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 2 other locations.\n",
+        "model": "MANDS1"
+      }
+    },
+    {
+      "testName": "ac11 HighRiskCoOTreatmentTypeSpecified Fail",
+      "inputs": {
+        "fileName": "ac11-highriskcootreatmenttypespecified-fail.pdf",
+        "applicationId": "1816178160457"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in page 1 row 1 and page 1 row 2.\n",
+        "model": "MANDS1"
+      }
+    },
+    {
+      "testName": "ac12 HighRiskCoOTreatmentTypeSpecifiedMultiple Fail",
+      "inputs": {
+        "fileName": "ac12-highriskcootreatmenttypespecifiedmultiple-fail.pdf",
+        "applicationId": "1816178160463"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 1 other locations.\n",
+        "model": "MANDS1"
+      }
+    },
+    {
+      "testName": "ac13 HighRiskCoOTreatmentTypeNotSpecified Fail",
+      "inputs": {
+        "fileName": "ac13-highriskcootreatmenttypenotspecified-fail.pdf",
+        "applicationId": "1816178160472"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in page 1 row 1.\n",
+        "model": "MANDS1"
+      }
+    },
+    {
+      "testName": "ac14 HighRiskCoOTreatmentTypeNotSpecifiedMultiple Fail",
+      "inputs": {
+        "fileName": "ac14-highriskcootreatmenttypenotspecifiedmultiple-fail.pdf",
+        "applicationId": "1816178160475"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 1 other locations.\n",
+        "model": "MANDS1"
+      }
+    },
+    {
+      "testName": "ac4 NullNirmsMultiple Fail",
+      "inputs": {
+        "fileName": "ac4-nullnirmsmultiple-fail.pdf",
+        "applicationId": "1816178161036"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 1 other locations.\n",
+        "model": "MANDS1"
+      }
+    }
+  ]
+}
