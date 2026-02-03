@@ -33,7 +33,7 @@
           "applicationId": "1721152336773"
         },
         "expectedResults": {
-          "approvalStatus": "approved",
+          "approvalStatus": "rejected_other",
           "reasonsForFailure": null,
           "model": "NOMATCH"
         }
