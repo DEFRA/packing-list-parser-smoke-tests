@@ -80,7 +80,7 @@
         "applicationId": "1816178160172"
       },
       "expectedResults": {
-        "approvalStatus": "rejected_coo",
+        "approvalStatus": "rejected_other",
         "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Input Data Sheet\" row 20.\n",
         "model": "TESCO3"
       }
@@ -92,7 +92,7 @@
         "applicationId": "1816178160175"
       },
       "expectedResults": {
-        "approvalStatus": "rejected_coo",
+        "approvalStatus": "rejected_other",
         "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Input Data Sheet\" row 20.\n",
         "model": "TESCO3"
       }
@@ -104,7 +104,7 @@
         "applicationId": "1816178160178"
       },
       "expectedResults": {
-        "approvalStatus": "rejected_coo",
+        "approvalStatus": "rejected_other",
         "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Input Data Sheet\" row 20, sheet \"Input Data Sheet\" row 21, sheet \"Input Data Sheet\" row 22 in addition to 2 other locations.\n",
         "model": "TESCO3"
       }
@@ -116,7 +116,7 @@
         "applicationId": "1816178160184"
       },
       "expectedResults": {
-        "approvalStatus": "rejected_coo",
+        "approvalStatus": "rejected_other",
         "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Input Data Sheet\" row 20, sheet \"Input Data Sheet\" row 21, sheet \"Input Data Sheet\" row 22 in addition to 2 other locations.\n",
         "model": "TESCO3"
       }
