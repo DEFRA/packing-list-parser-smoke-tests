@@ -1,0 +1,185 @@
+{
+  "name": "ASDA3 CoO",
+  "tests": [
+    {
+      "testName": "Happypath Pass",
+      "inputs": {
+        "fileName": "happypath-pass.xlsx",
+        "applicationId": "1816178161495"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ASDA3"
+      }
+    },
+    {
+      "testName": "ac10 xCoO Pass",
+      "inputs": {
+        "fileName": "ac10-xcoo-pass.xlsx",
+        "applicationId": "1816178161486"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ASDA3"
+      }
+    },
+    {
+      "testName": "ac11 HighRiskCoOTreatmentTypeSpecified Fail",
+      "inputs": {
+        "fileName": "ac11-highriskcootreatmenttypespecified-fail.xlsx",
+        "applicationId": "1816178161480"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Page1_1\" row 3 and sheet \"Page1_1\" row 4.\n",
+        "model": "ASDA3"
+      }
+    },
+    {
+      "testName": "ac12 HighRiskCoOTreatmentTypeSpecifiedMultiple Fail",
+      "inputs": {
+        "fileName": "ac12-highriskcootreatmenttypespecifiedmultiple-fail.xlsx",
+        "applicationId": "1816178161471"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Page1_1\" row 3 and sheet \"Page1_1\" row 4.\n",
+        "model": "ASDA3"
+      }
+    },
+    {
+      "testName": "ac13 HighRiskCoOTreatmentTypeNotSpecified Fail",
+      "inputs": {
+        "fileName": "ac13-highriskcootreatmenttypenotspecified-fail.xlsx",
+        "applicationId": "1816178161228"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Page1_1\" row 3 and sheet \"Page1_1\" row 4.\n",
+        "model": "ASDA3"
+      }
+    },
+    {
+      "testName": "ac14 HighRiskCoOTreatmentTypeNotSpecified COO InvalidMultiple Fail",
+      "inputs": {
+        "fileName": "ac14-highriskcootreatmenttypenotspecified-coo-invalidmultiple-fail.xlsx",
+        "applicationId": "1816178161483"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Page1_1\" row 3, sheet \"Page1_1\" row 4 and sheet \"Page1_1\" row 6.\n",
+        "model": "ASDA3"
+      }
+    },
+    {
+      "testName": "ac1 NotNirms Pass",
+      "inputs": {
+        "fileName": "ac1-notnirms-pass.xlsx",
+        "applicationId": "1816178161426"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ASDA3"
+      }
+    },
+    {
+      "testName": "ac2 NullNirms Fail",
+      "inputs": {
+        "fileName": "ac2-nullnirms-fail.xlsx",
+        "applicationId": "1816178160853"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Page1_1\" row 3 and sheet \"Page1_1\" row 4.\n",
+        "model": "ASDA3"
+      }
+    },
+    {
+      "testName": "ac3 InvalidNirms Fail",
+      "inputs": {
+        "fileName": "ac3-invalidnirms-fail.xlsx",
+        "applicationId": "1816178161432"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Page1_1\" row 3.\n",
+        "model": "ASDA3"
+      }
+    },
+    {
+      "testName": "ac4 NullNirmsMultiple Fail",
+      "inputs": {
+        "fileName": "ac4-nullnirmsmultiple-fail.xlsx",
+        "applicationId": "1816178161051"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Page1_1\" row 3, sheet \"Page1_1\" row 4, sheet \"Page1_1\" row 5 in addition to 1 other locations.\n",
+        "model": "ASDA3"
+      }
+    },
+    {
+      "testName": "ac5 InvalidNirmsMultiple Fail",
+      "inputs": {
+        "fileName": "ac5-invalidnirmsmultiple-fail.xlsx",
+        "applicationId": "1816178161159"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Page1_1\" row 3, sheet \"Page1_1\" row 4, sheet \"Page1_1\" row 5 in addition to 1 other locations.\n",
+        "model": "ASDA3"
+      }
+    },
+    {
+      "testName": "ac6 NullCoO Fail",
+      "inputs": {
+        "fileName": "ac6-nullcoo-fail.xlsx",
+        "applicationId": "1816178161168"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Page1_1\" row 3 and sheet \"Page1_1\" row 4.\n",
+        "model": "ASDA3"
+      }
+    },
+    {
+      "testName": "ac7 InvalidCoO Fail",
+      "inputs": {
+        "fileName": "ac7-invalidcoo-fail.xlsx",
+        "applicationId": "1816178161489"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Page1_1\" row 3 and sheet \"Page1_1\" row 4.\n",
+        "model": "ASDA3"
+      }
+    },
+    {
+      "testName": "ac8 NullCoOMultiple Fail",
+      "inputs": {
+        "fileName": "ac8-nullcoomultiple-fail.xlsx",
+        "applicationId": "1816178161447"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Page1_1\" row 3, sheet \"Page1_1\" row 4, sheet \"Page1_1\" row 5 in addition to 1 other locations.\n",
+        "model": "ASDA3"
+      }
+    },
+    {
+      "testName": "ac9 InvalidCoOMultiple Fail",
+      "inputs": {
+        "fileName": "ac9-invalidcoomultiple-fail.xlsx",
+        "applicationId": "1816178161453"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Page1_1\" row 3, sheet \"Page1_1\" row 4, sheet \"Page1_1\" row 5 in addition to 1 other locations.\n",
+        "model": "ASDA3"
+      }
+    }
+  ]
+}
