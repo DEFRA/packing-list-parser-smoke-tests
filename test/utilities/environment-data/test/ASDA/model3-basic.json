@@ -1,0 +1,389 @@
+{
+  "name": "ASDA4 Basic",
+  "tests": [
+    {
+      "testName": "AllMandatoryDataIsMissing Fail",
+      "inputs": {
+        "fileName": "allmandatorydataismissing-fail.csv",
+        "applicationId": "1816178159356"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in rows 3, 4, 5 in addition to 13 other locations.\nProduct description is missing in rows 3, 4, 5 in addition to 13 other locations.\nNo of packages is missing in rows 3, 4, 5 in addition to 13 other locations.\nTotal net weight is missing in rows 3, 4, 5 in addition to 13 other locations.\n",
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "DescriptionHasDoubleQuotesShould Pass",
+      "inputs": {
+        "fileName": "descriptionhasdoublequotesshould-pass.csv",
+        "applicationId": "1816178159968"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "Empty MultipleRowsColumns Pass",
+      "inputs": {
+        "fileName": "empty-multiplerowscolumns-pass.csv",
+        "applicationId": "1816178160037"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "Happypath Pass",
+      "inputs": {
+        "fileName": "happypath-pass.csv",
+        "applicationId": "1816178159920"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatatypes Excl netandNopkgs ProductCode Pass",
+      "inputs": {
+        "fileName": "incorrect-mandatatypes-excl-netandnopkgs-productcode-pass.csv",
+        "applicationId": "1816178159986"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryData MultipleRowsWithMultipleLocations All Fail",
+      "inputs": {
+        "fileName": "incorrect-mandatorydata-multiplerowswithmultiplelocations-all-fail.csv",
+        "applicationId": "1816178160070"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product code is invalid in rows 3, 4 and 5.\nNo of packages is invalid in rows 3, 4, 5 in addition to 1 other locations.\nTotal net weight is invalid in rows 3, 4 and 5.\n",
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader All Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-all-unparse.csv",
+        "applicationId": "1816178160790"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader CommodityCode Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-commoditycode-unparse.csv",
+        "applicationId": "1816178159995"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader Desc Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-desc-unparse.csv",
+        "applicationId": "1816178160007"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader NoofPakgs Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-noofpakgs-unparse.csv",
+        "applicationId": "1816178160787"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader TotNetweight Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-totnetweight-unparse.csv",
+        "applicationId": "1816178160028"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader TreatmentType Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-treatmenttype-unparse.csv",
+        "applicationId": "1816178160025"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect OptionalData All Pass",
+      "inputs": {
+        "fileName": "incorrect-optionaldata-all-pass.csv",
+        "applicationId": "1816178159950"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "Incorrect OptionalHeader All Pass",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-all-pass.csv",
+        "applicationId": "1816178159959"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "InvalidCommodityCode MultipleRows Fail",
+      "inputs": {
+        "fileName": "invalidcommoditycode-multiplerows-fail.csv",
+        "applicationId": "1816178160082"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product code is invalid in rows 4, 5 and 6.\n",
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "Invalid NoofPackages MultipleRows Fail",
+      "inputs": {
+        "fileName": "invalid-noofpackages-multiplerows-fail.csv",
+        "applicationId": "1816178160784"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No of packages is invalid in rows 3, 4 and 5.\n",
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "MandatoryHeaders CaseInSensitive Pass",
+      "inputs": {
+        "fileName": "mandatoryheaders-caseinsensitive-pass.csv",
+        "applicationId": "1816178159980"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData CommodityCode Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-commoditycode-fail.csv",
+        "applicationId": "1816178160781"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in rows 3, 4 and 5.\n",
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData CommodityCode Nature Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-commoditycode-nature-fail.csv",
+        "applicationId": "1816178160778"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in rows 3, 4 and 5.\n",
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData Desc Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-desc-fail.csv",
+        "applicationId": "1816178160775"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product description is missing in rows 3, 4 and 5.\n",
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData MultipleRowsWithMultipleLocations All Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-multiplerowswithmultiplelocations-all-fail.csv",
+        "applicationId": "1816178160076"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in rows 3, 4 and 5.\nProduct description is missing in rows 3, 4 and 5.\nNo of packages is missing in rows 3, 4 and 5.\nTotal net weight is missing in rows 3, 4 and 5.\n",
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData Noofpkgs Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-noofpkgs-fail.csv",
+        "applicationId": "1816178160772"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No of packages is missing in rows 3, 4 and 5.\n",
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData Totnetweight Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-totnetweight-fail.csv",
+        "applicationId": "1816178160769"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Total net weight is missing in rows 3, 4 and 5.\n",
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader All Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-all-unparse.csv",
+        "applicationId": "1816178160040"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader CommodityCode Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-commoditycode-unparse.csv",
+        "applicationId": "1816178160043"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader Description unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-description-unparse.csv",
+        "applicationId": "1816178160766"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader NoofPacakges Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-noofpacakges-unparse.csv",
+        "applicationId": "1816178160763"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader TotNetWeight Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-totnetweight-unparse.csv",
+        "applicationId": "1816178160058"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing OptionalData All Pass",
+      "inputs": {
+        "fileName": "missing-optionaldata-all-pass.csv",
+        "applicationId": "1816178159929"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "Missing OptionalHeader All Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-all-pass.csv",
+        "applicationId": "1816178159923"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "NoData ExceptSingleRMS Fail",
+      "inputs": {
+        "fileName": "nodata-exceptsinglerms-fail.csv",
+        "applicationId": "1816178160079"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No product line data found.",
+        "model": "ASDA4"
+      }
+    },
+    {
+      "testName": "OnlyMandatoryDataIsFilled Pass",
+      "inputs": {
+        "fileName": "onlymandatorydataisfilled-pass.csv",
+        "applicationId": "1816178159965"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ASDA4"
+      }
+    }
+  ]
+}
