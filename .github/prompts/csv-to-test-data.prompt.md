@@ -30,6 +30,7 @@ Apply these transformations:
 
 2. **File names** (inputs.fileName):
    - Convert to lowercase
+   - Remove spaces (e.g., "Test File.xlsx" → "testfile.xlsx")
    - Replace underscores with hyphens (e.g., "Test_Case.xlsx" → "test-case.xlsx")
 
 3. **Row numbers**:
