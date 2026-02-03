@@ -1,1 +1,79 @@
-[]
+[
+  {
+    "name": "Smoke Tests",
+    "tests": [
+      {
+        "testName": "PDF Happy path",
+        "inputs": {
+          "fileName": "mshappypath1.pdf",
+          "applicationId": "1721152348149"
+        },
+        "expectedResults": {
+          "approvalStatus": "approved",
+          "reasonsForFailure": null,
+          "model": "MANDS1"
+        }
+      },
+      {
+        "testName": "Excel Happy path",
+        "inputs": {
+          "fileName": "sc1-asda3happypath-pass.xlsx",
+          "applicationId": "1721152336758"
+        },
+        "expectedResults": {
+          "approvalStatus": "approved",
+          "reasonsForFailure": null,
+          "model": "ASDA3"
+        }
+      },
+      {
+        "testName": "Excel Null",
+        "inputs": {
+          "fileName": "sc4-nc5096066516.xlsx",
+          "applicationId": "1721152336773"
+        },
+        "expectedResults": {
+          "approvalStatus": "approved",
+          "reasonsForFailure": null,
+          "model": "NOMATCH"
+        }
+      },
+      {
+        "testName": "Excel Fail",
+        "inputs": {
+          "fileName": "sc2-asdafail.xls",
+          "applicationId": "1721152336782"
+        },
+        "expectedResults": {
+          "approvalStatus": "rejected_other",
+          "reasonsForFailure": "Identifier is missing in sheet \"PackingList_Extract\" row 4.\nNIRMS/Non-NIRMS goods not specified in sheet \"PackingList_Extract\" row 3, sheet \"PackingList_Extract\" row 4, sheet \"PackingList_Extract\" row 5 in addition to 1 other locations.\n",
+          "model": "ASDA3"
+        }
+      },
+      {
+        "testName": "Missing Country",
+        "inputs": {
+          "fileName": "ac3-missingcountryoforigin-fail.xlsx",
+          "applicationId": "1721152336752"
+        },
+        "expectedResults": {
+          "approvalStatus": "rejected_coo",
+          "reasonsForFailure": "Missing Country of Origin in sheet \"Page1_1\" row 3.\n",
+          "model": "ASDA3"
+        }
+      },
+      {
+        "testName": "Ineligible Items",
+        "inputs": {
+          "fileName": "ac2-ineligibleitems.xlsx",
+          "applicationId": "1721152336743"
+        },
+        "expectedResults": {
+          "approvalStatus": "rejected_ineligible",
+          "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Page1_1\" row 3.\n",
+          "model": "ASDA3"
+        }
+      }
+    ]
+  }
+]

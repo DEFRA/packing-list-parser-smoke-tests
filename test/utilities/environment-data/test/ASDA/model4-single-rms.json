@@ -160,7 +160,7 @@
     {
       "testName": "Non Numeric Atthe End Of RMS",
       "inputs": {
-        "fileName": "non-numeric-attheendofrms-fail.csv",
+        "fileName": "nonnumericattheendofrms-fail.csv",
         "applicationId": "1816178159413"
       },
       "expectedResults": {
@@ -172,7 +172,7 @@
     {
       "testName": "Non Numeric Establishment Suffix",
       "inputs": {
-        "fileName": "non-numericestablishmentsuffix-fail.csv",
+        "fileName": "nonnumericestablishmentsuffix-fail.csv",
         "applicationId": "1816178159431"
       },
       "expectedResults": {
