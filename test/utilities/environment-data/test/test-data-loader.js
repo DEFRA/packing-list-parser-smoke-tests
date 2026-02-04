@@ -1,6 +1,7 @@
 import { readdirSync, readFileSync } from 'fs'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
+import { retailerPrefixes } from '../../profile-utils.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -13,17 +14,8 @@ export function loadTestData() {
   const testData = []
   const baseDir = __dirname
 
-  // Define the model folders to load
-  const modelFolders = [
-    'ASDA',
-    'Giovanni',
-    'Iceland',
-    'MANDS',
-    'NISA',
-    'Sainsburys',
-    'Tesco',
-    'TJMorris'
-  ]
+  // Use retailer folder names from the shared retailerPrefixes
+  const modelFolders = Object.values(retailerPrefixes)
 
   modelFolders.forEach((modelFolder) => {
     const folderPath = join(baseDir, modelFolder)

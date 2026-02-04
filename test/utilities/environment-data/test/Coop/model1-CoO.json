@@ -1,0 +1,185 @@
+{
+  "name": "COOP1 CoO",
+  "tests": [
+    {
+      "testName": "ac10 xCoO Pass",
+      "inputs": {
+        "fileName": "ac10-xcoo-pass.xlsx",
+        "applicationId": "1816178159110"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "COOP1"
+      }
+    },
+    {
+      "testName": "ac11 HighRiskCoOTreatmentTypeSpecified Fail",
+      "inputs": {
+        "fileName": "ac11-highriskcootreatmenttypespecified-fail.xlsx",
+        "applicationId": "1816178159113"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Input Packing Sheet\" row 13 and sheet \"Input Packing Sheet\" row 14.\n",
+        "model": "COOP1"
+      }
+    },
+    {
+      "testName": "ac12 HighRiskCoOTreatmentTypeSpecifiedMultiple Fail",
+      "inputs": {
+        "fileName": "ac12-highriskcootreatmenttypespecifiedmultiple-fail.xlsx",
+        "applicationId": "1816178159116"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Input Packing Sheet\" row 13, sheet \"Input Packing Sheet\" row 14, sheet \"Input Packing Sheet\" row 15 in addition to 1 other locations.\n",
+        "model": "COOP1"
+      }
+    },
+    {
+      "testName": "ac13 HighRiskCoOTreatmentTypeNotSpecified Fail",
+      "inputs": {
+        "fileName": "ac13-highriskcootreatmenttypenotspecified-fail.xlsx",
+        "applicationId": "1816178159119"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Input Packing Sheet\" row 13 and sheet \"Input Packing Sheet\" row 14.\n",
+        "model": "COOP1"
+      }
+    },
+    {
+      "testName": "ac14 HighRiskCoOTreatmentTypeNotSpecifiedMultiple Fail",
+      "inputs": {
+        "fileName": "ac14-highriskcootreatmenttypenotspecifiedmultiple-fail.xlsx",
+        "applicationId": "1816178159122"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Input Packing Sheet\" row 13, sheet \"Input Packing Sheet\" row 14, sheet \"Input Packing Sheet\" row 15 in addition to 1 other locations.\n",
+        "model": "COOP1"
+      }
+    },
+    {
+      "testName": "ac15 HighRiskCoOTreatmentTypeNotSpecified COO InvalidMultiple Fail",
+      "inputs": {
+        "fileName": "ac15-highriskcootreatmenttypenotspecified-coo-invalidmultiple-fail.xlsx",
+        "applicationId": "1816178183632"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Input Packing Sheet\" row 19.\nProhibited item identified on the packing list in sheet \"Input Packing Sheet\" row 13, sheet \"Input Packing Sheet\" row 14, sheet \"Input Packing Sheet\" row 15 in addition to 1 other locations.\n",
+        "model": "COOP1"
+      }
+    },
+    {
+      "testName": "ac1 NotNirms Pass",
+      "inputs": {
+        "fileName": "ac1-notnirms-pass.xlsx",
+        "applicationId": "1816178159083"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "COOP1"
+      }
+    },
+    {
+      "testName": "ac2 NullNirms Fail",
+      "inputs": {
+        "fileName": "ac2-nullnirms-fail.xlsx",
+        "applicationId": "1816178159086"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Input Packing Sheet\" row 13.\n",
+        "model": "COOP1"
+      }
+    },
+    {
+      "testName": "ac3 InvalidNirms Fail",
+      "inputs": {
+        "fileName": "ac3-invalidnirms-fail.xlsx",
+        "applicationId": "1816178159089"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Input Packing Sheet\" row 13.\n",
+        "model": "COOP1"
+      }
+    },
+    {
+      "testName": "ac4 NullNirmsMultiple Fail",
+      "inputs": {
+        "fileName": "ac4-nullnirmsmultiple-fail.xlsx",
+        "applicationId": "1816178159092"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Input Packing Sheet\" row 13, sheet \"Input Packing Sheet\" row 14, sheet \"Input Packing Sheet\" row 15 in addition to 1 other locations.\n",
+        "model": "COOP1"
+      }
+    },
+    {
+      "testName": "ac5 InvalidNirmsMultiple Fail",
+      "inputs": {
+        "fileName": "ac5-invalidnirmsmultiple-fail.xlsx",
+        "applicationId": "1816178159095"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Input Packing Sheet\" row 13, sheet \"Input Packing Sheet\" row 14, sheet \"Input Packing Sheet\" row 15 in addition to 1 other locations.\n",
+        "model": "COOP1"
+      }
+    },
+    {
+      "testName": "ac6 NullCoO Fail",
+      "inputs": {
+        "fileName": "ac6-nullcoo-fail.xlsx",
+        "applicationId": "1816178159098"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Input Packing Sheet\" row 13, sheet \"Input Packing Sheet\" row 14 and sheet \"Input Packing Sheet\" row 15.\n",
+        "model": "COOP1"
+      }
+    },
+    {
+      "testName": "ac7 InvalidCoO Fail",
+      "inputs": {
+        "fileName": "ac7-invalidcoo-fail.xlsx",
+        "applicationId": "1816178159101"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Input Packing Sheet\" row 13, sheet \"Input Packing Sheet\" row 14 and sheet \"Input Packing Sheet\" row 15.\n",
+        "model": "COOP1"
+      }
+    },
+    {
+      "testName": "ac8 NullCoOMultiple Fail",
+      "inputs": {
+        "fileName": "ac8-nullcoomultiple-fail.xlsx",
+        "applicationId": "1816178159104"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Input Packing Sheet\" row 13, sheet \"Input Packing Sheet\" row 14, sheet \"Input Packing Sheet\" row 15 in addition to 2 other locations.\n",
+        "model": "COOP1"
+      }
+    },
+    {
+      "testName": "ac9 InvalidCoOMultiple Fail",
+      "inputs": {
+        "fileName": "ac9-invalidcoomultiple-fail.xlsx",
+        "applicationId": "1816178159107"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Input Packing Sheet\" row 13, sheet \"Input Packing Sheet\" row 14, sheet \"Input Packing Sheet\" row 15 in addition to 2 other locations.\n",
+        "model": "COOP1"
+      }
+    }
+  ]
+}
