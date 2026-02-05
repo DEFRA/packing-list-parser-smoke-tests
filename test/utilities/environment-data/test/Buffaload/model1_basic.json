@@ -1,0 +1,365 @@
+{
+  "name": "BUFFALOAD1 Basic",
+  "tests": [
+    {
+      "testName": "AllMandatoryDataIsMissing Fail",
+      "inputs": {
+        "fileName": "allmandatorydataismissing-fail.xlsx",
+        "applicationId": "1816178183077"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in sheet \"Sheet1\" row 5, sheet \"Sheet1\" row 6, sheet \"Sheet1\" row 7 in addition to 40 other locations.\nProduct description is missing in sheet \"Sheet1\" row 5, sheet \"Sheet1\" row 6, sheet \"Sheet1\" row 7 in addition to 40 other locations.\nNo of packages is missing in sheet \"Sheet1\" row 5, sheet \"Sheet1\" row 6, sheet \"Sheet1\" row 7 in addition to 40 other locations.\nTotal net weight is missing in sheet \"Sheet1\" row 5, sheet \"Sheet1\" row 6, sheet \"Sheet1\" row 7 in addition to 40 other locations.\nNIRMS/Non-NIRMS goods not specified in sheet \"Sheet1\" row 5, sheet \"Sheet1\" row 6, sheet \"Sheet1\" row 7 in addition to 40 other locations.\n",
+        "model": "BUFFALOAD1"
+      }
+    },
+    {
+      "testName": "DescriptionHasDoubleQuotesShould Pass",
+      "inputs": {
+        "fileName": "descriptionhasdoublequotesshould-pass.xlsx",
+        "applicationId": "1816178183080"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BUFFALOAD1"
+      }
+    },
+    {
+      "testName": "Empty MultipleRowsColumns Pass",
+      "inputs": {
+        "fileName": "empty-multiplerowscolumns-pass.xlsx",
+        "applicationId": "1816178183083"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BUFFALOAD1"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatatypes Excl netandNopkgs ProductCode Pass2",
+      "inputs": {
+        "fileName": "incorrect-mandatatypes-excl-netandnopkgs-productcode-pass2.xlsx",
+        "applicationId": "1816178183086"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BUFFALOAD1"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryData MultipleRowsWithMultipleLocations All Fail",
+      "inputs": {
+        "fileName": "incorrect-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
+        "applicationId": "1816178183455"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No of packages is invalid in sheet \"Sheet1\" row 17, sheet \"Sheet1\" row 18 and sheet \"Sheet1\" row 19.\n",
+        "model": "BUFFALOAD1"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader CommodityCode Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-commoditycode-unparse.xlsx",
+        "applicationId": "1816178183092"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader Desc Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-desc-unparse.xlsx",
+        "applicationId": "1816178183095"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader Noofpkgs Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-noofpkgs-unparse.xlsx",
+        "applicationId": "1816178183098"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader TotNetweight Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-totnetweight-unparse.xlsx",
+        "applicationId": "1816178183101"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader TreatmentType Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-treatmenttype-unparse.xlsx",
+        "applicationId": "1816178183104"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect OptionalData All Pass",
+      "inputs": {
+        "fileName": "incorrect-optionaldata-all-pass.xlsx",
+        "applicationId": "1816178183107"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BUFFALOAD1"
+      }
+    },
+    {
+      "testName": "Incorrect OptionalHeader All Pass",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-all-pass.xlsx",
+        "applicationId": "1816178183110"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BUFFALOAD1"
+      }
+    },
+    {
+      "testName": "Incorrect OptionalHeader CountryOfOrigin Pass",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-countryoforigin-pass.xlsx",
+        "applicationId": "1816178183113"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BUFFALOAD1"
+      }
+    },
+    {
+      "testName": "Incorrect OptionalHeader Nature Pass",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-nature-pass.xlsx",
+        "applicationId": "1816178183116"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BUFFALOAD1"
+      }
+    },
+    {
+      "testName": "Incorrect OptionalHeader Nirms Fail",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-nirms-fail.xlsx",
+        "applicationId": "1816178183119"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Sheet1\" row 5, sheet \"Sheet1\" row 6, sheet \"Sheet1\" row 7 in addition to 61 other locations.\n",
+        "model": "BUFFALOAD1"
+      }
+    },
+    {
+      "testName": "MandatoryHeaders CaseInSensitive Pass",
+      "inputs": {
+        "fileName": "mandatoryheaders-caseinsensitive-pass.xlsx",
+        "applicationId": "1816178183122"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BUFFALOAD1"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData MultipleRowsWithMultipleLocations All Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
+        "applicationId": "1816178183125"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product description is missing in sheet \"Sheet1\" row 15, sheet \"Sheet1\" row 16 and sheet \"Sheet1\" row 17.\nNo of packages is missing in sheet \"Sheet1\" row 22, sheet \"Sheet1\" row 23 and sheet \"Sheet1\" row 24.\nTotal net weight is missing in sheet \"Sheet1\" row 31, sheet \"Sheet1\" row 32 and sheet \"Sheet1\" row 33.\nNIRMS/Non-NIRMS goods not specified in sheet \"Sheet1\" row 5.\n",
+        "model": "BUFFALOAD1"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader All Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-all-unparse.xlsx",
+        "applicationId": "1816178183128"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader CommodityCode Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-commoditycode-unparse.xlsx",
+        "applicationId": "1816178183131"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader Desc Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-desc-unparse.xlsx",
+        "applicationId": "1816178183134"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader Noofpkgs Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-noofpkgs-unparse.xlsx",
+        "applicationId": "1816178183137"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader TotNetweightKGS Fail",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-totnetweightkgs-fail.xlsx",
+        "applicationId": "1816178183140"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "BUFFALOAD1"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader TotNetweight Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-totnetweight-unparse.xlsx",
+        "applicationId": "1816178183143"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader TreatmentType Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-treatmenttype-unparse.xlsx",
+        "applicationId": "1816178183146"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing OptionalData All Pass",
+      "inputs": {
+        "fileName": "missing-optionaldata-all-pass.xlsx",
+        "applicationId": "1816178183149"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BUFFALOAD1"
+      }
+    },
+    {
+      "testName": "Missing OptionalHeader All Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-all-pass.xlsx",
+        "applicationId": "1816178184703"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BUFFALOAD1"
+      }
+    },
+    {
+      "testName": "Missing OptionalHeader CountryOfOrigin Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-countryoforigin-pass.xlsx",
+        "applicationId": "1816178183155"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BUFFALOAD1"
+      }
+    },
+    {
+      "testName": "Missing OptionalHeader Nature Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-nature-pass.xlsx",
+        "applicationId": "1816178183158"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BUFFALOAD1"
+      }
+    },
+    {
+      "testName": "Missing OptionalHeader Nirms Fail",
+      "inputs": {
+        "fileName": "missing-optionalheader-nirms-fail.xlsx",
+        "applicationId": "1816178183161"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Sheet1\" row 5, sheet \"Sheet1\" row 6, sheet \"Sheet1\" row 7 in addition to 40 other locations.\n",
+        "model": "BUFFALOAD1"
+      }
+    },
+    {
+      "testName": "OnlyMandatoryDataIsFilled Pass",
+      "inputs": {
+        "fileName": "onlymandatorydataisfilled-pass.xlsx",
+        "applicationId": "1816178183470"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BUFFALOAD1"
+      }
+    }
+  ]
+}
