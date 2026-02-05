@@ -11,7 +11,8 @@ export const retailerPrefixes = {
   sainsburys: 'Sainsburys',
   tesco: 'Tesco',
   tjmorris: 'TJMorris',
-  coop: 'Coop'
+  coop: 'Coop',
+  buffaload: 'Buffaload'
 }
 
 /**
