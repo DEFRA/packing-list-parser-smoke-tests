@@ -1,0 +1,185 @@
+{
+  "name": "BOOKER2 CoO",
+  "tests": [
+    {
+      "testName": "ac10 xCoO pass",
+      "inputs": {
+        "fileName": "ac10-xcoo-pass.xlsx",
+        "applicationId": "1816178185036"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BOOKER2"
+      }
+    },
+    {
+      "testName": "ac11 HighRiskCoOTreatmentTypeSpecified Fail",
+      "inputs": {
+        "fileName": "ac11-highriskcootreatmenttypespecified-fail.xlsx",
+        "applicationId": "1816178185045"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Sheet1\" row 19.\n",
+        "model": "BOOKER2"
+      }
+    },
+    {
+      "testName": "ac12 HighRiskCoOTreatmentTypeSpecified Fail",
+      "inputs": {
+        "fileName": "ac12-highriskcootreatmenttypespecified-fail.xlsx",
+        "applicationId": "1816178185051"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Sheet1\" row 19, sheet \"Sheet1\" row 20, sheet \"Sheet1\" row 21 in addition to 1 other locations.\n",
+        "model": "BOOKER2"
+      }
+    },
+    {
+      "testName": "ac13 HighRiskCoOTreatmentTypeNotSpecified Fail",
+      "inputs": {
+        "fileName": "ac13-highriskcootreatmenttypenotspecified-fail.xlsx",
+        "applicationId": "1816178185057"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Sheet1\" row 19 and sheet \"Sheet1\" row 20.\n",
+        "model": "BOOKER2"
+      }
+    },
+    {
+      "testName": "ac15 RemovedRiceFromProhibitedItem Pass",
+      "inputs": {
+        "fileName": "ac15-removedricefromprohibiteditem-pass.xlsx",
+        "applicationId": "1816178185069"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BOOKER2"
+      }
+    },
+    {
+      "testName": "ac16 Missing&IncorrectData Fail",
+      "inputs": {
+        "fileName": "ac16-missingincorrectdata-fail.xlsx",
+        "applicationId": "1816178185087"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\nProduct description is missing in sheet \"Sheet1\" row 31.\nNo of packages is missing in sheet \"Sheet1\" row 19.\nInvalid entry for NIRMS/Non-NIRMS goods in sheet \"Sheet1\" row 28.\nProhibited item identified on the packing list in sheet \"Sheet1\" row 24.\nNIRMS/Non-NIRMS goods not specified in sheet \"Sheet1\" row 29.\n",
+        "model": "BOOKER2"
+      }
+    },
+    {
+      "testName": "ac1 NotNirms Pass",
+      "inputs": {
+        "fileName": "ac1-notnirms-pass.xlsx",
+        "applicationId": "1816178184316"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BOOKER2"
+      }
+    },
+    {
+      "testName": "ac2 NullNirms Fail",
+      "inputs": {
+        "fileName": "ac2-nullnirms-fail.xlsx",
+        "applicationId": "1816178184322"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Sheet1\" row 21, sheet \"Sheet1\" row 24 and sheet \"Sheet1\" row 29.\n",
+        "model": "BOOKER2"
+      }
+    },
+    {
+      "testName": "ac3 InvalidNirms Fail",
+      "inputs": {
+        "fileName": "ac3-invalidnirms-fail.xlsx",
+        "applicationId": "1816178184331"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Sheet1\" row 21, sheet \"Sheet1\" row 26 and sheet \"Sheet1\" row 33.\n",
+        "model": "BOOKER2"
+      }
+    },
+    {
+      "testName": "ac4 NullNirmsMultiple Fail",
+      "inputs": {
+        "fileName": "ac4-nullnirmsmultiple-fail.xlsx",
+        "applicationId": "1816178184337"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Sheet1\" row 19, sheet \"Sheet1\" row 20, sheet \"Sheet1\" row 21 in addition to 1 other locations.\n",
+        "model": "BOOKER2"
+      }
+    },
+    {
+      "testName": "ac5 InvalidNirmsMultiple Fail",
+      "inputs": {
+        "fileName": "ac5-invalidnirmsmultiple-fail.xlsx",
+        "applicationId": "1816178184349"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Sheet1\" row 20, sheet \"Sheet1\" row 21, sheet \"Sheet1\" row 27 in addition to 1 other locations.\n",
+        "model": "BOOKER2"
+      }
+    },
+    {
+      "testName": "ac6 NullCoO Fail",
+      "inputs": {
+        "fileName": "ac6-nullcoo-fail.xlsx",
+        "applicationId": "1816178184355"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Sheet1\" row 278.\nMissing Country of Origin in sheet \"Sheet1\" row 19.\n",
+        "model": "BOOKER2"
+      }
+    },
+    {
+      "testName": "ac7 InvalidCoO Fail",
+      "inputs": {
+        "fileName": "ac7-invalidcoo-fail.xlsx",
+        "applicationId": "1816178184364"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Sheet1\" row 19, sheet \"Sheet1\" row 20, sheet \"Sheet1\" row 21 in addition to 1 other locations.\n",
+        "model": "BOOKER2"
+      }
+    },
+    {
+      "testName": "ac8 NullCoOMultiple Fail",
+      "inputs": {
+        "fileName": "ac8-nullcoomultiple-fail.xlsx",
+        "applicationId": "1816178184370"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Sheet1\" row 278.\nMissing Country of Origin in sheet \"Sheet1\" row 19, sheet \"Sheet1\" row 20, sheet \"Sheet1\" row 21 in addition to 1 other locations.\n",
+        "model": "BOOKER2"
+      }
+    },
+    {
+      "testName": "ac9 InvalidCoOMultiple Fail",
+      "inputs": {
+        "fileName": "ac9-invalidcoomultiple-fail.xlsx",
+        "applicationId": "1816178184385"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Sheet1\" row 19, sheet \"Sheet1\" row 20, sheet \"Sheet1\" row 21 in addition to 1 other locations.\n",
+        "model": "BOOKER2"
+      }
+    }
+  ]
+}
