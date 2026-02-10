@@ -1,81 +1,98 @@
-# Prompt Template: Convert CSV Test Data to JSON Test Data Files
+# Convert CSV Test Data to JSON Test Data Files
 
-Use this prompt when you need to convert CSV test data files into JSON test data format for the packing list parser smoke tests.
+## Task
 
-## Prompt Template
+Take two CSV files as input and directly create JSON test data files for the packing list parser smoke tests. Do not create intermediate scripts - process the data and create the JSON files directly.
 
-**Required Variables:**
+The reference CSV provides the correct Application IDs which are matched to test results by filename.
 
-- `[MODEL_NAME]`: The model identifier (e.g., "NISA1", "TESCO2", "ASDA3")
-- `[MODEL_FOLDER]`: Derived from MODEL_NAME - the folder name (e.g., "NISA", "Tesco", "ASDA")
-- `[MODEL_NOMATCH]`: The value to use when model doesn't match (typically "NOMATCH")
+## Input Files
 
-````
-The attached CSV files contain test data with the following columns:
-- ID or Application ID: The application identifier
-- FileName: The test file name
-- Expected: The expected test result (Pass/Fail/Unparse)
-- Actual: The actual test result (for validation)
-- Matching: Whether expected matches actual
-- Message: Error or validation message (optional)
+### File 1: Test Results CSV
 
-Create test data JSON files for the [MODEL_NAME] model using this CSV data.
+- Has a header row
+- Format: `ID,Folder,SubFolder,FileName,Expected,Actual,Matching,Message`
+- The `FileName` column is used for matching
+- The `Expected` and `Message` columns determine test expectations
 
-Apply these transformations:
+### File 2: Reference CSV (contains Application IDs)
 
-1. **Test names**:
-   - Remove file extension (.xlsx, .csv, .pdf)
-   - Add spaces between capital letters (e.g., "HappyPath" → "Happy Path")
-   - Replace underscores with spaces (e.g., "Test_Case" → "Test Case")
+- No header row
+- Format: `ModelName,FileName,ApplicationId`
+- The `FileName` column (column 2) is used for matching
+- The `ApplicationId` column (column 3) provides the correct ID values
+- Handle scientific notation (e.g., `1.81618E+12` → `1816180000000`)
 
-2. **File names** (inputs.fileName):
-   - Convert to lowercase
-   - Remove spaces (e.g., "Test File.xlsx" → "testfile.xlsx")
-   - Replace underscores with hyphens (e.g., "Test_Case.xlsx" → "test-case.xlsx")
+## Required Variables
 
-3. **Row numbers**:
-   - For files ending in .xlsx, .xls, or .csv: increment all row numbers by 1
-   - This accounts for the header row in spreadsheet formats
+Before processing, define these variables:
 
-4. **Approval status** (expectedResults.approvalStatus):
-   - "Pass" → "approved"
-   - "Fail" with Message containing country of origin keywords → "rejected_coo"
-     - Keywords: "Country of Origin", "CoO", "ISO Code"
-   - "Fail" with Message containing prohibited/ineligible item keywords → "rejected_ineligible"
-     - Keywords: "Prohibited item", "illegitimate items", "ineligible"
-   - "Fail" (all other cases) → "rejected_other"
-   - "Unparse" → "rejected_other"
+- `[MODEL_NAME]`: The model identifier (e.g., "SAVERS1", "TESCO2", "ASDA3")
+- `[MODEL_FOLDER]`: The folder name, derived from MODEL_NAME (e.g., "Savers", "Tesco", "ASDA")
+- `[MODEL_NOMATCH]`: Value when model doesn't match (typically "NOMATCH")
 
-5. **Model assignment** (expectedResults.model):
-   - Use "NOREMOS" for:
-     - Any test with Message = "Check GB Establishment RMS Number."
-   - Use "[MODEL_NOMATCH]" for:
-     - Any test with Expected = "Unparse"
-   - Use "[MODEL_NAME]" for all other tests
+## Transformations
 
-6. **Reasons for failure** (expectedResults.reasonsForFailure):
-   - Copy the Message column value (preserve exact text including quotes and formatting)
-   - Use `null` when Message is empty
-   - **Newline formatting**:
-     - **Multiple sentences** (containing multiple periods): Add `\n` between each sentence AND end with `\n`
-       - Example: `"Identifier is missing in rows 3, 4 and 5.\nProduct description is missing in rows 3, 4 and 5.\n"`
-     - **Single sentences** (one period only): End with `\n` EXCEPT for "Check GB Establishment RMS Number."
-       - Example: `"No product line data found.\n"`
-       - Exception: `"Check GB Establishment RMS Number."` (no `\n`)
-     - This formatting is critical for proper error message display
+### 1. Test Names
 
-7. **File organization**:
-   - Create directory: `test/utilities/environment-data/test/[MODEL_FOLDER]/`
-   - Group tests into logical JSON files by category (e.g., basic.json, validation.json, etc.)
-   - Use descriptive category names based on the test file groupings
+- Remove file extension (.xlsx, .csv, .pdf)
+- Add spaces between capital letters (e.g., "HappyPath" → "Happy Path")
+- Replace underscores with spaces (e.g., "Test_Case" → "Test Case")
 
-8. **Update profile utils**:
-   - Add the retailer prefix to `retailerPrefixes` in `test/utilities/profile-utils.js` if not already present
-   - Use lowercase key and proper case value (e.g., `tesco: 'Tesco'`)
-   - This enables running tests with `PROFILE=[retailer]` or `PROFILE=[retailer][model]` (e.g., `PROFILE=tesco2`)
-   - The test data loader automatically derives model folders from this config
+### 2. File Names (inputs.fileName)
 
-JSON structure for each file:
+- Convert to lowercase
+- Remove spaces
+- Replace underscores with hyphens (e.g., "Test_Case.xlsx" → "test-case.xlsx")
+- Remove special characters such as parentheses, brackets
+
+### 3. Row Numbers
+
+- For .xlsx, .xls, or .csv files: increment all row numbers in messages by 1
+- This accounts for the header row in spreadsheet formats
+
+### 4. Approval Status (expectedResults.approvalStatus)
+
+| Expected | Message Contains                                      | approvalStatus        |
+| -------- | ----------------------------------------------------- | --------------------- |
+| Pass     | -                                                     | `approved`            |
+| Fail     | "Country of Origin", "CoO", "ISO Code"                | `rejected_coo`        |
+| Fail     | "Prohibited item", "illegitimate items", "ineligible" | `rejected_ineligible` |
+| Fail     | (other)                                               | `rejected_other`      |
+| Unparse  | -                                                     | `rejected_other`      |
+
+### 5. Model Assignment (expectedResults.model)
+
+| Condition                                      | Model Value       |
+| ---------------------------------------------- | ----------------- |
+| Message = "Check GB Establishment RMS Number." | `NOREMOS`         |
+| Expected = "Unparse"                           | `[MODEL_NOMATCH]` |
+| All other cases                                | `[MODEL_NAME]`    |
+
+### 6. Reasons for Failure (expectedResults.reasonsForFailure)
+
+- Copy the Message column value exactly (preserve quotes and formatting)
+- Use `null` when Message is empty
+- **Newline formatting**:
+  - Multiple sentences: Add `\n` between each AND end with `\n`
+  - Single sentence: End with `\n` EXCEPT for "Check GB Establishment RMS Number."
+
+### 7. File Organization
+
+- Create directory: `test/utilities/environment-data/test/[MODEL_FOLDER]/`
+- Group tests by SubFolder from CSV (e.g., SAVERS1_Basic → basic category)
+- File naming format: `model[N]-[category].json` (lowercase)
+  - Example: `model1-basic.json`, `model1-coo.json`, `model1-netweight.json`
+  - The model number comes from the SubFolder prefix (e.g., "SAVERS1_Basic" → "model1", "TESCO2_CoO" → "model2")
+  - The category comes from the SubFolder suffix (e.g., "SAVERS1_Basic" → "basic")
+
+### 8. Update Profile Utils
+
+- Add retailer prefix to `retailerPrefixes` in `test/utilities/profile-utils.js`
+- Use lowercase key and proper case value (e.g., `savers: 'Savers'`)
+
+## Output JSON Structure
+
 ```json
 {
   "name": "[MODEL_NAME] [Category Display Name]",
@@ -84,73 +101,89 @@ JSON structure for each file:
       "testName": "[Descriptive Test Name]",
       "inputs": {
         "fileName": "[lowercase-with-hyphens.xlsx]",
-        "applicationId": "[ID from CSV]"
+        "applicationId": "[ApplicationId from Reference CSV]"
       },
       "expectedResults": {
         "approvalStatus": "[approved|rejected_coo|rejected_ineligible|rejected_other]",
-        "reasonsForFailure": "[Message from CSV or null]",
-        "model": "[MODEL_NAME|MODEL_NOMATCH]"
+        "reasonsForFailure": "[Message with newlines or null]",
+        "model": "[MODEL_NAME|MODEL_NOMATCH|NOREMOS]"
       }
     }
   ]
 }
-````
-
 ```
 
-## Example Usage
+## Unmatched Files Report
 
-For a new model, define your variables first:
-- MODEL_NAME: "TESCO2"
-- MODEL_FOLDER: "Tesco" (derived from TESCO2)
-- MODEL_NOMATCH: "NOMATCH"
+After processing, report any unmatched files:
 
-Then use the prompt:
+- List filenames from test results with no match in reference CSV
+- List filenames from reference CSV with no match in test results
+- Include counts for each category
 
+## Example
+
+**Input - Test Results CSV:**
+
+```csv
+ID,Folder,SubFolder,FileName,Expected,Actual,Matching,Message
+1,"packing-lists","SAVERS1_Basic","Happypath_Pass.xlsx","Pass","Pass","Pass",""
+2,"packing-lists","SAVERS1_Basic","Empty_RMS_Fail.xlsx","Fail","Fail","Pass","Check GB Establishment RMS Number."
 ```
 
-The attached CSV files contain test data for TESCO2 model...
+**Input - Reference CSV:**
 
-Required Variables:
-
-- MODEL_NAME: "TESCO2"
-- MODEL_FOLDER: "Tesco"
-- MODEL_NOMATCH: "NOMATCH"
-
-Apply these transformations:
-... 4. **Model assignment**:
-
-- Use "NOMATCH" for:
-  - Any test with Expected = "Unparse"
-  - Any test with Message = "Check GB Establishment RMS Number."
-- Use "TESCO2" for all other tests
-  ...
-
-6. **File organization**:
-   - Create directory: `test/utilities/environment-data/test/Tesco/`
-     ...
-7. **Update profile utils**:
-   - Add `tesco: 'Tesco'` to retailerPrefixes in profile-utils.js
-
+```csv
+SAVERS1_Basic,Happypath_Pass.xlsx,1816178189770
+SAVERS1_Basic,Empty_RMS_Fail.xlsx,1816178190421
 ```
 
-Then attach your CSV files and the AI will process them accordingly.
+**Output - test/utilities/environment-data/test/Savers/model1-basic.json:**
+
+```json
+{
+  "name": "SAVERS1 Basic",
+  "tests": [
+    {
+      "testName": "Happypath Pass",
+      "inputs": {
+        "fileName": "happypath-pass.xlsx",
+        "applicationId": "1816178189770"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAVERS1"
+      }
+    },
+    {
+      "testName": "Empty RMS Fail",
+      "inputs": {
+        "fileName": "empty-rms-fail.xlsx",
+        "applicationId": "1816178190421"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    }
+  ]
+}
+```
+
+## Usage
+
+1. Attach both CSV files to your prompt
+2. Specify the required variables:
+   - MODEL_NAME: "SAVERS1"
+   - MODEL_FOLDER: "Savers"
+   - MODEL_NOMATCH: "NOMATCH"
+3. Ask Copilot to process and create JSON test data files
 
 ## Tips
 
-- Group related CSV files that test similar features into the same JSON file
-- Use clear category names (e.g., "basic", "validation", "net-weight", "country-of-origin")
-- Check the generated test names are readable and descriptive
-- Verify the model NOMATCH conditions match your specific parser's behavior
-- Review a sample of the generated JSON before committing
-
-## CSV Column Requirements
-
-Minimum required columns:
-- `ID` or `Application ID` (required)
-- `FileName` (required)
-- `Expected` (required)
-- `Message` (optional but recommended)
-
-Other columns are optional and used for validation purposes.
-```
+- Review SubFolder groupings to ensure logical JSON file organization
+- Verify scientific notation IDs are properly expanded
+- Check test names are readable after transformation
+- Confirm newline formatting in reasonsForFailure messages
