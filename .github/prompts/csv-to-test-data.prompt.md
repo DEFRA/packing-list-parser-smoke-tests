@@ -32,6 +32,7 @@ Apply these transformations:
    - Convert to lowercase
    - Remove spaces (e.g., "Test File.xlsx" → "testfile.xlsx")
    - Replace underscores with hyphens (e.g., "Test_Case.xlsx" → "test-case.xlsx")
+   - **DO NOT** add hyphens between camelCase words (e.g., "HappyPath.xlsx" → "happypath.xlsx", NOT "happy-path.xlsx")
 
 3. **Row numbers**:
    - For files ending in .xlsx, .xls, or .csv: increment all row numbers by 1

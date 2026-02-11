@@ -1,0 +1,257 @@
+{
+  "name": "MARS1 Basic",
+  "tests": [
+    {
+      "testName": "AllMandatoryDataIsMissing Fail",
+      "inputs": {
+        "fileName": "allmandatorydataismissing-fail.xlsx",
+        "applicationId": "1816178184475"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in sheet \"Packing List\" row 11, sheet \"Packing List\" row 12, sheet \"Packing List\" row 13 in addition to 13 other locations.\nProduct description is missing in sheet \"Packing List\" row 11, sheet \"Packing List\" row 12, sheet \"Packing List\" row 13 in addition to 13 other locations.\nNo of packages is missing in sheet \"Packing List\" row 11, sheet \"Packing List\" row 12, sheet \"Packing List\" row 13 in addition to 13 other locations.\nTotal net weight is missing in sheet \"Packing List\" row 11, sheet \"Packing List\" row 12, sheet \"Packing List\" row 13 in addition to 13 other locations.\n",
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "Description HasDoubleQuotesShould Pass",
+      "inputs": {
+        "fileName": "description-hasdoublequotesshould-pass.xlsx",
+        "applicationId": "1816178184535"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "Empty MultipleRowsColumns Pass",
+      "inputs": {
+        "fileName": "empty-multiplerowscolumns-pass.xlsx",
+        "applicationId": "1816178184481"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "Happypath Pass",
+      "inputs": {
+        "fileName": "happypath-pass.xlsx",
+        "applicationId": "1816178184538"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryData All Fail",
+      "inputs": {
+        "fileName": "incorrect-mandatorydata-all-fail.xlsx",
+        "applicationId": "1816178184487"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product code is invalid in sheet \"Packing List\" row 13.\n",
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryData MultipleRowsWithMultipleLocations All Fail",
+      "inputs": {
+        "fileName": "incorrect-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
+        "applicationId": "1816178184490"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product code is invalid in sheet \"Packing List\" row 11, sheet \"Packing List\" row 12 and sheet \"Packing List\" row 13.\nNo of packages is invalid in sheet \"Packing List\" row 11, sheet \"Packing List\" row 12 and sheet \"Packing List\" row 13.\nTotal net weight is invalid in sheet \"Packing List\" row 11, sheet \"Packing List\" row 12, sheet \"Packing List\" row 13 in addition to 1 other locations.\n",
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader All Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-all-unparse.xlsx",
+        "applicationId": "1816178184553"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect OptionalData All Pass",
+      "inputs": {
+        "fileName": "incorrect-optionaldata-all-pass.xlsx",
+        "applicationId": "1816178184493"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "Incorrect OptionalHeader All Pass",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-all-pass.xlsx",
+        "applicationId": "1816178184496"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "MandatoryHeaders CaseInSensitive Pass",
+      "inputs": {
+        "fileName": "mandatoryheaders-caseinsensitive-pass.xlsx",
+        "applicationId": "1816178184499"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "MandatoryHeaders Mixedcasesensitive Pass",
+      "inputs": {
+        "fileName": "mandatoryheaders-mixedcasesensitive-pass.xlsx",
+        "applicationId": "1816178184502"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData All Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-all-fail.xlsx",
+        "applicationId": "1816178184505"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in sheet \"Packing List\" row 11, sheet \"Packing List\" row 12, sheet \"Packing List\" row 13 in addition to 4 other locations.\nProduct description is missing in sheet \"Packing List\" row 11, sheet \"Packing List\" row 12, sheet \"Packing List\" row 13 in addition to 4 other locations.\nNo of packages is missing in sheet \"Packing List\" row 11, sheet \"Packing List\" row 12, sheet \"Packing List\" row 13 in addition to 3 other locations.\nTotal net weight is missing in sheet \"Packing List\" row 11, sheet \"Packing List\" row 12, sheet \"Packing List\" row 13 in addition to 4 other locations.\n",
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData MultipleRowsWithMultipleLocations All Fail ",
+      "inputs": {
+        "fileName": "missing-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
+        "applicationId": "1816178184559"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in sheet \"Packing List\" row 14, sheet \"Packing List\" row 18 and sheet \"Packing List\" row 21.\nProduct description is missing in sheet \"Packing List\" row 13 and sheet \"Packing List\" row 15.\nNo of packages is missing in sheet \"Packing List\" row 16, sheet \"Packing List\" row 18 and sheet \"Packing List\" row 20.\nTotal net weight is missing in sheet \"Packing List\" row 14, sheet \"Packing List\" row 17 and sheet \"Packing List\" row 21.\n",
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData MultipleRowsWithMultipleLocations All Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
+        "applicationId": "1816178184511"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in sheet \"Packing List\" row 14, sheet \"Packing List\" row 15, sheet \"Packing List\" row 16 in addition to 2 other locations.\nProduct description is missing in sheet \"Packing List\" row 11, sheet \"Packing List\" row 12, sheet \"Packing List\" row 13 in addition to 1 other locations.\nNo of packages is missing in sheet \"Packing List\" row 15, sheet \"Packing List\" row 20, sheet \"Packing List\" row 23 in addition to 1 other locations.\nTotal net weight is missing in sheet \"Packing List\" row 13, sheet \"Packing List\" row 15, sheet \"Packing List\" row 16 in addition to 1 other locations.\n",
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader All Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-all-unparse.xlsx",
+        "applicationId": "1816178184547"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader Description unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-description-unparse.xlsx",
+        "applicationId": "1816178184550"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader NoofPkgs unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-noofpkgs-unparse.xlsx",
+        "applicationId": "1816178184520"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing OptionalData All Pass",
+      "inputs": {
+        "fileName": "missing-optionaldata-all-pass.xlsx",
+        "applicationId": "1816178184523"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "Missing optionalHeader All Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-all-pass.xlsx",
+        "applicationId": "1816178184526"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "NoData ExceptSingleRMS Fail",
+      "inputs": {
+        "fileName": "nodata-exceptsinglerms-fail.xlsx",
+        "applicationId": "1816178184529"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No product line data found.",
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "OnlyMandatoryDataIsFilled Pass",
+      "inputs": {
+        "fileName": "onlymandatorydataisfilled-pass.xlsx",
+        "applicationId": "1816178184532"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MARS1"
+      }
+    }
+  ]
+}
