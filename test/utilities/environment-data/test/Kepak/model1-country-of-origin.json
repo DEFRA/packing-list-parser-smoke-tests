@@ -1,0 +1,137 @@
+{
+  "name": "KEPAK1 Country of Origin",
+  "tests": [
+    {
+      "testName": "AC 11 Missing Multiple Items Fail",
+      "inputs": {
+        "fileName": "ac-11-missing-multipleitems-fail.xlsx",
+        "applicationId": "1816178210077"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Identifier is missing in sheet \"KEPAK\" row 25.\nProduct code is invalid in sheet \"KEPAK\" row 23.\nProduct description is missing in sheet \"KEPAK\" row 23.\nNo of packages is missing in sheet \"KEPAK\" row 26.\nTotal net weight is invalid in sheet \"KEPAK\" row 23.\nInvalid Country of Origin ISO Code in sheet \"KEPAK\" row 26.\nProhibited item identified on the packing list in sheet \"KEPAK\" row 27.\n",
+        "model": "KEPAK1"
+      }
+    },
+    {
+      "testName": "ac10 Prohibited Item Null Treatment Multiple Fail",
+      "inputs": {
+        "fileName": "ac10-prohibiteditemnulltreatmentmultiple-fail.xlsx",
+        "applicationId": "1816178189752"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"KEPAK\" row 23, sheet \"KEPAK\" row 24, sheet \"KEPAK\" row 26 in addition to 1 other locations.\n",
+        "model": "KEPAK1"
+      }
+    },
+    {
+      "testName": "ac1 Null Nirms Fail",
+      "inputs": {
+        "fileName": "ac1-nullnirms-fail.xlsx",
+        "applicationId": "1816178189725"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified.\n",
+        "model": "KEPAK1"
+      }
+    },
+    {
+      "testName": "ac2 Null CoO Fail",
+      "inputs": {
+        "fileName": "ac2-nullcoo-fail.xlsx",
+        "applicationId": "1816178189755"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"KEPAK\" row 23.\n",
+        "model": "KEPAK1"
+      }
+    },
+    {
+      "testName": "ac3 Invalid CoO Fail",
+      "inputs": {
+        "fileName": "ac3-invalidcoo-fail.xlsx",
+        "applicationId": "1816178189731"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"KEPAK\" row 23 and sheet \"KEPAK\" row 24.\n",
+        "model": "KEPAK1"
+      }
+    },
+    {
+      "testName": "ac4 Null CoO Multiple Fail",
+      "inputs": {
+        "fileName": "ac4-nullcoomultiple-fail.xlsx",
+        "applicationId": "1816178189734"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"KEPAK\" row 23, sheet \"KEPAK\" row 24, sheet \"KEPAK\" row 25 in addition to 1 other locations.\n",
+        "model": "KEPAK1"
+      }
+    },
+    {
+      "testName": "ac5 Invalid CoO Multiple Fail",
+      "inputs": {
+        "fileName": "ac5-invalidcoomultiple-fail.xlsx",
+        "applicationId": "1816178189737"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"KEPAK\" row 23, sheet \"KEPAK\" row 24, sheet \"KEPAK\" row 25 in addition to 1 other locations.\n",
+        "model": "KEPAK1"
+      }
+    },
+    {
+      "testName": "ac6 XCoO Pass",
+      "inputs": {
+        "fileName": "ac6-xcoo-pass.xlsx",
+        "applicationId": "1816178189740"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "KEPAK1"
+      }
+    },
+    {
+      "testName": "ac7 Prohibited Item Fail",
+      "inputs": {
+        "fileName": "ac7-prohibiteditem-fail.xlsx",
+        "applicationId": "1816178189743"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"KEPAK\" row 23 and sheet \"KEPAK\" row 24.\n",
+        "model": "KEPAK1"
+      }
+    },
+    {
+      "testName": "ac8 Prohibited Item Multiple Fail",
+      "inputs": {
+        "fileName": "ac8-prohibiteditemmultiple-fail.xlsx",
+        "applicationId": "1816178189746"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"KEPAK\" row 23, sheet \"KEPAK\" row 24 and sheet \"KEPAK\" row 28.\n",
+        "model": "KEPAK1"
+      }
+    },
+    {
+      "testName": "ac9 Prohibited Item Null Treatment Fail",
+      "inputs": {
+        "fileName": "ac9-prohibiteditemnulltreatment-fail.xlsx",
+        "applicationId": "1816178209573"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"KEPAK\" row 23.\n",
+        "model": "KEPAK1"
+      }
+    }
+  ]
+}
