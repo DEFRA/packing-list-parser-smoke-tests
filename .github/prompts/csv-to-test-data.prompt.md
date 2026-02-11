@@ -45,6 +45,7 @@ Before processing, define these variables:
 - Remove spaces
 - Replace underscores with hyphens (e.g., "Test_Case.xlsx" → "test-case.xlsx")
 - Remove special characters such as parentheses, brackets
+- **DO NOT** add hyphens between camelCase words (e.g., "HappyPath.xlsx" → "happypath.xlsx", NOT "happy-path.xlsx")
 
 ### 3. Row Numbers
 
