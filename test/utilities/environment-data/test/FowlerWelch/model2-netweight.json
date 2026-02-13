@@ -22,7 +22,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -34,7 +34,7 @@
       "expectedResults": {
         "approvalStatus": "approved",
         "reasonsForFailure": null,
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -46,7 +46,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Total net weight is missing in sheet \"DR SCHAR - R\" row 46, sheet \"DR SCHAR - R\" row 47, sheet \"GRUPO BIMBO - G\" row 46 in addition to 1 other locations.\n",
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -70,7 +70,7 @@
       "expectedResults": {
         "approvalStatus": "approved",
         "reasonsForFailure": null,
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -94,7 +94,7 @@
       "expectedResults": {
         "approvalStatus": "approved",
         "reasonsForFailure": null,
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -106,7 +106,7 @@
       "expectedResults": {
         "approvalStatus": "approved",
         "reasonsForFailure": null,
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -118,7 +118,7 @@
       "expectedResults": {
         "approvalStatus": "approved",
         "reasonsForFailure": null,
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -130,7 +130,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Total net weight is invalid in sheet \"FLETCHERS - R\" row 46, sheet \"FLETCHERS - R\" row 47, sheet \"FLETCHERS - R\" row 48 in addition to 7 other locations.\n",
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -142,7 +142,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -154,7 +154,7 @@
       "expectedResults": {
         "approvalStatus": "approved",
         "reasonsForFailure": null,
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -178,7 +178,7 @@
       "expectedResults": {
         "approvalStatus": "approved",
         "reasonsForFailure": null,
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -190,7 +190,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -202,7 +202,7 @@
       "expectedResults": {
         "approvalStatus": "approved",
         "reasonsForFailure": null,
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -214,7 +214,7 @@
       "expectedResults": {
         "approvalStatus": "approved",
         "reasonsForFailure": null,
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -226,7 +226,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -250,7 +250,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -274,7 +274,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -286,7 +286,7 @@
       "expectedResults": {
         "approvalStatus": "approved",
         "reasonsForFailure": null,
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -298,7 +298,7 @@
       "expectedResults": {
         "approvalStatus": "approved",
         "reasonsForFailure": null,
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     }
   ]
