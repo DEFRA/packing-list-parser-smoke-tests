@@ -10,7 +10,7 @@
       "expectedResults": {
         "approvalStatus": "approved",
         "reasonsForFailure": null,
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -22,7 +22,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
         "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"DR SCHAR - R\" row 46, sheet \"FLETCHERS - R\" row 53, sheet \"GRUPO BIMBO - G\" row 46 in addition to 2 other locations.\n",
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -34,7 +34,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
         "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"DR SCHAR - R\" row 46, sheet \"GRUPO BIMBO - G\" row 46, sheet \"GRUPO BIMBO - G\" row 47 in addition to 2 other locations.\n",
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -46,7 +46,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
         "reasonsForFailure": "Identifier is missing in sheet \"GRUPO BIMBO - G\" row 47, sheet \"GRUPO BIMBO - G\" row 48 and sheet \"GRUPO BIMBO - G\" row 49.\nProhibited item identified on the packing list in sheet \"FLETCHERS - R\" row 46 and sheet \"GRUPO BIMBO - G\" row 46.\n",
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -58,7 +58,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
         "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"DR SCHAR - R\" row 46, sheet \"FLETCHERS - R\" row 46, sheet \"GRUPO BIMBO - G\" row 46 in addition to 3 other locations.\n",
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -70,7 +70,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_coo",
         "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\nIdentifier is missing in sheet \"FLETCHERS - R\" row 46.\nProduct description is missing in sheet \"FLETCHERS - R\" row 49.\nNo of packages is missing in sheet \"FLETCHERS - R\" row 47.\nTotal net weight is missing in sheet \"FLETCHERS - R\" row 52.\nMissing Country of Origin in sheet \"GRUPO BIMBO - G\" row 47.\nNIRMS/Non-NIRMS goods not specified in sheet \"GRUPO BIMBO - G\" row 46.\n",
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -82,7 +82,7 @@
       "expectedResults": {
         "approvalStatus": "approved",
         "reasonsForFailure": null,
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -94,7 +94,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"FLETCHERS - R\" row 46 and sheet \"GRUPO BIMBO - G\" row 46.\n",
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -106,7 +106,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"DR SCHAR - R\" row 47 and sheet \"GRUPO BIMBO - G\" row 46.\n",
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -118,7 +118,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"DR SCHAR - R\" row 46, sheet \"FLETCHERS - R\" row 46, sheet \"FLETCHERS - R\" row 47 in addition to 3 other locations.\n",
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -130,7 +130,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"DR SCHAR - R\" row 46, sheet \"FLETCHERS - R\" row 46, sheet \"FLETCHERS - R\" row 47 in addition to 2 other locations.\n",
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -142,7 +142,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_coo",
         "reasonsForFailure": "Missing Country of Origin in sheet \"DR SCHAR - R\" row 46, sheet \"FLETCHERS - R\" row 46, sheet \"FLETCHERS - R\" row 47 in addition to 1 other locations.\n",
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -154,7 +154,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_coo",
         "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"DR SCHAR - R\" row 46, sheet \"FLETCHERS - R\" row 46, sheet \"FLETCHERS - R\" row 47 in addition to 2 other locations.\n",
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -166,7 +166,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_coo",
         "reasonsForFailure": "Missing Country of Origin in sheet \"DR SCHAR - R\" row 46, sheet \"DR SCHAR - R\" row 47, sheet \"FLETCHERS - R\" row 46 in addition to 4 other locations.\n",
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     },
     {
@@ -178,7 +178,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_coo",
         "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"DR SCHAR - R\" row 46, sheet \"DR SCHAR - R\" row 47, sheet \"DR SCHAR - R\" row 48 in addition to 3 other locations.\n",
-        "model": "fowlerwelch-2"
+        "model": "FOWLERWELCH2"
       }
     }
   ]
