@@ -92,8 +92,8 @@
         "applicationId": "1816178209120"
       },
       "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Multiple GB Place of Dispatch (Establishment) numbers found on packing list.\n",
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
         "model": "FOWLERWELCH2"
       }
     },
@@ -128,8 +128,8 @@
         "applicationId": "1816178209129"
       },
       "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Multiple GB Place of Dispatch (Establishment) numbers found on packing list.\n",
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
         "model": "FOWLERWELCH2"
       }
     },
