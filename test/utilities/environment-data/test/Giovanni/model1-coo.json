@@ -1,0 +1,149 @@
+{
+  "name": "GIOVANNI1 CoO",
+  "tests": [
+    {
+      "testName": "Happypath Pass",
+      "inputs": {
+        "fileName": "happypath-pass.xlsx",
+        "applicationId": "1816178210767"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "GIOVANNI1"
+      }
+    },
+    {
+      "testName": "ac10 Prohibited Item Null Treatment Multiple Fail",
+      "inputs": {
+        "fileName": "ac10-prohibiteditemnulltreatmentmultiple-fail.xlsx",
+        "applicationId": "1816178184358"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"RANA\" row 23, sheet \"RANA\" row 24, sheet \"RANA\" row 25 in addition to 2 other locations.\n",
+        "model": "GIOVANNI1"
+      }
+    },
+    {
+      "testName": "ac11 Missing Incorrect All Fail",
+      "inputs": {
+        "fileName": "ac11-missing-incorrect-all-fail.xlsx",
+        "applicationId": "1816178184361"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Product description is missing in sheet \"RANA\" row 23.\nTotal net weight is invalid in sheet \"RANA\" row 23.\nInvalid Country of Origin ISO Code in sheet \"RANA\" row 23.\nProhibited item identified on the packing list in sheet \"RANA\" row 25.\n",
+        "model": "GIOVANNI1"
+      }
+    },
+    {
+      "testName": "ac1 Null Nirms Fail",
+      "inputs": {
+        "fileName": "ac1-nullnirms-fail.xlsx",
+        "applicationId": "1816178184367"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified.\n",
+        "model": "GIOVANNI1"
+      }
+    },
+    {
+      "testName": "ac2 Null Co O Fail",
+      "inputs": {
+        "fileName": "ac2-nullcoo-fail.xlsx",
+        "applicationId": "1816178184376"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"RANA\" row 23.\n",
+        "model": "GIOVANNI1"
+      }
+    },
+    {
+      "testName": "ac3 Invalid Co O Fail",
+      "inputs": {
+        "fileName": "ac3-invalidcoo-fail.xlsx",
+        "applicationId": "1816178184379"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"RANA\" row 23 and sheet \"RANA\" row 24.\n",
+        "model": "GIOVANNI1"
+      }
+    },
+    {
+      "testName": "ac4 Null Co OMultiple Fail",
+      "inputs": {
+        "fileName": "ac4-nullcoomultiple-fail.xlsx",
+        "applicationId": "1816178184382"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"RANA\" row 23, sheet \"RANA\" row 24, sheet \"RANA\" row 25 in addition to 1 other locations.\n",
+        "model": "GIOVANNI1"
+      }
+    },
+    {
+      "testName": "ac5 Invalid Co OMultiple Fail",
+      "inputs": {
+        "fileName": "ac5-invalidcoomultiple-fail.xlsx",
+        "applicationId": "1816178184388"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"RANA\" row 23, sheet \"RANA\" row 24, sheet \"RANA\" row 25 in addition to 1 other locations.\n",
+        "model": "GIOVANNI1"
+      }
+    },
+    {
+      "testName": "ac6 XCo O Pass",
+      "inputs": {
+        "fileName": "ac6-xcoo-pass.xlsx",
+        "applicationId": "1816178184391"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "GIOVANNI1"
+      }
+    },
+    {
+      "testName": "ac7 Prohibited Item Fail",
+      "inputs": {
+        "fileName": "ac7-prohibiteditem-fail.xlsx",
+        "applicationId": "1816178184394"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"RANA\" row 23 and sheet \"RANA\" row 24.\n",
+        "model": "GIOVANNI1"
+      }
+    },
+    {
+      "testName": "ac8 Prohibited Item Multiple Fail",
+      "inputs": {
+        "fileName": "ac8-prohibiteditemmultiple-fail.xlsx",
+        "applicationId": "1816178184397"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"RANA\" row 23, sheet \"RANA\" row 24 and sheet \"RANA\" row 25.\n",
+        "model": "GIOVANNI1"
+      }
+    },
+    {
+      "testName": "ac9 Prohibited Item Null Treatment Fail",
+      "inputs": {
+        "fileName": "ac9-prohibiteditemnulltreatment-fail.xlsx",
+        "applicationId": "1816178184400"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"RANA\" row 23.\n",
+        "model": "GIOVANNI1"
+      }
+    }
+  ]
+}
