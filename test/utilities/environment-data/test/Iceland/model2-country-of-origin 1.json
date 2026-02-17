@@ -1,0 +1,173 @@
+{
+  "name": "ICELAND2 Country of Origin",
+  "tests": [
+    {
+      "testName": "Ac10 X Coo Pass",
+      "inputs": {
+        "fileName": "ac10-xcoo-pass.csv",
+        "applicationId": "1816178214943"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "Ac11 High Risk CoO Treatment Type Specified Fail",
+      "inputs": {
+        "fileName": "ac11-highriskcootreatmenttypespecified-fail.csv",
+        "applicationId": "1816178214946"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in rows 3 and 4.\n",
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "Ac12 High Risk CoO Treatment Type Specified Multiple Fail",
+      "inputs": {
+        "fileName": "ac12-highriskcootreatmenttypespecifiedmultiple-fail.csv",
+        "applicationId": "1816178214964"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in rows 3, 4, 5 in addition to 1 other locations.\n",
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "Ac13 High Risk CoO Treatment Type Not Specified Fail",
+      "inputs": {
+        "fileName": "ac13-highriskcootreatmenttypenotspecified-fail.csv",
+        "applicationId": "1816178214952"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in rows 3 and 4.\n",
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "Ac14 High Risk CoO Treatment Type Not Specified COO Invalid Multiple Fail",
+      "inputs": {
+        "fileName": "ac14-highriskcootreatmenttypenotspecified-coo-invalidmultiple-fail.csv",
+        "applicationId": "1816178214955"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in rows 3, 4, 5 in addition to 1 other locations.\n",
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "Ac1 Not Nirms Pass",
+      "inputs": {
+        "fileName": "ac1-notnirms-pass.csv",
+        "applicationId": "1816178214916"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "Ac2 Null Nirms Fail",
+      "inputs": {
+        "fileName": "ac2-nullnirms-fail.csv",
+        "applicationId": "1816178214919"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in row 3.\n",
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "Ac3 Invalid Nirms Fail",
+      "inputs": {
+        "fileName": "ac3-invalidnirms-fail.csv",
+        "applicationId": "1816178214922"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in row 3.\n",
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "Ac4 Null Nirms Value More Than3 Fail",
+      "inputs": {
+        "fileName": "ac4-nullnirmsvaluemorethan3-fail.csv",
+        "applicationId": "1816178214925"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in rows 3, 4, 5 in addition to 1 other locations.\n",
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "Ac5 Invalid Nirms Value More Than3 Fail",
+      "inputs": {
+        "fileName": "ac5-invalidnirmsvaluemorethan3-fail.csv",
+        "applicationId": "1816178214928"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in rows 3, 4, 5 in addition to 1 other locations.\n",
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "Ac6 Null Coo Fail",
+      "inputs": {
+        "fileName": "ac6-nullcoo-fail.csv",
+        "applicationId": "1816178214931"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in rows 3, 4, 5 in addition to 1 other locations.\n",
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "Ac7 Invalid Coo Fail",
+      "inputs": {
+        "fileName": "ac7-invalidcoo-fail.csv",
+        "applicationId": "1816178214934"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in rows 3, 4 and 5.\n",
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "Ac8 Null Co O Multiple Fail",
+      "inputs": {
+        "fileName": "ac8-nullcoomultiple-fail.csv",
+        "applicationId": "1816178214937"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in rows 3, 4, 5 in addition to 1 other locations.\n",
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "Ac9 Invalid Co O Multiple Fail",
+      "inputs": {
+        "fileName": "ac9-invalidcoomultiple-fail.csv",
+        "applicationId": "1816178214940"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in rows 3, 4, 5 in addition to 1 other locations.\n",
+        "model": "ICELAND2"
+      }
+    }
+  ]
+}
