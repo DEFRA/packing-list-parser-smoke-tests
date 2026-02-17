@@ -1,0 +1,137 @@
+{
+  "name": "BANDM1 CoO",
+  "tests": [
+    {
+      "testName": "ac10 Prohibited Item Null Treatment Multiple Fail",
+      "inputs": {
+        "fileName": "ac10-prohibiteditemnulltreatmentmultiple-fail.xlsx",
+        "applicationId": "1816178185723"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Packing List\" row 30, sheet \"Packing List\" row 31, sheet \"Packing List\" row 33 in addition to 29 other locations.\n",
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "ac11 Null Treatment Type Fail",
+      "inputs": {
+        "fileName": "ac11-nulltreatmenttype-fail.xlsx",
+        "applicationId": "1816178185732"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Identifier is missing in sheet \"Packing List\" row 20.\nMissing Country of Origin in sheet \"Packing List\" row 30, sheet \"Packing List\" row 31, sheet \"Packing List\" row 33 in addition to 29 other locations.\n",
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "ac1 Null Nirms Fail",
+      "inputs": {
+        "fileName": "ac1-nullnirms-fail.xlsx",
+        "applicationId": "1816178185735"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified.\n",
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "ac2 Null Co O Fail",
+      "inputs": {
+        "fileName": "ac2-nullcoo-fail.xlsx",
+        "applicationId": "1816178185738"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Packing List\" row 20, sheet \"Packing List\" row 30, sheet \"Packing List\" row 31 in addition to 30 other locations.\n",
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "ac3 Invalid Co O Fail",
+      "inputs": {
+        "fileName": "ac3-invalidcoo-fail.xlsx",
+        "applicationId": "1816178185741"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Packing List\" row 30, sheet \"Packing List\" row 31, sheet \"Packing List\" row 33 in addition to 29 other locations.\nInvalid Country of Origin ISO Code in sheet \"Packing List\" row 20.\n",
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "ac4 Null Co OMultiple Fail",
+      "inputs": {
+        "fileName": "ac4-nullcoomultiple-fail.xlsx",
+        "applicationId": "1816178209294"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Packing List\" row 20, sheet \"Packing List\" row 21, sheet \"Packing List\" row 22 in addition to 33 other locations.\n",
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "ac5 Invalid Co OMultiple Fail",
+      "inputs": {
+        "fileName": "ac5-invalidcoomultiple-fail.xlsx",
+        "applicationId": "1816178185750"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Packing List\" row 30, sheet \"Packing List\" row 31, sheet \"Packing List\" row 33 in addition to 29 other locations.\nInvalid Country of Origin ISO Code in sheet \"Packing List\" row 20, sheet \"Packing List\" row 21, sheet \"Packing List\" row 22 in addition to 2 other locations.\n",
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "ac6 XCo O Pass(1)",
+      "inputs": {
+        "fileName": "ac6-xcoo-pass1.xlsx",
+        "applicationId": "1816178185753"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "ac7 Prohibited Item Fail",
+      "inputs": {
+        "fileName": "ac7-prohibiteditem-fail.xlsx",
+        "applicationId": "1816178185756"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Packing List\" row 30, sheet \"Packing List\" row 31, sheet \"Packing List\" row 33 in addition to 29 other locations.\n",
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "ac8 Prohibited Item Multiple Fail",
+      "inputs": {
+        "fileName": "ac8-prohibiteditemmultiple-fail.xlsx",
+        "applicationId": "1816178185759"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Packing List\" row 30, sheet \"Packing List\" row 31, sheet \"Packing List\" row 33 in addition to 29 other locations.\n",
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "ac9 Prohibited Item Null Treatment Fail",
+      "inputs": {
+        "fileName": "ac9-prohibiteditemnulltreatment-fail.xlsx",
+        "applicationId": "1816178185762"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Packing List\" row 30, sheet \"Packing List\" row 31, sheet \"Packing List\" row 33 in addition to 29 other locations.\n",
+        "model": "BANDM1"
+      }
+    }
+  ]
+}
