@@ -1,0 +1,185 @@
+{
+  "name": "MARS1 CoO",
+  "tests": [
+    {
+      "testName": "Happpypath Pass",
+      "inputs": {
+        "fileName": "happpypath-pass.xlsx",
+        "applicationId": "1816178185354"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "ac10 xCoo pass",
+      "inputs": {
+        "fileName": "ac10-xcoo-pass.xlsx",
+        "applicationId": "1816178185333"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "ac11 HighRiskCooTreatmentTypeSpecified Fail",
+      "inputs": {
+        "fileName": "ac11-highriskcootreatmenttypespecified-fail.xlsx",
+        "applicationId": "1816178185336"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Packing List\" row 11.\n",
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "ac12 HighRiskCooTreatmentTypeSpecified Fail",
+      "inputs": {
+        "fileName": "ac12-highriskcootreatmenttypespecified-fail.xlsx",
+        "applicationId": "1816178185342"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Packing List\" row 11, sheet \"Packing List\" row 12 and sheet \"Packing List\" row 14.\n",
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "ac13 HighRiskCooTreatmentTypeNotSpecified Fail",
+      "inputs": {
+        "fileName": "ac13-highriskcootreatmenttypenotspecified-fail.xlsx",
+        "applicationId": "1816178185345"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Packing List\" row 11.\n",
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "ac14 HighRiskCooTreatmentTypeNotSpecified Fail",
+      "inputs": {
+        "fileName": "ac14-highriskcootreatmenttypenotspecified-fail.xlsx",
+        "applicationId": "1816178185348"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Packing List\" row 11 and sheet \"Packing List\" row 12.\n",
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "ac1 NotNirms pass",
+      "inputs": {
+        "fileName": "ac1-notnirms-pass.xlsx",
+        "applicationId": "1816178185303"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "ac2 NullNirms Fail",
+      "inputs": {
+        "fileName": "ac2-nullnirms-fail.xlsx",
+        "applicationId": "1816178185306"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Packing List\" row 13 and sheet \"Packing List\" row 17.\n",
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "ac3 InvalidNirms Fail",
+      "inputs": {
+        "fileName": "ac3-invalidnirms-fail.xlsx",
+        "applicationId": "1816178185309"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Packing List\" row 11, sheet \"Packing List\" row 12, sheet \"Packing List\" row 13 in addition to 54 other locations.\n",
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "ac4 NullNirmsMultiple Fail",
+      "inputs": {
+        "fileName": "ac4-nullnirmsmultiple-fail.xlsx",
+        "applicationId": "1816178185363"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Packing List\" row 15, sheet \"Packing List\" row 16, sheet \"Packing List\" row 17 in addition to 50 other locations.\nNIRMS/Non-NIRMS goods not specified in sheet \"Packing List\" row 11, sheet \"Packing List\" row 12, sheet \"Packing List\" row 13 in addition to 1 other locations.\n",
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "ac5 InvalidNirmsMultiple Fail",
+      "inputs": {
+        "fileName": "ac5-invalidnirmsmultiple-fail.xlsx",
+        "applicationId": "1816178185318"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Packing List\" row 11, sheet \"Packing List\" row 12, sheet \"Packing List\" row 13 in addition to 54 other locations.\n",
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "ac6 NullCoo Fail",
+      "inputs": {
+        "fileName": "ac6-nullcoo-fail.xlsx",
+        "applicationId": "1816178185366"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Packing List\" row 11.\n",
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "ac7 InvalidCoo Fail",
+      "inputs": {
+        "fileName": "ac7-invalidcoo-fail.xlsx",
+        "applicationId": "1816178185324"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Packing List\" row 11, sheet \"Packing List\" row 12 and sheet \"Packing List\" row 13.\n",
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "ac8 NullCoo Multiple Fail",
+      "inputs": {
+        "fileName": "ac8-nullcoo-multiple-fail.xlsx",
+        "applicationId": "1816178185327"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Packing List\" row 11, sheet \"Packing List\" row 12, sheet \"Packing List\" row 13 in addition to 1 other locations.\n",
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "ac9 Invalid CooMultiple Fail",
+      "inputs": {
+        "fileName": "ac9-invalid-coomultiple-fail.xlsx",
+        "applicationId": "1816178185330"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Packing List\" row 11, sheet \"Packing List\" row 12, sheet \"Packing List\" row 13 in addition to 1 other locations.\n",
+        "model": "MARS1"
+      }
+    }
+  ]
+}

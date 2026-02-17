@@ -1,0 +1,389 @@
+{
+  "name": "ICELAND2 Basic Functionality",
+  "tests": [
+    {
+      "testName": "All Mandatory Data Is Missing Fail",
+      "inputs": {
+        "fileName": "allmandatorydataismissing-fail.csv",
+        "applicationId": "1816178211154"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "Description Has Double Quotes Should Pass",
+      "inputs": {
+        "fileName": "descriptionhasdoublequotesshould-pass.csv",
+        "applicationId": "1816178211157"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "Empty Multiple Rows Columns Pass",
+      "inputs": {
+        "fileName": "empty-multiplerowscolumns-pass.csv",
+        "applicationId": "1816178211160"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatatypes Excl Netand Nopkgs Product Code Pass",
+      "inputs": {
+        "fileName": "incorrect-mandatatypes-excl-netandnopkgs-productcode-pass.csv",
+        "applicationId": "1816178211166"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Data Multiple Rows With Multiple Locations All Fail",
+      "inputs": {
+        "fileName": "incorrect-mandatorydata-multiplerowswithmultiplelocations-all-fail.csv",
+        "applicationId": "1816178211169"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product code is invalid in rows 5, 6, 7 in addition to 2 other locations.\nNo of packages is missing in row 4.\nNo of packages is invalid in rows 5, 7, 8 in addition to 2 other locations.\nTotal net weight is invalid in rows 5, 7, 8 in addition to 2 other locations.\n",
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Commodity Code Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-commoditycode-unparse.csv",
+        "applicationId": "1816178211172"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Desc Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-desc-unparse.csv",
+        "applicationId": "1816178211448"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Nature Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-nature-unparse.csv",
+        "applicationId": "1816178211178"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Noofpkgs Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-noofpkgs-unparse.csv",
+        "applicationId": "1816178211547"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Tot Netweight Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-totnetweight-unparse.csv",
+        "applicationId": "1816178211181"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Treatment Type Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-treatmenttype-unparse.csv",
+        "applicationId": "1816178211643"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Optional Data All Pass",
+      "inputs": {
+        "fileName": "incorrect-optionaldata-all-pass.csv",
+        "applicationId": "1816178211184"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "Incorrect Optional Header All Pass",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-all-pass.csv",
+        "applicationId": "1816178211187"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "Incorrect Optional Header Country Of Origin Pass",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-countryoforigin-pass.csv",
+        "applicationId": "1816178211190"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "Incorrect Optional Header Nirms Fail",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-nirms-fail.csv",
+        "applicationId": "1816178211193"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in rows 3, 4, 5 in addition to 8 other locations.\n",
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "Mandatory Headers Case In Sensitive Pass",
+      "inputs": {
+        "fileName": "mandatoryheaders-caseinsensitive-pass.csv",
+        "applicationId": "1816178211196"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Data Multiple Rows With Multiple Locations All Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-multiplerowswithmultiplelocations-all-fail.csv",
+        "applicationId": "1816178211199"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in rows 4, 5 and 6.\nProduct description is missing in rows 6, 7, 8 in addition to 1 other locations.\nNo of packages is missing in rows 3, 4, 5 in addition to 3 other locations.\nTotal net weight is missing in rows 5, 6, 7 in addition to 2 other locations.\nNIRMS/Non-NIRMS goods not specified in rows 4, 5, 8 in addition to 1 other locations.\n",
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header All Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-all-unparse.csv",
+        "applicationId": "1816178211202"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Commodity Code Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-commoditycode-unparse.csv",
+        "applicationId": "1816178211205"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Desc Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-desc-unparse.csv",
+        "applicationId": "1816178211208"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Nature Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-nature-unparse.csv",
+        "applicationId": "1816178211736"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Noofpkgs Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-noofpkgs-unparse.csv",
+        "applicationId": "1816178211211"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Tot Netweight KGS Fail",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-totnetweightkgs-fail.csv",
+        "applicationId": "1816178232928"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Tot Netweight Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-totnetweight-unparse.csv",
+        "applicationId": "1816178211214"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Treatment Type Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-treatmenttype-unparse.csv",
+        "applicationId": "1816178211220"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Optional Data All Pass",
+      "inputs": {
+        "fileName": "missing-optionaldata-all-pass.csv",
+        "applicationId": "1816178211223"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "Missing Optional Header All Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-all-pass.csv",
+        "applicationId": "1816178211226"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "Missing Optional Header Country Of Origin Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-countryoforigin-pass.csv",
+        "applicationId": "1816178211229"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "Missing Optional Header Nirms Fail",
+      "inputs": {
+        "fileName": "missing-optionalheader-nirms-fail.csv",
+        "applicationId": "1816178211910"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in rows 3, 4, 5 in addition to 8 other locations.\n",
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "No Data Except Single RMS Fail",
+      "inputs": {
+        "fileName": "nodata-exceptsinglerms-fail.csv",
+        "applicationId": "1816178211232"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No product line data found.",
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "Only Mandatory Data Is Filled Pass",
+      "inputs": {
+        "fileName": "onlymandatorydataisfilled-pass.csv",
+        "applicationId": "1816178211235"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "Happy Path Pass",
+      "inputs": {
+        "fileName": "happypath-pass.csv",
+        "applicationId": "1816178211163"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ICELAND2"
+      }
+    }
+  ]
+}

@@ -1,0 +1,389 @@
+{
+  "name": "TURNERS1 Basic",
+  "tests": [
+    {
+      "testName": "Description Has Double Quotes Should  Pass",
+      "inputs": {
+        "fileName": "descriptionhasdoublequotesshould-pass.xlsx",
+        "applicationId": "1816178209297"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "Empty  Multiple Rows Columns  Pass",
+      "inputs": {
+        "fileName": "empty-multiplerowscolumns-pass.xlsx",
+        "applicationId": "1816178209300"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "Incorrect  Mandatatypes  Excl netand Nopkgs  Product Code  Pass",
+      "inputs": {
+        "fileName": "incorrect-mandatatypes-excl-netandnopkgs-productcode-pass.xlsx",
+        "applicationId": "1816178209303"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "Incorrect  Mandatory Data  Multiple Rows With Multiple Locations  All  Fail",
+      "inputs": {
+        "fileName": "incorrect-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
+        "applicationId": "1816178209306"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product code is invalid in sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 18, sheet \"Sheet1\" row 28 in addition to 5 other locations.\n",
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "Incorrect  Mandatory Header  All  Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-all-unparse.xlsx",
+        "applicationId": "1816178209309"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect  Mandatory Header  Commodity Code  Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-commoditycode-unparse.xlsx",
+        "applicationId": "1816178209324"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect  Mandatory Header  Desc  Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-desc-unparse.xlsx",
+        "applicationId": "1816178209327"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect  Mandatory Header  Nature  Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-nature-unparse.xlsx",
+        "applicationId": "1816178209330"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect  Mandatory Header  Noofpkgs  Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-noofpkgs-unparse.xlsx",
+        "applicationId": "1816178209333"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect  Mandatory Header  Tot Netweight K G S  Fail",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-totnetweightkgs-fail.xlsx",
+        "applicationId": "1816178209336"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "Incorrect  Mandatory Header  Tot Netweight  Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-totnetweight-unparse.xlsx",
+        "applicationId": "1816178209339"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect  Mandatory Header  Treatment Type  Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-treatmenttype-unparse.xlsx",
+        "applicationId": "1816178211055"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect  Optional Data  All  Pass",
+      "inputs": {
+        "fileName": "incorrect-optionaldata-all-pass.xlsx",
+        "applicationId": "1816178209342"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "Incorrect  Optional Header  All  Pass",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-all-pass.xlsx",
+        "applicationId": "1816178209345"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "Incorrect  Optional Header  Country Of Origin  Pass",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-countryoforigin-pass.xlsx",
+        "applicationId": "1816178209360"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "Incorrect  Optional Header  Nirms  Fail",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-nirms-fail.xlsx",
+        "applicationId": "1816178211058"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8, sheet \"Sheet1\" row 9 in addition to 48 other locations.\n",
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "Mandatory Headers  Case In Sensitive  Pass",
+      "inputs": {
+        "fileName": "mandatoryheaders-caseinsensitive-pass.xlsx",
+        "applicationId": "1816178209366"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "Missing  Mandatory Data  Multiple Rows With Multiple Locations  All  Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
+        "applicationId": "1816178209369"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product description is missing in sheet \"Sheet1\" row 7.\nNo of packages is missing in sheet \"Sheet1\" row 7.\nTotal net weight is missing in sheet \"Sheet1\" row 7.\n",
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "Missing  Mandatory Header  All  Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-all-unparse.xlsx",
+        "applicationId": "1816178209372"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing  Mandatory Header  Commodity Code  Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-commoditycode-unparse.xlsx",
+        "applicationId": "1816178209375"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing  Mandatory Header  Desc  Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-desc-unparse.xlsx",
+        "applicationId": "1816178209378"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing  Mandatory Header  Nature  Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-nature-unparse.xlsx",
+        "applicationId": "1816178209381"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing  Mandatory Header  Noofpkgs  Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-noofpkgs-unparse.xlsx",
+        "applicationId": "1816178209396"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing  Mandatory Header  Tot Netweight  Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-totnetweight-unparse.xlsx",
+        "applicationId": "1816178209399"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing  Mandatory Header  Treatment Type  Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-treatmenttype-unparse.xlsx",
+        "applicationId": "1816178209402"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing  Optional Data  All  Pass",
+      "inputs": {
+        "fileName": "missing-optionaldata-all-pass.xlsx",
+        "applicationId": "1816178209405"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "Missing  Optional Header  All  Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-all-pass.xlsx",
+        "applicationId": "1816178209408"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "Missing  Optional Header  Country Of Origin  Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-countryoforigin-pass.xlsx",
+        "applicationId": "1816178209411"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "Missing  Optional Header  Nirms  Fail",
+      "inputs": {
+        "fileName": "missing-optionalheader-nirms-fail.xlsx",
+        "applicationId": "1816178209414"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8, sheet \"Sheet1\" row 9 in addition to 48 other locations.\n",
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "No Data  Except Single R M S  Fail",
+      "inputs": {
+        "fileName": "nodata-exceptsinglerms-fail.xlsx",
+        "applicationId": "1816178209417"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No product line data found.",
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "Only Mandatory Data Is Filled  Pass",
+      "inputs": {
+        "fileName": "onlymandatorydataisfilled-pass.xlsx",
+        "applicationId": "1816178209420"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "TURNERS HappyPathPass",
+      "inputs": {
+        "fileName": "turnershappypath-pass.xlsx",
+        "applicationId": "1816178209426"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TURNERS1"
+      }
+    }
+  ]
+}

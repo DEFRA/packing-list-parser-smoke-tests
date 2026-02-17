@@ -1,0 +1,305 @@
+{
+  "name": "FOWLERWELCH2 NetWeight",
+  "tests": [
+    {
+      "testName": "Alpha Numeric Total Net Weight Unparse",
+      "inputs": {
+        "fileName": "alpha-numeric-totalnetweight-unparse.xlsx",
+        "applicationId": "1816178209021"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Alpha Numeric UOM Weight Fail",
+      "inputs": {
+        "fileName": "alpha-numeric-uom-weight-fail.xlsx",
+        "applicationId": "1816178209024"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "FOWLERWELCH2"
+      }
+    },
+    {
+      "testName": "Ambiguous Units in Header Pass",
+      "inputs": {
+        "fileName": "ambiguous-units-in-header-pass.xlsx",
+        "applicationId": "1816178209027"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "FOWLERWELCH2"
+      }
+    },
+    {
+      "testName": "Data empty Netweight Fail",
+      "inputs": {
+        "fileName": "data-empty-netweight-fail.xlsx",
+        "applicationId": "1816178209030"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Total net weight is missing in sheet \"DR SCHAR - R\" row 46, sheet \"DR SCHAR - R\" row 47, sheet \"GRUPO BIMBO - G\" row 46 in addition to 1 other locations.\n",
+        "model": "FOWLERWELCH2"
+      }
+    },
+    {
+      "testName": "Extra Spaces In Header Unparse",
+      "inputs": {
+        "fileName": "extra-spaces-in-header-unparse.xlsx",
+        "applicationId": "1816178209033"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Happypath Pass",
+      "inputs": {
+        "fileName": "happypath-pass.xlsx",
+        "applicationId": "1816178209036"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "FOWLERWELCH2"
+      }
+    },
+    {
+      "testName": "Header Typos or Special Characters Unparse",
+      "inputs": {
+        "fileName": "header-typos-or-specialcharacters-unparse.xlsx",
+        "applicationId": "1816178209039"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Header With Extra Parentheses Pass",
+      "inputs": {
+        "fileName": "header-with-extra-parentheses-pass.xlsx",
+        "applicationId": "1816178209042"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "FOWLERWELCH2"
+      }
+    },
+    {
+      "testName": "Header With Multiple Units Pass",
+      "inputs": {
+        "fileName": "header-with-multiple-units-pass.xlsx",
+        "applicationId": "1816178209045"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "FOWLERWELCH2"
+      }
+    },
+    {
+      "testName": "Header With Unit And Symbols Pass",
+      "inputs": {
+        "fileName": "header-with-unit-and-symbols-pass.xlsx",
+        "applicationId": "1816178209048"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "FOWLERWELCH2"
+      }
+    },
+    {
+      "testName": "Incorrect Netweight Data All Fail",
+      "inputs": {
+        "fileName": "incorrect-netweightdata-all-fail.xlsx",
+        "applicationId": "1816178209051"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Total net weight is invalid in sheet \"FLETCHERS - R\" row 46, sheet \"FLETCHERS - R\" row 47, sheet \"FLETCHERS - R\" row 48 in addition to 7 other locations.\n",
+        "model": "FOWLERWELCH2"
+      }
+    },
+    {
+      "testName": "Invalid Unit Type Fail",
+      "inputs": {
+        "fileName": "invalid-unit-type-fail.xlsx",
+        "applicationId": "1816178209054"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "FOWLERWELCH2"
+      }
+    },
+    {
+      "testName": "Malformed Header Unit Pass",
+      "inputs": {
+        "fileName": "malformed-header-unit-pass.xlsx",
+        "applicationId": "1816178209057"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "FOWLERWELCH2"
+      }
+    },
+    {
+      "testName": "Missing Header Netweight Unparse",
+      "inputs": {
+        "fileName": "missing-header-netweight-unparse.xlsx",
+        "applicationId": "1816178209060"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Paranthesis in Uom Pass",
+      "inputs": {
+        "fileName": "missing-paranthesis-in-uom-pass.xlsx",
+        "applicationId": "1816178209063"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "FOWLERWELCH2"
+      }
+    },
+    {
+      "testName": "Missing UOM Weight Fail",
+      "inputs": {
+        "fileName": "missing-uom-weight-fail.xlsx",
+        "applicationId": "1816178209066"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "FOWLERWELCH2"
+      }
+    },
+    {
+      "testName": "Mixed Case Header Pass",
+      "inputs": {
+        "fileName": "mixedcase-header-pass.xlsx",
+        "applicationId": "1816178209069"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "FOWLERWELCH2"
+      }
+    },
+    {
+      "testName": "Mixed Units And Casing Pass",
+      "inputs": {
+        "fileName": "mixedunits-and-casing-pass.xlsx",
+        "applicationId": "1816178209072"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "FOWLERWELCH2"
+      }
+    },
+    {
+      "testName": "Netweight Has Empty Parentheses Fail",
+      "inputs": {
+        "fileName": "netweight-hasempty-parentheses-fail.xlsx",
+        "applicationId": "1816178209075"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "FOWLERWELCH2"
+      }
+    },
+    {
+      "testName": "Splcharacters Header Netweight Unparse",
+      "inputs": {
+        "fileName": "splcharacters-header-netweight-unparse.xlsx",
+        "applicationId": "1816178209078"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Total Net Weight Without UOMWeight Fail",
+      "inputs": {
+        "fileName": "totalnetweight-without-uomweight-fail.xlsx",
+        "applicationId": "1816178209084"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "FOWLERWELCH2"
+      }
+    },
+    {
+      "testName": "UOMWeight Without Total Net Weight Unparse",
+      "inputs": {
+        "fileName": "uomweight-without-totalnetweight-unparse.xlsx",
+        "applicationId": "1816178209087"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Unit Missing Weight Present Fail",
+      "inputs": {
+        "fileName": "unit-missing-weight-present-fail.xlsx",
+        "applicationId": "1816178209090"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "FOWLERWELCH2"
+      }
+    },
+    {
+      "testName": "Valid Unit KG Parentheses Pass",
+      "inputs": {
+        "fileName": "valid-unit-kg-parentheses-pass.xlsx",
+        "applicationId": "1816178209093"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "FOWLERWELCH2"
+      }
+    },
+    {
+      "testName": "Zero Data Total Net Weight Pass",
+      "inputs": {
+        "fileName": "zero-data-totalnetweight-pass.xlsx",
+        "applicationId": "1816178209096"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "FOWLERWELCH2"
+      }
+    }
+  ]
+}

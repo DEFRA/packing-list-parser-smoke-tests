@@ -1,0 +1,317 @@
+{
+  "name": "MARS1 NetWeight",
+  "tests": [
+    {
+      "testName": "Alpha Numeric TotalNetWeight Unparse",
+      "inputs": {
+        "fileName": "alpha-numeric-totalnetweight-unparse.xlsx",
+        "applicationId": "1816178184721"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Alpha Numeric UOM Weight Fail",
+      "inputs": {
+        "fileName": "alpha-numeric-uom-weight-fail.xlsx",
+        "applicationId": "1816178184724"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "Ambiguous Units in Header Pass",
+      "inputs": {
+        "fileName": "ambiguous-units-in-header-pass.xlsx",
+        "applicationId": "1816178184727"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "Data empty Netweight Fail",
+      "inputs": {
+        "fileName": "data-empty-netweight-fail.xlsx",
+        "applicationId": "1816178184733"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Total net weight is missing in sheet \"Packing List\" row 11, sheet \"Packing List\" row 12, sheet \"Packing List\" row 13 in addition to 8 other locations.\n",
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "Extra Spaces In Header Unparse",
+      "inputs": {
+        "fileName": "extra-spaces-in-header-unparse.xlsx",
+        "applicationId": "1816178209594"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Happypath Pass",
+      "inputs": {
+        "fileName": "happypath-pass.xlsx",
+        "applicationId": "1816178184742"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "Header Typos or SpecialCharacters Unparse",
+      "inputs": {
+        "fileName": "header-typos-or-specialcharacters-unparse.xlsx",
+        "applicationId": "1816178184748"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Header With Extra Parentheses Pass",
+      "inputs": {
+        "fileName": "header-with-extra-parentheses-pass.xlsx",
+        "applicationId": "1816178184757"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "Header With Multiple Units Pass",
+      "inputs": {
+        "fileName": "header-with-multiple-units-pass.xlsx",
+        "applicationId": "1816178184763"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "Header With Unit And Symbols Pass",
+      "inputs": {
+        "fileName": "header-with-unit-and-symbols-pass.xlsx",
+        "applicationId": "1816178184769"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "Incorrect NetweightData All Fail",
+      "inputs": {
+        "fileName": "incorrect-netweightdata-all-fail.xlsx",
+        "applicationId": "1816178184781"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Total net weight is invalid in sheet \"Packing List\" row 11, sheet \"Packing List\" row 12, sheet \"Packing List\" row 13 in addition to 4 other locations.\n",
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "Invalid Unit Type Fail",
+      "inputs": {
+        "fileName": "invalid-unit-type-fail.xlsx",
+        "applicationId": "1816178184793"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "Malformed Header Unit Pass",
+      "inputs": {
+        "fileName": "malformed-header-unit-pass.xlsx",
+        "applicationId": "1816178209597"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "Missing Header TotalNetWeight Unparse",
+      "inputs": {
+        "fileName": "missing-header-totalnetweight-unparse.xlsx",
+        "applicationId": "1816178184805"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Paranthesis in Uom Pass",
+      "inputs": {
+        "fileName": "missing-paranthesis-in-uom-pass.xlsx",
+        "applicationId": "1816178184811"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "Missing UOM Weight Fail",
+      "inputs": {
+        "fileName": "missing-uom-weight-fail.xlsx",
+        "applicationId": "1816178184820"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "MixedCase Header Pass",
+      "inputs": {
+        "fileName": "mixedcase-header-pass.xlsx",
+        "applicationId": "1816178184826"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "MixedUnits And Casing Pass",
+      "inputs": {
+        "fileName": "mixedunits-and-casing-pass.xlsx",
+        "applicationId": "1816178184832"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "Netweight HasEmpty Parentheses Fail",
+      "inputs": {
+        "fileName": "netweight-hasempty-parentheses-fail.xlsx",
+        "applicationId": "1816178209600"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "Splcharacters Header Netweight Unparse",
+      "inputs": {
+        "fileName": "splcharacters-header-netweight-unparse.xlsx",
+        "applicationId": "1816178184841"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "TotalNetWeight Without UOMWeight Fail",
+      "inputs": {
+        "fileName": "totalnetweight-without-uomweight-fail.xlsx",
+        "applicationId": "1816178184847"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "UOMWeight Without TotalNetWeight Unparse",
+      "inputs": {
+        "fileName": "uomweight-without-totalnetweight-unparse.xlsx",
+        "applicationId": "1816178209606"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Unit Missing Weight Present Fail",
+      "inputs": {
+        "fileName": "unit-missing-weight-present-fail.xlsx",
+        "applicationId": "1816178209603"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "Valid Unit Kilo Pass",
+      "inputs": {
+        "fileName": "valid-unit-kilo-pass.xlsx",
+        "applicationId": "1816178184865"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "Valid Unit Kilograms Pass",
+      "inputs": {
+        "fileName": "valid-unit-kilograms-pass.xlsx",
+        "applicationId": "1816178184871"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MARS1"
+      }
+    },
+    {
+      "testName": "Zero Data TotalNetWeight Pass",
+      "inputs": {
+        "fileName": "zero-data-totalnetweight-pass.xlsx",
+        "applicationId": "1816178184877"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MARS1"
+      }
+    }
+  ]
+}

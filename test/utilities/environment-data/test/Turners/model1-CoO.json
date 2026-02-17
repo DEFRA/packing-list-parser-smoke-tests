@@ -1,0 +1,185 @@
+{
+  "name": "TURNERS1 Coo",
+  "tests": [
+    {
+      "testName": "T U R N E R S  Happy  Path  Pass",
+      "inputs": {
+        "fileName": "turnershappypath-pass.xlsx",
+        "applicationId": "1816178210278"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "ac10 x Co O  Pass",
+      "inputs": {
+        "fileName": "ac10-xcoo-pass.xlsx",
+        "applicationId": "1816178210230"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "ac11  High Risk Co O Treatment Type Specified  Fail",
+      "inputs": {
+        "fileName": "ac11-highriskcootreatmenttypespecified-fail.xlsx",
+        "applicationId": "1816178210233"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 9, sheet \"Sheet1\" row 18 in addition to 1 other locations.\n",
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "ac12  High Risk Co O Treatment Type Specified Multiple  Fail",
+      "inputs": {
+        "fileName": "ac12-highriskcootreatmenttypespecifiedmultiple-fail.xlsx",
+        "applicationId": "1816178210236"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8 and sheet \"Sheet1\" row 9.\n",
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "ac13  High Risk Co O Treatment Type Not Specified  Fail",
+      "inputs": {
+        "fileName": "ac13-highriskcootreatmenttypenotspecified-fail.xlsx",
+        "applicationId": "1816178210239"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product code is invalid in sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 18 and sheet \"Sheet1\" row 19.\n",
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "ac14  High Risk Co O Treatment Type Not Specified Multiple  Fail",
+      "inputs": {
+        "fileName": "ac14-highriskcootreatmenttypenotspecifiedmultiple-fail.xlsx",
+        "applicationId": "1816178210242"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8, sheet \"Sheet1\" row 9 in addition to 5 other locations.\n",
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "ac1  Not Nirms  Pass",
+      "inputs": {
+        "fileName": "ac1-notnirms-pass.xlsx",
+        "applicationId": "1816178210245"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "ac2  Null Nirms  Fail",
+      "inputs": {
+        "fileName": "ac2-nullnirms-fail.xlsx",
+        "applicationId": "1816178210248"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Sheet1\" row 7 and sheet \"Sheet1\" row 18.\n",
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "ac3  Invalid Nirms  Fail",
+      "inputs": {
+        "fileName": "ac3-invalidnirms-fail.xlsx",
+        "applicationId": "1816178210251"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Sheet1\" row 7 and sheet \"Sheet1\" row 18.\n",
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "ac4  Null Nirms Multiple  Fail",
+      "inputs": {
+        "fileName": "ac4-nullnirmsmultiple-fail.xlsx",
+        "applicationId": "1816178210254"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Sheet1\" row 13, sheet \"Sheet1\" row 14, sheet \"Sheet1\" row 24 in addition to 1 other locations.\n",
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "ac5  Invalid Nirms Multiple  Fail",
+      "inputs": {
+        "fileName": "ac5-invalidnirmsmultiple-fail.xlsx",
+        "applicationId": "1816178210257"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8, sheet \"Sheet1\" row 9 in addition to 6 other locations.\n",
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "ac6  Null Co O  Fail",
+      "inputs": {
+        "fileName": "ac6-nullcoo-fail.xlsx",
+        "applicationId": "1816178210260"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Sheet1\" row 7 and sheet \"Sheet1\" row 18.\n",
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "ac7  Invalid Co O  Fail",
+      "inputs": {
+        "fileName": "ac7-invalidcoo-fail.xlsx",
+        "applicationId": "1816178210263"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8, sheet \"Sheet1\" row 18 in addition to 1 other locations.\n",
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "ac8  Null Co O Multiple  Fail",
+      "inputs": {
+        "fileName": "ac8-nullcoomultiple-fail.xlsx",
+        "applicationId": "1816178210266"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Sheet1\" row 10, sheet \"Sheet1\" row 13, sheet \"Sheet1\" row 20 in addition to 1 other locations.\n",
+        "model": "TURNERS1"
+      }
+    },
+    {
+      "testName": "ac9  Invalid Co O Multiple  Fail",
+      "inputs": {
+        "fileName": "ac9-invalidcoomultiple-fail.xlsx",
+        "applicationId": "1816178210272"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8, sheet \"Sheet1\" row 9 in addition to 6 other locations.\n",
+        "model": "TURNERS1"
+      }
+    }
+  ]
+}

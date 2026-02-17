@@ -1,0 +1,545 @@
+{
+  "name": "SAVERS1 Basic",
+  "tests": [
+    {
+      "testName": "AllMandatoryDataIsMissing Fail",
+      "inputs": {
+        "fileName": "allmandatorydataismissing-fail.xlsx",
+        "applicationId": "1816178189758"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "DescriptionHasDoubleQuotesShould Pass",
+      "inputs": {
+        "fileName": "descriptionhasdoublequotesshould-pass.xlsx",
+        "applicationId": "1816178190460"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAVERS1"
+      }
+    },
+    {
+      "testName": "Empty MandatoryData RemosNo Fail",
+      "inputs": {
+        "fileName": "empty-mandatorydata-remosno-fail.xlsx",
+        "applicationId": "1816178189761"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "Empty MultipleRowsColumns Pass",
+      "inputs": {
+        "fileName": "empty-multiplerowscolumns-pass.xlsx",
+        "applicationId": "1816178189764"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAVERS1"
+      }
+    },
+    {
+      "testName": "Empty RMS Fail",
+      "inputs": {
+        "fileName": "empty-rms-fail.xlsx",
+        "applicationId": "1816178190421"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "Happypath Pass",
+      "inputs": {
+        "fileName": "happypath-pass.xlsx",
+        "applicationId": "1816178189770"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAVERS1"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatatypes Excl netandNopkgs ProductCode Pass",
+      "inputs": {
+        "fileName": "incorrect-mandatatypes-excl-netandnopkgs-productcode-pass.xlsx",
+        "applicationId": "1816178189773"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAVERS1"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryData MultipleRowsWithMultipleLocations All Fail",
+      "inputs": {
+        "fileName": "incorrect-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
+        "applicationId": "1816178189776"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product code is invalid in sheet \"(DO NOT SORT) Packing List\" row 47, sheet \"(DO NOT SORT) Packing List\" row 51, sheet \"(DO NOT SORT) Packing List\" row 53 in addition to 1 other locations.\nNo of packages is invalid in sheet \"(DO NOT SORT) Packing List\" row 47, sheet \"(DO NOT SORT) Packing List\" row 49, sheet \"(DO NOT SORT) Packing List\" row 51 in addition to 2 other locations.\nTotal net weight is invalid in sheet \"(DO NOT SORT) Packing List\" row 47, sheet \"(DO NOT SORT) Packing List\" row 49, sheet \"(DO NOT SORT) Packing List\" row 51 in addition to 2 other locations.\n",
+        "model": "SAVERS1"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader All Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-all-unparse.xlsx",
+        "applicationId": "1816178189779"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader CommodityCode Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-commoditycode-unparse.xlsx",
+        "applicationId": "1816178190424"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader Desc Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-desc-unparse.xlsx",
+        "applicationId": "1816178190427"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader Noofpackages Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-noofpackages-unparse.xlsx",
+        "applicationId": "1816178190430"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader TotNetweightKGS Fail",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-totnetweightkgs-fail.xlsx",
+        "applicationId": "1816178190436"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "SAVERS1"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader TotNetweight Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-totnetweight-unparse.xlsx",
+        "applicationId": "1816178190463"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect OptionalData All Pass",
+      "inputs": {
+        "fileName": "incorrect-optionaldata-all-pass.xlsx",
+        "applicationId": "1816178190439"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAVERS1"
+      }
+    },
+    {
+      "testName": "Incorrect OptionalHeader All Pass",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-all-pass.xlsx",
+        "applicationId": "1816178189923"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAVERS1"
+      }
+    },
+    {
+      "testName": "MandatoryHeaders CaseInSensitive Pass",
+      "inputs": {
+        "fileName": "mandatoryheaders-caseinsensitive-pass.xlsx",
+        "applicationId": "1816178189926"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAVERS1"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData CommodityCode Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-commoditycode-fail.xlsx",
+        "applicationId": "1816178189929"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in sheet \"(DO NOT SORT) Packing List\" row 47.\n",
+        "model": "SAVERS1"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData CommodityCode MultipleRowsWithMultipleLocations Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-commoditycode-multiplerowswithmultiplelocations-fail.xlsx",
+        "applicationId": "1816178189935"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in sheet \"(DO NOT SORT) Packing List\" row 47, sheet \"(DO NOT SORT) Packing List\" row 49, sheet \"(DO NOT SORT) Packing List\" row 51 in addition to 1 other locations.\n",
+        "model": "SAVERS1"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData CommodityCode MultipleRows Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-commoditycode-multiplerowswithmultiplelocations-fail.xlsx",
+        "applicationId": "1816178189935"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in sheet \"(DO NOT SORT) Packing List\" row 47, sheet \"(DO NOT SORT) Packing List\" row 49, sheet \"(DO NOT SORT) Packing List\" row 51 in addition to 1 other locations.\n",
+        "model": "SAVERS1"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData Desc Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-desc-fail.xlsx",
+        "applicationId": "1816178190442"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product description is missing in sheet \"(DO NOT SORT) Packing List\" row 47.\n",
+        "model": "SAVERS1"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData Desc MultipleRowsWithMultipleLocations Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-desc-multiplerowswithmultiplelocations-fail.xlsx",
+        "applicationId": "1816178189938"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product description is missing in sheet \"(DO NOT SORT) Packing List\" row 47, sheet \"(DO NOT SORT) Packing List\" row 49, sheet \"(DO NOT SORT) Packing List\" row 51 in addition to 1 other locations.\n",
+        "model": "SAVERS1"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData MultipleRowsWithMultipleLocations All Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
+        "applicationId": "1816178190466"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in sheet \"(DO NOT SORT) Packing List\" row 12 and sheet \"(DO NOT SORT) Packing List\" row 13.\nProduct description is missing in sheet \"(DO NOT SORT) Packing List\" row 9 and sheet \"(DO NOT SORT) Packing List\" row 11.\nNo of packages is missing in sheet \"(DO NOT SORT) Packing List\" row 12 and sheet \"(DO NOT SORT) Packing List\" row 13.\nTotal net weight is missing in sheet \"(DO NOT SORT) Packing List\" row 12 and sheet \"(DO NOT SORT) Packing List\" row 13.\nNIRMS/Non-NIRMS goods not specified in sheet \"(DO NOT SORT) Packing List\" row 10.\n",
+        "model": "SAVERS1"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData Noofpkgs Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-noofpkgs-fail.xlsx",
+        "applicationId": "1816178189944"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No of packages is missing in sheet \"(DO NOT SORT) Packing List\" row 47.\n",
+        "model": "SAVERS1"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData Noofpkgs MultipleRowsWithMultipleLocations Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-noofpkgs-multiplerowswithmultiplelocations-fail.xlsx",
+        "applicationId": "1816178189947"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No of packages is missing in sheet \"(DO NOT SORT) Packing List\" row 47, sheet \"(DO NOT SORT) Packing List\" row 49, sheet \"(DO NOT SORT) Packing List\" row 51 in addition to 1 other locations.\n",
+        "model": "SAVERS1"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData Totnetweight Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-totnetweight-fail.xlsx",
+        "applicationId": "1816178189950"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Total net weight is missing in sheet \"(DO NOT SORT) Packing List\" row 47.\n",
+        "model": "SAVERS1"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData Totnetweight MultipleRowsWithMultipleLocations Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-totnetweight-multiplerowswithmultiplelocations-fail.xlsx",
+        "applicationId": "1816178189953"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Total net weight is missing in sheet \"(DO NOT SORT) Packing List\" row 47, sheet \"(DO NOT SORT) Packing List\" row 49, sheet \"(DO NOT SORT) Packing List\" row 51 in addition to 1 other locations.\n",
+        "model": "SAVERS1"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader All Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-all-unparse.xlsx",
+        "applicationId": "1816178189956"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader CommodityCode Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-commoditycode-unparse.xlsx",
+        "applicationId": "1816178189959"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader Description Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-description-unparse.xlsx",
+        "applicationId": "1816178189962"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader NoofPacakges Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-noofpacakges-unparse.xlsx",
+        "applicationId": "1816178189965"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader TotNetWeight Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-totnetweight-unparse.xlsx",
+        "applicationId": "1816178189968"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader TotNetweightKGS Fail",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-totnetweightkgs-fail.xlsx",
+        "applicationId": "1816178190469"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "SAVERS1"
+      }
+    },
+    {
+      "testName": "Missing OptionalData All Pass",
+      "inputs": {
+        "fileName": "missing-optionaldata-all-pass.xlsx",
+        "applicationId": "1816178189974"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAVERS1"
+      }
+    },
+    {
+      "testName": "Missing OptionalHeader All Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-all-pass.xlsx",
+        "applicationId": "1816178189977"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAVERS1"
+      }
+    },
+    {
+      "testName": "Missing OptionalHeader TreatmentType Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-treatmenttype-pass.xlsx",
+        "applicationId": "1816178189980"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAVERS1"
+      }
+    },
+    {
+      "testName": "NoData ExceptSingleRMS Fail",
+      "inputs": {
+        "fileName": "nodata-exceptsinglerms-fail.xlsx",
+        "applicationId": "1816178189983"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in sheet \"(DO NOT SORT) Packing List\" row 9, sheet \"(DO NOT SORT) Packing List\" row 10, sheet \"(DO NOT SORT) Packing List\" row 11 in addition to 10610 other locations.\nProduct description is missing in sheet \"(DO NOT SORT) Packing List\" row 9, sheet \"(DO NOT SORT) Packing List\" row 10, sheet \"(DO NOT SORT) Packing List\" row 11 in addition to 10610 other locations.\nNo of packages is missing in sheet \"(DO NOT SORT) Packing List\" row 9, sheet \"(DO NOT SORT) Packing List\" row 10, sheet \"(DO NOT SORT) Packing List\" row 11 in addition to 10610 other locations.\nTotal net weight is missing in sheet \"(DO NOT SORT) Packing List\" row 9, sheet \"(DO NOT SORT) Packing List\" row 10, sheet \"(DO NOT SORT) Packing List\" row 11 in addition to 10610 other locations.\n",
+        "model": "SAVERS1"
+      }
+    },
+    {
+      "testName": "OnlyMandatoryDataIsFilled Pass",
+      "inputs": {
+        "fileName": "onlymandatorydataisfilled-pass.xlsx",
+        "applicationId": "1816178189986"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAVERS1"
+      }
+    },
+    {
+      "testName": "RMSHasWrongFinal3DigitsShould Pass",
+      "inputs": {
+        "fileName": "rmshaswrongfinal3digitsshould-pass.xlsx",
+        "applicationId": "1816178189989"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAVERS1"
+      }
+    },
+    {
+      "testName": "RMSHasWrongMiddle6DigitsShouldBe Unparse",
+      "inputs": {
+        "fileName": "rmshaswrongmiddle6digitsshouldbe-unparse.xlsx",
+        "applicationId": "1816178189992"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "RMSHasWrongRegexWithAdditionalHyphenShouldBe Fail",
+      "inputs": {
+        "fileName": "rmshaswrongregexwithadditionalhyphenshouldbe-fail.xlsx",
+        "applicationId": "1816178190451"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "RMSHasWrongRegexWithValueRemovedAtEndOfEstablishmentNumberShould Fail",
+      "inputs": {
+        "fileName": "rmshaswrongregexwithvalueremovedatendofestablishmentnumbershould-fail.xlsx",
+        "applicationId": "1816178189998"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "RMSIsPresentButNoHeaderTextShould Pass",
+      "inputs": {
+        "fileName": "rmsispresentbutnoheadertextshould-pass.xlsx",
+        "applicationId": "1816178190001"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAVERS1"
+      }
+    },
+    {
+      "testName": "RMSWith7DigitsShould Fail",
+      "inputs": {
+        "fileName": "rmswith7digitsshould-fail.xlsx",
+        "applicationId": "1816178197402"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "RMSWithExtraDashBeforeEstablishmentNumberShould Fail",
+      "inputs": {
+        "fileName": "rmswithextradashbeforeestablishmentnumbershould-fail.xlsx",
+        "applicationId": "1816178190007"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    }
+  ]
+}

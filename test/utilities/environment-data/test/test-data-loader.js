@@ -1,6 +1,6 @@
-import { readdirSync, readFileSync } from 'fs'
-import { join, dirname } from 'path'
-import { fileURLToPath } from 'url'
+import { readdirSync, readFileSync } from 'node:fs'
+import { join, dirname } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { retailerPrefixes } from '../../profile-utils.js'
 
 const __filename = fileURLToPath(import.meta.url)

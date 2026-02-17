@@ -9,11 +9,17 @@ export const retailerPrefixes = {
   mands: 'MANDS',
   nisa: 'NISA',
   sainsburys: 'Sainsburys',
+  savers: 'Savers',
   tesco: 'Tesco',
   tjmorris: 'TJMorris',
   coop: 'Coop',
   buffaload: 'Buffaload',
-  booker: 'Booker'
+  booker: 'Booker',
+  mars: 'Mars',
+  kepak: 'Kepak',
+  fowlerwelch: 'FowlerWelch',
+  turners: 'Turners',
+  bandm: 'BANDM'
 }
 
 /**
