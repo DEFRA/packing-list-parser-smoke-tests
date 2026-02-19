@@ -21,7 +21,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"RANA\" row 23, sheet \"RANA\" row 24, sheet \"RANA\" row 25 in addition to 2 other locations.\n",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"RANA\" row 23, sheet \"RANA\" row 24, sheet \"RANA\" row 25 in addition to 1 other locations.\n",
         "model": "GIOVANNI1"
       }
     },

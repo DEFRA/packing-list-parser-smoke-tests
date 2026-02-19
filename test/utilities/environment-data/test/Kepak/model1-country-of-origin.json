@@ -21,7 +21,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"KEPAK\" row 23, sheet \"KEPAK\" row 24, sheet \"KEPAK\" row 26 in addition to 1 other locations.\n",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"KEPAK\" row 23, sheet \"KEPAK\" row 24, sheet \"KEPAK\" row 26.\n",
         "model": "KEPAK1"
       }
     },

@@ -45,7 +45,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in rows 3, 4, 5 in addition to 1 other locations.\n",
+        "reasonsForFailure": "Prohibited item identified on the packing list in rows 3, 4, 5.\n",
         "model": "ASDA4"
       }
     },
@@ -69,7 +69,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in rows 3, 4, 5 in addition to 1 other locations.\n",
+        "reasonsForFailure": "Prohibited item identified on the packing list in rows 3, 4, 5.\n",
         "model": "ASDA4"
       }
     },
