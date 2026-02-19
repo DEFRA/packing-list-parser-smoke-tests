@@ -57,7 +57,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Input Data Sheet\" row 9, sheet \"Input Data Sheet\" row 10 and sheet \"Input Data Sheet\" row 11.\n",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Input Data Sheet\" row 10 and sheet \"Input Data Sheet\" row 11.\n",
         "model": "TESCO3"
       }
     },
