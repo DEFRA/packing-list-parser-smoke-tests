@@ -197,12 +197,12 @@
       "testName": "Incorrect Optional Header Country Of Origin Pass",
       "inputs": {
         "fileName": "incorrect-optionalheader-countryoforigin-pass.xlsx",
-        "applicationId": "1816178208964"
+        "applicationId": "1816178234245"
       },
       "expectedResults": {
-        "approvalStatus": "rejected_other",
+        "approvalStatus": "approved",
         "reasonsForFailure": null,
-        "model": "NOMATCH"
+        "model": "FOWLERWELCH2"
       }
     },
     {
