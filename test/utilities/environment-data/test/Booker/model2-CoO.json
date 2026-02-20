@@ -21,7 +21,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Sheet1\" row 19 and sheet \"Sheet1\" row 20.\n",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Sheet1\" row 19.\n",
         "model": "BOOKER2"
       }
     },
