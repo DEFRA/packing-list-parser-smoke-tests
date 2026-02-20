@@ -21,7 +21,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Sheet1\" row 19 and sheet \"Sheet1\" row 20.\n",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Sheet1\" row 19.\n",
         "model": "BOOKER2"
       }
     },
@@ -65,7 +65,7 @@
       "testName": "ac16 Missing&IncorrectData Fail",
       "inputs": {
         "fileName": "ac16-missingincorrectdata-fail.xlsx",
-        "applicationId": "1816178185087"
+        "applicationId": "1816178233912"
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
