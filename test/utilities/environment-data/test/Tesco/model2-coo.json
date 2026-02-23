@@ -1,0 +1,173 @@
+{
+  "name": "TESCO2 Coo",
+  "tests": [
+    {
+      "testName": "ac10 x Co O Pass",
+      "inputs": {
+        "fileName": "ac10-xcoo-pass.xlsx",
+        "applicationId": "1816178233492"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "ac11 High Risk Co O Treatment Type Specified Fail",
+      "inputs": {
+        "fileName": "ac11-highriskcootreatmenttypespecified-fail.xlsx",
+        "applicationId": "1816178233495"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Sheet2\" row 7, sheet \"Sheet2\" row 8 and sheet \"Sheet2\" row 9.\n",
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "ac12 High Risk Co O Treatment Type Specified Multiple Fail",
+      "inputs": {
+        "fileName": "ac12-highriskcootreatmenttypespecifiedmultiple-fail.xlsx",
+        "applicationId": "1816178233498"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Sheet2\" row 7, sheet \"Sheet2\" row 8, sheet \"Sheet2\" row 9 in addition to 1 other locations.\n",
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "ac13 High Risk Co O Treatment Type Not Specified Fail",
+      "inputs": {
+        "fileName": "ac13-highriskcootreatmenttypenotspecified-fail.xlsx",
+        "applicationId": "1816178233507"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Sheet2\" row 7.\n",
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "ac14 High Risk Co O Treatment Type Not Specified Multiple Fail",
+      "inputs": {
+        "fileName": "ac14-highriskcootreatmenttypenotspecifiedmultiple-fail.xlsx",
+        "applicationId": "1816178233504"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Sheet2\" row 7, sheet \"Sheet2\" row 8, sheet \"Sheet2\" row 9 in addition to 1 other locations.\n",
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "ac1 Not Nirms Pass",
+      "inputs": {
+        "fileName": "ac1-notnirms-pass.xlsx",
+        "applicationId": "1816178233465"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "ac2 Null Nirms Fail",
+      "inputs": {
+        "fileName": "ac2-nullnirms-fail.xlsx",
+        "applicationId": "1816178233468"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Sheet2\" row 7.\n",
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "ac3 Invalid Nirms Fail",
+      "inputs": {
+        "fileName": "ac3-invalidnirms-fail.xlsx",
+        "applicationId": "1816178233471"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Sheet2\" row 7.\n",
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "ac4 Null Nirms Multiple Fail",
+      "inputs": {
+        "fileName": "ac4-nullnirmsmultiple-fail.xlsx",
+        "applicationId": "1816178233474"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Sheet2\" row 7, sheet \"Sheet2\" row 8, sheet \"Sheet2\" row 9 in addition to 1 other locations.\n",
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "ac5 Invalid Nirms Multiple Fail",
+      "inputs": {
+        "fileName": "ac5-invalidnirmsmultiple-fail.xlsx",
+        "applicationId": "1816178233477"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Sheet2\" row 7, sheet \"Sheet2\" row 8, sheet \"Sheet2\" row 9 in addition to 1 other locations.\n",
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "ac6 Null Co O Fail",
+      "inputs": {
+        "fileName": "ac6-nullcoo-fail.xlsx",
+        "applicationId": "1816178233480"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Sheet2\" row 7.\n",
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "ac7 Invalid Co O Fail",
+      "inputs": {
+        "fileName": "ac7-invalidcoo-fail.xlsx",
+        "applicationId": "1816178233483"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Sheet2\" row 7.\n",
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "ac8 Null Co O Multiple Fail",
+      "inputs": {
+        "fileName": "ac8-nullcoomultiple-fail.xlsx",
+        "applicationId": "1816178233486"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Sheet2\" row 7, sheet \"Sheet2\" row 8, sheet \"Sheet2\" row 9 in addition to 1 other locations.\n",
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "ac9 Invalid Co O Multiple Fail",
+      "inputs": {
+        "fileName": "ac9-invalidcoomultiple-fail.xlsx",
+        "applicationId": "1816178233489"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Sheet2\" row 7, sheet \"Sheet2\" row 8, sheet \"Sheet2\" row 9 in addition to 1 other locations.\n",
+        "model": "TESCO2"
+      }
+    }
+  ]
+}

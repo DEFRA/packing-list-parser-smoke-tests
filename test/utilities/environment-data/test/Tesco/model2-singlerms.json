@@ -1,0 +1,341 @@
+{
+  "name": "TESCO2 Singlerms",
+  "tests": [
+    {
+      "testName": "Different Country Establishment Numbers Including GB Pass",
+      "inputs": {
+        "fileName": "differentcountryestablishmentnumbersincludinggb-pass.xlsx",
+        "applicationId": "1816178233315"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Different Country Establishment Numbersexcludes GB Fail",
+      "inputs": {
+        "fileName": "differentcountryestablishmentnumbersexcludesgb-fail.xlsx",
+        "applicationId": "1816178233312"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "Empty RMS Fail",
+      "inputs": {
+        "fileName": "empty-rms-fail.xlsx",
+        "applicationId": "1816178233198"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "Invalid Establishment Formats Fail",
+      "inputs": {
+        "fileName": "invalidestablishmentformats-fail.xlsx",
+        "applicationId": "1816178233201"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "Invalid Format Rms Gb 000000 000 Unparse",
+      "inputs": {
+        "fileName": "invalidformat-rmsgb-000000-000-unparse.xlsx",
+        "applicationId": "1816178233204"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Invalid Prefix In Establishment Number Fail",
+      "inputs": {
+        "fileName": "invalidprefixinestablishmentnumber-fail.xlsx",
+        "applicationId": "1816178233207"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "Lowercase And Malformed Prefix In Establishment Number Pass",
+      "inputs": {
+        "fileName": "lowercaseandmalformedprefixinestablishmentnumber-pass.xlsx",
+        "applicationId": "1816178233210"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Malformed Country Code In Establishment Number Fail",
+      "inputs": {
+        "fileName": "malformedcountrycodeinestablishmentnumber-fail.xlsx",
+        "applicationId": "1816178233216"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "Malformed RMS Number Fail",
+      "inputs": {
+        "fileName": "malformed-rms-number-fail.xlsx",
+        "applicationId": "1816178233213"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "Mixed Case Establishment Number Format Pass",
+      "inputs": {
+        "fileName": "mixedcaseestablishmentnumberformat-pass.xlsx",
+        "applicationId": "1816178233219"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Mixed Valid And Invalid Establishment Formats Pass",
+      "inputs": {
+        "fileName": "mixedvalidandinvalidestablishmentformats-pass.xlsx",
+        "applicationId": "1816178233351"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Multiple GB Establishment Numbers With Valid Invalid Length Pass",
+      "inputs": {
+        "fileName": "multiplegbestablishmentnumberswithvalid-invalidlength-pass.xlsx",
+        "applicationId": "1816178233228"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Multipledifferent Establishment Numbers Fail",
+      "inputs": {
+        "fileName": "multipledifferent-establishment-numbers-fail.xlsx",
+        "applicationId": "1816178233225"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Multiple GB Place of Dispatch (Establishment) numbers found on packing list.\n",
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Non Numeric Atthe End Of RMS Fail",
+      "inputs": {
+        "fileName": "nonnumericattheendofrms-fail.xlsx",
+        "applicationId": "1816178233231"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "Non Numeric Establishment Suffix Fail",
+      "inputs": {
+        "fileName": "nonnumericestablishmentsuffix-fail.xlsx",
+        "applicationId": "1816178233234"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "RMS Has Wrong Final3 Digits Should Pass",
+      "inputs": {
+        "fileName": "rmshaswrongfinal3digitsshould-pass.xlsx",
+        "applicationId": "1816178233240"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "RMS Has Wrong Middle6 Digits Should Be Unparsed",
+      "inputs": {
+        "fileName": "rmshaswrongmiddle6digitsshouldbe-unparsed.xlsx",
+        "applicationId": "1816178233243"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "RMS Has Wrong Regex With Additional Hyphen Should Be Fail",
+      "inputs": {
+        "fileName": "rmshaswrongregexwithadditionalhyphenshouldbe-fail.xlsx",
+        "applicationId": "1816178233246"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "RMS Has Wrong Regex With Value Removed At End Of Establishment Number Should Fail",
+      "inputs": {
+        "fileName": "rmshaswrongregexwithvalueremovedatendofestablishmentnumbershould-fail.xlsx",
+        "applicationId": "1816178233249"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "RMS Is Present But No Header Text Should Pass",
+      "inputs": {
+        "fileName": "rmsispresentbutnoheadertextshould-pass.xlsx",
+        "applicationId": "1816178233321"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "RMS With7 Digits Should Fail",
+      "inputs": {
+        "fileName": "rmswith7digitsshould-fail.xlsx",
+        "applicationId": "1816178233324"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "RMS With Extra Dash Before Establishment Number Should Fail",
+      "inputs": {
+        "fileName": "rmswithextradashbeforeestablishmentnumbershould-fail.xlsx",
+        "applicationId": "1816178233327"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "RMS With Extra Dash Establishment Number At Startand End Fail",
+      "inputs": {
+        "fileName": "rmswithextradashestablishmentnumberatstartandend-fail.xlsx",
+        "applicationId": "1816178233357"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "RMS Has Spl Characters Fail",
+      "inputs": {
+        "fileName": "rms-hassplcharacters-fail.xlsx",
+        "applicationId": "1816178237614"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "TC Invalid Format Rms Gb 15 10 Fail",
+      "inputs": {
+        "fileName": "tc-invalidformat-rmsgb-15-10-fail.xlsx",
+        "applicationId": "1816178233333"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "TC Invalid Format With Spaces And Hyphens Fail",
+      "inputs": {
+        "fileName": "tc-invalidformat-withspacesandhyphens-fail.xlsx",
+        "applicationId": "1816178233360"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "Tesco2 Happypath Pass",
+      "inputs": {
+        "fileName": "tesco2-happypath-pass.xlsx",
+        "applicationId": "1816178233336"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Test Valid Input Rms Gb Without Hyphens Fail",
+      "inputs": {
+        "fileName": "test-validinput-rmsgb-withouthyphens-fail.xlsx",
+        "applicationId": "1816178233339"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    }
+  ]
+}
