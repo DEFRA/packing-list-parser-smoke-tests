@@ -1,0 +1,497 @@
+{
+  "name": "TESCO2 Basic",
+  "tests": [
+    {
+      "testName": "All Mandatory Data Is Missing Fail",
+      "inputs": {
+        "fileName": "allmandatorydataismissing-fail.xlsx",
+        "applicationId": "1816178233072"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in sheet \"Sheet2\" row 7, sheet \"Sheet2\" row 8, sheet \"Sheet2\" row 9 in addition to 105 other locations.\nProduct description is missing in sheet \"Sheet2\" row 7, sheet \"Sheet2\" row 8, sheet \"Sheet2\" row 9 in addition to 105 other locations.\nNo of packages is missing in sheet \"Sheet2\" row 7, sheet \"Sheet2\" row 8, sheet \"Sheet2\" row 9 in addition to 105 other locations.\nTotal net weight is missing in sheet \"Sheet2\" row 7, sheet \"Sheet2\" row 8, sheet \"Sheet2\" row 9 in addition to 105 other locations.\n",
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Description Has Double Quotes Should Pass",
+      "inputs": {
+        "fileName": "descriptionhasdoublequotesshould-pass.xlsx",
+        "applicationId": "1816178233075"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Empty Multiple Rows Columns Pass",
+      "inputs": {
+        "fileName": "empty-multiplerowscolumns-pass.xlsx",
+        "applicationId": "1816178233078"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatatypes Excl netand Nopkgs Product Code Pass",
+      "inputs": {
+        "fileName": "incorrect-mandatatypes-excl-netandnopkgs-productcode-pass.xlsx",
+        "applicationId": "1816178233081"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Data Multiple Rows With Multiple Locations All Fail",
+      "inputs": {
+        "fileName": "incorrect-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
+        "applicationId": "1816178233084"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product code is invalid in sheet \"Sheet2\" row 7.\nNo of packages is invalid in sheet \"Sheet2\" row 7, sheet \"Sheet2\" row 8, sheet \"Sheet2\" row 9 in addition to 1 other locations.\nTotal net weight is invalid in sheet \"Sheet2\" row 8, sheet \"Sheet2\" row 9 and sheet \"Sheet2\" row 10.\n",
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header All Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-all-unparse.xlsx",
+        "applicationId": "1816178233087"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Commodity Code Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-commoditycode-unparse.xlsx",
+        "applicationId": "1816178233090"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Desc Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-desc-unparse.xlsx",
+        "applicationId": "1816178233093"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Noofpkgs Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-noofpkgs-unparse.xlsx",
+        "applicationId": "1816178233096"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Tot Netweight KGS Fail",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-totnetweightkgs-fail.xlsx",
+        "applicationId": "1816178233102"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Tot Netweight Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-totnetweight-unparse.xlsx",
+        "applicationId": "1816178233099"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Optional Data All Pass",
+      "inputs": {
+        "fileName": "incorrect-optionaldata-all-pass.xlsx",
+        "applicationId": "1816178233105"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Incorrect Optional Header All Pass",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-all-pass.xlsx",
+        "applicationId": "1816178233108"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Incorrect Optional Header Country Of Origin Pass",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-countryoforigin-pass.xlsx",
+        "applicationId": "1816178233111"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Incorrect Optional Header Nature Pass",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-nature-pass.xlsx",
+        "applicationId": "1816178233114"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Incorrect Optional Header Nirms Fail",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-nirms-fail.xlsx",
+        "applicationId": "1816178233117"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Sheet2\" row 7, sheet \"Sheet2\" row 8, sheet \"Sheet2\" row 9 in addition to 105 other locations.\n",
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Incorrect Optional Header Treatment Type Pass",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-treatmenttype-pass.xlsx",
+        "applicationId": "1816178233120"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Invalid Commodity Code Multiple Rows Fail",
+      "inputs": {
+        "fileName": "invalidcommoditycode-multiplerows-fail.xlsx",
+        "applicationId": "1816178233123"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product code is invalid in sheet \"Sheet2\" row 7, sheet \"Sheet2\" row 8, sheet \"Sheet2\" row 9 in addition to 2 other locations.\n",
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Mandatory Headers Case In Sensitive Pass",
+      "inputs": {
+        "fileName": "mandatoryheaders-caseinsensitive-pass.xlsx",
+        "applicationId": "1816178233126"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Data Multiple Rows With Multiple Locations All Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
+        "applicationId": "1816178233192"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in sheet \"Sheet2\" row 8 and sheet \"Sheet2\" row 13.\nProduct description is missing in sheet \"Sheet2\" row 9, sheet \"Sheet2\" row 10 and sheet \"Sheet2\" row 12.\nNo of packages is missing in sheet \"Sheet2\" row 8, sheet \"Sheet2\" row 11 and sheet \"Sheet2\" row 13.\nTotal net weight is missing in sheet \"Sheet2\" row 8, sheet \"Sheet2\" row 12, sheet \"Sheet2\" row 13 in addition to 2 other locations.\n",
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header All Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-all-unparse.xlsx",
+        "applicationId": "1816178233129"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Commodity Code Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-commoditycode-unparse.xlsx",
+        "applicationId": "1816178233132"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Desc Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-desc-unparse.xlsx",
+        "applicationId": "1816178233135"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Noofpkgs Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-noofpkgs-unparse.xlsx",
+        "applicationId": "1816178233138"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Tot Netweight Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-totnetweight-unparse.xlsx",
+        "applicationId": "1816178233141"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Optional Data All Pass",
+      "inputs": {
+        "fileName": "missing-optionaldata-all-pass.xlsx",
+        "applicationId": "1816178233144"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Missing Optional Header All Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-all-pass.xlsx",
+        "applicationId": "1816178233147"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Missing Optional Header Country of Origin Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-countryoforigin-pass.xlsx",
+        "applicationId": "1816178233150"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Missing Optional Header GB Establishment RMS Number Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-gbestablishmentrmsnumber-pass.xlsx",
+        "applicationId": "1816178233153"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Missing Optional Header Item Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-item-pass.xlsx",
+        "applicationId": "1816178233156"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Missing Optional Header Meursing code Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-meursingcode-pass.xlsx",
+        "applicationId": "1816178233159"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Missing Optional Header Nature Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-nature-pass.xlsx",
+        "applicationId": "1816178233162"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Missing Optional Header Online Check Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-onlinecheck-pass.xlsx",
+        "applicationId": "1816178233165"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Missing Optional Header Product code Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-productcode-pass.xlsx",
+        "applicationId": "1816178233168"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Missing Optional Header Total Gross Weight Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-totalgrossweight-pass.xlsx",
+        "applicationId": "1816178233171"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Missing Optional Header Total Line Value Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-totallinevalue-pass.xlsx",
+        "applicationId": "1816178233174"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Missing Optional Header Treatment Type Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-treatmenttype-pass.xlsx",
+        "applicationId": "1816178233177"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Missing Optional Header Type of pkgs Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-typeofpkgs-pass.xlsx",
+        "applicationId": "1816178233180"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "No Data Except Single RMS Fail",
+      "inputs": {
+        "fileName": "nodata-exceptsinglerms-fail.xlsx",
+        "applicationId": "1816178233183"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No product line data found.",
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Only Mandatory Data Is Filled Pass",
+      "inputs": {
+        "fileName": "onlymandatorydataisfilled-pass.xlsx",
+        "applicationId": "1816178233186"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    },
+    {
+      "testName": "Tesco2 Happypath Pass",
+      "inputs": {
+        "fileName": "tesco2-happypath-pass.xlsx",
+        "applicationId": "1816178233336"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "TESCO2"
+      }
+    }
+  ]
+}
