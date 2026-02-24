@@ -21,7 +21,6 @@ The reference CSV provides the correct Application IDs which are matched to test
 - Format: `ModelName,FileName,ApplicationId`
 - The `FileName` column (column 2) is used for matching
 - The `ApplicationId` column (column 3) provides the correct ID values
-- Handle scientific notation (e.g., `1.81618E+12` → `1816180000000`)
 
 ## Required Variables
 
@@ -30,6 +29,8 @@ Before processing, define these variables:
 - `[MODEL_NAME]`: The model identifier (e.g., "SAVERS1", "TESCO2", "ASDA3")
 - `[MODEL_FOLDER]`: The folder name, derived from MODEL_NAME (e.g., "Savers", "Tesco", "ASDA")
 - `[MODEL_NOMATCH]`: Value when model doesn't match (typically "NOMATCH")
+
+- Derivation rule: `MODEL_FOLDER` should be derived by removing any trailing digits from `MODEL_NAME` and using that value as the folder name under `test/utilities/environment-data/test/` (e.g., `CDS2` → `CDS`, `SAVERS1` → `SAVERS` then title-cased where appropriate). If the folder does not already exist, create it.
 
 ## Transformations
 
@@ -86,11 +87,12 @@ Before processing, define these variables:
   - Example: `model1-basic.json`, `model1-coo.json`, `model1-netweight.json`
   - The model number comes from the SubFolder prefix (e.g., "SAVERS1_Basic" → "model1", "TESCO2_CoO" → "model2")
   - The category comes from the SubFolder suffix (e.g., "SAVERS1_Basic" → "basic")
+  - The numeric suffix in the SubFolder or `MODEL_NAME` (for example `CDS2`, `SAVERS1`) is the `N` used in the filename. For example, `CDS2` → `model2-single-rms.json`.
 
 ### 8. Update Profile Utils
 
-- Add retailer prefix to `retailerPrefixes` in `test/utilities/profile-utils.js`
-- Use lowercase key and proper case value (e.g., `savers: 'Savers'`)
+- If the retailer prefix is missing, add it to `retailerPrefixes` in `test/utilities/profile-utils.js`.
+- Use a lowercase key and the same casing as the folder that will be created for the value. Example: for `MODEL_NAME` `CDS2` add `cds: 'CDS'` (folder `test/utilities/environment-data/test/CDS/`).
 
 ## Output JSON Structure
 
@@ -181,6 +183,13 @@ SAVERS1_Basic,Empty_RMS_Fail.xlsx,1816178190421
    - MODEL_FOLDER: "Savers"
    - MODEL_NOMATCH: "NOMATCH"
 3. Ask Copilot to process and create JSON test data files
+
+Recommended input parameters:
+
+- Provide the two CSV files as separate inputs: the Test Results CSV and the Reference CSV (containing Application IDs).
+- Provide `MODEL_NAME` (example: `CDS2`). The processor will derive `MODEL_FOLDER` by removing trailing digits from `MODEL_NAME` (example: `CDS2` -> `CDS`) and will create `test/utilities/environment-data/test/[MODEL_FOLDER]/` if it does not already exist.
+- Provide `MODEL_NAME` (example: `CDS2`). The processor will derive `MODEL_FOLDER` by removing trailing digits from `MODEL_NAME` (example: `CDS2` -> `CDS`) and will create `test/utilities/environment-data/test/[MODEL_FOLDER]/` if it does not already exist.
+- The numeric suffix of `MODEL_NAME` (for example the `2` in `CDS2`) is used as the `N` in output filenames. Example: `MODEL_NAME=CDS2` → output files named like `model2-[category].json` (e.g., `model2-single-rms.json`).
 
 ## Tips
 
