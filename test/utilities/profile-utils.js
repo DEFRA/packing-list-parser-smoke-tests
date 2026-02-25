@@ -19,7 +19,8 @@ export const retailerPrefixes = {
   kepak: 'Kepak',
   fowlerwelch: 'FowlerWelch',
   turners: 'Turners',
-  bandm: 'BANDM'
+  bandm: 'BANDM',
+  cds: 'CDS'
 }
 
 /**
