@@ -1,0 +1,317 @@
+{
+  "name": "CDS2 NetWeight",
+  "tests": [
+    {
+      "testName": "Alpha Numeric Total Net Weight Unparse",
+      "inputs": {
+        "fileName": "alpha-numeric-totalnetweight-unparse.xlsx",
+        "applicationId": "1816178234164"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Alpha Numeric UOM Weight Fail",
+      "inputs": {
+        "fileName": "alpha-numeric-uom-weight-fail.xlsx",
+        "applicationId": "1816178234167"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "Ambiguous Units in Header pass",
+      "inputs": {
+        "fileName": "ambiguous-units-in-header-pass.xlsx",
+        "applicationId": "1816178234170"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "Data empty Netweight Fail",
+      "inputs": {
+        "fileName": "data-empty-netweight-fail.xlsx",
+        "applicationId": "1816178234173"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Total net weight is missing in sheet \"77100 - Packing List\" row 4, sheet \"77100 - Packing List\" row 5, sheet \"77100 - Packing List\" row 6 in addition to 12 other locations.\n",
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "Extra Spaces In Header Unparse",
+      "inputs": {
+        "fileName": "extra-spaces-in-header-unparse.xlsx",
+        "applicationId": "1816178234176"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Header Typos or Special Characters Unparse",
+      "inputs": {
+        "fileName": "header-typos-or-specialcharacters-unparse.xlsx",
+        "applicationId": "1816178234179"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Header With Extra Parentheses Pass",
+      "inputs": {
+        "fileName": "header-with-extra-parentheses-pass.xlsx",
+        "applicationId": "1816178234182"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "Header With Multiple Units Pass",
+      "inputs": {
+        "fileName": "header-with-multiple-units-pass.xlsx",
+        "applicationId": "1816178234185"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "Header With Unit And Symbols Pass",
+      "inputs": {
+        "fileName": "header-with-unit-and-symbols-pass.xlsx",
+        "applicationId": "1816178234188"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "Incorrect Netweight Data All Fail",
+      "inputs": {
+        "fileName": "incorrect-netweightdata-all-fail.xlsx",
+        "applicationId": "1816178234194"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Total net weight is invalid in sheet \"77100 - Packing List\" row 4, sheet \"77100 - Packing List\" row 5, sheet \"77100 - Packing List\" row 6 in addition to 2 other locations.\n",
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "Invalid Unit Type Fail",
+      "inputs": {
+        "fileName": "invalid-unit-type-fail.xlsx",
+        "applicationId": "1816178234197"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "Malformed Header Unit Pass",
+      "inputs": {
+        "fileName": "malformed-header-unit-pass.xlsx",
+        "applicationId": "1816178234200"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "Missing Header Netweight UOM Fail",
+      "inputs": {
+        "fileName": "missing-header-netweightuom-fail.xlsx",
+        "applicationId": "1816178234203"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "Missing Header Netweight Unparse",
+      "inputs": {
+        "fileName": "missing-header-netweight-unparse.xlsx",
+        "applicationId": "1816178234206"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Netweight Unparse",
+      "inputs": {
+        "fileName": "missing-netweight-unparse.xlsx",
+        "applicationId": "1816178234209"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing PACKAGEUOM Weight Fail",
+      "inputs": {
+        "fileName": "missing-packageuom-weight-fail.xlsx",
+        "applicationId": "1816178234212"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "Missing Paranthesis in Uom Pass",
+      "inputs": {
+        "fileName": "missing-paranthesis-in-uom-pass.xlsx",
+        "applicationId": "1816178234215"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "Missing UOM Weight Fail Unparse",
+      "inputs": {
+        "fileName": "missing-uom-weight-fail-unparse.xlsx",
+        "applicationId": "1816178234218"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "Mixed Case Header Pass",
+      "inputs": {
+        "fileName": "mixedcase-header-pass.xlsx",
+        "applicationId": "1816178234221"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "Netweight Has Empty Parentheses Fail",
+      "inputs": {
+        "fileName": "netweight-hasempty-parentheses-fail.xlsx",
+        "applicationId": "1816178234224"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "Paranthesis in Uom Pass",
+      "inputs": {
+        "fileName": "paranthesis-in-uom-pass.xlsx",
+        "applicationId": "1816178234227"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "UOMWeight Without Total Net Weight Unparse",
+      "inputs": {
+        "fileName": "uomweight-without-totalnetweight-unparse.xlsx",
+        "applicationId": "1816178234230"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Unhandled Unit Type Fail",
+      "inputs": {
+        "fileName": "unhandled-unit-type-fail.xlsx",
+        "applicationId": "1816178234233"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "Unit Missing Weight Present Fail",
+      "inputs": {
+        "fileName": "unit-missing-weight-present-fail.xlsx",
+        "applicationId": "1816178234236"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "Zero Data Total Net Weight Pass",
+      "inputs": {
+        "fileName": "zero-data-totalnetweight-pass.xlsx",
+        "applicationId": "1816178234239"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "cds2 happypath pass",
+      "inputs": {
+        "fileName": "cds2-happypath-pass.xlsx",
+        "applicationId": "1816178234242"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "CDS2"
+      }
+    }
+  ]
+}
