@@ -1,0 +1,401 @@
+{
+  "name": "NISA2 Basic",
+  "tests": [
+    {
+      "testName": "All Mandatory Data Is Missing Fail",
+      "inputs": {
+        "fileName": "allmandatorydataismissing-fail.xlsx",
+        "applicationId": "1816178233735"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in sheet \"MAIN20DD DEL 04082025\" row 14, sheet \"MAIN20DD DEL 04082025\" row 15, sheet \"MAIN20DD DEL 04082025\" row 16 in addition to 12 other locations.\nProduct description is missing in sheet \"MAIN20DD DEL 04082025\" row 14, sheet \"MAIN20DD DEL 04082025\" row 15, sheet \"MAIN20DD DEL 04082025\" row 16 in addition to 12 other locations.\nNo of packages is missing in sheet \"MAIN20DD DEL 04082025\" row 14, sheet \"MAIN20DD DEL 04082025\" row 15, sheet \"MAIN20DD DEL 04082025\" row 16 in addition to 12 other locations.\nTotal net weight is missing in sheet \"MAIN20DD DEL 04082025\" row 14, sheet \"MAIN20DD DEL 04082025\" row 15, sheet \"MAIN20DD DEL 04082025\" row 16 in addition to 12 other locations.\n",
+        "model": "NISA2"
+      }
+    },
+    {
+      "testName": "Description Has Double Quotes Should Pass",
+      "inputs": {
+        "fileName": "descriptionhasdoublequotesshould-pass.xlsx",
+        "applicationId": "1816178233693"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "NISA2"
+      }
+    },
+    {
+      "testName": "Empty Multiple Rows Columns Pass",
+      "inputs": {
+        "fileName": "empty-multiplerowscolumns-pass.xlsx",
+        "applicationId": "1816178233714"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "NISA2"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatatypes Excl netand Nopkgs Product Code Pass",
+      "inputs": {
+        "fileName": "incorrect-mandatatypes-excl-netandnopkgs-productcode-pass.xlsx",
+        "applicationId": "1816178233699"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "NISA2"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Data Multiple Rows With Multiple Locations All Fail",
+      "inputs": {
+        "fileName": "incorrect-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
+        "applicationId": "1816178233729"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product code is invalid in sheet \"MAIN20DD DEL 04082025\" row 14, sheet \"MAIN20DD DEL 04082025\" row 15, sheet \"MAIN20DD DEL 04082025\" row 16 in addition to 1 other locations.\nNo of packages is invalid in sheet \"MAIN20DD DEL 04082025\" row 14, sheet \"MAIN20DD DEL 04082025\" row 15, sheet \"MAIN20DD DEL 04082025\" row 16 in addition to 1 other locations.\nTotal net weight is invalid in sheet \"MAIN20DD DEL 04082025\" row 14, sheet \"MAIN20DD DEL 04082025\" row 15 and sheet \"MAIN20DD DEL 04082025\" row 16.\n",
+        "model": "NISA2"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header All Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-all-unparse.xlsx",
+        "applicationId": "1816178234092"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Commodity Code Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-commoditycode-unparse.xlsx",
+        "applicationId": "1816178233702"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Desc Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-desc-unparse.xlsx",
+        "applicationId": "1816178233705"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Noof Pakgs Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-noofpakgs-unparse.xlsx",
+        "applicationId": "1816178234086"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Tot Netweight KGS Fail",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-totnetweightkgs-fail.xlsx",
+        "applicationId": "1816178234101"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "NISA2"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Tot Netweight Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-totnetweight-unparse.xlsx",
+        "applicationId": "1816178234104"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Optional Data All Pass",
+      "inputs": {
+        "fileName": "incorrect-optionaldata-all-pass.xlsx",
+        "applicationId": "1816178234110"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "NISA2"
+      }
+    },
+    {
+      "testName": "Incorrect Optional Header All Pass",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-all-pass.xlsx",
+        "applicationId": "1816178233687"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "NISA2"
+      }
+    },
+    {
+      "testName": "Invalid Commodity Code Multiple Rows Fail",
+      "inputs": {
+        "fileName": "invalidcommoditycode-multiplerows-fail.xlsx",
+        "applicationId": "1816178234116"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product code is invalid in sheet \"MAIN20DD DEL 04082025\" row 14, sheet \"MAIN20DD DEL 04082025\" row 15, sheet \"MAIN20DD DEL 04082025\" row 16 in addition to 1 other locations.\n",
+        "model": "NISA2"
+      }
+    },
+    {
+      "testName": "Invalid Noof Packages Multiple Rows Fail",
+      "inputs": {
+        "fileName": "invalid-noofpackages-multiplerows-fail.xlsx",
+        "applicationId": "1816178234122"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No of packages is invalid in sheet \"MAIN20DD DEL 04082025\" row 14, sheet \"MAIN20DD DEL 04082025\" row 15, sheet \"MAIN20DD DEL 04082025\" row 16 in addition to 1 other locations.\n",
+        "model": "NISA2"
+      }
+    },
+    {
+      "testName": "Mandatory Headers Case In Sensitive Pass",
+      "inputs": {
+        "fileName": "mandatoryheaders-caseinsensitive-pass.xlsx",
+        "applicationId": "1816178234128"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "NISA2"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Data Commodity Code Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-commoditycode-fail.xlsx",
+        "applicationId": "1816178234131"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in sheet \"MAIN20DD DEL 04082025\" row 14 and sheet \"MAIN20DD DEL 04082025\" row 16.\n",
+        "model": "NISA2"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Data Commodity Code Nature Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-commoditycode-nature-fail.xlsx",
+        "applicationId": "1816178234137"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in sheet \"MAIN20DD DEL 04082025\" row 14.\n",
+        "model": "NISA2"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Data Desc Fail.xlsx",
+      "inputs": {
+        "fileName": "missing-mandatorydata-desc-failxlsx.xlsx",
+        "applicationId": "1816178234140"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product description is missing in sheet \"MAIN20DD DEL 04082025\" row 14, sheet \"MAIN20DD DEL 04082025\" row 15 and sheet \"MAIN20DD DEL 04082025\" row 16.\n",
+        "model": "NISA2"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Data Multiple Rows With Multiple Locations All Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
+        "applicationId": "1816178233732"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in sheet \"MAIN20DD DEL 04082025\" row 14, sheet \"MAIN20DD DEL 04082025\" row 15 and sheet \"MAIN20DD DEL 04082025\" row 16.\nProduct description is missing in sheet \"MAIN20DD DEL 04082025\" row 14, sheet \"MAIN20DD DEL 04082025\" row 15 and sheet \"MAIN20DD DEL 04082025\" row 16.\nNo of packages is missing in sheet \"MAIN20DD DEL 04082025\" row 14, sheet \"MAIN20DD DEL 04082025\" row 15 and sheet \"MAIN20DD DEL 04082025\" row 16.\nTotal net weight is missing in sheet \"MAIN20DD DEL 04082025\" row 14, sheet \"MAIN20DD DEL 04082025\" row 15 and sheet \"MAIN20DD DEL 04082025\" row 16.\n",
+        "model": "NISA2"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Data Noofpkgs Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-noofpkgs-fail.xlsx",
+        "applicationId": "1816178234146"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No of packages is missing in sheet \"MAIN20DD DEL 04082025\" row 14, sheet \"MAIN20DD DEL 04082025\" row 15 and sheet \"MAIN20DD DEL 04082025\" row 16.\n",
+        "model": "NISA2"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Data Totnetweight Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-totnetweight-fail.xlsx",
+        "applicationId": "1816178234152"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Total net weight is missing in sheet \"MAIN20DD DEL 04082025\" row 14, sheet \"MAIN20DD DEL 04082025\" row 15 and sheet \"MAIN20DD DEL 04082025\" row 16.\n",
+        "model": "NISA2"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header All Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-all-unparse.xlsx",
+        "applicationId": "1816178233717"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Commodity Code Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-commoditycode-unparse.xlsx",
+        "applicationId": "1816178233720"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Desc Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-desc-unparse.xlsx",
+        "applicationId": "1816178234155"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Noof Pakgs Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-noofpakgs-unparse.xlsx",
+        "applicationId": "1816178234158"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Tot Netweight KGS Fail",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-totnetweightkgs-fail.xlsx",
+        "applicationId": "1816178234161"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Tot Netweight Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-totnetweight-unparse.xlsx",
+        "applicationId": "1816178233723"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Optional Data All Pass",
+      "inputs": {
+        "fileName": "missing-optionaldata-all-pass.xlsx",
+        "applicationId": "1816178233681"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "NISA2"
+      }
+    },
+    {
+      "testName": "Missing Optional Header All Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-all-pass.xlsx",
+        "applicationId": "1816178233678"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "NISA2"
+      }
+    },
+    {
+      "testName": "No Data Except Single RMS Fail",
+      "inputs": {
+        "fileName": "nodata-exceptsinglerms-fail.xlsx",
+        "applicationId": "1816178233738"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No product line data found.",
+        "model": "NISA2"
+      }
+    },
+    {
+      "testName": "Only Mandatory Data Is Filled Pass",
+      "inputs": {
+        "fileName": "onlymandatorydataisfilled-pass.xlsx",
+        "applicationId": "1816178233690"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "NISA2"
+      }
+    },
+    {
+      "testName": "happypath Pass",
+      "inputs": {
+        "fileName": "happypath-pass.xlsx",
+        "applicationId": "1816178233675"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "NISA2"
+      }
+    }
+  ]
+}
