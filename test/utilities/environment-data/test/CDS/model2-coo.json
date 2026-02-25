@@ -1,0 +1,185 @@
+{
+  "name": "CDS2 CoO",
+  "tests": [
+    {
+      "testName": "ac10 x Co O Pass",
+      "inputs": {
+        "fileName": "ac10-xcoo-pass.xlsx",
+        "applicationId": "1816178234071"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "ac11 High Risk Co OTreatment Type Specified Fail",
+      "inputs": {
+        "fileName": "ac11-highriskcootreatmenttypespecified-fail.xlsx",
+        "applicationId": "1816178234074"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"77100 - Packing List\" row 4.\n",
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "ac12 High Risk Co OTreatment Type Specified Multiple Fail",
+      "inputs": {
+        "fileName": "ac12-highriskcootreatmenttypespecifiedmultiple-fail.xlsx",
+        "applicationId": "1816178234077"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"77100 - Packing List\" row 4 and sheet \"77100 - Packing List\" row 5.\n",
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "ac13 High Risk Co OTreatment Type Not Specified Fail",
+      "inputs": {
+        "fileName": "ac13-highriskcootreatmenttypenotspecified-fail.xlsx",
+        "applicationId": "1816178234080"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"77100 - Packing List\" row 4 and sheet \"77100 - Packing List\" row 5.\n",
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "ac14 High Risk Co OTreatment Type Not Specified Multiple Fail",
+      "inputs": {
+        "fileName": "ac14-highriskcootreatmenttypenotspecifiedmultiple-fail.xlsx",
+        "applicationId": "1816178234083"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"77100 - Packing List\" row 4, sheet \"77100 - Packing List\" row 5 and sheet \"77100 - Packing List\" row 7.\n",
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "ac1 Not Nirms Pass",
+      "inputs": {
+        "fileName": "ac1-notnirms-pass.xlsx",
+        "applicationId": "1816178234089"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "ac2 Null Nirms Fail",
+      "inputs": {
+        "fileName": "ac2-nullnirms-fail.xlsx",
+        "applicationId": "1816178234095"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"77100 - Packing List\" row 4, sheet \"77100 - Packing List\" row 5 and sheet \"77100 - Packing List\" row 6.\n",
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "ac3 Invalid Nirms Fail",
+      "inputs": {
+        "fileName": "ac3-invalidnirms-fail.xlsx",
+        "applicationId": "1816178234098"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"77100 - Packing List\" row 4, sheet \"77100 - Packing List\" row 5 and sheet \"77100 - Packing List\" row 6.\n",
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "ac4 Null Nirms Multiple Fail",
+      "inputs": {
+        "fileName": "ac4-nullnirmsmultiple-fail.xlsx",
+        "applicationId": "1816178234107"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"77100 - Packing List\" row 4, sheet \"77100 - Packing List\" row 5, sheet \"77100 - Packing List\" row 6 in addition to 1 other locations.\n",
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "ac5 Invalid Nirms Multiple Fail",
+      "inputs": {
+        "fileName": "ac5-invalidnirmsmultiple-fail.xlsx",
+        "applicationId": "1816178234113"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"77100 - Packing List\" row 4, sheet \"77100 - Packing List\" row 5, sheet \"77100 - Packing List\" row 6 in addition to 1 other locations.\n",
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "ac6 Null Co O Fail",
+      "inputs": {
+        "fileName": "ac6-nullcoo-fail.xlsx",
+        "applicationId": "1816178234119"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"77100 - Packing List\" row 4, sheet \"77100 - Packing List\" row 5 and sheet \"77100 - Packing List\" row 6.\n",
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "ac7 Invalid Co O Fail",
+      "inputs": {
+        "fileName": "ac7-invalidcoo-fail.xlsx",
+        "applicationId": "1816178234125"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"77100 - Packing List\" row 4, sheet \"77100 - Packing List\" row 5 and sheet \"77100 - Packing List\" row 6.\n",
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "ac8 Null Co OMultiple Fail",
+      "inputs": {
+        "fileName": "ac8-nullcoomultiple-fail.xlsx",
+        "applicationId": "1816178234134"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"77100 - Packing List\" row 4, sheet \"77100 - Packing List\" row 5, sheet \"77100 - Packing List\" row 6 in addition to 1 other locations.\n",
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "ac9 Invalid Co OMultiple Fail",
+      "inputs": {
+        "fileName": "ac9-invalidcoomultiple-fail.xlsx",
+        "applicationId": "1816178234143"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"77100 - Packing List\" row 4, sheet \"77100 - Packing List\" row 5, sheet \"77100 - Packing List\" row 6 in addition to 1 other locations.\n",
+        "model": "CDS2"
+      }
+    },
+    {
+      "testName": "cds2 happypath pass",
+      "inputs": {
+        "fileName": "cds2-happypath-pass.xlsx",
+        "applicationId": "1816178234149"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "CDS2"
+      }
+    }
+  ]
+}
