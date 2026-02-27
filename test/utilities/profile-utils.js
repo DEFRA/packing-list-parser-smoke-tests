@@ -20,7 +20,8 @@ export const retailerPrefixes = {
   fowlerwelch: 'FowlerWelch',
   turners: 'Turners',
   bandm: 'BANDM',
-  cds: 'CDS'
+  gousto: 'Gousto',
+  nutricia: 'Nutricia'
 }
 
 /**
