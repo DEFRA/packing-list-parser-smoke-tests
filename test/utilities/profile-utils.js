@@ -21,6 +21,7 @@ export const retailerPrefixes = {
   turners: 'Turners',
   bandm: 'BANDM',
   cds: 'CDS',
+  fw: 'FW',
   gousto: 'Gousto',
   nutricia: 'Nutricia'
 }
