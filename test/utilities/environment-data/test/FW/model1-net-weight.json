@@ -1,0 +1,138 @@
+{
+  "name": "FW1 Net Weight",
+  "tests": [
+    {
+      "testName": "Alpha Numeric UOM Weight Unparse",
+      "inputs": {
+        "fileName": "alpha-numeric-uom-weight-unparse.xlsx",
+        "applicationId": "1816178256658"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+
+    {
+      "testName": "Incorrect Netweight Data All Fail",
+      "inputs": {
+        "fileName": "incorrect-netweightdata-all-fail.xlsx",
+        "applicationId": "1816178256664"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Total net weight is invalid in sheet \"Customer Order\" row 46, sheet \"Customer Order\" row 47, sheet \"Customer Order\" row 48 in addition to 2 other locations.\n",
+        "model": "FOWLERWELCH1"
+      }
+    },
+    {
+      "testName": "Invalid Unit Type Fail",
+      "inputs": {
+        "fileName": "invalid-unit-type-fail.xlsx",
+        "applicationId": "1816178256694"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "FOWLERWELCH1"
+      }
+    },
+    {
+      "testName": "Malformed Header Unit Pass",
+      "inputs": {
+        "fileName": "malformed-header-unit-pass.xlsx",
+        "applicationId": "1816178256670"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "FOWLERWELCH1"
+      }
+    },
+    {
+      "testName": "Missing Header Total Net Weight Unparse",
+      "inputs": {
+        "fileName": "missing-header-totalnetweight-unparse.xlsx",
+        "applicationId": "1816178256673"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing UOM Weight Fail",
+      "inputs": {
+        "fileName": "missing-uom-weight-fail.xlsx",
+        "applicationId": "1816178256676"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "FOWLERWELCH1"
+      }
+    },
+    {
+      "testName": "Mixed Units And Casing Pass",
+      "inputs": {
+        "fileName": "mixedunits-and-casing-pass.xlsx",
+        "applicationId": "1816178256679"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "FOWLERWELCH1"
+      }
+    },
+    {
+      "testName": "Netweight HasEmpty Parentheses ExtraSpace Unparse",
+      "inputs": {
+        "fileName": "netweight-hasempty-parentheses-extraspace-unparse.xlsx",
+        "applicationId": "1816178256682"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Splcharacters Header Netweight Unparse",
+      "inputs": {
+        "fileName": "splcharacters-header-netweight-unparse.xlsx",
+        "applicationId": "1816178256685"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "UOM Weight Without Total Net Weight Unparse",
+      "inputs": {
+        "fileName": "uomweight-without-totalnetweight-unparse.xlsx",
+        "applicationId": "1816178256688"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Zero Data Total Net Weight Pass",
+      "inputs": {
+        "fileName": "zero-data-totalnetweight-pass.xlsx",
+        "applicationId": "1816178256691"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "FOWLERWELCH1"
+      }
+    }
+  ]
+}

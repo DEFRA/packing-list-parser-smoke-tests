@@ -1,0 +1,269 @@
+{
+  "name": "FW1 Basic",
+  "tests": [
+    {
+      "testName": "All Mandatory Data Is Missing Fail",
+      "inputs": {
+        "fileName": "allmandatorydataismissing-fail.xlsx",
+        "applicationId": "1816178256424"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "Description Has Double Quotes Should Pass",
+      "inputs": {
+        "fileName": "descriptionhasdoublequotesshould-pass.xlsx",
+        "applicationId": "1816178256427"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "FOWLERWELCH1"
+      }
+    },
+    {
+      "testName": "Empty Multiple Rows Columns Pass",
+      "inputs": {
+        "fileName": "empty-multiplerowscolumns-pass.xlsx",
+        "applicationId": "1816178256502"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "FOWLERWELCH1"
+      }
+    },
+    {
+      "testName": "Empty RMS Fail",
+      "inputs": {
+        "fileName": "empty-rms-fail.xlsx",
+        "applicationId": "1816178256430"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "Happypath Pass",
+      "inputs": {
+        "fileName": "happypath-pass.xlsx",
+        "applicationId": "1816178256433"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "FOWLERWELCH1"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatatypes Excl netand Nopkgs Pass",
+      "inputs": {
+        "fileName": "incorrect-mandatatypes-excl-netandnopkgs-pass.xlsx",
+        "applicationId": "1816178256490"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "FOWLERWELCH1"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Data Multiple Rows With Multiple Locations All Mandatory Fail",
+      "inputs": {
+        "fileName": "incorrect-mandatorydata-multiplerowswithmultiplelocations-allmandatory-fail.xlsx",
+        "applicationId": "1816178256439"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product code is invalid in sheet \"Sheet1\" row 47, sheet \"Sheet1\" row 51, sheet \"Sheet1\" row 53 in addition to 1 other locations.\nNo of packages is invalid in sheet \"Sheet1\" row 47, sheet \"Sheet1\" row 49, sheet \"Sheet1\" row 51 in addition to 2 other locations.\nTotal net weight is invalid in sheet \"Sheet1\" row 47, sheet \"Sheet1\" row 49, sheet \"Sheet1\" row 51 in addition to 2 other locations.\n",
+        "model": "FOWLERWELCH1"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Data Nets Weight Fail",
+      "inputs": {
+        "fileName": "incorrect-mandatorydata-netsweight-fail.xlsx",
+        "applicationId": "1816178256493"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Total net weight is invalid in sheet \"Customer Order\" row 46 and sheet \"Customer Order\" row 47.\n",
+        "model": "FOWLERWELCH1"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header All Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-all-unparse.xlsx",
+        "applicationId": "1816178256442"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Optional Data All Pass",
+      "inputs": {
+        "fileName": "incorrect-optionaldata-all-pass.xlsx",
+        "applicationId": "1816178256445"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "FOWLERWELCH1"
+      }
+    },
+    {
+      "testName": "Incorrect Optional Header All Pass",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-all-pass.xlsx",
+        "applicationId": "1816178256448"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "FOWLERWELCH1"
+      }
+    },
+    {
+      "testName": "Mandatory Headers Case In Sensitive Pass",
+      "inputs": {
+        "fileName": "mandatoryheaders-caseinsensitive-pass.xlsx",
+        "applicationId": "1816178256496"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "FOWLERWELCH1"
+      }
+    },
+    {
+      "testName": "Missing All Mandatory Data Except One Multiple Rows With Multiple Locations Fail",
+      "inputs": {
+        "fileName": "missing-allmandatorydata-exceptone-multiplerowswithmultiplelocations-fail.xlsx",
+        "applicationId": "1816178256451"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product description is missing in sheet \"Sheet1\" row 47, sheet \"Sheet1\" row 49 and sheet \"Sheet1\" row 51.\nNo of packages is missing in sheet \"Sheet1\" row 47, sheet \"Sheet1\" row 49 and sheet \"Sheet1\" row 51.\nTotal net weight is missing in sheet \"Sheet1\" row 47, sheet \"Sheet1\" row 49 and sheet \"Sheet1\" row 51.\n",
+        "model": "FOWLERWELCH1"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Data Multiple Rows With Multiple Locations Commodity Code&Treatment Type Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-multiplerowswithmultiplelocations-commoditycodetreatmenttype-fail.xlsx",
+        "applicationId": "1816178256499"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in sheet \"Sheet1\" row 47, sheet \"Sheet1\" row 49 and sheet \"Sheet1\" row 51.\n",
+        "model": "FOWLERWELCH1"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Description Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-description-unparse.xlsx",
+        "applicationId": "1816178256457"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header No Of Packages Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-noofpackages-unparse.xlsx",
+        "applicationId": "1816178256460"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header RMS Pass",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-rms-pass.xlsx",
+        "applicationId": "1816178256463"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "FOWLERWELCH1"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Total Net Weight Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-totalnetweight-unparse.xlsx",
+        "applicationId": "1816178256466"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Treatment Type Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-treatmenttype-unparse.xlsx",
+        "applicationId": "1816178256469"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Headers All Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheaders-all-unparse.xlsx",
+        "applicationId": "1816178256472"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Optional Data All Pass",
+      "inputs": {
+        "fileName": "missing-optionaldata-all-pass.xlsx",
+        "applicationId": "1816178256475"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "FOWLERWELCH1"
+      }
+    },
+    {
+      "testName": "Missing Optional Header All Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-all-pass.xlsx",
+        "applicationId": "1816178256478"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "FOWLERWELCH1"
+      }
+    }
+  ]
+}
