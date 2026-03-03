@@ -1,0 +1,185 @@
+{
+  "name": "WARRENS2 CoO",
+  "tests": [
+    {
+      "testName": "ac10 x Co O Pass",
+      "inputs": {
+        "fileName": "ac10-xcoo-pass.xlsx",
+        "applicationId": "1816178257393"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "WARRENS2"
+      }
+    },
+    {
+      "testName": "ac11 High Risk Co O Treatment Type Specified Fail",
+      "inputs": {
+        "fileName": "ac11-highriskcootreatmenttypespecified-fail.xlsx",
+        "applicationId": "1816178257396"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"DR SCHAR - R\" row 46, sheet \"FLETCHERS - R\" row 53, sheet \"GRUPO BIMBO - G\" row 46 in addition to 2 other locations.\n",
+        "model": "WARRENS2"
+      }
+    },
+    {
+      "testName": "ac12 High Risk Co O Treatment Type Specified Multiple Fail",
+      "inputs": {
+        "fileName": "ac12-highriskcootreatmenttypespecifiedmultiple-fail.xlsx",
+        "applicationId": "1816178257399"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"DR SCHAR - R\" row 46, sheet \"GRUPO BIMBO - G\" row 46, sheet \"GRUPO BIMBO - G\" row 47 in addition to 2 other locations.\n",
+        "model": "WARRENS2"
+      }
+    },
+    {
+      "testName": "ac13 High Risk Co O Treatment Type Not Specified Fail",
+      "inputs": {
+        "fileName": "ac13-highriskcootreatmenttypenotspecified-fail.xlsx",
+        "applicationId": "1816178257402"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Identifier is missing in sheet \"GRUPO BIMBO - G\" row 47, sheet \"GRUPO BIMBO - G\" row 48 and sheet \"GRUPO BIMBO - G\" row 49.\nProhibited item identified on the packing list in sheet \"FLETCHERS - R\" row 46 and sheet \"GRUPO BIMBO - G\" row 46.\n",
+        "model": "WARRENS2"
+      }
+    },
+    {
+      "testName": "ac14 High Risk Co O Treatment Type Not Specified Multiple Fail",
+      "inputs": {
+        "fileName": "ac14-highriskcootreatmenttypenotspecifiedmultiple-fail.xlsx",
+        "applicationId": "1816178257405"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"DR SCHAR - R\" row 46, sheet \"FLETCHERS - R\" row 46, sheet \"GRUPO BIMBO - G\" row 46 in addition to 3 other locations.\n",
+        "model": "WARRENS2"
+      }
+    },
+    {
+      "testName": "ac15 Multiple Headers and Data Missing Fail",
+      "inputs": {
+        "fileName": "ac15-multipleheadersanddatamissing-fail.xlsx",
+        "applicationId": "1816178257408"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\nIdentifier is missing in sheet \"FLETCHERS - R\" row 46.\nProduct description is missing in sheet \"FLETCHERS - R\" row 49.\nNo of packages is missing in sheet \"FLETCHERS - R\" row 47.\nTotal net weight is missing in sheet \"FLETCHERS - R\" row 52.\nMissing Country of Origin in sheet \"GRUPO BIMBO - G\" row 47.\nNIRMS/Non-NIRMS goods not specified in sheet \"GRUPO BIMBO - G\" row 46.\n",
+        "model": "WARRENS2"
+      }
+    },
+    {
+      "testName": "ac1 Not Nirms Pass",
+      "inputs": {
+        "fileName": "ac1-notnirms-pass.xlsx",
+        "applicationId": "1816178257411"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "WARRENS2"
+      }
+    },
+    {
+      "testName": "ac2 Null Nirms Fail",
+      "inputs": {
+        "fileName": "ac2-nullnirms-fail.xlsx",
+        "applicationId": "1816178257414"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"FLETCHERS - R\" row 46 and sheet \"GRUPO BIMBO - G\" row 46.\n",
+        "model": "WARRENS2"
+      }
+    },
+    {
+      "testName": "ac3 Invalid Nirms Fail",
+      "inputs": {
+        "fileName": "ac3-invalidnirms-fail.xlsx",
+        "applicationId": "1816178257417"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"DR SCHAR - R\" row 47 and sheet \"GRUPO BIMBO - G\" row 46.\n",
+        "model": "WARRENS2"
+      }
+    },
+    {
+      "testName": "ac4 Null Nirms Multiple Fail",
+      "inputs": {
+        "fileName": "ac4-nullnirmsmultiple-fail.xlsx",
+        "applicationId": "1816178257420"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"DR SCHAR - R\" row 46, sheet \"FLETCHERS - R\" row 46, sheet \"FLETCHERS - R\" row 47 in addition to 3 other locations.\n",
+        "model": "WARRENS2"
+      }
+    },
+    {
+      "testName": "ac5 Invalid Nirms Multiple Fail",
+      "inputs": {
+        "fileName": "ac5-invalidnirmsmultiple-fail.xlsx",
+        "applicationId": "1816178257423"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"DR SCHAR - R\" row 46, sheet \"FLETCHERS - R\" row 46, sheet \"FLETCHERS - R\" row 47 in addition to 2 other locations.\n",
+        "model": "WARRENS2"
+      }
+    },
+    {
+      "testName": "ac6 Null Co O Fail",
+      "inputs": {
+        "fileName": "ac6-nullcoo-fail.xlsx",
+        "applicationId": "1816178257426"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"DR SCHAR - R\" row 46, sheet \"FLETCHERS - R\" row 46, sheet \"FLETCHERS - R\" row 47 in addition to 1 other locations.\n",
+        "model": "WARRENS2"
+      }
+    },
+    {
+      "testName": "ac7 Invalid Co O Fail",
+      "inputs": {
+        "fileName": "ac7-invalidcoo-fail.xlsx",
+        "applicationId": "1816178257429"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"DR SCHAR - R\" row 46, sheet \"FLETCHERS - R\" row 46, sheet \"FLETCHERS - R\" row 47 in addition to 2 other locations.\n",
+        "model": "WARRENS2"
+      }
+    },
+    {
+      "testName": "ac8 Null Co O Multiple Fail",
+      "inputs": {
+        "fileName": "ac8-nullcoomultiple-fail.xlsx",
+        "applicationId": "1816178257432"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"DR SCHAR - R\" row 46, sheet \"DR SCHAR - R\" row 47, sheet \"FLETCHERS - R\" row 46 in addition to 4 other locations.\n",
+        "model": "WARRENS2"
+      }
+    },
+    {
+      "testName": "ac9 Invalid Co O Multiple Fail",
+      "inputs": {
+        "fileName": "ac9-invalidcoomultiple-fail.xlsx",
+        "applicationId": "1816178257435"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"DR SCHAR - R\" row 46, sheet \"DR SCHAR - R\" row 47, sheet \"DR SCHAR - R\" row 48 in addition to 3 other locations.\n",
+        "model": "WARRENS2"
+      }
+    }
+  ]
+}
