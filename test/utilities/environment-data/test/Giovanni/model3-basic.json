@@ -357,7 +357,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Product code is invalid in page 1 row 2.\n",
+        "reasonsForFailure": "Identifier is missing in page 1 row 2.\n",
         "model": "GIOVANNI3"
       }
     },
@@ -381,7 +381,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Product code is invalid in page 1 row 2, page 1 row 4, page 1 row 6 in addition to 1 other locations.\nNo of packages is missing in page 1 row 2, page 1 row 4, page 1 row 6 in addition to 1 other locations.\nTotal net weight is missing in page 1 row 2, page 1 row 4, page 1 row 6 in addition to 1 other locations.\n",
+        "reasonsForFailure": "Identifier is missing in page 1 row 2, page 1 row 4, page 1 row 6 in addition to 1 other locations.\nNo of packages is missing in page 1 row 2, page 1 row 4, page 1 row 6 in addition to 1 other locations.\nTotal net weight is missing in page 1 row 2, page 1 row 4, page 1 row 6 in addition to 1 other locations.\n",
         "model": "GIOVANNI3"
       }
     },
