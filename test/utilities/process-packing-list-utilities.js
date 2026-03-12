@@ -1,3 +1,4 @@
+import devData from './environment-data/dev/dev-data.json'
 import testData from './environment-data/test/test-data.js'
 import perfTestData from './environment-data/perf-test/perf-test-data.json'
 import prodData from './environment-data/prod/prod-data.json'
@@ -13,7 +14,23 @@ export function createProcessPackingListMessage(
     packing_list_blob: blobUrl,
     application_id: applicationId,
     SupplyChainConsignment: {
+      Consignor: {
+        DefraCustomer: {
+          OrgId: establishmentId
+        }
+      },
+      Consignee: {
+        DefraCustomer: {
+          OrgId: establishmentId
+        }
+      },
+      OperatorResponsibleForConsignment: {},
       DispatchLocation: {
+        IDCOMS: {
+          EstablishmentId: establishmentId
+        }
+      },
+      DestinationLocation: {
         IDCOMS: {
           EstablishmentId: establishmentId
         }
@@ -25,6 +42,9 @@ export function createProcessPackingListMessage(
 export function getTestCases() {
   let data
   switch (environmentToTest) {
+    case 'dev':
+      data = addBaseUrlToTests(devData)
+      break
     case 'test':
     case undefined:
       data = addBaseUrlToTests(testData)

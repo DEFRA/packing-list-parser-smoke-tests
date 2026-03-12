@@ -17,18 +17,18 @@
     ]
   },
   {
-    "name": "Giovanni3",
+    "name": "MANDS1",
     "tests": [
       {
-        "testName": "Happy path",
+        "testName": "Happypath Pass",
         "inputs": {
-          "fileName": "happypath.pdf",
-          "applicationId": "1816178135641"
+          "fileName": "happypath-pass.pdf",
+          "applicationId": "1816178160406"
         },
         "expectedResults": {
           "approvalStatus": "approved",
           "reasonsForFailure": null,
-          "model": "GIOVANNI3"
+          "model": "MANDS1"
         }
       }
     ]
