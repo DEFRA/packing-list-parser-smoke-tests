@@ -2,502 +2,10 @@
   "name": "GIOVANNI3 Basic",
   "tests": [
     {
-      "testName": "1721151629799 Pass",
+      "testName": "Happypath",
       "inputs": {
-        "fileName": "1721151629799-pass.pdf",
-        "applicationId": "1816178255668"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "All Mandatory Data Is Missing Fail",
-      "inputs": {
-        "fileName": "allmandatorydataismissing-fail.pdf",
-        "applicationId": "1816178255671"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Check GB Establishment RMS Number.",
-        "model": "NOREMOS"
-      }
-    },
-    {
-      "testName": "Description Has Double Quotes Should Pass",
-      "inputs": {
-        "fileName": "descriptionhasdoublequotesshould-pass.pdf",
-        "applicationId": "1816178255674"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Empty RMS Fail",
-      "inputs": {
-        "fileName": "empty-rms-fail.pdf",
-        "applicationId": "1816178255677"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Check GB Establishment RMS Number.",
-        "model": "NOREMOS"
-      }
-    },
-    {
-      "testName": "Happypat Passh",
-      "inputs": {
-        "fileName": "happypat-passh.pdf",
-        "applicationId": "1816178255680"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Incorrect Mandatatypes Excl netand Nopkgs Product Code Pass",
-      "inputs": {
-        "fileName": "incorrect-mandatatypes-excl-netandnopkgs-productcode-pass.pdf",
-        "applicationId": "1816178255683"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Incorrect Mandatory Data All Fail",
-      "inputs": {
-        "fileName": "incorrect-mandatorydata-all-fail.pdf",
-        "applicationId": "1816178255686"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Product code is invalid in page 1 row 1.\nNo of packages is invalid in page 1 row 1.\nTotal net weight is invalid in page 1 row 1.\n",
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Incorrect Mandatory Data Multiple Rows With Multiple Locations All Fail",
-      "inputs": {
-        "fileName": "incorrect-mandatorydata-multiplerowswithmultiplelocations-all-fail.pdf",
-        "applicationId": "1816178255689"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "No product line data found.",
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Incorrect Mandatory Data Netweight Fail",
-      "inputs": {
-        "fileName": "incorrect-mandatorydata-netweight-fail.pdf",
-        "applicationId": "1816178255692"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Total net weight is invalid in page 1 row 2.\n",
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Incorrect Mandatory Data Noofpkgs1 Fail",
-      "inputs": {
-        "fileName": "incorrect-mandatorydata-noofpkgs1-fail.pdf",
-        "applicationId": "1816178255695"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "No of packages is invalid in page 1 row 2 and page 1 row 4.\n",
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Incorrect Mandatory Data Noofpkgs3 Fail",
-      "inputs": {
-        "fileName": "incorrect-mandatorydata-noofpkgs3-fail.pdf",
-        "applicationId": "1816178255698"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "No of packages is invalid in page 1 row 2.\n",
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Incorrect Mandatory Data Noofpkgs4 Fail",
-      "inputs": {
-        "fileName": "incorrect-mandatorydata-noofpkgs4-fail.pdf",
-        "applicationId": "1816178255701"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "No of packages is invalid in page 1 row 2 and page 1 row 5.\n",
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Incorrect Mandatory Data Noofpkgs Fail",
-      "inputs": {
-        "fileName": "incorrect-mandatorydata-noofpkgs-fail.pdf",
-        "applicationId": "1816178255704"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "No of packages is invalid in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 1 other locations.\n",
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Incorrect Mandatory Data Nopkgs Fail",
-      "inputs": {
-        "fileName": "incorrect-mandatorydata-nopkgs-fail.pdf",
-        "applicationId": "1816178255707"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "No of packages is invalid in page 1 row 3.\n",
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Incorrect Mandatory Header All Unparse",
-      "inputs": {
-        "fileName": "incorrect-mandatoryheader-all-unparse.pdf",
-        "applicationId": "1816178255710"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Incorrect Mandatory Header Commodity Code Unparse",
-      "inputs": {
-        "fileName": "incorrect-mandatoryheader-commoditycode-unparse.pdf",
-        "applicationId": "1816178255713"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Incorrect Mandatory Header Desc Unparse",
-      "inputs": {
-        "fileName": "incorrect-mandatoryheader-desc-unparse.pdf",
-        "applicationId": "1816178255716"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Incorrect Mandatory Header Noofpackages Unparse",
-      "inputs": {
-        "fileName": "incorrect-mandatoryheader-noofpackages-unparse.pdf",
-        "applicationId": "1816178255719"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Incorrect Mandatory Header Tot Netweight KGS Fail",
-      "inputs": {
-        "fileName": "incorrect-mandatoryheader-totnetweightkgs-fail.pdf",
-        "applicationId": "1816178255722"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Incorrect Mandatory Header Tot Netweight Unparse",
-      "inputs": {
-        "fileName": "incorrect-mandatoryheader-totnetweight-unparse.pdf",
-        "applicationId": "1816178255725"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Incorrect Mandatorydata Netweight2 Fail",
-      "inputs": {
-        "fileName": "incorrect-mandatorydata-netweight2-fail.pdf",
-        "applicationId": "1816178255728"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Total net weight is invalid in page 1 row 3.\n",
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Incorrect Mandatorydata Netweight3 Fail",
-      "inputs": {
-        "fileName": "incorrect-mandatorydata-netweight3-fail.pdf",
-        "applicationId": "1816178255731"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Total net weight is invalid in page 1 row 7.\n",
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Incorrect Optional Data All1 Pass",
-      "inputs": {
-        "fileName": "incorrect-optionaldata-all1-pass.pdf",
-        "applicationId": "1816178255734"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Incorrect Optional Data All Pass",
-      "inputs": {
-        "fileName": "incorrect-optionaldata-all-pass.pdf",
-        "applicationId": "1816178255737"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Incorrect Optional Header All Pass",
-      "inputs": {
-        "fileName": "incorrect-optionalheader-all-pass.pdf",
-        "applicationId": "1816178255740"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Incorrect mandatory Data Commodity Code Fail",
-      "inputs": {
-        "fileName": "incorrect-mandatorydata-commoditycode-fail.pdf",
-        "applicationId": "1816178255743"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Product code is invalid in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 2 other locations.\n",
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Incorrect mandatory Data Netweight1 Fail",
-      "inputs": {
-        "fileName": "incorrect-mandatorydata-netweight1-fail.pdf",
-        "applicationId": "1816178255746"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Total net weight is invalid in page 1 row 3.\n",
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Invalid Commodity Code Multiple Rows Fail",
-      "inputs": {
-        "fileName": "invalidcommoditycode-multiplerows-fail.pdf",
-        "applicationId": "1816178255749"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Product code is invalid in page 1 row 1, page 1 row 3, page 1 row 5 in addition to 1 other locations.\n",
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Mandatory Headers Case In Sensitive Pass",
-      "inputs": {
-        "fileName": "mandatoryheaders-caseinsensitive-pass.pdf",
-        "applicationId": "1816178255752"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Data Commodity Code Fail",
-      "inputs": {
-        "fileName": "missing-mandatorydata-commoditycode-fail.pdf",
-        "applicationId": "1816178255755"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Identifier is missing in page 1 row 2.\n",
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Data Desc Fail",
-      "inputs": {
-        "fileName": "missing-mandatorydata-desc-fail.pdf",
-        "applicationId": "1816178255758"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Product description is missing in page 1 row 2.\n",
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Data Multiple Rows With Multiple Locations Except One Fail",
-      "inputs": {
-        "fileName": "missing-mandatorydata-multiplerowswithmultiplelocations-exceptone-fail.pdf",
-        "applicationId": "1816178255761"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Identifier is missing in page 1 row 2, page 1 row 4, page 1 row 6 in addition to 1 other locations.\nNo of packages is missing in page 1 row 2, page 1 row 4, page 1 row 6 in addition to 1 other locations.\nTotal net weight is missing in page 1 row 2, page 1 row 4, page 1 row 6 in addition to 1 other locations.\n",
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Data Noofpkgs Fail",
-      "inputs": {
-        "fileName": "missing-mandatorydata-noofpkgs-fail.pdf",
-        "applicationId": "1816178255764"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "No of packages is missing in page 1 row 2.\n",
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Data Remos No Pass",
-      "inputs": {
-        "fileName": "missing-mandatorydata-remosno-pass.pdf",
-        "applicationId": "1816178255767"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Data Totnetweight Fail",
-      "inputs": {
-        "fileName": "missing-mandatorydata-totnetweight-fail.pdf",
-        "applicationId": "1816178255770"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Total net weight is missing in page 1 row 2.\n",
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Header All Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-all-unparse.pdf",
-        "applicationId": "1816178255773"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Header Commodity Code Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-commoditycode-unparse.pdf",
-        "applicationId": "1816178255776"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Header Description Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-description-unparse.pdf",
-        "applicationId": "1816178255779"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Header Noof Pacakges Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-noofpacakges-unparse.pdf",
-        "applicationId": "1816178255782"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Header Tot Net Weight Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-totnetweight-unparse.pdf",
-        "applicationId": "1816178255785"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Header Tot Netweight KGS Fail",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-totnetweightkgs-fail.pdf",
-        "applicationId": "1816178255788"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Missing Optional Data All Pass",
-      "inputs": {
-        "fileName": "missing-optionaldata-all-pass.pdf",
-        "applicationId": "1816178255791"
+        "fileName": "happypath.pdf",
+        "applicationId": "1816178295154"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -509,7 +17,7 @@
       "testName": "Missing Optional Header All Pass",
       "inputs": {
         "fileName": "missing-optionalheader-all-pass.pdf",
-        "applicationId": "1816178255794"
+        "applicationId": "1816178295157"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -518,14 +26,26 @@
       }
     },
     {
-      "testName": "No Data Except Single RMS Fail",
+      "testName": "Incorrect Optional Data All Pass",
       "inputs": {
-        "fileName": "nodata-exceptsinglerms-fail.pdf",
-        "applicationId": "1816178255797"
+        "fileName": "incorrect-optionaldata-all-pass.pdf",
+        "applicationId": "1816178295160"
       },
       "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "No product line data found.",
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "GIOVANNI3"
+      }
+    },
+    {
+      "testName": "Incorrect Optional Header All Pass",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-all-pass.pdf",
+        "applicationId": "1816178295166"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
         "model": "GIOVANNI3"
       }
     },
@@ -533,7 +53,7 @@
       "testName": "Only Mandatory Data Is Filled Pass",
       "inputs": {
         "fileName": "onlymandatorydataisfilled-pass.pdf",
-        "applicationId": "1816178255800"
+        "applicationId": "1816178295169"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -542,10 +62,10 @@
       }
     },
     {
-      "testName": "RMSHas Wrong Final3Digits Should Pass",
+      "testName": "Description Has Double Quotes Should Pass",
       "inputs": {
-        "fileName": "rmshaswrongfinal3digitsshould-pass.pdf",
-        "applicationId": "1816178255803"
+        "fileName": "descriptionhasdoublequotesshould-pass.pdf",
+        "applicationId": "1816178295172"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -554,26 +74,290 @@
       }
     },
     {
-      "testName": "RMSHas Wrong Regex With Additional Hyphen Should Be Fail",
+      "testName": "Mandatory Headers Case In Sensitive Pass",
       "inputs": {
-        "fileName": "rmshaswrongregexwithadditionalhyphenshouldbe-fail.pdf",
-        "applicationId": "1816178255806"
+        "fileName": "mandatoryheaders-caseinsensitive-pass.pdf",
+        "applicationId": "1816178295175"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "GIOVANNI3"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatatypes Excl netand Nopkgs Product Code Pass",
+      "inputs": {
+        "fileName": "incorrect-mandatatypes-excl-netandnopkgs-productcode-pass.pdf",
+        "applicationId": "1816178295178"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "GIOVANNI3"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Commodity Code Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-commoditycode-unparse.pdf",
+        "applicationId": "1816178295181"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Check GB Establishment RMS Number.",
-        "model": "NOREMOS"
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
       }
     },
     {
-      "testName": "RMSIs Present But No Header Text Should Pass",
+      "testName": "Incorrect Mandatory Header Desc Unparse",
       "inputs": {
-        "fileName": "rmsispresentbutnoheadertextshould-pass.pdf",
-        "applicationId": "1816178255809"
+        "fileName": "incorrect-mandatoryheader-desc-unparse.pdf",
+        "applicationId": "1816178295184"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Noofpkgs Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-noofpkgs-unparse.pdf",
+        "applicationId": "1816178295247"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Nature Pass",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-nature-pass.pdf",
+        "applicationId": "1816178295250"
       },
       "expectedResults": {
         "approvalStatus": "approved",
         "reasonsForFailure": null,
+        "model": "GIOVANNI3"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Treatment Type Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-treatmenttype-unparse.pdf",
+        "applicationId": "1816178295193"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Tot Netweight Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-totnetweight-unparse.pdf",
+        "applicationId": "1816178295253"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Optional Header Country Of Origin Pass",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-countryoforigin-pass.pdf",
+        "applicationId": "1816178295199"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "GIOVANNI3"
+      }
+    },
+    {
+      "testName": "Incorrect Optional Header Nirms Fail",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-nirms-fail.pdf",
+        "applicationId": "1816178295202"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 8 other locations.\n",
+        "model": "GIOVANNI3"
+      }
+    },
+    {
+      "testName": "Empty Multiple Rows Columns Pass",
+      "inputs": {
+        "fileName": "empty-multiplerowscolumns-pass.pdf",
+        "applicationId": "1816178295256"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "GIOVANNI3"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header All Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-all-unparse.pdf",
+        "applicationId": "1816178295208"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Commodity Code Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-commoditycode-unparse.pdf",
+        "applicationId": "1816178295211"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Desc Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-desc-unparse.pdf",
+        "applicationId": "1816178295214"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Noofpkgs Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-noofpkgs-unparse.pdf",
+        "applicationId": "1816178295217"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Nature Pass",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-nature-pass.pdf",
+        "applicationId": "1816178295259"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "GIOVANNI3"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Treatment Type Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-treatmenttype-unparse.pdf",
+        "applicationId": "1816178295223"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Tot Netweight Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-totnetweight-unparse.pdf",
+        "applicationId": "1816178295262"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Optional Header Country Of Origin Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-countryoforigin-pass.pdf",
+        "applicationId": "1816178295229"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "GIOVANNI3"
+      }
+    },
+    {
+      "testName": "Missing Optional Header Nirms Fail",
+      "inputs": {
+        "fileName": "missing-optionalheader-nirms-fail.pdf",
+        "applicationId": "1816178295232"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 8 other locations.\n",
+        "model": "GIOVANNI3"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Data Multiple Rows With Multiple Locations All Fail",
+      "inputs": {
+        "fileName": "incorrect-mandatorydata-multiplerowswithmultiplelocations-all-fail.pdf",
+        "applicationId": "1816178307088"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in page 1 row 2.\nNo of packages is invalid in page 1 row 1 and page 1 row 2.\nTotal net weight is invalid in page 1 row 1 and page 1 row 2.\n",
+        "model": "GIOVANNI3"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Data Multiple Rows With Multiple Locations All Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-multiplerowswithmultiplelocations-all-fail.pdf",
+        "applicationId": "1816178295238"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in page 1 row 1.\nProduct description is missing in page 1 row 2.\nNo of packages is missing in page 1 row 1.\nTotal net weight is missing in page 1 row 1.\n",
+        "model": "GIOVANNI3"
+      }
+    },
+    {
+      "testName": "All Mandatory Data Is Missing Fail",
+      "inputs": {
+        "fileName": "allmandatorydataismissing-fail.pdf",
+        "applicationId": "1816178295241"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 8 other locations.\nProduct description is missing in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 8 other locations.\nNo of packages is missing in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 8 other locations.\nTotal net weight is missing in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 8 other locations.\n",
+        "model": "GIOVANNI3"
+      }
+    },
+    {
+      "testName": "No Data Except Single R M S Fail",
+      "inputs": {
+        "fileName": "nodata-exceptsinglerms-fail.pdf",
+        "applicationId": "1816178295244"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in page 1 row 1, page 1 row 2 and page 1 row 3.\nProduct description is missing in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 1 other locations.\n",
         "model": "GIOVANNI3"
       }
     }
