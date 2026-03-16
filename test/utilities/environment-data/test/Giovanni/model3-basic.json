@@ -321,7 +321,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Identifier is missing in page 1 row 2.\nNo of packages is invalid in page 1 row 1 and page 1 row 2.\nTotal net weight is invalid in page 1 row 1 and page 1 row 2.\n",
+        "reasonsForFailure": "Product code is invalid in page 1 row 2.\nNo of packages is invalid in page 1 row 1 and page 1 row 2.\nTotal net weight is invalid in page 1 row 1 and page 1 row 2.\n",
         "model": "GIOVANNI3"
       }
     },
