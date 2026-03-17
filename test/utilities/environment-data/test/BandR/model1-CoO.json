@@ -1,0 +1,185 @@
+{
+  "name": "BandR1 CoO",
+  "tests": [
+    {
+      "testName": "Happypath Pass",
+      "inputs": {
+        "fileName": "happypath-pass.xlsx",
+        "applicationId": "1816178295346"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BARTONREDMAN1"
+      }
+    },
+    {
+      "testName": "AC1 Not NIRMS Pass",
+      "inputs": {
+        "fileName": "ac1-notnirms-pass.xlsx",
+        "applicationId": "1816178307124"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BARTONREDMAN1"
+      }
+    },
+    {
+      "testName": "AC2 Invalid NIRMS Fail",
+      "inputs": {
+        "fileName": "ac2-invalidnirms-fail.xlsx",
+        "applicationId": "1816178295349"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Revised\" row 46.\n",
+        "model": "BARTONREDMAN1"
+      }
+    },
+    {
+      "testName": "AC3 Null NIRMS Fail",
+      "inputs": {
+        "fileName": "ac3-nullnirms-fail.xlsx",
+        "applicationId": "1816178295352"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Revised\" row 46.\n",
+        "model": "BARTONREDMAN1"
+      }
+    },
+    {
+      "testName": "AC4 Null NIRMS Multiple Fail",
+      "inputs": {
+        "fileName": "ac4-nullnirmsmultiple-fail.xlsx",
+        "applicationId": "1816178295355"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Revised\" row 46, sheet \"Revised\" row 47, sheet \"Revised\" row 48 in addition to 1 other locations.\n",
+        "model": "BARTONREDMAN1"
+      }
+    },
+    {
+      "testName": "AC5 Invalid NIRMS Multiple Fail",
+      "inputs": {
+        "fileName": "ac5-invalidnirmsmultiple-fail.xlsx",
+        "applicationId": "1816178310730"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Revised\" row 46, sheet \"Revised\" row 47, sheet \"Revised\" row 48 in addition to 1 other locations.\n",
+        "model": "BARTONREDMAN1"
+      }
+    },
+    {
+      "testName": "AC6 Null Co O Fail",
+      "inputs": {
+        "fileName": "ac6-nullcoo-fail.xlsx",
+        "applicationId": "1816178295361"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Revised\" row 46.\n",
+        "model": "BARTONREDMAN1"
+      }
+    },
+    {
+      "testName": "AC7 Invalid Co O Fail",
+      "inputs": {
+        "fileName": "ac7-invalidcoo-fail.xlsx",
+        "applicationId": "1816178295364"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Revised\" row 47.\n",
+        "model": "BARTONREDMAN1"
+      }
+    },
+    {
+      "testName": "AC8 Multiple Null Co O Fail",
+      "inputs": {
+        "fileName": "ac8-multiplenullcoo-fail.xlsx",
+        "applicationId": "1816178295367"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Revised\" row 46, sheet \"Revised\" row 47, sheet \"Revised\" row 48 in addition to 1 other locations.\n",
+        "model": "BARTONREDMAN1"
+      }
+    },
+    {
+      "testName": "AC9 Multiple Invalid Co O Fail",
+      "inputs": {
+        "fileName": "ac9-multipleinvalidcoo-fail.xlsx",
+        "applicationId": "1816178295370"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Revised\" row 46, sheet \"Revised\" row 47, sheet \"Revised\" row 48 in addition to 1 other locations.\n",
+        "model": "BARTONREDMAN1"
+      }
+    },
+    {
+      "testName": "AC10 Co O X Pass",
+      "inputs": {
+        "fileName": "ac10-coo-x-pass.xlsx",
+        "applicationId": "1816178295373"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BARTONREDMAN1"
+      }
+    },
+    {
+      "testName": "AC11 High Risk Co O Treatment Type Specified Fail",
+      "inputs": {
+        "fileName": "ac11-highriskcootreatmenttypespecified-fail.xlsx",
+        "applicationId": "1816178310676"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Revised\" row 46.\n",
+        "model": "BARTONREDMAN1"
+      }
+    },
+    {
+      "testName": "AC12 High Risk Co O Treatment Type Specified Multiple Fail",
+      "inputs": {
+        "fileName": "ac12-highriskcootreatmenttypespecifiedmultiple-fail.xlsx",
+        "applicationId": "1816178310679"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Revised\" row 46, sheet \"Revised\" row 47, sheet \"Revised\" row 48 in addition to 1 other locations.\n",
+        "model": "BARTONREDMAN1"
+      }
+    },
+    {
+      "testName": "AC13 High Risk Co O Treatment Type Not Specified Fail",
+      "inputs": {
+        "fileName": "ac13-highriskcootreatmenttypenotspecified-fail.xlsx",
+        "applicationId": "1816178310685"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Revised\" row 46.\n",
+        "model": "BARTONREDMAN1"
+      }
+    },
+    {
+      "testName": "AC14 High Risk Co O Treatment Type Not Specified Multiple Fail",
+      "inputs": {
+        "fileName": "ac14-highriskcootreatmenttypenotspecifiedmultiple-fail.xlsx",
+        "applicationId": "1816178310688"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Revised\" row 46, sheet \"Revised\" row 47, sheet \"Revised\" row 48 in addition to 1 other locations.\n",
+        "model": "BARTONREDMAN1"
+      }
+    }
+  ]
+}
