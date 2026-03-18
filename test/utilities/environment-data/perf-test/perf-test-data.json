@@ -41,8 +41,8 @@
       {
         "testName": "Pdf Happy path",
         "inputs": {
-          "fileName": "happypathgr.pdf",
-          "applicationId": "1762431244328"
+          "fileName": "sc3-giovanniranaasdalarne.pdf",
+          "applicationId": "1762431272480"
         },
         "expectedResults": {
           "approvalStatus": "approved",
@@ -53,12 +53,12 @@
       {
         "testName": "Pdf UnHappy path",
         "inputs": {
-          "fileName": "unhappypathgr.pdf",
-          "applicationId": "1762431244331"
+          "fileName": "nodata-exceptsinglerms-fail.pdf",
+          "applicationId": "1762431272483"
         },
         "expectedResults": {
           "approvalStatus": "rejected_other",
-          "reasonsForFailure": "Product code is invalid in page 1 row 2.\n",
+          "reasonsForFailure": "Identifier is missing in page 1 row 1, page 1 row 2 and page 1 row 3.\nProduct description is missing in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 1 other locations.\n",
           "model": "GIOVANNI3"
         }
       },
