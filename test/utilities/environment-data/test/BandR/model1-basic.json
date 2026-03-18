@@ -1,0 +1,329 @@
+{
+  "name": "BandR1 Basic",
+  "tests": [
+    {
+      "testName": "Happypath Pass",
+      "inputs": {
+        "fileName": "happypath-pass.xlsx",
+        "applicationId": "1816178270377"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BARTONREDMAN1"
+      }
+    },
+    {
+      "testName": "Missing Optional Header All Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-all-pass.xlsx",
+        "applicationId": "1816178295385"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BARTONREDMAN1"
+      }
+    },
+    {
+      "testName": "Incorrect Optional Data All Pass",
+      "inputs": {
+        "fileName": "incorrect-optionaldata-all-pass.xlsx",
+        "applicationId": "1816178294266"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BARTONREDMAN1"
+      }
+    },
+    {
+      "testName": "Incorrect Optional Header All Pass",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-all-pass.xlsx",
+        "applicationId": "1816178294269"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Only Mandatory Data Is Filled Pass",
+      "inputs": {
+        "fileName": "onlymandatorydataisfilled-pass.xlsx",
+        "applicationId": "1816178294275"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BARTONREDMAN1"
+      }
+    },
+    {
+      "testName": "Description Has Double Quotes Should Pass",
+      "inputs": {
+        "fileName": "descriptionhasdoublequotesshould-pass.xlsx",
+        "applicationId": "1816178294278"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BARTONREDMAN1"
+      }
+    },
+    {
+      "testName": "Mandatory Headers Case In Sensitive Pass",
+      "inputs": {
+        "fileName": "mandatoryheaders-caseinsensitive-pass.xlsx",
+        "applicationId": "1816178294281"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BARTONREDMAN1"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Commodity Code Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-commoditycode-unparse.xlsx",
+        "applicationId": "1816178294764"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Desc Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-desc-unparse.xlsx",
+        "applicationId": "1816178294767"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header No Of Pkgs Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-noofpkgs-unparse.xlsx",
+        "applicationId": "1816178294770"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Nature Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-nature-unparse.xlsx",
+        "applicationId": "1816178294302"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BARTONREDMAN1"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Treatment Type Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-treatmenttype-unparse.xlsx",
+        "applicationId": "1816178294305"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Tot Netweight Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-totnetweight-unparse.xlsx",
+        "applicationId": "1816178294308"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Empty Multiple Rows Columns Pass",
+      "inputs": {
+        "fileName": "empty-multiplerowscolumns-pass.xlsx",
+        "applicationId": "1816178294317"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BARTONREDMAN1"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header All Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-all-unparse.xlsx",
+        "applicationId": "1816178294320"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Commodity Code Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-commoditycode-unparse.xlsx",
+        "applicationId": "1816178294326"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Desc Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-desc-unparse.xlsx",
+        "applicationId": "1816178294329"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header No Of Pkgs Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-noofpkgs-unparse.xlsx",
+        "applicationId": "1816178294332"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Nature Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-nature-unparse.xlsx",
+        "applicationId": "1816178294785"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BARTONREDMAN1"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Treatment Type Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-treatmenttype-unparse.xlsx",
+        "applicationId": "1816178294338"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Tot Netweight Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-totnetweight-unparse.xlsx",
+        "applicationId": "1816178294341"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Data Multiple Rows With Multiple Locations All Fail",
+      "inputs": {
+        "fileName": "incorrect-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
+        "applicationId": "1816178294350"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product code is invalid in sheet \"Revised\" row 47, sheet \"Revised\" row 51 and sheet \"Revised\" row 53.\nTotal net weight is invalid in sheet \"Revised\" row 46, sheet \"Revised\" row 49, sheet \"Revised\" row 51 in addition to 1 other locations.\n",
+        "model": "BARTONREDMAN1"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Data Multiple Rows With Multiple Locations All Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
+        "applicationId": "1816178294353"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in sheet \"Revised\" row 48 and sheet \"Revised\" row 52.\nProduct description is missing in sheet \"Revised\" row 48, sheet \"Revised\" row 51 and sheet \"Revised\" row 54.\nNo of packages is missing in sheet \"Revised\" row 48, sheet \"Revised\" row 51 and sheet \"Revised\" row 54.\nTotal net weight is missing in sheet \"Revised\" row 48, sheet \"Revised\" row 50 and sheet \"Revised\" row 53.\n",
+        "model": "BARTONREDMAN1"
+      }
+    },
+    {
+      "testName": "All Mandatory Data Is Missing Fail",
+      "inputs": {
+        "fileName": "allmandatorydataismissing-fail.xlsx",
+        "applicationId": "1816178294356"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in sheet \"Revised\" row 46, sheet \"Revised\" row 47, sheet \"Revised\" row 48 in addition to 7 other locations.\nProduct description is missing in sheet \"Revised\" row 46, sheet \"Revised\" row 47, sheet \"Revised\" row 48 in addition to 7 other locations.\nNo of packages is missing in sheet \"Revised\" row 46, sheet \"Revised\" row 47, sheet \"Revised\" row 48 in addition to 7 other locations.\nTotal net weight is missing in sheet \"Revised\" row 46, sheet \"Revised\" row 47, sheet \"Revised\" row 48 in addition to 7 other locations.\n",
+        "model": "BARTONREDMAN1"
+      }
+    },
+    {
+      "testName": "No Data Except Single RMS Fail",
+      "inputs": {
+        "fileName": "nodata-exceptsinglerms-fail.xlsx",
+        "applicationId": "1816178294359"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No product line data found.",
+        "model": "BARTONREDMAN1"
+      }
+    },
+    {
+      "testName": "Missing Optional Header Country Of Origin Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-countryoforigin-pass.xlsx",
+        "applicationId": "1816178307091"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BARTONREDMAN1"
+      }
+    },
+    {
+      "testName": "Missing Optional Header NIRMS Fail",
+      "inputs": {
+        "fileName": "missing-optionalheader-nirms-fail.xlsx",
+        "applicationId": "1816178307094"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Revised\" row 46, sheet \"Revised\" row 47, sheet \"Revised\" row 48 in addition to 7 other locations.\n",
+        "model": "BARTONREDMAN1"
+      }
+    }
+  ]
+}

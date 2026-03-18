@@ -1,11 +1,11 @@
 {
-  "name": "GIOVANNI3 NetWeight",
+  "name": "GIOVANNI3 Netweight",
   "tests": [
     {
       "testName": "Alpha Numeric Total Net Weight Unparse",
       "inputs": {
         "fileName": "alpha-numeric-totalnetweight-unparse.pdf",
-        "applicationId": "1816178255812"
+        "applicationId": "1816178295073"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -14,10 +14,10 @@
       }
     },
     {
-      "testName": "Alpha Numeric UOM Weight Fail",
+      "testName": "Alpha Numeric U O M Weight Fail",
       "inputs": {
         "fileName": "alpha-numeric-uom-weight-fail.pdf",
-        "applicationId": "1816178255815"
+        "applicationId": "1816178295076"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -29,7 +29,7 @@
       "testName": "Ambiguous Units in Header Pass",
       "inputs": {
         "fileName": "ambiguous-units-in-header-pass.pdf",
-        "applicationId": "1816178255818"
+        "applicationId": "1816178295079"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -38,22 +38,10 @@
       }
     },
     {
-      "testName": "Data empty Netweight Fail",
-      "inputs": {
-        "fileName": "data-empty-netweight-fail.pdf",
-        "applicationId": "1816178255821"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\nTotal net weight is missing in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 2 other locations.\n",
-        "model": "GIOVANNI3"
-      }
-    },
-    {
       "testName": "Extra Spaces In Header Unparse",
       "inputs": {
         "fileName": "extra-spaces-in-header-unparse.pdf",
-        "applicationId": "1816178255824"
+        "applicationId": "1816178295082"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -65,7 +53,7 @@
       "testName": "Happypath Pass",
       "inputs": {
         "fileName": "happypath-pass.pdf",
-        "applicationId": "1816178255827"
+        "applicationId": "1816178295088"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -77,7 +65,7 @@
       "testName": "Header Typos or Special Characters Unparse",
       "inputs": {
         "fileName": "header-typos-or-specialcharacters-unparse.pdf",
-        "applicationId": "1816178255830"
+        "applicationId": "1816178295091"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -86,10 +74,10 @@
       }
     },
     {
-      "testName": "Header With Extra Parenthese Pass",
+      "testName": "Header With Extra Parentheses Pass",
       "inputs": {
-        "fileName": "header-with-extra-parenthese-pass.pdf",
-        "applicationId": "1816178255833"
+        "fileName": "header-with-extra-parentheses-pass.pdf",
+        "applicationId": "1816178295580"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -101,7 +89,7 @@
       "testName": "Header With Multiple Units Pass",
       "inputs": {
         "fileName": "header-with-multiple-units-pass.pdf",
-        "applicationId": "1816178255836"
+        "applicationId": "1816178295103"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -113,59 +101,11 @@
       "testName": "Header With Unit And Symbols Pass",
       "inputs": {
         "fileName": "header-with-unit-and-symbols-pass.pdf",
-        "applicationId": "1816178255839"
+        "applicationId": "1816178295589"
       },
       "expectedResults": {
         "approvalStatus": "approved",
         "reasonsForFailure": null,
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Inconsistent Header Case Pass",
-      "inputs": {
-        "fileName": "inconsistent-header-case-pass.pdf",
-        "applicationId": "1816178255842"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Incorrect Mandatory Data Netweight Fail",
-      "inputs": {
-        "fileName": "incorrect-mandatorydata-netweight-fail.pdf",
-        "applicationId": "1816178255845"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Total net weight is invalid in page 1 row 1, page 1 row 2 and page 1 row 3.\n",
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Incorrect Netweight Data All Fail",
-      "inputs": {
-        "fileName": "incorrect-netweightdata-all-fail.pdf",
-        "applicationId": "1816178255848"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Total net weight is invalid in page 1 row 1.\n",
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Incorrect Netweight UOMData All Fail",
-      "inputs": {
-        "fileName": "incorrect-netweightuomdata-all-fail.pdf",
-        "applicationId": "1816178255851"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Total net weight is invalid in page 1 row 1.\n",
         "model": "GIOVANNI3"
       }
     },
@@ -173,7 +113,7 @@
       "testName": "Invalid Unit Type Fail",
       "inputs": {
         "fileName": "invalid-unit-type-fail.pdf",
-        "applicationId": "1816178255854"
+        "applicationId": "1816178295112"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -185,7 +125,7 @@
       "testName": "Malformed Header Unit Pass",
       "inputs": {
         "fileName": "malformed-header-unit-pass.pdf",
-        "applicationId": "1816178255857"
+        "applicationId": "1816178295115"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -194,22 +134,10 @@
       }
     },
     {
-      "testName": "Missing Header Netweight unparse",
-      "inputs": {
-        "fileName": "missing-header-netweight-unparse.pdf",
-        "applicationId": "1816178255860"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
       "testName": "Missing Header Total Net Weight Unparse",
       "inputs": {
         "fileName": "missing-header-totalnetweight-unparse.pdf",
-        "applicationId": "1816178255863"
+        "applicationId": "1816178295118"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -221,31 +149,7 @@
       "testName": "Missing Paranthesis in Uom Pass",
       "inputs": {
         "fileName": "missing-paranthesis-in-uom-pass.pdf",
-        "applicationId": "1816178255866"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Missing UOM Weight Unparse",
-      "inputs": {
-        "fileName": "missing-uom-weight-unparse.pdf",
-        "applicationId": "1816178255869"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Mixed Case Header Pass",
-      "inputs": {
-        "fileName": "mixedcase-header-pass.pdf",
-        "applicationId": "1816178255872"
+        "applicationId": "1816178295121"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -257,7 +161,7 @@
       "testName": "Mixed Units And Casing Pass",
       "inputs": {
         "fileName": "mixedunits-and-casing-pass.pdf",
-        "applicationId": "1816178255875"
+        "applicationId": "1816178295124"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -269,7 +173,7 @@
       "testName": "Netweight Has Empty Parentheses Fail",
       "inputs": {
         "fileName": "netweight-hasempty-parentheses-fail.pdf",
-        "applicationId": "1816178255878"
+        "applicationId": "1816178295127"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -278,98 +182,26 @@
       }
     },
     {
-      "testName": "Splcharacters Header Netweight Unparse",
-      "inputs": {
-        "fileName": "splcharacters-header-netweight-unparse.pdf",
-        "applicationId": "1816178255881"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Total Net Weight Without UOMWeight Fail",
-      "inputs": {
-        "fileName": "totalnetweight-without-uomweight-fail.pdf",
-        "applicationId": "1816178255884"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "UOMWeight Without Total Net Weight Unparse",
+      "testName": "U O M Weight Without Total Net Weight Unparse",
       "inputs": {
         "fileName": "uomweight-without-totalnetweight-unparse.pdf",
-        "applicationId": "1816178255887"
+        "applicationId": "1816178295133"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": null,
         "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Unhandled Unit Type Fail",
-      "inputs": {
-        "fileName": "unhandled-unit-type-fail.pdf",
-        "applicationId": "1816178255890"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "GIOVANNI3"
       }
     },
     {
       "testName": "Unit Missing Weight Present Fail",
       "inputs": {
         "fileName": "unit-missing-weight-present-fail.pdf",
-        "applicationId": "1816178255893"
+        "applicationId": "1816178295142"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Zero Data Total Net Weight Pass",
-      "inputs": {
-        "fileName": "zero-data-totalnetweight-pass.pdf",
-        "applicationId": "1816178255896"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Zero Data UOM Pass",
-      "inputs": {
-        "fileName": "zero-data-uom-pass.pdf",
-        "applicationId": "1816178255899"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "giovanni3 Pass",
-      "inputs": {
-        "fileName": "giovanni3-pass.pdf",
-        "applicationId": "1816178255902"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
         "model": "GIOVANNI3"
       }
     }

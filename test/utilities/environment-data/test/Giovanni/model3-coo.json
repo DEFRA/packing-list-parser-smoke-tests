@@ -1,0 +1,185 @@
+{
+  "name": "GIOVANNI3 Coo",
+  "tests": [
+    {
+      "testName": "ac1 Valid Nirms Pass",
+      "inputs": {
+        "fileName": "ac1-validnirms-pass.pdf",
+        "applicationId": "1816178295568"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "GIOVANNI3"
+      }
+    },
+    {
+      "testName": "ac2 Null Nirms Fail",
+      "inputs": {
+        "fileName": "ac2-nullnirms-fail.pdf",
+        "applicationId": "1816178295574"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 8 other locations.\n",
+        "model": "GIOVANNI3"
+      }
+    },
+    {
+      "testName": "ac3 Invalid Nirms Fail",
+      "inputs": {
+        "fileName": "ac3-invalidnirms-fail.pdf",
+        "applicationId": "1816178295646"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 8 other locations.\n",
+        "model": "GIOVANNI3"
+      }
+    },
+    {
+      "testName": "ac4 Null N I R M S Multiple",
+      "inputs": {
+        "fileName": "ac4-nullnirms-multiple.pdf",
+        "applicationId": "1816178295586"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 8 other locations.\n",
+        "model": "GIOVANNI3"
+      }
+    },
+    {
+      "testName": "ac5 Invalid N I R M S Multiple",
+      "inputs": {
+        "fileName": "ac5-invalidnirms-multiple.pdf",
+        "applicationId": "1816178295592"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 8 other locations.\n",
+        "model": "GIOVANNI3"
+      }
+    },
+    {
+      "testName": "ac6 Null Coo Fail",
+      "inputs": {
+        "fileName": "ac6-nullcoo-fail.pdf",
+        "applicationId": "1816178295595"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in page 1 row 1.\n",
+        "model": "GIOVANNI3"
+      }
+    },
+    {
+      "testName": "ac7 Invalid Coo fail",
+      "inputs": {
+        "fileName": "ac7-invalidcoo-fail.pdf",
+        "applicationId": "1816178295598"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in page 1 row 1.\n",
+        "model": "GIOVANNI3"
+      }
+    },
+    {
+      "testName": "ac8 Null Coo Multiple",
+      "inputs": {
+        "fileName": "ac8-nullcoo-multiple.pdf",
+        "applicationId": "1816178295601"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 1 other locations.\n",
+        "model": "GIOVANNI3"
+      }
+    },
+    {
+      "testName": "ac9 Invalid Coo Multiple",
+      "inputs": {
+        "fileName": "ac9-invalidcoo-multiple.pdf",
+        "applicationId": "1816178295604"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in page 1 row 1, page 1 row 2 and page 1 row 3.\n",
+        "model": "GIOVANNI3"
+      }
+    },
+    {
+      "testName": "ac10 X Coo Pass",
+      "inputs": {
+        "fileName": "ac10-xcoo-pass.pdf",
+        "applicationId": "1816178295610"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "GIOVANNI3"
+      }
+    },
+    {
+      "testName": "ac11 Prohibited Item Fail",
+      "inputs": {
+        "fileName": "ac11-prohibiteditem-fail.pdf",
+        "applicationId": "1816178295619"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in page 1 row 1.\n",
+        "model": "GIOVANNI3"
+      }
+    },
+    {
+      "testName": "ac12 Prohibited Item Multiple Fail",
+      "inputs": {
+        "fileName": "ac12-prohibiteditem-multiple-fail.pdf",
+        "applicationId": "1816178295622"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 1 other locations.\n",
+        "model": "GIOVANNI3"
+      }
+    },
+    {
+      "testName": "ac13 Prohibited Item Null Treatment Fail",
+      "inputs": {
+        "fileName": "ac13-prohibiteditemnulltreatment-fail.pdf",
+        "applicationId": "1816178295625"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in page 1 row 1.\n",
+        "model": "GIOVANNI3"
+      }
+    },
+    {
+      "testName": "ac14 Prohibited Item Null Treatment Multiple Fail",
+      "inputs": {
+        "fileName": "ac14-prohibiteditemnulltreatment-multiple-fail.pdf",
+        "applicationId": "1816178295628"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 1 other locations.\n",
+        "model": "GIOVANNI3"
+      }
+    },
+    {
+      "testName": "ac15 Ignore Zero Rows Pass",
+      "inputs": {
+        "fileName": "ac15-ignorezerorows-pass.pdf",
+        "applicationId": "1816178295631"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "GIOVANNI3"
+      }
+    }
+  ]
+}
