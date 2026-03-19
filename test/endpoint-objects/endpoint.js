@@ -5,6 +5,7 @@
  * and attach results to Allure reports.
  */
 import allureReporter from '@wdio/allure-reporter'
+import { apiKey } from '../utilities/config.js'
 
 const MAX_RETRIES = 3
 const RETRY_DELAY_MS = 1000
@@ -41,7 +42,13 @@ class Endpoint {
     allureReporter.addStep(`GET ${url}`)
 
     return await this.executeWithRetry(async () => {
-      const response = await fetch(url)
+      const response = apiKey
+        ? await fetch(url, {
+            headers: {
+              'x-api-key': apiKey
+            }
+          })
+        : await fetch(url)
       return response
     })
   }
@@ -58,15 +65,20 @@ class Endpoint {
     allureReporter.addStep(`POST ${url}`)
 
     const payload = JSON.stringify(message)
+    const headers = {
+      'Content-Type': 'application/json'
+    }
+
+    if (apiKey) {
+      headers['x-api-key'] = apiKey
+    }
 
     allureReporter.addAttachment('Request', payload, 'application/json')
 
     return await this.executeWithRetry(async () => {
       const response = await fetch(url, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
+        headers,
         body: payload
       })
       return response
