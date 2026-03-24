@@ -118,7 +118,8 @@ export const config = {
   // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
   // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
   // gets prepended directly.
-  baseUrl: 'http://localhost:3001',
+  baseUrl:
+    'https://ephemeral-protected.api.test.cdp-int.defra.cloud/trade-exports-packinglistparser',
   //
   // Default timeout for all waitFor* commands.
   waitforTimeout: 10000,

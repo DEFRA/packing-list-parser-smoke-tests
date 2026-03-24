@@ -36,18 +36,30 @@ Install application dependencies:
 npm install
 ```
 
-### Running local tests
+### Running local tests against CDP Test environment
 
-Start application you are testing on the url specified in `baseUrl` [wdio.local.conf.js](wdio.local.conf.js)
+config required for the environment needs to be updated in [config.js](./test/utilities/config.js)
+
+- `baseUrl` for the path to the application forms directory
+- `defaultEstablishmentId` for an establishment from IDCOMS
+- `apiKey` for the developer token from the CDP portal
+
+Start application you are testing on the url specified in `baseUrl` [wdio.local.conf.js](wdio.local.conf.js). By default this points to teh cdp test environment.
 
 ```bash
 npm run test:local
 ```
 
-### Debugging local tests
+or in debug mode
 
 ```bash
-npm run test:local:debug
+npm run test:cdptest:local
+```
+
+If you want to run only smoke tests for specific models, values can be passed to the `PROFILE` environment variable. For example, top run ASDA model 4 tests
+
+```bash
+PROFILE=ASDA4 npm run test:local
 ```
 
 ## Production
