@@ -45,7 +45,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Total net weight is missing in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 24 other locations.\n",
+        "reasonsForFailure": "Total net weight is missing in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 23 other locations.\n",
         "model": "MANDS1"
       }
     },
@@ -137,7 +137,7 @@
       "testName": "Invalid Unit Type Fail",
       "inputs": {
         "fileName": "invalid-unit-type-fail.pdf",
-        "applicationId": "1816178160574"
+        "applicationId": "1816178332015"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -173,7 +173,7 @@
       "testName": "MixedUnits And Casing Pass",
       "inputs": {
         "fileName": "mixedunits-and-casing-pass.pdf",
-        "applicationId": "1816178160592"
+        "applicationId": "1816178332018"
       },
       "expectedResults": {
         "approvalStatus": "approved",
