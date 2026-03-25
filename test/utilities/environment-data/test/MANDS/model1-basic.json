@@ -153,7 +153,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 24 other locations.\n",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 23 other locations.\n",
         "model": "MANDS1"
       }
     },
