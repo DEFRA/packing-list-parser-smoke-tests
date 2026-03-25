@@ -348,6 +348,42 @@
         "reasonsForFailure": "Total net weight is missing in page 1 row 1, page 1 row 3, page 1 row 5 in addition to 1 other locations.\n",
         "model": "MANDS1"
       }
+    },
+    {
+      "testName": "mands format1 pass",
+      "inputs": {
+        "fileName": "mands-format1-pass.pdf",
+        "applicationId": "1816178331952"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MANDS1"
+      }
+    },
+    {
+      "testName": "mands format2 pass",
+      "inputs": {
+        "fileName": "mands-format2-pass.pdf",
+        "applicationId": "1816178331961"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MANDS1"
+      }
+    },
+    {
+      "testName": "mands format3 pass",
+      "inputs": {
+        "fileName": "mands-format3-pass.pdf",
+        "applicationId": "1816178331964"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MANDS1"
+      }
     }
   ]
 }
