@@ -721,6 +721,30 @@
           "reasonsForFailure": "No product line data found.",
           "model": "WARRENS2"
         }
+      },
+      {
+        "testName": "Boots1 | Happypath Pass",
+        "inputs": {
+          "fileName": "boots1-happypath-pass.xlsx",
+          "applicationId": "1816178315101"
+        },
+        "expectedResults": {
+          "approvalStatus": "approved",
+          "reasonsForFailure": null,
+          "model": "BOOTS1"
+        }
+      },
+      {
+        "testName": "Boots1 | No Data  Except Single RMS Fail",
+        "inputs": {
+          "fileName": "nodata-exceptsinglerms-fail.xlsx",
+          "applicationId": "1816178315008"
+        },
+        "expectedResults": {
+          "approvalStatus": "rejected_other",
+          "reasonsForFailure": "No product line data found.",
+          "model": "BOOTS1"
+        }
       }
     ]
   }
