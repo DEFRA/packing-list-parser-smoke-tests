@@ -27,7 +27,7 @@ export const retailerPrefixes = {
   warrens: 'Warrens',
   burbank: 'Burbank',
   bandr: 'BandR',
-  boots:  'Boots'
+  boots: 'Boots'
 }
 
 /**
