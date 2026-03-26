@@ -1,0 +1,377 @@
+{
+  "name": "BOOTS1 Basic",
+  "tests": [
+    {
+      "testName": "Only Mandatory Data Is Filled Pass",
+      "inputs": {
+        "fileName": "onlymandatorydataisfilled-pass.xlsx",
+        "applicationId": "1816178315005"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No of packages is missing in sheet \"07042025 DDTV5216 SSC NI ROUTE1\" row 20, sheet \"07042025 DDTV5216 SSC NI ROUTE1\" row 21, sheet \"07042025 DDTV5216 SSC NI ROUTE1\" row 22 in addition to 4537 other locations.\n",
+        "model": "BOOTS1"
+      }
+    },
+    {
+      "testName": "No Data Except Single RMS Fail",
+      "inputs": {
+        "fileName": "nodata-exceptsinglerms-fail.xlsx",
+        "applicationId": "1816178315008"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No product line data found.",
+        "model": "BOOTS1"
+      }
+    },
+    {
+      "testName": "Missing Optional Header Treatment Type Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-treatmenttype-pass.xlsx",
+        "applicationId": "1816178315011"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BOOTS1"
+      }
+    },
+    {
+      "testName": "Missing Optional Header Total Gross Weight Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-totalgrossweight-pass.xlsx",
+        "applicationId": "1816178315014"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BOOTS1"
+      }
+    },
+    {
+      "testName": "Missing Optional Header Nature Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-nature-pass.xlsx",
+        "applicationId": "1816178315017"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BOOTS1"
+      }
+    },
+    {
+      "testName": "Missing Optional Header GB Establishment RMS Number Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-gbestablishmentrmsnumber-pass.xlsx",
+        "applicationId": "1816178315020"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BOOTS1"
+      }
+    },
+    {
+      "testName": "Missing Optional Header Country Of Origin Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-countryoforigin-pass.xlsx",
+        "applicationId": "1816178315023"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BOOTS1"
+      }
+    },
+    {
+      "testName": "Missing Optional Header All Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-all-pass.xlsx",
+        "applicationId": "1816178315026"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BOOTS1"
+      }
+    },
+    {
+      "testName": "Missing Optional Data All Pass",
+      "inputs": {
+        "fileName": "missing-optionaldata-all-pass.xlsx",
+        "applicationId": "1816178315029"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BOOTS1"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Tot Netweight Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-totnetweight-unparse.xlsx",
+        "applicationId": "1816178315032"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Desc Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-desc-unparse.xlsx",
+        "applicationId": "1816178315038"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Commodity Code Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-commoditycode-unparse.xlsx",
+        "applicationId": "1816178315041"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header All Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-all-unparse.xlsx",
+        "applicationId": "1816178315044"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Data Multiple Rows With Multiple Locations All Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
+        "applicationId": "1816178328463"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product description is missing in sheet \"07042025 DDTV5216 SSC NI ROUTE1\" row 20 and sheet \"07042025 DDTV5216 SSC NI ROUTE1\" row 22.\nTotal net weight is missing in sheet \"07042025 DDTV5216 SSC NI ROUTE1\" row 21.\n",
+        "model": "BOOTS1"
+      }
+    },
+    {
+      "testName": "Mandatory Headers Case In Sensitive Pass",
+      "inputs": {
+        "fileName": "mandatoryheaders-caseinsensitive-pass.xlsx",
+        "applicationId": "1816178315050"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BOOTS1"
+      }
+    },
+    {
+      "testName": "Invalid Commodity Code Multiple Rows Fail",
+      "inputs": {
+        "fileName": "invalidcommoditycode-multiplerows-fail.xlsx",
+        "applicationId": "1816178315053"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product code is invalid in sheet \"07042025 DDTV5216 SSC NI ROUTE1\" row 20, sheet \"07042025 DDTV5216 SSC NI ROUTE1\" row 21 and sheet \"07042025 DDTV5216 SSC NI ROUTE1\" row 23.\n",
+        "model": "BOOTS1"
+      }
+    },
+    {
+      "testName": "Incorrect Optional Header Nature Pass",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-nature-pass.xlsx",
+        "applicationId": "1816178315056"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BOOTS1"
+      }
+    },
+    {
+      "testName": "Incorrect Optional Header Country Of Origin Pass",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-countryoforigin-pass.xlsx",
+        "applicationId": "1816178315059"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BOOTS1"
+      }
+    },
+    {
+      "testName": "Incorrect Optional Data All Pass",
+      "inputs": {
+        "fileName": "incorrect-optionaldata-all-pass.xlsx",
+        "applicationId": "1816178315107"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BOOTS1"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Tot Netweight KGS Fail",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-totnetweightkgs-fail.xlsx",
+        "applicationId": "1816178315068"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "BOOTS1"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Tot Netweight Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-totnetweight-unparse.xlsx",
+        "applicationId": "1816178315071"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Commodity Code Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-commoditycode-unparse.xlsx",
+        "applicationId": "1816178315074"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header No Of Pkgs Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-noofpkgs-unparse.xlsx",
+        "applicationId": "1816178328469"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Desc Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-desc-unparse.xlsx",
+        "applicationId": "1816178315080"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header All Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-all-unparse.xlsx",
+        "applicationId": "1816178315083"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Data Multiple Rows With Multiple Locations All Fail",
+      "inputs": {
+        "fileName": "incorrect-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
+        "applicationId": "1816178315125"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No of packages is invalid in sheet \"07042025 DDTV5216 SSC NI ROUTE1\" row 20 and sheet \"07042025 DDTV5216 SSC NI ROUTE1\" row 22.\nTotal net weight is invalid in sheet \"07042025 DDTV5216 SSC NI ROUTE1\" row 20.\n",
+        "model": "BOOTS1"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatatypes Excl Netand Nopkgs Product Code Pass",
+      "inputs": {
+        "fileName": "incorrect-mandatatypes-excl-netandnopkgs-productcode-pass.xlsx",
+        "applicationId": "1816178315089"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BOOTS1"
+      }
+    },
+    {
+      "testName": "Empty Multiple Rows Columns Pass",
+      "inputs": {
+        "fileName": "empty-multiplerowscolumns-pass.xlsx",
+        "applicationId": "1816178315092"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BOOTS1"
+      }
+    },
+    {
+      "testName": "Description Has Double Quotes Should Pass",
+      "inputs": {
+        "fileName": "descriptionhasdoublequotesshould-pass.xlsx",
+        "applicationId": "1816178315095"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BOOTS1"
+      }
+    },
+    {
+      "testName": "All Mandatory Data Is Missing Fail",
+      "inputs": {
+        "fileName": "allmandatorydataismissing-fail.xlsx",
+        "applicationId": "1816178328466"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in sheet \"07042025 DDTV5216 SSC NI ROUTE1\" row 20 and sheet \"07042025 DDTV5216 SSC NI ROUTE1\" row 21.\nProduct description is missing in sheet \"07042025 DDTV5216 SSC NI ROUTE1\" row 20 and sheet \"07042025 DDTV5216 SSC NI ROUTE1\" row 21.\nNo of packages is missing in sheet \"07042025 DDTV5216 SSC NI ROUTE1\" row 20 and sheet \"07042025 DDTV5216 SSC NI ROUTE1\" row 21.\nTotal net weight is missing in sheet \"07042025 DDTV5216 SSC NI ROUTE1\" row 20 and sheet \"07042025 DDTV5216 SSC NI ROUTE1\" row 21.\n",
+        "model": "BOOTS1"
+      }
+    },
+    {
+      "testName": "Boots1 Happypath Pass",
+      "inputs": {
+        "fileName": "boots1-happypath-pass.xlsx",
+        "applicationId": "1816178315101"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BOOTS1"
+      }
+    }
+  ]
+}
