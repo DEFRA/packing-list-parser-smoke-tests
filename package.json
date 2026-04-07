@@ -33,7 +33,7 @@
     "report:publish": "npm run report; ./bin/publish-tests.sh"
   },
   "dependencies": {
-    "@wdio/allure-reporter": "9.27.0",
+    "@wdio/allure-reporter": "9.9.0",
     "@wdio/browserstack-service": "9.27.0",
     "@wdio/cli": "9.27.0",
     "@wdio/globals": "9.27.0",
@@ -47,7 +47,8 @@
     "undici": "7.24.0"
   },
   "overrides": {
-    "serialize-javascript": "7.0.4"
+    "serialize-javascript": "7.0.4",
+    "diff": "8.0.3"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
