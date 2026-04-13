@@ -1,71 +1,11 @@
 {
-  "name": "NISA2 CoO",
+  "name": "NISA2 Coo",
   "tests": [
     {
-      "testName": "ac10 x Coo pass",
-      "inputs": {
-        "fileName": "ac10-xcoo-pass.xlsx",
-        "applicationId": "1816178233528"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "NISA2"
-      }
-    },
-    {
-      "testName": "ac11 High Risk Coo Treatment Type Specified Fail",
-      "inputs": {
-        "fileName": "ac11-highriskcootreatmenttypespecified-fail.xlsx",
-        "applicationId": "1816178233531"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"MAIN20DD DEL 04082025\" row 14 and sheet \"MAIN20DD DEL 04082025\" row 15.\n",
-        "model": "NISA2"
-      }
-    },
-    {
-      "testName": "ac12 High Risk Co OTreatment Type Specified Multiple Fail",
-      "inputs": {
-        "fileName": "ac12-highriskcootreatmenttypespecifiedmultiple-fail.xlsx",
-        "applicationId": "1816178233534"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"MAIN20DD DEL 04082025\" row 14, sheet \"MAIN20DD DEL 04082025\" row 15, sheet \"MAIN20DD DEL 04082025\" row 16 in addition to 1 other locations.\n",
-        "model": "NISA2"
-      }
-    },
-    {
-      "testName": "ac13 High Risk Co OTreatment Type Not Specified Fail",
-      "inputs": {
-        "fileName": "ac13-highriskcootreatmenttypenotspecified-fail.xlsx",
-        "applicationId": "1816178233537"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"MAIN20DD DEL 04082025\" row 14 and sheet \"MAIN20DD DEL 04082025\" row 15.\n",
-        "model": "NISA2"
-      }
-    },
-    {
-      "testName": "ac14 High Risk Co OTreatment Type Not Specified Multiple Fail",
-      "inputs": {
-        "fileName": "ac14-highriskcootreatmenttypenotspecifiedmultiple-fail.xlsx",
-        "applicationId": "1816178233540"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"MAIN20DD DEL 04082025\" row 14, sheet \"MAIN20DD DEL 04082025\" row 15, sheet \"MAIN20DD DEL 04082025\" row 16 in addition to 1 other locations.\n",
-        "model": "NISA2"
-      }
-    },
-    {
-      "testName": "ac1 Not Nirms pass",
+      "testName": "ac1 Not NIRMS pass",
       "inputs": {
         "fileName": "ac1-notnirms-pass.xlsx",
-        "applicationId": "1816178233543"
+        "applicationId": "1816178345059"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -74,98 +14,158 @@
       }
     },
     {
-      "testName": "ac2 Null Nirms Fail",
+      "testName": "ac2 Null NIRMS Fail",
       "inputs": {
         "fileName": "ac2-nullnirms-fail.xlsx",
-        "applicationId": "1816178233546"
+        "applicationId": "1816178345062"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"MAIN20DD DEL 04082025\" row 14.\n",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"MAIN20DEL 23032026\" row 15.\n",
         "model": "NISA2"
       }
     },
     {
-      "testName": "ac3 Invalid Nirms Fail",
+      "testName": "ac3 Invalid NIRMS Fail",
       "inputs": {
         "fileName": "ac3-invalidnirms-fail.xlsx",
-        "applicationId": "1816178233549"
+        "applicationId": "1816178345065"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"MAIN20DD DEL 04082025\" row 14.\n",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"MAIN20DEL 23032026\" row 15.\n",
         "model": "NISA2"
       }
     },
     {
-      "testName": "ac4 Null Nirms Multiple Fail",
+      "testName": "ac4 Null NIRMS Multiple Fail",
       "inputs": {
         "fileName": "ac4-nullnirmsmultiple-fail.xlsx",
-        "applicationId": "1816178233552"
+        "applicationId": "1816178345068"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"MAIN20DD DEL 04082025\" row 14, sheet \"MAIN20DD DEL 04082025\" row 15, sheet \"MAIN20DD DEL 04082025\" row 16 in addition to 1 other locations.\n",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"MAIN20DEL 23032026\" row 15, sheet \"MAIN20DEL 23032026\" row 16, sheet \"MAIN20DEL 23032026\" row 17 in addition to 1 other locations.\n",
         "model": "NISA2"
       }
     },
     {
-      "testName": "ac5 Invalid Nirms Multiple Fail",
+      "testName": "ac5 Invalid NIRMS Multiple Fail",
       "inputs": {
         "fileName": "ac5-invalidnirmsmultiple-fail.xlsx",
-        "applicationId": "1816178233555"
+        "applicationId": "1816178345071"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"MAIN20DD DEL 04082025\" row 14, sheet \"MAIN20DD DEL 04082025\" row 15, sheet \"MAIN20DD DEL 04082025\" row 16 in addition to 1 other locations.\n",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"MAIN20DEL 23032026\" row 15, sheet \"MAIN20DEL 23032026\" row 16 and sheet \"MAIN20DEL 23032026\" row 17.\n",
         "model": "NISA2"
       }
     },
     {
-      "testName": "ac6 Null Coo Fail",
+      "testName": "ac6 Null CoO Fail",
       "inputs": {
         "fileName": "ac6-nullcoo-fail.xlsx",
-        "applicationId": "1816178233561"
+        "applicationId": "1816178345074"
       },
       "expectedResults": {
         "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in sheet \"MAIN20DD DEL 04082025\" row 14, sheet \"MAIN20DD DEL 04082025\" row 15 and sheet \"MAIN20DD DEL 04082025\" row 16.\n",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"MAIN20DEL 23032026\" row 15, sheet \"MAIN20DEL 23032026\" row 16, sheet \"MAIN20DEL 23032026\" row 17 in addition to 1 other locations.\n",
         "model": "NISA2"
       }
     },
     {
-      "testName": "ac7 Invalid Coo Fail",
+      "testName": "ac7 Invalid CoO Fail",
       "inputs": {
         "fileName": "ac7-invalidcoo-fail.xlsx",
-        "applicationId": "1816178233564"
+        "applicationId": "1816178345077"
       },
       "expectedResults": {
         "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"MAIN20DD DEL 04082025\" row 14, sheet \"MAIN20DD DEL 04082025\" row 15 and sheet \"MAIN20DD DEL 04082025\" row 16.\n",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"MAIN20DEL 23032026\" row 15.\n",
         "model": "NISA2"
       }
     },
     {
-      "testName": "ac8 Null Coo Multiple Fail",
+      "testName": "ac8 Null CoO Multiple Fail",
       "inputs": {
         "fileName": "ac8-nullcoo-multiple-fail.xlsx",
-        "applicationId": "1816178233567"
+        "applicationId": "1816178345080"
       },
       "expectedResults": {
         "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in sheet \"MAIN20DD DEL 04082025\" row 14, sheet \"MAIN20DD DEL 04082025\" row 15, sheet \"MAIN20DD DEL 04082025\" row 16 in addition to 1 other locations.\n",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"MAIN20DEL 23032026\" row 15, sheet \"MAIN20DEL 23032026\" row 16 and sheet \"MAIN20DEL 23032026\" row 17.\n",
         "model": "NISA2"
       }
     },
     {
-      "testName": "ac9 Invalid Coo Multiple Fail",
+      "testName": "ac9 Invalid CoO Multiple Fail",
       "inputs": {
         "fileName": "ac9-invalid-coomultiple-fail.xlsx",
-        "applicationId": "1816178233570"
+        "applicationId": "1816178345083"
       },
       "expectedResults": {
         "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"MAIN20DD DEL 04082025\" row 14, sheet \"MAIN20DD DEL 04082025\" row 15, sheet \"MAIN20DD DEL 04082025\" row 16 in addition to 1 other locations.\n",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"MAIN20DEL 23032026\" row 15, sheet \"MAIN20DEL 23032026\" row 16 and sheet \"MAIN20DEL 23032026\" row 17.\n",
+        "model": "NISA2"
+      }
+    },
+    {
+      "testName": "ac10 x CoO pass",
+      "inputs": {
+        "fileName": "ac10-xcoo-pass.xlsx",
+        "applicationId": "1816178345086"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "NISA2"
+      }
+    },
+    {
+      "testName": "ac11 High Risk CoO Treatment Type Specified Fail",
+      "inputs": {
+        "fileName": "ac11-highriskcootreatmenttypespecified-fail.xlsx",
+        "applicationId": "1816178348677"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"MAIN20DD DEL 04082025\" row 14 and sheet \"MAIN20DD DEL 04082025\" row 15.\n",
+        "model": "NISA2"
+      }
+    },
+    {
+      "testName": "ac12 High Risk Co O Treatment Type Specified Multiple Fail",
+      "inputs": {
+        "fileName": "ac12-highriskcootreatmenttypespecifiedmultiple-fail.xlsx",
+        "applicationId": "1816178345218"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"MAIN20DD DEL 04082025\" row 14, sheet \"MAIN20DD DEL 04082025\" row 15, sheet \"MAIN20DD DEL 04082025\" row 16 in addition to 1 other locations.\n",
+        "model": "NISA2"
+      }
+    },
+    {
+      "testName": "ac13 High Risk Co O Treatment Type Not Specified Fail",
+      "inputs": {
+        "fileName": "ac13-highriskcootreatmenttypenotspecified-fail.xlsx",
+        "applicationId": "1816178345224"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"MAIN20DEL 23032026\" row 15, sheet \"MAIN20DEL 23032026\" row 16 and sheet \"MAIN20DEL 23032026\" row 17.\n",
+        "model": "NISA2"
+      }
+    },
+    {
+      "testName": "ac14 High Risk Co O Treatment Type Not Specified Multiple Fail",
+      "inputs": {
+        "fileName": "ac14-highriskcootreatmenttypenotspecifiedmultiple-fail.xlsx",
+        "applicationId": "1816178345227"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"MAIN20DEL 23032026\" row 15, sheet \"MAIN20DEL 23032026\" row 16, sheet \"MAIN20DEL 23032026\" row 17 in addition to 2 other locations.\n",
         "model": "NISA2"
       }
     }

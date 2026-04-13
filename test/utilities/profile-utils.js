@@ -21,14 +21,12 @@ export const retailerPrefixes = {
   turners: 'Turners',
   bandm: 'BANDM',
   cds: 'CDS',
-  fw: 'FW',
   gousto: 'Gousto',
   nutricia: 'Nutricia',
   warrens: 'Warrens',
   burbank: 'Burbank',
   bandr: 'BandR',
-  boots: 'Boots',
-  nisa2: 'NISA2'
+  boots: 'Boots'
 }
 
 /**
