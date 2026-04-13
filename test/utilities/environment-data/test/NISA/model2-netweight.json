@@ -53,12 +53,12 @@
       "testName": "Extra Spaces In Header Unparse",
       "inputs": {
         "fileName": "extra-spaces-in-header-unparse.xlsx",
-        "applicationId": "1816178344939"
+        "applicationId": "1816178349184"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": null,
-        "model": "NISA2"
+        "model": "NOMATCH"
       }
     },
     {
