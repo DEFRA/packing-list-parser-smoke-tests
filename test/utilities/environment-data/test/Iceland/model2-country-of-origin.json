@@ -45,7 +45,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in rows in addition to 1 other locations.\n",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in rows 3, 4, 5 in addition to 1 other locations.\n",
         "model": "ICELAND2"
       }
     },
