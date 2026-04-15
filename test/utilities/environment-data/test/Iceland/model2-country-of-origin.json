@@ -40,7 +40,7 @@
     {
       "testName": "ac4 Null NIRMS Multiple Fail",
       "inputs": {
-        "fileName": "ac4-nullnirmsmultiple-fail",
+        "fileName": "ac4-nullnirmsmultiple-fail.csv",
         "applicationId": "1816178352604"
       },
       "expectedResults": {
