@@ -28,7 +28,7 @@
     {
       "testName": "Incorrect Optional Header NIRMS Fail",
       "inputs": {
-        "fileName": "incorrect-optionalheader-nirms-unparse.csv",
+        "fileName": "incorrect-optionalheader-nirms-fail.csv",
         "applicationId": "1816178356891"
       },
       "expectedResults": {

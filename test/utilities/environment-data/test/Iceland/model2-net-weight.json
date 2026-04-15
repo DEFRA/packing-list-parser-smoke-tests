@@ -16,7 +16,7 @@
     {
       "testName": "Alpha Numeric UOM Weight Fail",
       "inputs": {
-        "fileName": "alpha-numeric-uom-weight-fail",
+        "fileName": "alpha-numeric-uom-weight-fail.csv",
         "applicationId": "1816178356894"
       },
       "expectedResults": {
