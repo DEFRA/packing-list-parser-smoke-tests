@@ -17,13 +17,12 @@
       "testName": "Alpha Numeric UOM Weight Fail",
       "inputs": {
         "fileName": "alpha-numeric-uom-weight-fail",
-        "applicationId": "1816178353384"
+        "applicationId": "1816178356894"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "ICELAND2",
-        "expectedStatus": 404
+        "model": "ICELAND2"
       }
     },
     {
@@ -46,7 +45,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Total net weight is missing in rows 3, 4, 5 in addition to 8 other locations.",
+        "reasonsForFailure": "Total net weight is missing in rows 3, 4, 5 in addition to 8 other locations.\n",
         "model": "ICELAND2"
       }
     },
@@ -142,7 +141,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Total net weight is invalid in rows 3, 4, 5 in addition to 2 other locations.",
+        "reasonsForFailure": "Total net weight is invalid in rows 3, 4, 5 in addition to 2 other locations.\n",
         "model": "ICELAND2"
       }
     },

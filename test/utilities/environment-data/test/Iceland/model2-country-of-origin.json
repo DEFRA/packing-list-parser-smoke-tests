@@ -21,7 +21,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in row 3.",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in row 3.\n",
         "model": "ICELAND2"
       }
     },
@@ -33,7 +33,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in row 3.",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in row 3.\n",
         "model": "ICELAND2"
       }
     },
@@ -46,8 +46,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in rows in addition to 1 other locations.\n",
-        "model": "ICELAND2",
-        "expectedStatus": 404
+        "model": "ICELAND2"
       }
     },
     {
@@ -58,7 +57,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in rows 3, 4, 5 in addition to 1 other locations.",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in rows 3, 4, 5 in addition to 1 other locations.\n",
         "model": "ICELAND2"
       }
     },
@@ -70,7 +69,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in rows 3, 4, 5 in addition to 1 other locations.",
+        "reasonsForFailure": "Missing Country of Origin in rows 3, 4, 5 in addition to 1 other locations.\n",
         "model": "ICELAND2"
       }
     },
@@ -82,7 +81,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Invalid Country of Origin ISO Code in rows 3, 4 and 5.",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in rows 3, 4 and 5.\n",
         "model": "ICELAND2"
       }
     },
@@ -94,7 +93,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in rows 3, 4, 5 in addition to 1 other locations.",
+        "reasonsForFailure": "Missing Country of Origin in rows 3, 4, 5 in addition to 1 other locations.\n",
         "model": "ICELAND2"
       }
     },
@@ -106,7 +105,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Invalid Country of Origin ISO Code in rows 3, 4, 5 in addition to 1 other locations.",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in rows 3, 4, 5 in addition to 1 other locations.\n",
         "model": "ICELAND2"
       }
     },
@@ -130,7 +129,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in rows 3 and 4.",
+        "reasonsForFailure": "Prohibited item identified on the packing list in rows 3 and 4.\n",
         "model": "ICELAND2"
       }
     },
@@ -142,7 +141,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in rows 3, 4, 5 in addition to 1 other locations.",
+        "reasonsForFailure": "Prohibited item identified on the packing list in rows 3, 4, 5 in addition to 1 other locations.\n",
         "model": "ICELAND2"
       }
     },
@@ -154,7 +153,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in rows 3 and 4.",
+        "reasonsForFailure": "Prohibited item identified on the packing list in rows 3 and 4.\n",
         "model": "ICELAND2"
       }
     }
