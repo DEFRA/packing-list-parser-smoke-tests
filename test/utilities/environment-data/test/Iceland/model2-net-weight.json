@@ -5,7 +5,7 @@
       "testName": "Alpha Numeric Total Net Weight Unparse",
       "inputs": {
         "fileName": "alpha-numeric-totalnetweight-unparse.csv",
-        "applicationId": "1816178214799"
+        "applicationId": "1816178352673"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -16,20 +16,21 @@
     {
       "testName": "Alpha Numeric UOM Weight Fail",
       "inputs": {
-        "fileName": "alpha-numeric-uom-weight-fail.csv",
-        "applicationId": "1816178214733"
+        "fileName": "alpha-numeric-uom-weight-fail",
+        "applicationId": "1816178353384"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "ICELAND2"
+        "model": "ICELAND2",
+        "expectedStatus": 404
       }
     },
     {
-      "testName": "Ambiguous Units In Header Pass",
+      "testName": "Ambiguous Units in Header pass",
       "inputs": {
         "fileName": "ambiguous-units-in-header-pass.csv",
-        "applicationId": "1816178214850"
+        "applicationId": "1816178353354"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -38,14 +39,14 @@
       }
     },
     {
-      "testName": "Data Empty Netweight Fail",
+      "testName": "Data empty Netweight Fail",
       "inputs": {
         "fileName": "data-empty-netweight-fail.csv",
-        "applicationId": "1816178214739"
+        "applicationId": "1816178352682"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Total net weight is missing in rows 3, 4, 5 in addition to 8 other locations.\n",
+        "reasonsForFailure": "Total net weight is missing in rows 3, 4, 5 in addition to 8 other locations.",
         "model": "ICELAND2"
       }
     },
@@ -53,7 +54,7 @@
       "testName": "Extra Spaces In Header Unparse",
       "inputs": {
         "fileName": "extra-spaces-in-header-unparse.csv",
-        "applicationId": "1816178214841"
+        "applicationId": "1816178352661"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -62,10 +63,22 @@
       }
     },
     {
-      "testName": "Header Typos Or Special Characters Unparse",
+      "testName": "Happypath Pass",
+      "inputs": {
+        "fileName": "happypath-pass.csv",
+        "applicationId": "1816178352631"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "ICELAND2"
+      }
+    },
+    {
+      "testName": "Header Typos or Special Characters Unparse",
       "inputs": {
         "fileName": "header-typos-or-specialcharacters-unparse.csv",
-        "applicationId": "1816178214808"
+        "applicationId": "1816178352670"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -77,7 +90,7 @@
       "testName": "Header With Extra Parentheses Pass",
       "inputs": {
         "fileName": "header-with-extra-parentheses-pass.csv",
-        "applicationId": "1816178214745"
+        "applicationId": "1816178352652"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -89,7 +102,7 @@
       "testName": "Header With Multiple Units Pass",
       "inputs": {
         "fileName": "header-with-multiple-units-pass.csv",
-        "applicationId": "1816178214748"
+        "applicationId": "1816178352655"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -101,7 +114,7 @@
       "testName": "Header With Unit And Symbols Pass",
       "inputs": {
         "fileName": "header-with-unit-and-symbols-pass.csv",
-        "applicationId": "1816178214751"
+        "applicationId": "1816178352634"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -113,7 +126,7 @@
       "testName": "Inconsistent Header Case Pass",
       "inputs": {
         "fileName": "inconsistent-header-case-pass.csv",
-        "applicationId": "1816178214754"
+        "applicationId": "1816178353399"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -125,11 +138,11 @@
       "testName": "Incorrect Netweight Data All Fail",
       "inputs": {
         "fileName": "incorrect-netweightdata-all-fail.csv",
-        "applicationId": "1816178214844"
+        "applicationId": "1816178352688"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Total net weight is invalid in rows 3, 4, 5 in addition to 2 other locations.\n",
+        "reasonsForFailure": "Total net weight is invalid in rows 3, 4, 5 in addition to 2 other locations.",
         "model": "ICELAND2"
       }
     },
@@ -137,7 +150,7 @@
       "testName": "Invalid Unit Type Fail",
       "inputs": {
         "fileName": "invalid-unit-type-fail.csv",
-        "applicationId": "1816178214760"
+        "applicationId": "1816178353405"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -149,7 +162,7 @@
       "testName": "Malformed Header Unit Pass",
       "inputs": {
         "fileName": "malformed-header-unit-pass.csv",
-        "applicationId": "1816178214763"
+        "applicationId": "1816178352640"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -158,22 +171,10 @@
       }
     },
     {
-      "testName": "Missing Header Netweight UOM Fail",
-      "inputs": {
-        "fileName": "missing-header-netweightuom-fail.csv",
-        "applicationId": "1816178214769"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "ICELAND2"
-      }
-    },
-    {
       "testName": "Missing Header Netweight Unparse",
       "inputs": {
         "fileName": "missing-header-netweight-unparse.csv",
-        "applicationId": "1816178214766"
+        "applicationId": "1816178352676"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -182,10 +183,22 @@
       }
     },
     {
+      "testName": "Missing Header Netweight UOM Fail",
+      "inputs": {
+        "fileName": "missing-header-netweightuom-fail.csv",
+        "applicationId": "1816178353411"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "ICELAND2"
+      }
+    },
+    {
       "testName": "Missing Netweight Unparse",
       "inputs": {
         "fileName": "missing-netweight-unparse.csv",
-        "applicationId": "1816178214772"
+        "applicationId": "1816178353423"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -197,7 +210,7 @@
       "testName": "Missing PACKAGEUOM Weight Unparse",
       "inputs": {
         "fileName": "missing-packageuom-weight-unparse.csv",
-        "applicationId": "1816178214775"
+        "applicationId": "1816178353435"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -206,10 +219,10 @@
       }
     },
     {
-      "testName": "Missing Paranthesis In Uom Pass",
+      "testName": "Missing Paranthesis in UOM Pass",
       "inputs": {
         "fileName": "missing-paranthesis-in-uom-pass.csv",
-        "applicationId": "1816178214778"
+        "applicationId": "1816178353438"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -221,7 +234,7 @@
       "testName": "Missing UOM Weight Fail Unparse",
       "inputs": {
         "fileName": "missing-uom-weight-fail-unparse.csv",
-        "applicationId": "1816178214781"
+        "applicationId": "1816178353441"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -233,7 +246,7 @@
       "testName": "Mixed Case Header Pass",
       "inputs": {
         "fileName": "mixedcase-header-pass.csv",
-        "applicationId": "1816178214814"
+        "applicationId": "1816178353348"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -245,7 +258,7 @@
       "testName": "Netweight Has Empty Parentheses Fail",
       "inputs": {
         "fileName": "netweight-hasempty-parentheses-fail.csv",
-        "applicationId": "1816178214787"
+        "applicationId": "1816178352694"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -254,38 +267,14 @@
       }
     },
     {
-      "testName": "Paranthesis In Uom Pass",
+      "testName": "Paranthesis in UOM Pass",
       "inputs": {
         "fileName": "paranthesis-in-uom-pass.csv",
-        "applicationId": "1816178214817"
+        "applicationId": "1816178353444"
       },
       "expectedResults": {
         "approvalStatus": "approved",
         "reasonsForFailure": null,
-        "model": "ICELAND2"
-      }
-    },
-    {
-      "testName": "UOM Weight Without Total Net Weight Unparse",
-      "inputs": {
-        "fileName": "uomweight-without-totalnetweight-unparse.csv",
-        "applicationId": "1816178214820"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Unhandled Unit Type Fail",
-      "inputs": {
-        "fileName": "unhandled-unit-type-fail.csv",
-        "applicationId": "1816178214790"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
         "model": "ICELAND2"
       }
     },
@@ -293,7 +282,7 @@
       "testName": "Unit Missing Weight Present Fail",
       "inputs": {
         "fileName": "unit-missing-weight-present-fail.csv",
-        "applicationId": "1816178232934"
+        "applicationId": "1816178352691"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -302,22 +291,23 @@
       }
     },
     {
-      "testName": "Zero Data Total Net Weight Pass",
+      "testName": "UOM Weight Without Total Net Weight Unparse",
       "inputs": {
-        "fileName": "zero-data-totalnetweight-pass.csv",
-        "applicationId": "1816178214796"
+        "fileName": "uomweight-without-totalnetweight-unparse.csv",
+        "applicationId": "1816178353363"
       },
       "expectedResults": {
-        "approvalStatus": "approved",
+        "approvalStatus": "rejected_other",
         "reasonsForFailure": null,
-        "model": "ICELAND2"
+        "model": "NOMATCH",
+        "expectedStatus": 200
       }
     },
     {
-      "testName": "Happy Path Pass",
+      "testName": "Zero Data Total Net Weight Pass",
       "inputs": {
-        "fileName": "happypath-pass.csv",
-        "applicationId": "1816178214742"
+        "fileName": "zero-data-totalnetweight-pass.csv",
+        "applicationId": "1816178352637"
       },
       "expectedResults": {
         "approvalStatus": "approved",
