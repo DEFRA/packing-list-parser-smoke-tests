@@ -26,16 +26,15 @@
       }
     },
     {
-      "testName": "Incorrect Optional Header NIRMS Unparse",
+      "testName": "Incorrect Optional Header NIRMS Fail",
       "inputs": {
         "fileName": "incorrect-optionalheader-nirms-unparse.csv",
-        "applicationId": "1816178349100"
+        "applicationId": "1816178356891"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "ICELAND2",
-        "expectedStatus": 404
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in rows 3, 4, 5 in addition to 8 other locations.\n",
+        "model": "ICELAND2"
       }
     },
     {
@@ -202,7 +201,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in rows 3, 4, 5 in addition to 8 other locations.",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in rows 3, 4, 5 in addition to 8 other locations.\n",
         "model": "ICELAND2"
       }
     },
@@ -214,7 +213,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Product code is invalid in rows 5, 6, 7 in addition to 2 other locations.\nNo of packages is missing in row 4.\nNo of packages is invalid in rows 5, 7, 8 in addition to 2 other locations.\nTotal net weight is invalid in rows 5, 7, 8 in addition to 2 other locations.",
+        "reasonsForFailure": "Product code is invalid in rows 5, 6, 7 in addition to 2 other locations.\nNo of packages is missing in row 4.\nNo of packages is invalid in rows 5, 7, 8 in addition to 2 other locations.\nTotal net weight is invalid in rows 5, 7, 8 in addition to 2 other locations.\n",
         "model": "ICELAND2"
       }
     },
@@ -226,7 +225,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Identifier is missing in rows 4, 5 and 6.\nProduct description is missing in rows 6, 7, 8 in addition to 1 other locations.\nNo of packages is missing in rows 3, 4, 5 in addition to 3 other locations.\nTotal net weight is missing in rows 5, 6, 7 in addition to 2 other locations.\nNIRMS/Non-NIRMS goods not specified in rows 4, 5, 8 in addition to 1 other locations.",
+        "reasonsForFailure": "Identifier is missing in rows 4, 5 and 6.\nProduct description is missing in rows 6, 7, 8 in addition to 1 other locations.\nNo of packages is missing in rows 3, 4, 5 in addition to 3 other locations.\nTotal net weight is missing in rows 5, 6, 7 in addition to 2 other locations.\nNIRMS/Non-NIRMS goods not specified in rows 4, 5, 8 in addition to 1 other locations.\n",
         "model": "ICELAND2"
       }
     },
@@ -358,7 +357,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "No product line data found.\n",
+        "reasonsForFailure": "No product line data found.",
         "model": "ICELAND2"
       }
     }
