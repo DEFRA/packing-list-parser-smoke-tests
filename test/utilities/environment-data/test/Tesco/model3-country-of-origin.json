@@ -50,14 +50,14 @@
       }
     },
     {
-      "testName": "ac14 High Risk Co O Treatment Type Not Specified Multiple Fail",
+      "testName": "ac14 High Risk CoO Treatment Type Not Specified Multiple Fail",
       "inputs": {
         "fileName": "ac14-highriskcootreatmenttypenotspecifiedmultiple-fail.xlsx",
         "applicationId": "1816178160223"
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Input Data Sheet\" row 10 and sheet \"Input Data Sheet\" row 11.\n",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Input Data Sheet\" row 9, sheet \"Input Data Sheet\" row 10 and sheet \"Input Data Sheet\" row 11.\n",
         "model": "TESCO3"
       }
     },
