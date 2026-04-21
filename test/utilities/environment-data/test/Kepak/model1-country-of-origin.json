@@ -17,11 +17,11 @@
       "testName": "ac10 Prohibited Item Null Treatment Multiple Fail",
       "inputs": {
         "fileName": "ac10-prohibiteditemnulltreatmentmultiple-fail.xlsx",
-        "applicationId": "1816178189752"
+        "applicationId": "1816178382553"
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"KEPAK\" row 23, sheet \"KEPAK\" row 24 and sheet \"KEPAK\" row 26.\n",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"KEPAK\" row 23, sheet \"KEPAK\" row 24, sheet \"KEPAK\" row 26 in addition to 1 other locations.\n",
         "model": "KEPAK1"
       }
     },
