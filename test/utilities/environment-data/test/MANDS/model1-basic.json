@@ -2,226 +2,34 @@
   "name": "MANDS1 Basic",
   "tests": [
     {
-      "testName": "Empty RMS Headercol Pass",
+      "testName": "Missing Mandatory Data Commodity Code Fail",
       "inputs": {
-        "fileName": "empty-rms-headercol-pass.pdf",
-        "applicationId": "1816178160262"
+        "fileName": "missing-mandatorydata-commoditycode-fail.pdf",
+        "applicationId": "1816178405482"
       },
       "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in page 1 row 1, page 1 row 2 and page 1 row 3.\n",
         "model": "MANDS1"
       }
     },
     {
-      "testName": "Empty RMsNumber Fail",
+      "testName": "Missing Mandatory Data Totnetweight Fail",
       "inputs": {
-        "fileName": "empty-rmsnumber-fail.pdf",
-        "applicationId": "1816178160400"
+        "fileName": "missing-mandatorydata-totnetweight-fail.pdf",
+        "applicationId": "1816178405485"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Check GB Establishment RMS Number.",
-        "model": "NOREMOS"
-      }
-    },
-    {
-      "testName": "Happypath Pass",
-      "inputs": {
-        "fileName": "happypath-pass.pdf",
-        "applicationId": "1816178160406"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
+        "reasonsForFailure": "Total net weight is missing in page 1 row 1, page 1 row 2 and page 1 row 3.\n",
         "model": "MANDS1"
       }
     },
     {
-      "testName": "Incorrect Mandatatypes Excl net Nopkgs Pass",
-      "inputs": {
-        "fileName": "incorrect-mandatatypes-excl-net-nopkgs-pass.pdf",
-        "applicationId": "1816178160412"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "MANDS1"
-      }
-    },
-    {
-      "testName": "Incorrect MandatoryData MultipleRowsWithMultipleLocations All Fail",
-      "inputs": {
-        "fileName": "incorrect-mandatorydata-multiplerowswithmultiplelocations-all-fail.pdf",
-        "applicationId": "1816178160274"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Product code is invalid in page 1 row 1.\nNo of packages is invalid in page 1 row 1.\nTotal net weight is invalid in page 1 row 1.\n",
-        "model": "MANDS1"
-      }
-    },
-    {
-      "testName": "Incorrect MandatoryHeader CommodityCode Unparse",
-      "inputs": {
-        "fileName": "incorrect-mandatoryheader-commoditycode-unparse.pdf",
-        "applicationId": "1816178160277"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Incorrect MandatoryHeader Desc Unparse",
-      "inputs": {
-        "fileName": "incorrect-mandatoryheader-desc-unparse.pdf",
-        "applicationId": "1816178160280"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Incorrect MandatoryHeader Noofpkgs Unparse",
-      "inputs": {
-        "fileName": "incorrect-mandatoryheader-noofpkgs-unparse.pdf",
-        "applicationId": "1816178160286"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Incorrect MandatoryHeader TotNetweight Unparse",
-      "inputs": {
-        "fileName": "incorrect-mandatoryheader-totnetweight-unparse.pdf",
-        "applicationId": "1816178160292"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Incorrect Mandatoryheaders Unparse",
-      "inputs": {
-        "fileName": "incorrect-mandatoryheaders-unparse.pdf",
-        "applicationId": "1816178160415"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Incorrect OptionalHeader All Pass",
-      "inputs": {
-        "fileName": "incorrect-optionalheader-all-pass.pdf",
-        "applicationId": "1816178160421"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "MANDS1"
-      }
-    },
-    {
-      "testName": "Incorrect OptionalHeader CountryOfOrigin Pass",
-      "inputs": {
-        "fileName": "incorrect-optionalheader-countryoforigin-pass.pdf",
-        "applicationId": "1816178160307"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "MANDS1"
-      }
-    },
-    {
-      "testName": "Incorrect OptionalHeader Nirms Fail",
-      "inputs": {
-        "fileName": "incorrect-optionalheader-nirms-fail.pdf",
-        "applicationId": "1816178160427"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 23 other locations.\n",
-        "model": "MANDS1"
-      }
-    },
-    {
-      "testName": "InvalidCommodityCode MultipleRows Fail",
-      "inputs": {
-        "fileName": "invalidcommoditycode-multiplerows-fail.pdf",
-        "applicationId": "1816178160430"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Product code is invalid in page 1 row 1, page 1 row 3 and page 1 row 5.\n",
-        "model": "MANDS1"
-      }
-    },
-    {
-      "testName": "Missing CommoCode Fail",
-      "inputs": {
-        "fileName": "missing-commocode-fail.pdf",
-        "applicationId": "1816178160436"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Identifier is missing in page 1 row 1, page 1 row 3, page 1 row 5 in addition to 1 other locations.\n",
-        "model": "MANDS1"
-      }
-    },
-    {
-      "testName": "Missing Description Fail",
-      "inputs": {
-        "fileName": "missing-description-fail.pdf",
-        "applicationId": "1816178160439"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Product description is missing in page 1 row 1, page 1 row 3, page 1 row 5 in addition to 1 other locations.\n",
-        "model": "MANDS1"
-      }
-    },
-    {
-      "testName": "Missing MandatoryData MultipleRowsWithMultipleLocations All Fail",
-      "inputs": {
-        "fileName": "missing-mandatorydata-multiplerowswithmultiplelocations-all-fail.pdf",
-        "applicationId": "1816178160331"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Identifier is missing in page 1 row 1.\nProduct description is missing in page 1 row 2.\nNo of packages is missing in page 1 row 1.\nTotal net weight is missing in page 1 row 1.\n",
-        "model": "MANDS1"
-      }
-    },
-    {
-      "testName": "Missing MandatoryData Treatmenttype Fail",
-      "inputs": {
-        "fileName": "missing-mandatorydata-treatmenttype-fail.pdf",
-        "applicationId": "1816178160337"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Identifier is missing in page 1 row 1, page 1 row 3, page 1 row 5 in addition to 1 other locations.\n",
-        "model": "MANDS1"
-      }
-    },
-    {
-      "testName": "Missing MandatoryHeader All Unparse",
+      "testName": "Missing Mandatory Header All Unparse",
       "inputs": {
         "fileName": "missing-mandatoryheader-all-unparse.pdf",
-        "applicationId": "1816178160343"
+        "applicationId": "1816178405488"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -230,10 +38,10 @@
       }
     },
     {
-      "testName": "Missing MandatoryHeader Desc Unparse",
+      "testName": "Incorrect Mandatory Header Tot Netweight Unparse",
       "inputs": {
-        "fileName": "missing-mandatoryheader-desc-unparse.pdf",
-        "applicationId": "1816178160349"
+        "fileName": "incorrect-mandatoryheader-totnetweight-unparse.pdf",
+        "applicationId": "1816178405416"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -242,10 +50,10 @@
       }
     },
     {
-      "testName": "Missing MandatoryHeader Noofpkgs Unparse",
+      "testName": "Missing Mandatory Header All Unparse",
       "inputs": {
-        "fileName": "missing-mandatoryheader-noofpkgs-unparse.pdf",
-        "applicationId": "1816178160352"
+        "fileName": "missing-mandatoryheader-all-unparse.pdf",
+        "applicationId": "1816178405425"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -254,10 +62,22 @@
       }
     },
     {
-      "testName": "Missing MandatoryHeader TotNetweight Unparse",
+      "testName": "Missing Mandatory Header Commodity Code Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-commoditycode-unparse.pdf",
+        "applicationId": "1816178405428"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Tot Netweight Unparse",
       "inputs": {
         "fileName": "missing-mandatoryheader-totnetweight-unparse.pdf",
-        "applicationId": "1816178160355"
+        "applicationId": "1816178405461"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -266,10 +86,46 @@
       }
     },
     {
-      "testName": "Missing MandatoryHeader TreatmentType Unparse",
+      "testName": "Incorrect Mandatory Data Multiple Rows With Multiple Locations All Fail",
       "inputs": {
-        "fileName": "missing-mandatoryheader-treatmenttype-unparse.pdf",
-        "applicationId": "1816178160358"
+        "fileName": "incorrect-mandatorydata-multiplerowswithmultiplelocations-all-fail.pdf",
+        "applicationId": "1816178405467"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product code is invalid in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 901 other locations.\nNo of packages is invalid in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 898 other locations.\nTotal net weight is invalid in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 901 other locations.\n",
+        "model": "MANDS1"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Data Multiple Rows With Multiple Locations All Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-multiplerowswithmultiplelocations-all-fail.pdf",
+        "applicationId": "1816178405470"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in page 3 row 9, page 3 row 35 and page 4 row 42.\nProduct description is missing in page 3 row 9, page 3 row 35 and page 4 row 42.\nTotal net weight is missing in page 3 row 9, page 3 row 35 and page 4 row 42.\n",
+        "model": "MANDS1"
+      }
+    },
+    {
+      "testName": "All Mandatory Data Is Missing Fail",
+      "inputs": {
+        "fileName": "allmandatorydataismissing-fail.pdf",
+        "applicationId": "1816178405473"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in page 3 row 9, page 3 row 35 and page 4 row 42.\nProduct description is missing in page 3 row 9, page 3 row 35 and page 4 row 42.\nTotal net weight is missing in page 3 row 9, page 3 row 35 and page 4 row 42.\n",
+        "model": "MANDS1"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Noofpacakges Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-noofpacakges-unparse.pdf",
+        "applicationId": "1816178405494"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -278,10 +134,10 @@
       }
     },
     {
-      "testName": "Missing MandatoryHeaders CommodityCode Unparse",
+      "testName": "Missing Mandatory Header Tot Netweight Unparse",
       "inputs": {
-        "fileName": "missing-mandatoryheaders-commoditycode-unparse.pdf",
-        "applicationId": "1816178160361"
+        "fileName": "missing-mandatoryheader-totnetweight-unparse.pdf",
+        "applicationId": "1816178405497"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -290,70 +146,142 @@
       }
     },
     {
-      "testName": "Missing Noofpkgs Fail",
+      "testName": "Missing Optional Header All Fail",
       "inputs": {
-        "fileName": "missing-noofpkgs-fail.pdf",
-        "applicationId": "1816178160364"
+        "fileName": "missing-optionalheader-all-fail.pdf",
+        "applicationId": "1816178405809"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "No of packages is missing in page 1 row 1, page 1 row 3, page 1 row 5 in addition to 1 other locations.\n",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 63 other locations.\n",
         "model": "MANDS1"
       }
     },
     {
-      "testName": "Missing OptionalData All Pass",
+      "testName": "No Data Except Single RMS Fail",
       "inputs": {
-        "fileName": "missing-optionaldata-all-pass.pdf",
-        "applicationId": "1816178160367"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "MANDS1"
-      }
-    },
-    {
-      "testName": "Missing OptionalHeader All Pass",
-      "inputs": {
-        "fileName": "missing-optionalheader-all-pass.pdf",
-        "applicationId": "1816178160445"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "MANDS1"
-      }
-    },
-    {
-      "testName": "Missing RMsNumber Fail",
-      "inputs": {
-        "fileName": "missing-rmsnumber-fail.pdf",
-        "applicationId": "1816178160448"
+        "fileName": "nodata-exceptsinglerms-fail.pdf",
+        "applicationId": "1816178405509"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Check GB Establishment RMS Number.",
-        "model": "NOREMOS"
+        "reasonsForFailure": "No product line data found.",
+        "model": "MANDS1"
       }
     },
     {
-      "testName": "Missing Totnetweight Fail",
+      "testName": "Missing Mandatory Header Description Unparse",
       "inputs": {
-        "fileName": "missing-totnetweight-fail.pdf",
-        "applicationId": "1816178161738"
+        "fileName": "missing-mandatoryheader-description-unparse.pdf",
+        "applicationId": "1816178405491"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Total net weight is missing in page 1 row 1, page 1 row 3, page 1 row 5 in addition to 1 other locations.\n",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header All Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-all-unparse.pdf",
+        "applicationId": "1816178405518"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Commodity Code Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-commoditycode-unparse.pdf",
+        "applicationId": "1816178405521"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Tot Netweight KGS Fail",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-totnetweightkgs-fail.pdf",
+        "applicationId": "1816178405524"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
         "model": "MANDS1"
       }
     },
     {
-      "testName": "mands format1 pass",
+      "testName": "Incorrect Mandatory Header Treatment Type Unparse",
       "inputs": {
-        "fileName": "mands-format1-pass.pdf",
-        "applicationId": "1816178331952"
+        "fileName": "incorrect-mandatoryheader-treatmenttype-unparse.pdf",
+        "applicationId": "1816178405527"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Optional Data All Fail",
+      "inputs": {
+        "fileName": "incorrect-optionaldata-all-fail.pdf",
+        "applicationId": "1816178405815"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in page 1 row 1, page 1 row 2 and page 1 row 3.\n",
+        "model": "MANDS1"
+      }
+    },
+    {
+      "testName": "Incorrect Optional Header All Fail",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-all-fail.pdf",
+        "applicationId": "1816178405821"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 63 other locations.\n",
+        "model": "MANDS1"
+      }
+    },
+    {
+      "testName": "Invalid Noof Packages Multiple Rows Fail",
+      "inputs": {
+        "fileName": "invalid-noofpackages-multiplerows-fail.pdf",
+        "applicationId": "1816178405536"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No of packages is invalid in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 1 other locations.\n",
+        "model": "MANDS1"
+      }
+    },
+    {
+      "testName": "Invalid Commodity Code Multiple Rows Fail",
+      "inputs": {
+        "fileName": "invalidcommoditycode-multiplerows-fail.pdf",
+        "applicationId": "1816178405539"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product code is invalid in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 1 other locations.\n",
+        "model": "MANDS1"
+      }
+    },
+    {
+      "testName": "Mandatory Headers Case In Sensitive Pass",
+      "inputs": {
+        "fileName": "mandatoryheaders-caseinsensitive-pass.pdf",
+        "applicationId": "1816178405542"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -362,10 +290,34 @@
       }
     },
     {
-      "testName": "mands format2 pass",
+      "testName": "Missing Mandatory Data Desc Fail",
       "inputs": {
-        "fileName": "mands-format2-pass.pdf",
-        "applicationId": "1816178331961"
+        "fileName": "missing-mandatorydata-desc-fail.pdf",
+        "applicationId": "1816178405545"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product description is missing in page 1 row 1, page 1 row 2 and page 1 row 3.\n",
+        "model": "MANDS1"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Data Noof Pkgs Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-noofpkgs-fail.pdf",
+        "applicationId": "1816178405548"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No of packages is missing in page 1 row 1, page 1 row 2 and page 1 row 3.\n",
+        "model": "MANDS1"
+      }
+    },
+    {
+      "testName": "Description Has Double Quotes Should Pass",
+      "inputs": {
+        "fileName": "descriptionhasdoublequotesshould-pass.pdf",
+        "applicationId": "1816178405551"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -374,14 +326,14 @@
       }
     },
     {
-      "testName": "mands format3 pass",
+      "testName": "Missing Mandatory Data Commodity Code Fail",
       "inputs": {
-        "fileName": "mands-format3-pass.pdf",
-        "applicationId": "1816178331964"
+        "fileName": "missing-mandatorydata-commoditycode-fail.pdf",
+        "applicationId": "1816178405554"
       },
       "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in page 1 row 1, page 1 row 2 and page 1 row 3.\n",
         "model": "MANDS1"
       }
     }
