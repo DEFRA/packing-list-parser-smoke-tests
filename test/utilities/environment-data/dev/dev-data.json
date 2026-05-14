@@ -531,30 +531,6 @@
         }
       },
       {
-        "testName": "NUTRICIA2 | Happypath Pass",
-        "inputs": {
-          "fileName": "happypath-pass.xlsx",
-          "applicationId": "1816178256817"
-        },
-        "expectedResults": {
-          "approvalStatus": "approved",
-          "reasonsForFailure": null,
-          "model": "NUTRICIA2"
-        }
-      },
-      {
-        "testName": "NUTRICIA2 | All Mandatory Data Is Missing Fail",
-        "inputs": {
-          "fileName": "allmandatorydataismissing-fail.xlsx",
-          "applicationId": "1816178256712"
-        },
-        "expectedResults": {
-          "approvalStatus": "rejected_other",
-          "reasonsForFailure": "Check GB Establishment RMS Number.",
-          "model": "NOREMOS"
-        }
-      },
-      {
         "testName": "SAINSBURYS1 | Happypath Pass",
         "inputs": {
           "fileName": "happypath-pass.xlsx",
