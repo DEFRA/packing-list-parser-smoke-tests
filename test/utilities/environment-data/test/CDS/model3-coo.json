@@ -1,0 +1,161 @@
+{
+  "name": "CDS3 COO",
+  "tests": [
+    {
+      "testName": "Ac1 Not NIRMS Pass",
+      "inputs": {
+        "fileName": "ac1-notnirms-pass.xlsx",
+        "applicationId": "1816178497213"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "CDS3"
+      }
+    },
+    {
+      "testName": "Ac2 Null NIRMS Fail",
+      "inputs": {
+        "fileName": "ac2-nullnirms-fail.xlsx",
+        "applicationId": "1816178497216"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"109880\" row 4 and sheet \"109880\" row 5.\n",
+        "model": "CDS3"
+      }
+    },
+    {
+      "testName": "Ac3 Invalid NIRMS Fail",
+      "inputs": {
+        "fileName": "ac3-invalidnirms-fail.xlsx",
+        "applicationId": "1816178497219"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"109880\" row 4 and sheet \"109880\" row 5.\n",
+        "model": "CDS3"
+      }
+    },
+    {
+      "testName": "Ac4 Null NIRMS Multiple Fail",
+      "inputs": {
+        "fileName": "ac4-nullnirmsmultiple-fail.xlsx",
+        "applicationId": "1816178497279"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"109880\" row 4, sheet \"109880\" row 5 and sheet \"109880\" row 6.\n",
+        "model": "CDS3"
+      }
+    },
+    {
+      "testName": "Ac5 Invalid NIRMS Multiple Fail",
+      "inputs": {
+        "fileName": "ac5-invalidnirmsmultiple-fail.xlsx",
+        "applicationId": "1816178497222"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"109880\" row 4, sheet \"109880\" row 5 and sheet \"109880\" row 6.\n",
+        "model": "CDS3"
+      }
+    },
+    {
+      "testName": "Ac6 Null Co O Fail",
+      "inputs": {
+        "fileName": "ac6-nullcoo-fail.xlsx",
+        "applicationId": "1816178497225"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"109880\" row 4 and sheet \"109880\" row 5.\n",
+        "model": "CDS3"
+      }
+    },
+    {
+      "testName": "Ac7 Invalid Co O Fail",
+      "inputs": {
+        "fileName": "ac7-invalidcoo-fail.xlsx",
+        "applicationId": "1816178497228"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"109880\" row 4 and sheet \"109880\" row 5.\n",
+        "model": "CDS3"
+      }
+    },
+    {
+      "testName": "Ac8 Null Co O Multiple Fail",
+      "inputs": {
+        "fileName": "ac8-nullcoomultiple-fail.xlsx",
+        "applicationId": "1816178497231"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"109880\" row 4, sheet \"109880\" row 5 and sheet \"109880\" row 6.\n",
+        "model": "CDS3"
+      }
+    },
+    {
+      "testName": "Ac9 Invalid Co O Multiple Fail",
+      "inputs": {
+        "fileName": "ac9-invalidcoomultiple-fail.xlsx",
+        "applicationId": "1816178497234"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"109880\" row 4, sheet \"109880\" row 5 and sheet \"109880\" row 6.\n",
+        "model": "CDS3"
+      }
+    },
+    {
+      "testName": "Ac11 High Risk Co O Treatment Type Specified Fail",
+      "inputs": {
+        "fileName": "ac11-highriskcootreatmenttypespecified-fail.xlsx",
+        "applicationId": "1816178497237"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"109880\" row 4 and sheet \"109880\" row 5.\n",
+        "model": "CDS3"
+      }
+    },
+    {
+      "testName": "Ac12 High Risk Co O Treatment Type Specified Multiple Fail",
+      "inputs": {
+        "fileName": "ac12-highriskcootreatmenttypespecifiedmultiple-fail.xlsx",
+        "applicationId": "1816178497240"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"109880\" row 4 and sheet \"109880\" row 5.\n",
+        "model": "CDS3"
+      }
+    },
+    {
+      "testName": "Ac13 High Risk Co O Treatment Type Not Specified Fail",
+      "inputs": {
+        "fileName": "ac13-highriskcootreatmenttypenotspecified-fail.xlsx",
+        "applicationId": "1816178497243"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"109880\" row 4 and sheet \"109880\" row 5.\n",
+        "model": "CDS3"
+      }
+    },
+    {
+      "testName": "Ac14 High Risk Co O Treatment Type Not Specified Multiple Fail",
+      "inputs": {
+        "fileName": "ac14-highriskcootreatmenttypenotspecifiedmultiple-fail.xlsx",
+        "applicationId": "1816178497246"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"109880\" row 5 and sheet \"109880\" row 6.\nProhibited item identified on the packing list in sheet \"109880\" row 4.\n",
+        "model": "CDS3"
+      }
+    }
+  ]
+}
