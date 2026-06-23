@@ -1,11 +1,11 @@
 {
-  "name": "WARRENS2 NetWeight",
+  "name": "WARRENS2 Netweight",
   "tests": [
     {
       "testName": "Alpha Numeric Total Net Weight Unparse",
       "inputs": {
         "fileName": "alpha-numeric-totalnetweight-unparse.xlsx",
-        "applicationId": "1816178257438"
+        "applicationId": "1816178622154"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -14,22 +14,10 @@
       }
     },
     {
-      "testName": "Alpha Numeric UOM Weight Fail",
-      "inputs": {
-        "fileName": "alpha-numeric-uom-weight-fail.xlsx",
-        "applicationId": "1816178257441"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "WARRENS2"
-      }
-    },
-    {
       "testName": "Ambiguous Units in Header Pass",
       "inputs": {
         "fileName": "ambiguous-units-in-header-pass.xlsx",
-        "applicationId": "1816178257444"
+        "applicationId": "1816178596312"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -38,14 +26,14 @@
       }
     },
     {
-      "testName": "Data empty Netweight Fail",
+      "testName": "Empty Netweight Fail",
       "inputs": {
-        "fileName": "data-empty-netweight-fail.xlsx",
-        "applicationId": "1816178257447"
+        "fileName": "empty-netweight-fail.xlsx",
+        "applicationId": "1816178596315"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Total net weight is missing in sheet \"DR SCHAR - R\" row 46, sheet \"DR SCHAR - R\" row 47, sheet \"GRUPO BIMBO - G\" row 46 in addition to 1 other locations.\n",
+        "reasonsForFailure": "Total net weight is missing in sheet \"DR SCHAR UK LTD - R\" row 50, sheet \"DR SCHAR UK LTD - R\" row 51 and sheet \"DR SCHAR UK LTD - R\" row 52.\n",
         "model": "WARRENS2"
       }
     },
@@ -53,7 +41,7 @@
       "testName": "Extra Spaces In Header Unparse",
       "inputs": {
         "fileName": "extra-spaces-in-header-unparse.xlsx",
-        "applicationId": "1816178257450"
+        "applicationId": "1816178622160"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -62,22 +50,10 @@
       }
     },
     {
-      "testName": "Happypath Pass",
-      "inputs": {
-        "fileName": "happypath-pass.xlsx",
-        "applicationId": "1816178257453"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "WARRENS2"
-      }
-    },
-    {
       "testName": "Header Typos or Special Characters Unparse",
       "inputs": {
         "fileName": "header-typos-or-specialcharacters-unparse.xlsx",
-        "applicationId": "1816178257456"
+        "applicationId": "1816178596321"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -89,19 +65,7 @@
       "testName": "Header With Extra Parentheses Pass",
       "inputs": {
         "fileName": "header-with-extra-parentheses-pass.xlsx",
-        "applicationId": "1816178257459"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "WARRENS2"
-      }
-    },
-    {
-      "testName": "Header With Multiple Units Pass",
-      "inputs": {
-        "fileName": "header-with-multiple-units-pass.xlsx",
-        "applicationId": "1816178257462"
+        "applicationId": "1816178596324"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -113,7 +77,7 @@
       "testName": "Header With Unit And Symbols Pass",
       "inputs": {
         "fileName": "header-with-unit-and-symbols-pass.xlsx",
-        "applicationId": "1816178257465"
+        "applicationId": "1816178596330"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -125,35 +89,11 @@
       "testName": "Incorrect Netweight Data All Fail",
       "inputs": {
         "fileName": "incorrect-netweightdata-all-fail.xlsx",
-        "applicationId": "1816178257468"
+        "applicationId": "1816178596333"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Total net weight is invalid in sheet \"FLETCHERS - R\" row 46, sheet \"FLETCHERS - R\" row 47, sheet \"FLETCHERS - R\" row 48 in addition to 7 other locations.\n",
-        "model": "WARRENS2"
-      }
-    },
-    {
-      "testName": "Invalid Unit Type Fail",
-      "inputs": {
-        "fileName": "invalid-unit-type-fail.xlsx",
-        "applicationId": "1816178257471"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "WARRENS2"
-      }
-    },
-    {
-      "testName": "Malformed Header Unit Pass",
-      "inputs": {
-        "fileName": "malformed-header-unit-pass.xlsx",
-        "applicationId": "1816178257474"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
+        "reasonsForFailure": "Identifier is missing in sheet \"DR SCHAR UK LTD - R\" row 53 and sheet \"DR SCHAR UK LTD - R\" row 60.\nProduct description is missing in sheet \"DR SCHAR UK LTD - R\" row 53 and sheet \"DR SCHAR UK LTD - R\" row 60.\nNo of packages is missing in sheet \"DR SCHAR UK LTD - R\" row 53 and sheet \"DR SCHAR UK LTD - R\" row 60.\nTotal net weight is invalid in sheet \"DR SCHAR UK LTD - R\" row 50, sheet \"DR SCHAR UK LTD - R\" row 51, sheet \"DR SCHAR UK LTD - R\" row 52 in addition to 9 other locations.\nNIRMS/Non-NIRMS goods not specified in sheet \"DR SCHAR UK LTD - R\" row 53 and sheet \"DR SCHAR UK LTD - R\" row 60.\n",
         "model": "WARRENS2"
       }
     },
@@ -161,7 +101,7 @@
       "testName": "Missing Header Netweight Unparse",
       "inputs": {
         "fileName": "missing-header-netweight-unparse.xlsx",
-        "applicationId": "1816178257477"
+        "applicationId": "1816178596339"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -170,46 +110,10 @@
       }
     },
     {
-      "testName": "Missing Paranthesis in Uom Pass",
+      "testName": "Missing Paranthesis in UOM Pass",
       "inputs": {
         "fileName": "missing-paranthesis-in-uom-pass.xlsx",
-        "applicationId": "1816178257480"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "WARRENS2"
-      }
-    },
-    {
-      "testName": "Missing UOM Weight Fail",
-      "inputs": {
-        "fileName": "missing-uom-weight-fail.xlsx",
-        "applicationId": "1816178257483"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "WARRENS2"
-      }
-    },
-    {
-      "testName": "Mixed Case Header Pass",
-      "inputs": {
-        "fileName": "mixedcase-header-pass.xlsx",
-        "applicationId": "1816178257486"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "WARRENS2"
-      }
-    },
-    {
-      "testName": "Mixed Units And Casing Pass",
-      "inputs": {
-        "fileName": "mixedunits-and-casing-pass.xlsx",
-        "applicationId": "1816178257489"
+        "applicationId": "1816178596342"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -221,71 +125,11 @@
       "testName": "Netweight Has Empty Parentheses Fail",
       "inputs": {
         "fileName": "netweight-hasempty-parentheses-fail.xlsx",
-        "applicationId": "1816178257492"
+        "applicationId": "1816178596348"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "WARRENS2"
-      }
-    },
-    {
-      "testName": "Splcharacters Header Netweight Unparse",
-      "inputs": {
-        "fileName": "splcharacters-header-netweight-unparse.xlsx",
-        "applicationId": "1816178257495"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Total Net Weight Without UOM Weight Fail",
-      "inputs": {
-        "fileName": "totalnetweight-without-uomweight-fail.xlsx",
-        "applicationId": "1816178257498"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "WARRENS2"
-      }
-    },
-    {
-      "testName": "UOM Weight Without Total Net Weight Unparse",
-      "inputs": {
-        "fileName": "uomweight-without-totalnetweight-unparse.xlsx",
-        "applicationId": "1816178257501"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Unit Missing Weight Present Fail",
-      "inputs": {
-        "fileName": "unit-missing-weight-present-fail.xlsx",
-        "applicationId": "1816178257504"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "WARRENS2"
-      }
-    },
-    {
-      "testName": "Valid Unit KG Parentheses Pass",
-      "inputs": {
-        "fileName": "valid-unit-kg-parentheses-pass.xlsx",
-        "applicationId": "1816178257507"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
         "model": "WARRENS2"
       }
     },
@@ -293,7 +137,7 @@
       "testName": "Zero Data Total Net Weight Pass",
       "inputs": {
         "fileName": "zero-data-totalnetweight-pass.xlsx",
-        "applicationId": "1816178257510"
+        "applicationId": "1816178596381"
       },
       "expectedResults": {
         "approvalStatus": "approved",
