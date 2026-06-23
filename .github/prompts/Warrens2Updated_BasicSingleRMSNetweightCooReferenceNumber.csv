@@ -1,0 +1,91 @@
+ParserName,FileName,ApplicationID,Status,FailureReasons
+Warrens2Updated_Basic,AllMandatoryDataIsMissing_Fail.xlsx,'1816178595892,Other failure,"Identifier is missing in sheet ""DR SCHAR UK LTD - R"" row 50, sheet ""DR SCHAR UK LTD - R"" row 51, sheet ""DR SCHAR UK LTD - R"" row 52 in addition to 7 other locations.
+Product description is missing in sheet ""DR SCHAR UK LTD - R"" row 50, sheet ""DR SCHAR UK LTD - R"" row 51, sheet ""DR SCHAR UK LTD - R"" row 52 in addition to 7 other locations.
+No of packages is missing in sheet ""DR SCHAR UK LTD - R"" row 50, sheet ""DR SCHAR UK LTD - R"" row 51, sheet ""DR SCHAR UK LTD - R"" row 52 in addition to 7 other locations.
+Total net weight is missing in sheet ""DR SCHAR UK LTD - R"" row 50, sheet ""DR SCHAR UK LTD - R"" row 51, sheet ""DR SCHAR UK LTD - R"" row 52 in addition to 7 other locations."
+Warrens2Updated_Basic,DescriptionHasDoubleQuotesShould_Pass.xlsx,'1816178595991,Pass,
+Warrens2Updated_Basic,Empty_MultipleRowsColumns_Pass.xlsx,'1816178595895,Pass,
+Warrens2Updated_Basic,Happypath_Pass.xlsx,'1816178595898,Pass,
+Warrens2Updated_Basic,Incorrect_Mandatatypes_Excl_netandNopkgs_ProductCode_Pass.xlsx,'1816178622121,Pass,
+Warrens2Updated_Basic,Incorrect_MandatoryData_MultipleRowsWithMultipleLocations_All_Fail.xlsx,'1816178595904,Other failure,"Product code is invalid in sheet ""DR SCHAR UK LTD - R"" row 50, sheet ""DR SCHAR UK LTD - R"" row 51 and sheet ""DR SCHAR UK LTD - R"" row 52.
+No of packages is invalid in sheet ""DR SCHAR UK LTD - R"" row 50, sheet ""DR SCHAR UK LTD - R"" row 51 and sheet ""DR SCHAR UK LTD - R"" row 52.
+Total net weight is invalid in sheet ""DR SCHAR UK LTD - R"" row 50, sheet ""DR SCHAR UK LTD - R"" row 51 and sheet ""DR SCHAR UK LTD - R"" row 52."
+Warrens2Updated_Basic,Incorrect_MandatoryHeader_All_Unparse.xlsx,'1816178595907,Unparse,
+Warrens2Updated_Basic,Incorrect_MandatoryHeader_CommodityCode_Unparse.xlsx,1.82E+12,Unparse,
+Warrens2Updated_Basic,Incorrect_MandatoryHeader_Desc_Unparse.xlsx,1.82E+12,Unparse,
+Warrens2Updated_Basic,Incorrect_MandatoryHeader_NoofPakgs_Unparse.xlsx,1.82E+12,Unparse,
+Warrens2Updated_Basic,Incorrect_MandatoryHeader_TotNetweight_Unparse.xlsx,1.82E+12,Unparse,
+Warrens2Updated_Basic,Incorrect_MandatoryHeader_TotNetweightKGS_Fail.xlsx,'1816178595919,Other failure,Net Weight Unit of Measure (kg) not found.
+Warrens2Updated_Basic,Incorrect_MandatoryHeader_TreatmentType_Unparse.xlsx,'1816178595922,Unparse,
+Warrens2Updated_Basic,Incorrect_OptionalData_All_Pass.xlsx,'1816178622127,Pass,
+Warrens2Updated_Basic,Incorrect_OptionalHeader_All_Pass.xlsx,'1816178622136,Pass,
+Warrens2Updated_Basic,Invalid_NoofPackages_MultipleRows_Fail.xlsx,'1816178595928,Other failure,"No of packages is invalid in sheet ""DR SCHAR UK LTD - R"" row 50, sheet ""DR SCHAR UK LTD - R"" row 51 and sheet ""DR SCHAR UK LTD - R"" row 52."
+Warrens2Updated_Basic,InvalidCommodityCode_MultipleRows_Fail.xlsx,'1816178595994,Other failure,"Product code is invalid in sheet ""DR SCHAR UK LTD - R"" row 50, sheet ""DR SCHAR UK LTD - R"" row 51 and sheet ""DR SCHAR UK LTD - R"" row 52."
+Warrens2Updated_Basic,MandatoryHeaders_CaseInSensitive_Pass.xlsx,'1816178595997,Pass,
+Warrens2Updated_Basic,Missing_MandatoryData_CommodityCode_Fail.xlsx,'1816178595937,Other failure,"Identifier is missing in sheet ""DR SCHAR UK LTD - R"" row 50, sheet ""DR SCHAR UK LTD - R"" row 51 and sheet ""DR SCHAR UK LTD - R"" row 52."
+Warrens2Updated_Basic,Missing_MandatoryData_CommodityCode_Nature_Fail.xlsx,'1816178596000,Other failure,"Identifier is missing in sheet ""DR SCHAR UK LTD - R"" row 50, sheet ""DR SCHAR UK LTD - R"" row 51 and sheet ""DR SCHAR UK LTD - R"" row 52."
+Warrens2Updated_Basic,Missing_MandatoryData_Desc_Fail.xlsx,'1816178595943,Other failure,"Product description is missing in sheet ""DR SCHAR UK LTD - R"" row 50, sheet ""DR SCHAR UK LTD - R"" row 51 and sheet ""DR SCHAR UK LTD - R"" row 52."
+Warrens2Updated_Basic,Missing_MandatoryData_MultipleRowsWithMultipleLocations_All_Fail.xlsx,'1816178595946,Other failure,"Product description is missing in sheet ""DR SCHAR UK LTD - R"" row 50.
+No of packages is missing in sheet ""DR SCHAR UK LTD - R"" row 51.
+Total net weight is missing in sheet ""DR SCHAR UK LTD - R"" row 51."
+Warrens2Updated_Basic,Missing_MandatoryData_Noofpkgs_Fail.xlsx,'1816178595985,Other failure,"No of packages is missing in sheet ""DR SCHAR UK LTD - R"" row 50, sheet ""DR SCHAR UK LTD - R"" row 51 and sheet ""DR SCHAR UK LTD - R"" row 52."
+Warrens2Updated_Basic,Missing_MandatoryData_Totnetweight_Fail.xlsx,'1816178595949,Other failure,"Total net weight is missing in sheet ""DR SCHAR UK LTD - R"" row 50, sheet ""DR SCHAR UK LTD - R"" row 51 and sheet ""DR SCHAR UK LTD - R"" row 52."
+Warrens2Updated_Basic,Missing_MandatoryHeader_All_Unparse.xlsx,'1816178595952,Unparse,
+Warrens2Updated_Basic,Missing_MandatoryHeader_CommodityCode_Unparse.xlsx,'1816178595988,Unparse,
+Warrens2Updated_Basic,Missing_MandatoryHeader_Description_unparse.xlsx,'1816178596006,Unparse,
+Warrens2Updated_Basic,Missing_MandatoryHeader_NoofPacakges_Unparse.xlsx,'1816178596012,Unparse,
+Warrens2Updated_Basic,Missing_MandatoryHeader_TotNetWeight_Unparse.xlsx,'1816178595964,Unparse,
+Warrens2Updated_Basic,Missing_OptionalData_All_Pass.xlsx,'1816178622139,Pass,
+Warrens2Updated_Basic,Missing_OptionalHeader_All_Pass.xlsx,'1816178622142,Pass,
+Warrens2Updated_Basic,NoData_ExceptSingleRMS_Fail.xlsx,'1816178622145,Other failure,No product line data found.
+Warrens2Updated_Basic,OnlyMandatoryDataIsFilled_Pass.xlsx,'1816178622151,Pass,
+Warrens2Updated_Netweight,Alpha_Numeric_TotalNetWeight_Unparse.xlsx,'1816178622154,Unparse,
+Warrens2Updated_Netweight,Ambiguous_Units_in_Header_Pass.xlsx,'1816178596312,Pass,
+Warrens2Updated_Netweight,Empty_Netweight_Fail.xlsx,'1816178596315,Other failure,"Total net weight is missing in sheet ""DR SCHAR UK LTD - R"" row 50, sheet ""DR SCHAR UK LTD - R"" row 51 and sheet ""DR SCHAR UK LTD - R"" row 52."
+Warrens2Updated_Netweight,Extra_Spaces_In_Header_Unparse.xlsx,'1816178622160,Unparse,
+Warrens2Updated_Netweight,Header_Typos_or_SpecialCharacters_Unparse.xlsx,'1816178596321,Unparse,
+Warrens2Updated_Netweight,Header_With_Extra_Parentheses_Pass.xlsx,'1816178596324,Pass,
+Warrens2Updated_Netweight,Header_With_Unit_And_Symbols_Pass.xlsx,'1816178596330,Pass,
+Warrens2Updated_Netweight,Incorrect_NetweightData_All_Fail.xlsx,'1816178596333,Other failure,"Identifier is missing in sheet ""DR SCHAR UK LTD - R"" row 53 and sheet ""DR SCHAR UK LTD - R"" row 60.
+Product description is missing in sheet ""DR SCHAR UK LTD - R"" row 53 and sheet ""DR SCHAR UK LTD - R"" row 60.
+No of packages is missing in sheet ""DR SCHAR UK LTD - R"" row 53 and sheet ""DR SCHAR UK LTD - R"" row 60.
+Total net weight is invalid in sheet ""DR SCHAR UK LTD - R"" row 50, sheet ""DR SCHAR UK LTD - R"" row 51, sheet ""DR SCHAR UK LTD - R"" row 52 in addition to 9 other locations.
+NIRMS/Non-NIRMS goods not specified in sheet ""DR SCHAR UK LTD - R"" row 53 and sheet ""DR SCHAR UK LTD - R"" row 60."
+Warrens2Updated_Netweight,Missing_Header_Netweight_Unparse.xlsx,'1816178596339,Unparse,
+Warrens2Updated_Netweight,Missing_Paranthesis_in_Uom_Pass.xlsx,'1816178596342,Pass,
+Warrens2Updated_Netweight,Netweight_HasEmpty_Parentheses_Fail.xlsx,'1816178596348,Other failure,Net Weight Unit of Measure (kg) not found.
+Warrens2Updated_Netweight,Zero_Data_TotalNetWeight_Pass.xlsx,'1816178596381,Pass,
+Warrens2Updated_SingleRMS,DifferentCountryEstablishmentNumbersexcludesGB_Pass.xlsx,'1816178596114,Pass,
+Warrens2Updated_SingleRMS,DifferentCountryEstablishmentNumbersIncludingGB_Pass.xlsx,'1816178596123,Pass,
+Warrens2Updated_SingleRMS,Empty_RMS_Fail.xlsx,'1816178621749,Other failure,Check GB Establishment RMS Number.
+Warrens2Updated_SingleRMS,InvalidEstablishmentFormats_Fail.xlsx,'1816178621857,Other failure,Check GB Establishment RMS Number.
+Warrens2Updated_SingleRMS,InvalidFormat_RmsGb_000000_000_Unparse.xlsx,'1816178621761,Unparse,
+Warrens2Updated_SingleRMS,InvalidPrefixInEstablishmentNumber_Fail.xlsx,'1816178621764,Other failure,Check GB Establishment RMS Number.
+Warrens2Updated_SingleRMS,LowercaseAndMalformedPrefixInEstablishmentNumber_Pass.xlsx,'1816178621773,Pass,
+Warrens2Updated_SingleRMS,MixedCaseEstablishmentNumberFormat_Pass.xlsx,'1816178621869,Pass,
+Warrens2Updated_SingleRMS,MixedValidAndInvalidEstablishmentFormats_Pass.xlsx,1.82E+12,Pass,
+Warrens2Updated_SingleRMS,Multipledifferent_Establishment_Numbers_Fail.xlsx,'1816178621863,Other failure,Multiple GB Place of Dispatch (Establishment) numbers found on packing list.
+Warrens2Updated_SingleRMS,MultipleGBEstablishmentNumbersWithValid_InvalidLength_Pass.xlsx,'1816178596180,Pass,
+Warrens2Updated_SingleRMS,NonNumericAttheEndOfRMS_Fail.xlsx,'1816178621830,Other failure,Check GB Establishment RMS Number.
+Warrens2Updated_SingleRMS,RMSHasWrongFinal3DigitsShould_Pass.xlsx,'1816178621824,Pass,
+Warrens2Updated_SingleRMS,RMSHasWrongMiddle6DigitsShouldBe_Unparse.xlsx,'1816178621833,Unparse,
+Warrens2Updated_SingleRMS,RMSHasWrongRegexWithAdditionalHyphenShouldBe_Fail.xlsx,'1816178621836,Other failure,Check GB Establishment RMS Number.
+Warrens2Updated_SingleRMS,RMSWith7DigitsShould_Fail.xlsx,'1816178621839,Other failure,Check GB Establishment RMS Number.
+Warrens2Updated_SingleRMS,RMSWithExtraDashEstablishmentNumberAtStartandEnd_Fail.xlsx,'1816178621842,Other failure,Check GB Establishment RMS Number.
+Warrens2Updated_SingleRMS,TC_InvalidFormat_RmsGb_15_10_Fail.xlsx,'1816178621845,Other failure,Check GB Establishment RMS Number.
+Warrens2Updated_SingleRMS,TC_InvalidFormat_WithSpacesAndHyphens_Fail.xlsx,'1816178621848,Other failure,Check GB Establishment RMS Number.
+Warrens2Updated_SingleRMS,Test_ValidInput_RmsGb_WithoutHyphens_Fail.xlsx,'1816178621851,Other failure,Check GB Establishment RMS Number.
+Warrens2Updated_Coo,ac1_NotNirms_Pass.xlsx,'1816178596423,Pass,
+Warrens2Updated_Coo,ac2_NullNirms_Fail.xlsx,'1816178596426,Other failure,"NIRMS/Non-NIRMS goods not specified in sheet ""DR SCHAR UK LTD - R"" row 50, sheet ""DR SCHAR UK LTD - R"" row 51 and sheet ""DR SCHAR UK LTD - R"" row 52."
+Warrens2Updated_Coo,ac3_InvalidNirms_Fail.xlsx,'1816178596429,Other failure,"Invalid entry for NIRMS/Non-NIRMS goods in sheet ""DR SCHAR UK LTD - R"" row 50 and sheet ""DR SCHAR UK LTD - R"" row 51."
+Warrens2Updated_Coo,ac4_NullNirmsMultiple_Fail.xlsx,'1816178596432,Other failure,"NIRMS/Non-NIRMS goods not specified in sheet ""DR SCHAR UK LTD - R"" row 50, sheet ""DR SCHAR UK LTD - R"" row 51, sheet ""DR SCHAR UK LTD - R"" row 52 in addition to 1 other locations."
+Warrens2Updated_Coo,ac5_InvalidNirmsMultiple_Fail.xlsx,'1816178596435,Other failure,"Invalid entry for NIRMS/Non-NIRMS goods in sheet ""DR SCHAR UK LTD - R"" row 50, sheet ""DR SCHAR UK LTD - R"" row 51 and sheet ""DR SCHAR UK LTD - R"" row 52."
+Warrens2Updated_Coo,ac6_NullCoO_Fail.xlsx,'1816178596438,Country of Origin,"Missing Country of Origin in sheet ""DR SCHAR UK LTD - R"" row 46, sheet ""DR SCHAR UK LTD - R"" row 47, sheet ""DR SCHAR UK LTD - R"" row 49 in addition to 12 other locations."
+Warrens2Updated_Coo,ac7_InvalidCoO_Fail.xlsx,'1816178621875,Country of Origin,"Invalid Country of Origin ISO Code in sheet ""DR SCHAR UK LTD - R"" row 50 and sheet ""DR SCHAR UK LTD - R"" row 51."
+Warrens2Updated_Coo,ac8_NullCoOMultiple_Fail.xlsx,'1816178621878,Country of Origin,"Missing Country of Origin in sheet ""DR SCHAR UK LTD - R"" row 50, sheet ""DR SCHAR UK LTD - R"" row 51, sheet ""DR SCHAR UK LTD - R"" row 52 in addition to 1 other locations."
+Warrens2Updated_Coo,ac9_InvalidCoOMultiple_Fail.xlsx,'1816178621881,Country of Origin,"Invalid Country of Origin ISO Code in sheet ""DR SCHAR UK LTD - R"" row 50, sheet ""DR SCHAR UK LTD - R"" row 51 and sheet ""DR SCHAR UK LTD - R"" row 52."
+Warrens2Updated_Coo,ac10_xCoO_Pass.xlsx,'1816178621884,Pass,
+Warrens2Updated_Coo,ac11_HighRiskCoOTreatmentTypeSpecified_Fail.xlsx,'1816178622094,Ineligible Items,"Prohibited item identified on the packing list in sheet ""DR SCHAR UK LTD - R"" row 46, sheet ""DR SCHAR UK LTD - R"" row 47, sheet ""DR SCHAR UK LTD - R"" row 49 in addition to 12 other locations."
+Warrens2Updated_Coo,ac12_HighRiskCoOTreatmentTypeSpecifiedMultiple_Fail.xlsx,'1816178622109,Ineligible Items,"Prohibited item identified on the packing list in sheet ""DR SCHAR UK LTD - R"" row 46, sheet ""DR SCHAR UK LTD - R"" row 47, sheet ""DR SCHAR UK LTD - R"" row 49 in addition to 12 other locations."
+Warrens2Updated_Coo,ac13_HighRiskCoOTreatmentTypeNotSpecified_Fail.xlsx,'1816178622115,ineligible Items,"Prohibited item identified on the packing list in sheet ""DR SCHAR UK LTD - R"" row 46, sheet ""DR SCHAR UK LTD - R"" row 47, sheet ""DR SCHAR UK LTD - R"" row 49 in addition to 12 other locations."
+Warrens2Updated_Coo,ac14_HighRiskCoOTreatmentTypeNotSpecifiedMultiple_Fail.xlsx,'1816178622118,Ineligible Items,"Prohibited item identified on the packing list in sheet ""DR SCHAR UK LTD - R"" row 46, sheet ""DR SCHAR UK LTD - R"" row 47, sheet ""DR SCHAR UK LTD - R"" row 49 in addition to 12 other locations."
