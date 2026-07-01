@@ -53,11 +53,11 @@
       "testName": "ac13 High Risk Co OTreatment Type Not Specified",
       "inputs": {
         "fileName": "ac13-highriskcootreatmenttypenotspecified-fail.csv",
-        "applicationId": "1816178159479"
+        "applicationId": "1816178654296"
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in row 3.\n",
+        "reasonsForFailure": "Prohibited item identified on the packing list in rows 3, 4, 5 in addition to 13 other locations.\n",
         "model": "ASDA4"
       }
     },
