@@ -1,0 +1,233 @@
+{
+  "name": "MANFREIGHT1 Netweight",
+  "tests": [
+    {
+      "testName": "Header With Unit And Symbols Pass",
+      "inputs": {
+        "fileName": "header-with-unit-and-symbols-pass.xlsx",
+        "applicationId": "1816178735860"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MANFREIGHT1"
+      }
+    },
+    {
+      "testName": "Zero Data Total Net Weight Pass",
+      "inputs": {
+        "fileName": "zero-data-totalnetweight-pass.xlsx",
+        "applicationId": "1816178735863"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MANFREIGHT1"
+      }
+    },
+    {
+      "testName": "Mixed Case Header Pass",
+      "inputs": {
+        "fileName": "mixedcase-header-pass.xlsx",
+        "applicationId": "1816178735866"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MANFREIGHT1"
+      }
+    },
+    {
+      "testName": "Header With Extra Parentheses Pass",
+      "inputs": {
+        "fileName": "header-with-extra-parentheses-pass.xlsx",
+        "applicationId": "1816178735875"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MANFREIGHT1"
+      }
+    },
+    {
+      "testName": "Missing Header Netweight Unparse",
+      "inputs": {
+        "fileName": "missing-header-netweight-unparse.xlsx",
+        "applicationId": "1816178735878"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Special Characters Header Netweight Unparse",
+      "inputs": {
+        "fileName": "splcharacters-header-netweight-unparse.xlsx",
+        "applicationId": "1816178735881"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "MANFREIGHT1"
+      }
+    },
+    {
+      "testName": "Netweight Has Empty Parentheses Fail",
+      "inputs": {
+        "fileName": "netweight-hasempty-parentheses-fail.xlsx",
+        "applicationId": "1816178735902"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "MANFREIGHT1"
+      }
+    },
+    {
+      "testName": "Total Net Weight Without UOM Weight Fail",
+      "inputs": {
+        "fileName": "totalnetweight-without-uomweight-fail.xlsx",
+        "applicationId": "1816178735905"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "MANFREIGHT1"
+      }
+    },
+    {
+      "testName": "Valid Unit KG Parentheses Pass",
+      "inputs": {
+        "fileName": "valid-unit-kg-parentheses-pass.xlsx",
+        "applicationId": "1816178735908"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MANFREIGHT1"
+      }
+    },
+    {
+      "testName": "Ambiguous Units in Header Pass",
+      "inputs": {
+        "fileName": "ambiguous-units-in-header-pass.xlsx",
+        "applicationId": "1816178736052"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MANFREIGHT1"
+      }
+    },
+    {
+      "testName": "Missing Header Netweight Unparse",
+      "inputs": {
+        "fileName": "missing-header-netweight-unparse.xlsx",
+        "applicationId": "1816178736076"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Data empty Netweight Fail",
+      "inputs": {
+        "fileName": "data-empty-netweight-fail.xlsx",
+        "applicationId": "1816178736340"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Total net weight is missing in sheet \"Sheet1\" row 6, sheet \"Sheet1\" row 7 and sheet \"Sheet1\" row 8.\n",
+        "model": "MANFREIGHT1"
+      }
+    },
+    {
+      "testName": "Zero Data Total Net Weight Pass",
+      "inputs": {
+        "fileName": "zero-data-totalnetweight-pass.xlsx",
+        "applicationId": "1816178736343"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MANFREIGHT1"
+      }
+    },
+    {
+      "testName": "Header With Multiple Units Pass",
+      "inputs": {
+        "fileName": "header-with-multiple-units-pass.xlsx",
+        "applicationId": "1816178736352"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MANFREIGHT1"
+      }
+    },
+    {
+      "testName": "Extra Spaces In Header Unparse",
+      "inputs": {
+        "fileName": "extra-spaces-in-header-unparse.xlsx",
+        "applicationId": "1816178736358"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Header Netweight Unparse",
+      "inputs": {
+        "fileName": "missing-header-netweight-unparse.xlsx",
+        "applicationId": "1816178736373"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Header Typos or Special Characters Unparse",
+      "inputs": {
+        "fileName": "header-typos-or-specialcharacters-unparse.xlsx",
+        "applicationId": "1816178736376"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Netweight Data All Fail",
+      "inputs": {
+        "fileName": "incorrect-netweightdata-all-fail.xlsx",
+        "applicationId": "1816178736382"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Total net weight is invalid in sheet \"Sheet1\" row 6, sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8 in addition to 160 other locations.\n",
+        "model": "MANFREIGHT1"
+      }
+    },
+    {
+      "testName": "Header With Extra Parentheses Pass",
+      "inputs": {
+        "fileName": "header-with-extra-parentheses-pass.xlsx",
+        "applicationId": "1816178736514"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MANFREIGHT1"
+      }
+    }
+  ]
+}

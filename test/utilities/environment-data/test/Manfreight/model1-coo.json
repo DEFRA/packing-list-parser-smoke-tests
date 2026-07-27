@@ -1,0 +1,185 @@
+{
+  "name": "MANFREIGHT2 CoO",
+  "tests": [
+    {
+      "testName": "ac1 Not NIRMS Pass",
+      "inputs": {
+        "fileName": "ac1-notnirms-pass.xlsx",
+        "applicationId": "1816178709700"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MANFREIGHT2"
+      }
+    },
+    {
+      "testName": "ac2 Null NIRMS Fail",
+      "inputs": {
+        "fileName": "ac2-nullnirms-fail.xlsx",
+        "applicationId": "1816178709715"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Enter_your_data\" row 5 and sheet \"Enter_your_data\" row 6.\n",
+        "model": "MANFREIGHT2"
+      }
+    },
+    {
+      "testName": "ac3 Invalid NIRMS Fail",
+      "inputs": {
+        "fileName": "ac3-invalidnirms-fail.xlsx",
+        "applicationId": "1816178709703"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Enter_your_data\" row 5 and sheet \"Enter_your_data\" row 6.\n",
+        "model": "MANFREIGHT2"
+      }
+    },
+    {
+      "testName": "ac4 Null NIRMS Multiple Fail",
+      "inputs": {
+        "fileName": "ac4-nullnirmsmultiple-fail.xlsx",
+        "applicationId": "1816178709718"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Enter_your_data\" row 5, sheet \"Enter_your_data\" row 6 and sheet \"Enter_your_data\" row 7.\n",
+        "model": "MANFREIGHT2"
+      }
+    },
+    {
+      "testName": "ac5 Invalid NIRMS Multiple Fail",
+      "inputs": {
+        "fileName": "ac5-invalidnirmsmultiple-fail.xlsx",
+        "applicationId": "1816178709673"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Enter_your_data\" row 5, sheet \"Enter_your_data\" row 6 and sheet \"Enter_your_data\" row 7.\n",
+        "model": "MANFREIGHT2"
+      }
+    },
+    {
+      "testName": "ac6 Null Co O Fail",
+      "inputs": {
+        "fileName": "ac6-nullcoo-fail.xlsx",
+        "applicationId": "1816178709676"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Enter_your_data\" row 5 and sheet \"Enter_your_data\" row 6.\n",
+        "model": "MANFREIGHT2"
+      }
+    },
+    {
+      "testName": "ac7 Invalid Co O Fail",
+      "inputs": {
+        "fileName": "ac7-invalidcoo-fail.xlsx",
+        "applicationId": "1816178709679"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Enter_your_data\" row 5 and sheet \"Enter_your_data\" row 6.\n",
+        "model": "MANFREIGHT2"
+      }
+    },
+    {
+      "testName": "ac8 Null Co O Multiple Fail",
+      "inputs": {
+        "fileName": "ac8-nullcoomultiple-fail.xlsx",
+        "applicationId": "1816178709709"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Enter_your_data\" row 5, sheet \"Enter_your_data\" row 6 and sheet \"Enter_your_data\" row 7.\n",
+        "model": "MANFREIGHT2"
+      }
+    },
+    {
+      "testName": "ac9 Invalid Co O Multiple Fail",
+      "inputs": {
+        "fileName": "ac9-invalidcoomultiple-fail.xlsx",
+        "applicationId": "1816178709724"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Enter_your_data\" row 5, sheet \"Enter_your_data\" row 6 and sheet \"Enter_your_data\" row 7.\n",
+        "model": "MANFREIGHT2"
+      }
+    },
+    {
+      "testName": "ac10 x Co O Pass",
+      "inputs": {
+        "fileName": "ac10-xcoo-pass.xlsx",
+        "applicationId": "1816178709685"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MANFREIGHT2"
+      }
+    },
+    {
+      "testName": "ac11 High Risk Co O Treatment Type Specified Fail",
+      "inputs": {
+        "fileName": "ac11-highriskcootreatmenttypespecified-fail.xlsx",
+        "applicationId": "1816178709688"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Enter_your_data\" row 5 and sheet \"Enter_your_data\" row 6.\n",
+        "model": "MANFREIGHT2"
+      }
+    },
+    {
+      "testName": "ac12 High Risk Co O Treatment Type Specified Multiple Fail",
+      "inputs": {
+        "fileName": "ac12-highriskcootreatmenttypespecifiedmultiple-fail.xlsx",
+        "applicationId": "1816178709691"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Enter_your_data\" row 5, sheet \"Enter_your_data\" row 6 and sheet \"Enter_your_data\" row 7.\n",
+        "model": "MANFREIGHT2"
+      }
+    },
+    {
+      "testName": "ac13 High Risk Co O Treatment Type Not Specified Fail",
+      "inputs": {
+        "fileName": "ac13-highriskcootreatmenttypenotspecified-fail.xlsx",
+        "applicationId": "1816178709694"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Enter_your_data\" row 5 and sheet \"Enter_your_data\" row 6.\n",
+        "model": "MANFREIGHT2"
+      }
+    },
+    {
+      "testName": "ac14 High Risk Co O Treatment Type Not Specified Multiple Fail",
+      "inputs": {
+        "fileName": "ac14-highriskcootreatmenttypenotspecified-coo-invalidmultiple-fail.xlsx",
+        "applicationId": "1816178709730"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Enter_your_data\" row 6.\nProhibited item identified on the packing list in sheet \"Enter_your_data\" row 5 and sheet \"Enter_your_data\" row 7.\n",
+        "model": "MANFREIGHT2"
+      }
+    },
+    {
+      "testName": "ac15 Multiple Headers and Data Missing Fail",
+      "inputs": {
+        "fileName": "ac15-multipleheadersanddatamissing-fail.xlsx",
+        "applicationId": "1816178709733"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Enter_your_data\" row 5, sheet \"Enter_your_data\" row 6 and sheet \"Enter_your_data\" row 7.\n",
+        "model": "MANFREIGHT2"
+      }
+    }
+  ]
+}
