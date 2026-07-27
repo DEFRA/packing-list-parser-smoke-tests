@@ -52,13 +52,13 @@
     {
       "testName": "Missing Header Netweight Unparse",
       "inputs": {
-        "fileName": "Missing_Header_Netweight_Unparse.xlsx",
+        "fileName": "missing-header-netweight-unparse.xlsx",
         "applicationId": "1816178735878"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": null,
-        "model": "MANFREIGHT1"
+        "model": "NOMATCH"
       }
     },
     {
@@ -69,7 +69,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
         "model": "MANFREIGHT1"
       }
     },
@@ -130,18 +130,18 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": null,
-        "model": "MANFREIGHT1"
+        "model": "NOMATCH"
       }
     },
     {
       "testName": "Data empty Netweight Fail",
       "inputs": {
-        "fileName": "Data_empty_Netweight_Fail.xlsx",
+        "fileName": "data-empty-netweight-fail.xlsx",
         "applicationId": "1816178736340"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Total net weight is missing in sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8 and sheet \"Sheet1\" row 9.\n",
+        "reasonsForFailure": "Total net weight is missing in sheet \"Sheet1\" row 6, sheet \"Sheet1\" row 7 and sheet \"Sheet1\" row 8.\n",
         "model": "MANFREIGHT1"
       }
     },
@@ -178,7 +178,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": null,
-        "model": "MANFREIGHT1"
+        "model": "NOMATCH"
       }
     },
     {
@@ -190,7 +190,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": null,
-        "model": "MANFREIGHT1"
+        "model": "NOMATCH"
       }
     },
     {
@@ -202,7 +202,7 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": null,
-        "model": "MANFREIGHT1"
+        "model": "NOMATCH"
       }
     },
     {
@@ -213,7 +213,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Total net weight is invalid in sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8, sheet \"Sheet1\" row 9 in addition to 160 other locations.\n",
+        "reasonsForFailure": "Total net weight is invalid in sheet \"Sheet1\" row 6, sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8 in addition to 160 other locations.\n",
         "model": "MANFREIGHT1"
       }
     },

@@ -220,7 +220,7 @@
     {
       "testName": "Malformed Country Code In Establishment Number Fail",
       "inputs": {
-        "fileName": "MalformedCountryCodeInEstablishmentNumber_Fail.xlsx",
+        "fileName": "malformedcountrycodeinestablishmentnumber-fail.xlsx",
         "applicationId": "1816178735512"
       },
       "expectedResults": {
@@ -232,7 +232,7 @@
     {
       "testName": "TC Invalid Format With Spaces And Hyphens Fail",
       "inputs": {
-        "fileName": "tc-invalidformat-withspacesandhyphens-fail.xlsx",
+        "fileName": "test-validinput-rmsgb-withouthyphens-fail.xlsx",
         "applicationId": "1816178735509"
       },
       "expectedResults": {

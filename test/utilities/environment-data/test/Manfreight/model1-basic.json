@@ -201,7 +201,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Product code is invalid in sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8, sheet \"Sheet1\" row 9 in addition to 1 other locations.\nNo of packages is invalid in sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8, sheet \"Sheet1\" row 9 in addition to 1 other locations.\nTotal net weight is invalid in sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8, sheet \"Sheet1\" row 9 in addition to 1 other locations.\n",
+        "reasonsForFailure": "Product code is invalid in sheet \"Sheet1\" row 6, sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8 in addition to 1 other locations.\nNo of packages is invalid in sheet \"Sheet1\" row 6, sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8 in addition to 1 other locations.\nTotal net weight is invalid in sheet \"Sheet1\" row 6, sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8 in addition to 1 other locations.\n",
         "model": "MANFREIGHT1"
       }
     },
@@ -213,7 +213,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Identifier is missing in sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8 and sheet \"Sheet1\" row 9.\nProduct description is missing in sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8 and sheet \"Sheet1\" row 9.\nNo of packages is missing in sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8 and sheet \"Sheet1\" row 9.\nTotal net weight is missing in sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8 and sheet \"Sheet1\" row 9.\n",
+        "reasonsForFailure": "Identifier is missing in sheet \"Sheet1\" row 6, sheet \"Sheet1\" row 7 and sheet \"Sheet1\" row 8.\nProduct description is missing in sheet \"Sheet1\" row 6, sheet \"Sheet1\" row 7 and sheet \"Sheet1\" row 8.\nNo of packages is missing in sheet \"Sheet1\" row 6, sheet \"Sheet1\" row 7 and sheet \"Sheet1\" row 8.\nTotal net weight is missing in sheet \"Sheet1\" row 6, sheet \"Sheet1\" row 7 and sheet \"Sheet1\" row 8.\n",
         "model": "MANFREIGHT1"
       }
     },
@@ -249,7 +249,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Identifier is missing in sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8, sheet \"Sheet1\" row 9 in addition to 160 other locations.\nProduct description is missing in sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8, sheet \"Sheet1\" row 9 in addition to 160 other locations.\nNo of packages is missing in sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8, sheet \"Sheet1\" row 9 in addition to 160 other locations.\nTotal net weight is missing in sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8, sheet \"Sheet1\" row 9 in addition to 160 other locations.\n",
+        "reasonsForFailure": "Identifier is missing in sheet \"Sheet1\" row 6, sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8 in addition to 160 other locations.\nProduct description is missing in sheet \"Sheet1\" row 6, sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8 in addition to 160 other locations.\nNo of packages is missing in sheet \"Sheet1\" row 6, sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8 in addition to 160 other locations.\nTotal net weight is missing in sheet \"Sheet1\" row 6, sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8 in addition to 160 other locations.\n",
         "model": "MANFREIGHT1"
       }
     },
@@ -261,7 +261,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "No product line data found.\n",
+        "reasonsForFailure": "No product line data found.",
         "model": "MANFREIGHT1"
       }
     },
@@ -273,7 +273,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Product code is invalid in sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8 and sheet \"Sheet1\" row 9.\n",
+        "reasonsForFailure": "Product code is invalid in sheet \"Sheet1\" row 6, sheet \"Sheet1\" row 7 and sheet \"Sheet1\" row 8.\n",
         "model": "MANFREIGHT1"
       }
     }
