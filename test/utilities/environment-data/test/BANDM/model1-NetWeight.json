@@ -2,10 +2,10 @@
   "name": "BANDM1 NetWeight",
   "tests": [
     {
-      "testName": "Alpha Numeric Total Net Weight Unparse",
+      "testName": "Alpha Numeric Total Net Weight  Unparse",
       "inputs": {
         "fileName": "alpha-numeric-totalnetweight-unparse.xlsx",
-        "applicationId": "1816178185765"
+        "applicationId": "1816178737189"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -14,22 +14,10 @@
       }
     },
     {
-      "testName": "Alpha Numeric UOM Weight Fail",
-      "inputs": {
-        "fileName": "alpha-numeric-uom-weight-fail.xlsx",
-        "applicationId": "1816178232946"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "BANDM1"
-      }
-    },
-    {
-      "testName": "Ambiguous Units in Header Pass",
+      "testName": "Ambiguous Units In Header Pass Pass",
       "inputs": {
         "fileName": "ambiguous-units-in-header-pass.xlsx",
-        "applicationId": "1816178185774"
+        "applicationId": "1816178736946"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -38,10 +26,10 @@
       }
     },
     {
-      "testName": "Extra Spaces In Header Unparse",
+      "testName": "Extra Spaces In Header Unparse Unparse",
       "inputs": {
         "fileName": "extra-spaces-in-header-unparse.xlsx",
-        "applicationId": "1816178185780"
+        "applicationId": "1816178736952"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -50,22 +38,10 @@
       }
     },
     {
-      "testName": "Happy Path Pass",
-      "inputs": {
-        "fileName": "happypath-pass.xlsx",
-        "applicationId": "1816178185783"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BANDM1"
-      }
-    },
-    {
-      "testName": "Header Typos or Special Characters Unparse",
+      "testName": "Header Typos Or Special Characters Unparse Unparse",
       "inputs": {
         "fileName": "header-typos-or-specialcharacters-unparse.xlsx",
-        "applicationId": "1816178185786"
+        "applicationId": "1816178736955"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -74,10 +50,10 @@
       }
     },
     {
-      "testName": "Header With Extra Parentheses Pass",
+      "testName": "Header With Extra Parentheses Pass Pass",
       "inputs": {
         "fileName": "header-with-extra-parentheses-pass.xlsx",
-        "applicationId": "1816178185789"
+        "applicationId": "1816178736958"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -86,10 +62,10 @@
       }
     },
     {
-      "testName": "Header With Multiple Units Pass",
+      "testName": "Header With Multiple Units Pass Pass",
       "inputs": {
         "fileName": "header-with-multiple-units-pass.xlsx",
-        "applicationId": "1816178185795"
+        "applicationId": "1816178737021"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -98,58 +74,22 @@
       }
     },
     {
-      "testName": "Header With Unit And Symbols Pass",
-      "inputs": {
-        "fileName": "header-with-unit-and-symbols-pass.xlsx",
-        "applicationId": "1816178185798"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BANDM1"
-      }
-    },
-    {
-      "testName": "Inconsistent Header Case Pass",
-      "inputs": {
-        "fileName": "inconsistent-header-case-pass.xlsx",
-        "applicationId": "1816178185801"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BANDM1"
-      }
-    },
-    {
-      "testName": "Incorrect Netweight Data All Fail",
+      "testName": "Incorrect Netweight Data All Fail Other Failure",
       "inputs": {
         "fileName": "incorrect-netweightdata-all-fail.xlsx",
-        "applicationId": "1816178185807"
+        "applicationId": "1816178736967"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Total net weight is invalid in sheet \"Packing List\" row 20, sheet \"Packing List\" row 21, sheet \"Packing List\" row 22 in addition to 6 other locations.\n",
+        "reasonsForFailure": "Total net weight is invalid in sheet \"Sheet1\" row 20, sheet \"Sheet1\" row 21, sheet \"Sheet1\" row 22 in addition to 19 other locations.\n",
         "model": "BANDM1"
       }
     },
     {
-      "testName": "Invalid Unit Type Fail",
+      "testName": "Header With Unit And Symbols Pass Pass",
       "inputs": {
-        "fileName": "invalid-unit-type-fail.xlsx",
-        "applicationId": "1816178232949"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "BANDM1"
-      }
-    },
-    {
-      "testName": "Malformed Header Unit Pass",
-      "inputs": {
-        "fileName": "malformed-header-unit-pass.xlsx",
-        "applicationId": "1816178185813"
+        "fileName": "header-with-unit-and-symbols-pass.xlsx",
+        "applicationId": "1816178737024"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -158,10 +98,10 @@
       }
     },
     {
-      "testName": "Missing Header Total Net Weight Unparse",
+      "testName": "Malformed Header Unit  Unparse",
       "inputs": {
-        "fileName": "missing-header-totalnetweight-unparse.xlsx",
-        "applicationId": "1816178185819"
+        "fileName": "malformed-header-unit-unparse.xlsx",
+        "applicationId": "1816178737210"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -170,10 +110,22 @@
       }
     },
     {
-      "testName": "Missing Paranthesis in Uom Pass",
+      "testName": "Missing Header Netweight  Unparse",
+      "inputs": {
+        "fileName": "missing-header-netweight-unparse.xlsx",
+        "applicationId": "1816178736976"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Paranthesis In Uom Pass",
       "inputs": {
         "fileName": "missing-paranthesis-in-uom-pass.xlsx",
-        "applicationId": "1816178185822"
+        "applicationId": "1816178736979"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -182,22 +134,22 @@
       }
     },
     {
-      "testName": "Missing UOM Weight Fail Unparse",
+      "testName": "Splcharacters Header Netweight Unparse",
       "inputs": {
-        "fileName": "missing-uom-weight-fail-unparse.xlsx",
-        "applicationId": "1816178232952"
+        "fileName": "splcharacters-header-netweight-unparse.xlsx",
+        "applicationId": "1816178737228"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "BANDM1"
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
       }
     },
     {
-      "testName": "Mixed Units And Casing Pass",
+      "testName": "Mixed Case Header Pass Pass",
       "inputs": {
-        "fileName": "mixedunits-and-casing-pass.xlsx",
-        "applicationId": "1816178185831"
+        "fileName": "mixedcase-header-pass.xlsx",
+        "applicationId": "1816178736985"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -206,38 +158,14 @@
       }
     },
     {
-      "testName": "Netweight Has Empty Parentheses Fail",
+      "testName": "Netweight Has Empty Parentheses Fail Other Failure",
       "inputs": {
-        "fileName": "netweighthasemptyparenthesesfail.xlsx",
-        "applicationId": "1816178232958"
+        "fileName": "netweight-hasempty-parentheses-fail.xlsx",
+        "applicationId": "1816178736988"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "BANDM1"
-      }
-    },
-    {
-      "testName": "Unit Missing Weight Present Fail",
-      "inputs": {
-        "fileName": "unit-missing-weight-present-fail.xlsx",
-        "applicationId": "1816178232955"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "BANDM1"
-      }
-    },
-    {
-      "testName": "Zero Data Total Net Weight Pass",
-      "inputs": {
-        "fileName": "zero-data-totalnetweight-pass.xlsx",
-        "applicationId": "1816178185843"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
         "model": "BANDM1"
       }
     }

@@ -2,22 +2,22 @@
   "name": "BANDM1 Basic",
   "tests": [
     {
-      "testName": "All Mandatory Data Is Missing Fail",
+      "testName": "All Mandatory Data Is Missing Fail ",
       "inputs": {
         "fileName": "allmandatorydataismissing-fail.xlsx",
-        "applicationId": "1816178185573"
+        "applicationId": "1816178736661"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "No product line data found.",
+        "reasonsForFailure": "Identifier is missing in sheet \"Sheet1\" row 20, sheet \"Sheet1\" row 21, sheet \"Sheet1\" row 22 in addition to 19 other locations.\nProduct description is missing in sheet \"Sheet1\" row 20, sheet \"Sheet1\" row 21, sheet \"Sheet1\" row 22 in addition to 19 other locations.\nNo of packages is missing in sheet \"Sheet1\" row 20, sheet \"Sheet1\" row 21, sheet \"Sheet1\" row 22 in addition to 19 other locations.\nTotal net weight is missing in sheet \"Sheet1\" row 20, sheet \"Sheet1\" row 21, sheet \"Sheet1\" row 22 in addition to 19 other locations.\n",
         "model": "BANDM1"
       }
     },
     {
-      "testName": "Description Has Double Quotes Should Pass",
+      "testName": "Description Has Double Quotes Should Pass Pass",
       "inputs": {
         "fileName": "descriptionhasdoublequotesshould-pass.xlsx",
-        "applicationId": "1816178185579"
+        "applicationId": "1816178736664"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -26,10 +26,10 @@
       }
     },
     {
-      "testName": "Happy Path Pass",
+      "testName": "Empty Multiple Rows Columns Pass Pass",
       "inputs": {
-        "fileName": "happypath-pass.xlsx",
-        "applicationId": "1816178185585"
+        "fileName": "empty-multiplerowscolumns-pass.xlsx",
+        "applicationId": "1816178736667"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -38,10 +38,22 @@
       }
     },
     {
-      "testName": "Incorrect Mandatatypes Excl netand Nopkgs Product Code Pass",
+      "testName": "Happypath Pass",
+      "inputs": {
+        "fileName": "happypath.xlsx",
+        "applicationId": "1816178736769"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatatypes Excl Netand Nopkgs Product Code Pass Pass",
       "inputs": {
         "fileName": "incorrect-mandatatypes-excl-netandnopkgs-productcode-pass.xlsx",
-        "applicationId": "1816178185588"
+        "applicationId": "1816178737069"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -50,22 +62,34 @@
       }
     },
     {
-      "testName": "Incorrect Mandatory Data Multiple Rows With Multiple Locations All Fail",
+      "testName": "Incorrect Mandatory Data Multiple Rows With Multiple Locations All Fail Other Failure",
       "inputs": {
         "fileName": "incorrect-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
-        "applicationId": "1816178185594"
+        "applicationId": "1816178736676"
       },
       "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Product code is invalid in sheet \"Packing List\" row 20, sheet \"Packing List\" row 21, sheet \"Packing List\" row 22 in addition to 2 other locations.\nNo of packages is invalid in sheet \"Packing List\" row 22, sheet \"Packing List\" row 23 and sheet \"Packing List\" row 24.\nTotal net weight is invalid in sheet \"Packing List\" row 20 and sheet \"Packing List\" row 21.\nInvalid Country of Origin ISO Code in sheet \"Packing List\" row 23, sheet \"Packing List\" row 24 and sheet \"Packing List\" row 25.\n",
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product code is invalid in sheet \"Sheet1\" row 20, sheet \"Sheet1\" row 21 and sheet \"Sheet1\" row 22.\nNo of packages is invalid in sheet \"Sheet1\" row 20, sheet \"Sheet1\" row 21 and sheet \"Sheet1\" row 22.\nTotal net weight is invalid in sheet \"Sheet1\" row 20, sheet \"Sheet1\" row 21 and sheet \"Sheet1\" row 22.\n",
         "model": "BANDM1"
       }
     },
     {
-      "testName": "Incorrect Mandatory Header Commodity Code Unparse",
+      "testName": "Incorrect Mandatory Header All Unparse Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-all-unparse.xlsx",
+        "applicationId": "1816178736679"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Commodity Code Unparse Unparse",
       "inputs": {
         "fileName": "incorrect-mandatoryheader-commoditycode-unparse.xlsx",
-        "applicationId": "1816178185597"
+        "applicationId": "1816178736682"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -74,166 +98,238 @@
       }
     },
     {
-      "testName": "Incorrect Mandatory Header Desc Unparse",
-      "inputs": {
-        "fileName": "incorrect-mandatoryheader-desc-unparse.xlsx",
-        "applicationId": "1816178185600"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Incorrect Mandatory Header Noofpkgs Unparse",
-      "inputs": {
-        "fileName": "incorrect-mandatoryheader-noofpkgs-unparse.xlsx",
-        "applicationId": "1816178185606"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Incorrect Mandatory Header Tot Netweight Unparse",
-      "inputs": {
-        "fileName": "incorrect-mandatoryheader-totnetweight-unparse.xlsx",
-        "applicationId": "1816178185609"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Incorrect Optional Data All Pass",
-      "inputs": {
-        "fileName": "incorrect-optionaldata-all-pass.xlsx",
-        "applicationId": "1816178185612"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BANDM1"
-      }
-    },
-    {
-      "testName": "Incorrect Optional Header All Pass",
-      "inputs": {
-        "fileName": "incorrect-optionalheader-all-pass.xlsx",
-        "applicationId": "1816178185615"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BANDM1"
-      }
-    },
-    {
-      "testName": "Incorrect Optional Header Country Of Origin Pass",
-      "inputs": {
-        "fileName": "incorrect-optionalheader-countryoforigin-pass.xlsx",
-        "applicationId": "1816178185618"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BANDM1"
-      }
-    },
-    {
-      "testName": "Mandatory Headers Case In Sensitive Pass",
-      "inputs": {
-        "fileName": "mandatoryheaders-caseinsensitive-pass.xlsx",
-        "applicationId": "1816178185621"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BANDM1"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Data Multiple Rows With Multiple Locations All Fail",
-      "inputs": {
-        "fileName": "missing-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
-        "applicationId": "1816178185624"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Identifier is missing in sheet \"Packing List\" row 20, sheet \"Packing List\" row 22, sheet \"Packing List\" row 23 in addition to 3 other locations.\nProduct description is missing in sheet \"Packing List\" row 22, sheet \"Packing List\" row 23, sheet \"Packing List\" row 34 in addition to 3 other locations.\nNo of packages is missing in sheet \"Packing List\" row 20, sheet \"Packing List\" row 26, sheet \"Packing List\" row 27 in addition to 2 other locations.\nTotal net weight is missing in sheet \"Packing List\" row 22, sheet \"Packing List\" row 23, sheet \"Packing List\" row 24 in addition to 1 other locations.\nMissing Country of Origin in sheet \"Packing List\" row 20.\n",
-        "model": "BANDM1"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Header All Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-all-unparse.xlsx",
-        "applicationId": "1816178185627"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Header Commodity Code Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-commoditycode-unparse.xlsx",
-        "applicationId": "1816178185633"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Header Desc Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-desc-unparse.xlsx",
-        "applicationId": "1816178185642"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Header Noofpkgs Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-noofpkgs-unparse.xlsx",
-        "applicationId": "1816178185648"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Header Tot Netweight Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-totnetweight-unparse.xlsx",
-        "applicationId": "1816178185654"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing Optional Data All Pass",
+      "testName": "Missing Optional Data All Pass Pass",
       "inputs": {
         "fileName": "missing-optionaldata-all-pass.xlsx",
-        "applicationId": "1816178185657"
+        "applicationId": "1816178737072"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Noof Pakgs Unparse Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-noofpakgs-unparse.xlsx",
+        "applicationId": "1816178736775"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Tot Netweight Unparse Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-totnetweight-unparse.xlsx",
+        "applicationId": "1816178736691"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatory Header Tot Netweight Kgs Fail Other Failure",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-totnetweightkgs-fail.xlsx",
+        "applicationId": "1816178736856"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "Incorrect Optional Data All Pass Pass",
+      "inputs": {
+        "fileName": "incorrect-optionaldata-all-pass.xlsx",
+        "applicationId": "1816178737075"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "Incorrect Optional Header All Pass Pass",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-all-pass.xlsx",
+        "applicationId": "1816178737078"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "Invalid Noof Packages Multiple Rows Fail Other Failure",
+      "inputs": {
+        "fileName": "invalid-noofpackages-multiplerows-fail.xlsx",
+        "applicationId": "1816178736703"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No of packages is invalid in sheet \"Sheet1\" row 20, sheet \"Sheet1\" row 21 and sheet \"Sheet1\" row 22.\n",
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "Invalid Commodity Code Multiple Rows Fail Other Failure",
+      "inputs": {
+        "fileName": "invalidcommoditycode-multiplerows-fail.xlsx",
+        "applicationId": "1816178736706"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product code is invalid in sheet \"Sheet1\" row 20, sheet \"Sheet1\" row 21 and sheet \"Sheet1\" row 22.\n",
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "Mandatory Headers Case In Sensitive Pass Pass",
+      "inputs": {
+        "fileName": "mandatoryheaders-caseinsensitive-pass.xlsx",
+        "applicationId": "1816178736709"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Data Commodity Code Fail Other Failure",
+      "inputs": {
+        "fileName": "missing-mandatorydata-commoditycode-fail.xlsx",
+        "applicationId": "1816178736781"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in sheet \"Sheet1\" row 20, sheet \"Sheet1\" row 21 and sheet \"Sheet1\" row 22.\n",
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Data Desc Fail Other Failure",
+      "inputs": {
+        "fileName": "missing-mandatorydata-desc-fail.xlsx",
+        "applicationId": "1816178736715"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product description is missing in sheet \"Sheet1\" row 21.\n",
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Data Multiple Rows With Multiple Locations All Fail Other Failure",
+      "inputs": {
+        "fileName": "missing-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
+        "applicationId": "1816178736718"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in sheet \"Sheet1\" row 20, sheet \"Sheet1\" row 21 and sheet \"Sheet1\" row 22.\nProduct description is missing in sheet \"Sheet1\" row 20, sheet \"Sheet1\" row 21 and sheet \"Sheet1\" row 22.\nNo of packages is missing in sheet \"Sheet1\" row 20, sheet \"Sheet1\" row 21 and sheet \"Sheet1\" row 22.\nTotal net weight is missing in sheet \"Sheet1\" row 20, sheet \"Sheet1\" row 21 and sheet \"Sheet1\" row 22.\n",
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Data No Of Pkgs Fail Other Failure",
+      "inputs": {
+        "fileName": "missing-mandatorydata-noofpkgs-fail.xlsx",
+        "applicationId": "1816178736784"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No of packages is missing in sheet \"Sheet1\" row 20, sheet \"Sheet1\" row 21 and sheet \"Sheet1\" row 22.\n",
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Data Totnetweight Fail Other Failure",
+      "inputs": {
+        "fileName": "missing-mandatorydata-totnetweight-fail.xlsx",
+        "applicationId": "1816178736727"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Total net weight is missing in sheet \"Sheet1\" row 20, sheet \"Sheet1\" row 21 and sheet \"Sheet1\" row 22.\n",
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header All Unparse Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-all-unparse.xlsx",
+        "applicationId": "1816178736730"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Commodity Code Unparse Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-commoditycode-unparse.xlsx",
+        "applicationId": "1816178736736"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Description Unparse Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-description-unparse.xlsx",
+        "applicationId": "1816178736787"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Noof Pacakges Unparse Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-noofpacakges-unparse.xlsx",
+        "applicationId": "1816178736742"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Mandatory Header Tot Net Weight Unparse Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-totnetweight-unparse.xlsx",
+        "applicationId": "1816178736745"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Optional Data All Pass Pass",
+      "inputs": {
+        "fileName": "missing-optionaldata-all-pass.xlsx",
+        "applicationId": "1816178737081"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -245,7 +341,7 @@
       "testName": "Missing Optional Header All Pass",
       "inputs": {
         "fileName": "missing-optionalheader-all-pass.xlsx",
-        "applicationId": "1816178185660"
+        "applicationId": "1816178737213"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -254,22 +350,10 @@
       }
     },
     {
-      "testName": "Missing Optional Header Country Of Origin Pass",
-      "inputs": {
-        "fileName": "missing-optionalheader-countryoforigin-pass.xlsx",
-        "applicationId": "1816178185669"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BANDM1"
-      }
-    },
-    {
-      "testName": "No Data Except Single RMS Fail",
+      "testName": "No Data Except Single Rms Fail ",
       "inputs": {
         "fileName": "nodata-exceptsinglerms-fail.xlsx",
-        "applicationId": "1816178185672"
+        "applicationId": "1816178737222"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -281,7 +365,7 @@
       "testName": "Only Mandatory Data Is Filled Pass",
       "inputs": {
         "fileName": "onlymandatorydataisfilled-pass.xlsx",
-        "applicationId": "1816178185678"
+        "applicationId": "1816178737219"
       },
       "expectedResults": {
         "approvalStatus": "approved",

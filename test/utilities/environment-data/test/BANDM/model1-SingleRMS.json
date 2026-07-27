@@ -2,10 +2,22 @@
   "name": "BANDM1 SingleRMS",
   "tests": [
     {
-      "testName": "Different Country Establishment Numbers Including GB Pass",
+      "testName": "Different Country Establishment Numbersexcludes Gb Pass Pass",
+      "inputs": {
+        "fileName": "differentcountryestablishmentnumbersexcludesgb-pass.xlsx",
+        "applicationId": "1816178736859"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "Different Country Establishment Numbers Including Gb Pass Pass",
       "inputs": {
         "fileName": "differentcountryestablishmentnumbersincludinggb-pass.xlsx",
-        "applicationId": "1816178185852"
+        "applicationId": "1816178736862"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -14,46 +26,34 @@
       }
     },
     {
-      "testName": "Different Country Establishment Numbersexcludes GB Fail",
-      "inputs": {
-        "fileName": "differentcountryestablishmentnumbersexcludesgb-fail.xlsx",
-        "applicationId": "1816178209450"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in sheet \"Packing List\" row 30, sheet \"Packing List\" row 31, sheet \"Packing List\" row 33 in addition to 29 other locations.\n",
-        "model": "BANDM1"
-      }
-    },
-    {
-      "testName": "Empty RMS Fail",
+      "testName": "Empty Rms Fail Other Failure",
       "inputs": {
         "fileName": "empty-rms-fail.xlsx",
-        "applicationId": "1816178185858"
+        "applicationId": "1816178736865"
       },
       "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in sheet \"Packing List\" row 30, sheet \"Packing List\" row 31, sheet \"Packing List\" row 33 in addition to 29 other locations.\n",
-        "model": "BANDM1"
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
       }
     },
     {
-      "testName": "Invalid Establishment Formats Fail",
+      "testName": "Invalid Establishment Formats Fail Other Failure",
       "inputs": {
         "fileName": "invalidestablishmentformats-fail.xlsx",
-        "applicationId": "1816178185861"
+        "applicationId": "1816178736868"
       },
       "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in sheet \"Packing List\" row 30, sheet \"Packing List\" row 31, sheet \"Packing List\" row 33 in addition to 29 other locations.\n",
-        "model": "BANDM1"
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
       }
     },
     {
-      "testName": "Invalid Format Rms Gb 000000 000 Unparse",
+      "testName": "Invalid Format Rms Gb 000000 000 Unparse Unparse",
       "inputs": {
         "fileName": "invalidformat-rmsgb-000000-000-unparse.xlsx",
-        "applicationId": "1816178185864"
+        "applicationId": "1816178736871"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -62,22 +62,22 @@
       }
     },
     {
-      "testName": "Invalid Prefix In Establishment Number Fail",
+      "testName": "Invalid Prefix In Establishment Number Fail Other Failure",
       "inputs": {
         "fileName": "invalidprefixinestablishmentnumber-fail.xlsx",
-        "applicationId": "1816178185867"
+        "applicationId": "1816178736874"
       },
       "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in sheet \"Packing List\" row 30, sheet \"Packing List\" row 31, sheet \"Packing List\" row 33 in addition to 29 other locations.\n",
-        "model": "BANDM1"
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
       }
     },
     {
-      "testName": "Lowercase And Malformed Prefix In Establishment Number Pass",
+      "testName": "Lowercase And Malformed Prefix In Establishment Number Pass Pass",
       "inputs": {
         "fileName": "lowercaseandmalformedprefixinestablishmentnumber-pass.xlsx",
-        "applicationId": "1816178185870"
+        "applicationId": "1816178736877"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -86,34 +86,34 @@
       }
     },
     {
-      "testName": "Malformed Country Code In Establishment Number Fail",
-      "inputs": {
-        "fileName": "malformedcountrycodeinestablishmentnumber-fail.xlsx",
-        "applicationId": "1816178185873"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in sheet \"Packing List\" row 30, sheet \"Packing List\" row 31, sheet \"Packing List\" row 33 in addition to 29 other locations.\n",
-        "model": "BANDM1"
-      }
-    },
-    {
-      "testName": "Malformed RMS Number Fail",
+      "testName": "Malformed Rms Number Fail Other Failure",
       "inputs": {
         "fileName": "malformed-rms-number-fail.xlsx",
-        "applicationId": "1816178185876"
+        "applicationId": "1816178736928"
       },
       "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in sheet \"Packing List\" row 30, sheet \"Packing List\" row 31, sheet \"Packing List\" row 33 in addition to 29 other locations.\n",
-        "model": "BANDM1"
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
       }
     },
     {
-      "testName": "Mixed Case Establishment Number Format Pass",
+      "testName": "Malformed Country Code In Establishment Number Fail Other Failure",
+      "inputs": {
+        "fileName": "malformedcountrycodeinestablishmentnumber-fail.xlsx",
+        "applicationId": "1816178736883"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "Mixed Case Establishment Number Format Pass Pass",
       "inputs": {
         "fileName": "mixedcaseestablishmentnumberformat-pass.xlsx",
-        "applicationId": "1816178209453"
+        "applicationId": "1816178736931"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -122,10 +122,10 @@
       }
     },
     {
-      "testName": "Mixed Valid And Invalid Establishment Formats Pass",
+      "testName": "Mixed Valid And Invalid Establishment Formats Pass Pass",
       "inputs": {
         "fileName": "mixedvalidandinvalidestablishmentformats-pass.xlsx",
-        "applicationId": "1816178185879"
+        "applicationId": "1816178736889"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -134,58 +134,22 @@
       }
     },
     {
-      "testName": "Multiple GBEstablishment Numbers With Valid Invalid Length Pass",
-      "inputs": {
-        "fileName": "multiplegbestablishmentnumberswithvalid-invalidlength-pass.xlsx",
-        "applicationId": "1816178185882"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BANDM1"
-      }
-    },
-    {
-      "testName": "Multipledifferent Establishment Numbers Fail",
+      "testName": "Multipledifferent Establishment Numbers Fail Other Failure",
       "inputs": {
         "fileName": "multipledifferent-establishment-numbers-fail.xlsx",
-        "applicationId": "1816178185888"
+        "applicationId": "1816178736934"
       },
       "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in sheet \"Packing List\" row 30, sheet \"Packing List\" row 31, sheet \"Packing List\" row 33 in addition to 29 other locations.\n",
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Multiple GB Place of Dispatch (Establishment) numbers found on packing list.\n",
         "model": "BANDM1"
       }
     },
     {
-      "testName": "Non Numeric Atthe End Of RMS Fail",
+      "testName": "Multiple Gb Establishment Numbers With Valid Invalid Length Pass Pass",
       "inputs": {
-        "fileName": "nonnumericattheendofrms-fail.xlsx",
-        "applicationId": "1816178185891"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in sheet \"Packing List\" row 30, sheet \"Packing List\" row 31, sheet \"Packing List\" row 33 in addition to 29 other locations.\n",
-        "model": "BANDM1"
-      }
-    },
-    {
-      "testName": "Non Numeric Establishment Suffix Fail",
-      "inputs": {
-        "fileName": "nonnumericestablishmentsuffix-fail.xlsx",
-        "applicationId": "1816178185894"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in sheet \"Packing List\" row 30, sheet \"Packing List\" row 31, sheet \"Packing List\" row 33 in addition to 29 other locations.\n",
-        "model": "BANDM1"
-      }
-    },
-    {
-      "testName": "RMSHas Wrong Final3Digits Should Pass",
-      "inputs": {
-        "fileName": "rmshaswrongfinal3digitsshould-pass.xlsx",
-        "applicationId": "1816178185900"
+        "fileName": "multiplegbestablishmentnumberswithvalid-invalidlength-pass.xlsx",
+        "applicationId": "1816178736895"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -194,10 +158,34 @@
       }
     },
     {
-      "testName": "RMSHas Wrong Middle6Digits Should Be Unparsed",
+      "testName": "Non Numeric Atthe End Of Rms Fail Other Failure",
       "inputs": {
-        "fileName": "rmshaswrongmiddle6digitsshouldbe-unparsed.xlsx",
-        "applicationId": "1816178185903"
+        "fileName": "nonnumericattheendofrms-fail.xlsx",
+        "applicationId": "1816178736898"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "Rms Has Wrong Final3 Digits Should Pass Pass",
+      "inputs": {
+        "fileName": "rmshaswrongfinal3digitsshould-pass.xlsx",
+        "applicationId": "1816178736901"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "Rms Has Wrong Middle6 Digits Should Be Unparse Unparse",
+      "inputs": {
+        "fileName": "rmshaswrongmiddle6digitsshouldbe-unparse.xlsx",
+        "applicationId": "1816178736937"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -206,123 +194,87 @@
       }
     },
     {
-      "testName": "RMSHas Wrong Regex With Additional Hyphen Should Be Fail",
+      "testName": "Rms Has Wrong Regex With Additional Hyphen Should Be Fail Other Failure",
       "inputs": {
         "fileName": "rmshaswrongregexwithadditionalhyphenshouldbe-fail.xlsx",
-        "applicationId": "1816178185906"
+        "applicationId": "1816178736907"
       },
       "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in sheet \"Packing List\" row 30, sheet \"Packing List\" row 31, sheet \"Packing List\" row 33 in addition to 29 other locations.\n",
-        "model": "BANDM1"
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
       }
     },
     {
-      "testName": "RMSHas Wrong Regex With Value Removed At End Of Establishment Number Should Fail",
-      "inputs": {
-        "fileName": "rmshaswrongregexwithvalueremovedatendofestablishmentnumbershould-fail.xlsx",
-        "applicationId": "1816178185909"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in sheet \"Packing List\" row 30, sheet \"Packing List\" row 31, sheet \"Packing List\" row 33 in addition to 29 other locations.\n",
-        "model": "BANDM1"
-      }
-    },
-    {
-      "testName": "RMSIs Present But No Header Text Should Pass",
-      "inputs": {
-        "fileName": "rmsispresentbutnoheadertextshould-pass.xlsx",
-        "applicationId": "1816178185912"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BANDM1"
-      }
-    },
-    {
-      "testName": "RMSWith7Digits Should Fail",
+      "testName": "Rms With7 Digits Should Fail Other Failure",
       "inputs": {
         "fileName": "rmswith7digitsshould-fail.xlsx",
-        "applicationId": "1816178185915"
+        "applicationId": "1816178736910"
       },
       "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in sheet \"Packing List\" row 30, sheet \"Packing List\" row 31, sheet \"Packing List\" row 33 in addition to 29 other locations.\n",
-        "model": "BANDM1"
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
       }
     },
     {
-      "testName": "RMSWith Extra Dash Before Establishment Number Should Fail",
+      "testName": "Rms With Extra Dash Before Establishment Number Should Fail Other Failure",
       "inputs": {
         "fileName": "rmswithextradashbeforeestablishmentnumbershould-fail.xlsx",
-        "applicationId": "1816178185918"
+        "applicationId": "1816178736913"
       },
       "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in sheet \"Packing List\" row 30, sheet \"Packing List\" row 31, sheet \"Packing List\" row 33 in addition to 29 other locations.\n",
-        "model": "BANDM1"
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
       }
     },
     {
-      "testName": "RMSWith Extra Dash Establishment Number At Startand End Fail",
+      "testName": "Rms With Extra Dash Establishment Number At Startand End Fail Other Failure",
       "inputs": {
         "fileName": "rmswithextradashestablishmentnumberatstartandend-fail.xlsx",
-        "applicationId": "1816178185921"
+        "applicationId": "1816178737117"
       },
       "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in sheet \"Packing List\" row 30, sheet \"Packing List\" row 31, sheet \"Packing List\" row 33 in addition to 29 other locations.\n",
-        "model": "BANDM1"
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
       }
     },
     {
-      "testName": "RMS Has Spl Characters Fail",
-      "inputs": {
-        "fileName": "rms-hassplcharacters-fail.xlsx",
-        "applicationId": "1816178185924"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in sheet \"Packing List\" row 30, sheet \"Packing List\" row 31, sheet \"Packing List\" row 33 in addition to 29 other locations.\n",
-        "model": "BANDM1"
-      }
-    },
-    {
-      "testName": "TC Invalid Format Rms Gb 15 10 Fail",
+      "testName": "Tc Invalid Format Rms Gb 15 10 Fail Other Failure",
       "inputs": {
         "fileName": "tc-invalidformat-rmsgb-15-10-fail.xlsx",
-        "applicationId": "1816178185927"
+        "applicationId": "1816178737120"
       },
       "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in sheet \"Packing List\" row 30, sheet \"Packing List\" row 31, sheet \"Packing List\" row 33 in addition to 29 other locations.\n",
-        "model": "BANDM1"
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
       }
     },
     {
-      "testName": "TC Invalid Format With Spaces And Hyphens Fail",
+      "testName": "Tc Invalid Format With Spaces And Hyphens Fail Other Failure",
       "inputs": {
         "fileName": "tc-invalidformat-withspacesandhyphens-fail.xlsx",
-        "applicationId": "1816178185930"
+        "applicationId": "1816178737177"
       },
       "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in sheet \"Packing List\" row 30, sheet \"Packing List\" row 31, sheet \"Packing List\" row 33 in addition to 29 other locations.\n",
-        "model": "BANDM1"
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
       }
     },
     {
-      "testName": "Test Valid Input Rms Gb Without Hyphens Fail",
+      "testName": "Test Valid Input Rms Gb Without Hyphens Fail Other Failure",
       "inputs": {
         "fileName": "test-validinput-rmsgb-withouthyphens-fail.xlsx",
-        "applicationId": "1816178185933"
+        "applicationId": "1816178737180"
       },
       "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in sheet \"Packing List\" row 30, sheet \"Packing List\" row 31, sheet \"Packing List\" row 33 in addition to 29 other locations.\n",
-        "model": "BANDM1"
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
       }
     }
   ]
