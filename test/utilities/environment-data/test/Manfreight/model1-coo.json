@@ -1,5 +1,5 @@
 {
-  "name": "MANFREIGHT1 CoO",
+  "name": "MANFREIGHT2 CoO",
   "tests": [
     {
       "testName": "ac1 Not NIRMS Pass",
@@ -10,7 +10,7 @@
       "expectedResults": {
         "approvalStatus": "approved",
         "reasonsForFailure": null,
-        "model": "MANFREIGHT1"
+        "model": "MANFREIGHT2"
       }
     },
     {
@@ -21,8 +21,8 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Enter_your_data\" row 6 and sheet \"Enter_your_data\" row 7.\n",
-        "model": "MANFREIGHT1"
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Enter_your_data\" row 5 and sheet \"Enter_your_data\" row 6.\n",
+        "model": "MANFREIGHT2"
       }
     },
     {
@@ -33,8 +33,8 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Enter_your_data\" row 6 and sheet \"Enter_your_data\" row 7.\n",
-        "model": "MANFREIGHT1"
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Enter_your_data\" row 5 and sheet \"Enter_your_data\" row 6.\n",
+        "model": "MANFREIGHT2"
       }
     },
     {
@@ -45,8 +45,8 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Enter_your_data\" row 6, sheet \"Enter_your_data\" row 7 and sheet \"Enter_your_data\" row 8.\n",
-        "model": "MANFREIGHT1"
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"Enter_your_data\" row 5, sheet \"Enter_your_data\" row 6 and sheet \"Enter_your_data\" row 7.\n",
+        "model": "MANFREIGHT2"
       }
     },
     {
@@ -57,8 +57,8 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Enter_your_data\" row 6, sheet \"Enter_your_data\" row 7 and sheet \"Enter_your_data\" row 8.\n",
-        "model": "MANFREIGHT1"
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Enter_your_data\" row 5, sheet \"Enter_your_data\" row 6 and sheet \"Enter_your_data\" row 7.\n",
+        "model": "MANFREIGHT2"
       }
     },
     {
@@ -69,8 +69,8 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in sheet \"Enter_your_data\" row 6 and sheet \"Enter_your_data\" row 7.\n",
-        "model": "MANFREIGHT1"
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Enter_your_data\" row 5 and sheet \"Enter_your_data\" row 6.\n",
+        "model": "MANFREIGHT2"
       }
     },
     {
@@ -81,8 +81,8 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Enter_your_data\" row 6 and sheet \"Enter_your_data\" row 7.\n",
-        "model": "MANFREIGHT1"
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Enter_your_data\" row 5 and sheet \"Enter_your_data\" row 6.\n",
+        "model": "MANFREIGHT2"
       }
     },
     {
@@ -93,8 +93,8 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in sheet \"Enter_your_data\" row 6, sheet \"Enter_your_data\" row 7 and sheet \"Enter_your_data\" row 8.\n",
-        "model": "MANFREIGHT1"
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Enter_your_data\" row 5, sheet \"Enter_your_data\" row 6 and sheet \"Enter_your_data\" row 7.\n",
+        "model": "MANFREIGHT2"
       }
     },
     {
@@ -105,8 +105,8 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Enter_your_data\" row 6, sheet \"Enter_your_data\" row 7 and sheet \"Enter_your_data\" row 8.\n",
-        "model": "MANFREIGHT1"
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Enter_your_data\" row 5, sheet \"Enter_your_data\" row 6 and sheet \"Enter_your_data\" row 7.\n",
+        "model": "MANFREIGHT2"
       }
     },
     {
@@ -118,7 +118,7 @@
       "expectedResults": {
         "approvalStatus": "approved",
         "reasonsForFailure": null,
-        "model": "MANFREIGHT1"
+        "model": "MANFREIGHT2"
       }
     },
     {
@@ -129,8 +129,8 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Enter_your_data\" row 6 and sheet \"Enter_your_data\" row 7.\n",
-        "model": "MANFREIGHT1"
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Enter_your_data\" row 5 and sheet \"Enter_your_data\" row 6.\n",
+        "model": "MANFREIGHT2"
       }
     },
     {
@@ -141,8 +141,8 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Enter_your_data\" row 6, sheet \"Enter_your_data\" row 7 and sheet \"Enter_your_data\" row 8.\n",
-        "model": "MANFREIGHT1"
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Enter_your_data\" row 5, sheet \"Enter_your_data\" row 6 and sheet \"Enter_your_data\" row 7.\n",
+        "model": "MANFREIGHT2"
       }
     },
     {
@@ -153,20 +153,20 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Enter_your_data\" row 6 and sheet \"Enter_your_data\" row 7.\n",
-        "model": "MANFREIGHT1"
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Enter_your_data\" row 5 and sheet \"Enter_your_data\" row 6.\n",
+        "model": "MANFREIGHT2"
       }
     },
     {
       "testName": "ac14 High Risk Co O Treatment Type Not Specified Multiple Fail",
       "inputs": {
-        "fileName": "ac14-highriskcootreatmenttypenotspecifiedmultiple-fail.xlsx",
+        "fileName": "ac14-highriskcootreatmenttypenotspecified-coo-invalidmultiple-fail.xlsx",
         "applicationId": "1816178709730"
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Enter_your_data\" row 7.\nProhibited item identified on the packing list in sheet \"Enter_your_data\" row 6 and sheet \"Enter_your_data\" row 8.\n",
-        "model": "MANFREIGHT1"
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Enter_your_data\" row 6.\nProhibited item identified on the packing list in sheet \"Enter_your_data\" row 5 and sheet \"Enter_your_data\" row 7.\n",
+        "model": "MANFREIGHT2"
       }
     },
     {
@@ -177,8 +177,8 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Enter_your_data\" row 6, sheet \"Enter_your_data\" row 7 and sheet \"Enter_your_data\" row 8.\n",
-        "model": "MANFREIGHT1"
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Enter_your_data\" row 5, sheet \"Enter_your_data\" row 6 and sheet \"Enter_your_data\" row 7.\n",
+        "model": "MANFREIGHT2"
       }
     }
   ]
