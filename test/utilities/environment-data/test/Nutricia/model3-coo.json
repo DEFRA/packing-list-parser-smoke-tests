@@ -1,0 +1,161 @@
+{
+  "name": "NUTRICIA3 CoO",
+  "tests": [
+    {
+      "testName": "Ac1 NotNirms Pass",
+      "inputs": {
+        "fileName": "ac1-notnirms-pass.xlsx",
+        "applicationId": "1816178870026"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "NUTRICIA3"
+      }
+    },
+    {
+      "testName": "Ac2 NullNirms Fail",
+      "inputs": {
+        "fileName": "ac2-nullnirms-fail.xlsx",
+        "applicationId": "1816178870029"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in sheet \"DANONE\" row 25, sheet \"DANONE\" row 26, sheet \"DANONE\" row 27 in addition to 2 other locations.\n",
+        "model": "NUTRICIA3"
+      }
+    },
+    {
+      "testName": "Ac3 InvalidNirms Fail",
+      "inputs": {
+        "fileName": "ac3-invalidnirms-fail.xlsx",
+        "applicationId": "1816178870032"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"DANONE\" row 25, sheet \"DANONE\" row 26, sheet \"DANONE\" row 27 in addition to 2 other locations.\n",
+        "model": "NUTRICIA3"
+      }
+    },
+    {
+      "testName": "Ac4 NullCoO Fail",
+      "inputs": {
+        "fileName": "ac4-nullcoo-fail.xlsx",
+        "applicationId": "1816178870086"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"DANONE\" row 25 and sheet \"DANONE\" row 26.\n",
+        "model": "NUTRICIA3"
+      }
+    },
+    {
+      "testName": "Ac5 InvalidCoO Fail",
+      "inputs": {
+        "fileName": "ac5-invalidcoo-fail.xlsx",
+        "applicationId": "1816178870089"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"DANONE\" row 25 and sheet \"DANONE\" row 26.\n",
+        "model": "NUTRICIA3"
+      }
+    },
+    {
+      "testName": "Ac6 NullCoOMultiple Fail",
+      "inputs": {
+        "fileName": "ac6-nullcoomultiple-fail.xlsx",
+        "applicationId": "1816178895583"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"DANONE\" row 25, sheet \"DANONE\" row 26 and sheet \"DANONE\" row 27.\n",
+        "model": "NUTRICIA3"
+      }
+    },
+    {
+      "testName": "Ac7 InvalidCoOMultiple Fail",
+      "inputs": {
+        "fileName": "ac7-invalidcoomultiple-fail.xlsx",
+        "applicationId": "1816178895586"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"DANONE\" row 25, sheet \"DANONE\" row 26, sheet \"DANONE\" row 27 in addition to 1 other locations.\n",
+        "model": "NUTRICIA3"
+      }
+    },
+    {
+      "testName": "Ac8 XCoO Pass",
+      "inputs": {
+        "fileName": "ac8-xcoo-pass.xlsx",
+        "applicationId": "1816178870092"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "NUTRICIA3"
+      }
+    },
+    {
+      "testName": "Ac9 HighRiskCoOTreatmentTypeSpecified Fail",
+      "inputs": {
+        "fileName": "ac9-highriskcootreatmenttypespecified-fail.xlsx",
+        "applicationId": "1816178870095"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"DANONE\" row 25 and sheet \"DANONE\" row 26.\n",
+        "model": "NUTRICIA3"
+      }
+    },
+    {
+      "testName": "Ac10 HighRiskCoOTreatmentTypeSpecifiedMultiple Fail",
+      "inputs": {
+        "fileName": "ac10-highriskcootreatmenttypespecifiedmultiple-fail.xlsx",
+        "applicationId": "1816178895595"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"DANONE\" row 25, sheet \"DANONE\" row 26 and sheet \"DANONE\" row 27.\n",
+        "model": "NUTRICIA3"
+      }
+    },
+    {
+      "testName": "Ac11 HighRiskCoOTreatmentTypeNotSpecified Fail",
+      "inputs": {
+        "fileName": "ac11-highriskcootreatmenttypenotspecified-fail.xlsx",
+        "applicationId": "1816178895598"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"DANONE\" row 25 and sheet \"DANONE\" row 26.\n",
+        "model": "NUTRICIA3"
+      }
+    },
+    {
+      "testName": "Ac12 HighRiskCoOTreatmentTypeNotSpecified COO InvalidMultiple Fail",
+      "inputs": {
+        "fileName": "ac12-highriskcootreatmenttypenotspecified-coo-invalidmultiple-fail.xlsx",
+        "applicationId": "1816178895574"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"DANONE\" row 26.\nProhibited item identified on the packing list in sheet \"DANONE\" row 25 and sheet \"DANONE\" row 27.\n",
+        "model": "NUTRICIA3"
+      }
+    },
+    {
+      "testName": "Ac13 HighRiskCoOTreatmentTypeNotSpecifiedMultiple Fail",
+      "inputs": {
+        "fileName": "ac13-highriskcootreatmenttypenotspecifiedmultiple-fail.xlsx",
+        "applicationId": "1816178895571"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"DANONE\" row 25, sheet \"DANONE\" row 26 and sheet \"DANONE\" row 27.\n",
+        "model": "NUTRICIA3"
+      }
+    }
+  ]
+}

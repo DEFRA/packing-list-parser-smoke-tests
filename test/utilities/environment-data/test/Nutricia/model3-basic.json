@@ -1,0 +1,282 @@
+{
+  "name": "NUTRICIA3 Basic",
+  "tests": [
+    {
+      "testName": "Missing OptionalHeader All Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-all-pass.xlsx",
+        "applicationId": "1816178869723"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "NUTRICIA3"
+      }
+    },
+    {
+      "testName": "Missing OptionalData All Pass",
+      "inputs": {
+        "fileName": "missing-optionaldata-all-pass.xlsx",
+        "applicationId": "1816178869726"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "NUTRICIA3"
+      }
+    },
+    {
+      "testName": "Incorrect OptionalData All Pass",
+      "inputs": {
+        "fileName": "incorrect-optionaldata-all-pass.xlsx",
+        "applicationId": "1816178869729"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "NUTRICIA3"
+      }
+    },
+    {
+      "testName": "Incorrect OptionalHeader All Pass",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-all-pass.xlsx",
+        "applicationId": "1816178869732"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "NUTRICIA3"
+      }
+    },
+    {
+      "testName": "Description Has Double Quotes Should Pass",
+      "inputs": {
+        "fileName": "descriptionhasdoublequotesshould-pass.xlsx",
+        "applicationId": "1816178869735"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "NUTRICIA3"
+      }
+    },
+    {
+      "testName": "Mandatory Headers Case In Sensitive Pass",
+      "inputs": {
+        "fileName": "mandatoryheaders-caseinsensitive-pass.xlsx",
+        "applicationId": "1816178869738"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "NUTRICIA3"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatatypes Excl Netand Nopkgs ProductCode Pass",
+      "inputs": {
+        "fileName": "incorrect-mandatatypes-excl-netandnopkgs-productcode-pass.xlsx",
+        "applicationId": "1816178869741"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "NUTRICIA3"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader CommodityCode Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-commoditycode-unparse.xlsx",
+        "applicationId": "1816178869744"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader Desc Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-desc-unparse.xlsx",
+        "applicationId": "1816178869747"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader TotNetweight Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-totnetweight-unparse.xlsx",
+        "applicationId": "1816178869759"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Empty MultipleRows Columns Pass",
+      "inputs": {
+        "fileName": "empty-multiplerowscolumns-pass.xlsx",
+        "applicationId": "1816178869765"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "NUTRICIA3"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader All Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-all-unparse.xlsx",
+        "applicationId": "1816178869768"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader TotNetweight Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-totnetweight-unparse.xlsx",
+        "applicationId": "1816178869783"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryData MultipleRows With Multiple Locations All Fail",
+      "inputs": {
+        "fileName": "incorrect-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
+        "applicationId": "1816178869792"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product code is invalid in sheet \"DANONE\" row 25, sheet \"DANONE\" row 26 and sheet \"DANONE\" row 27.\nNo of packages is invalid in sheet \"DANONE\" row 25, sheet \"DANONE\" row 26 and sheet \"DANONE\" row 27.\nTotal net weight is invalid in sheet \"DANONE\" row 25, sheet \"DANONE\" row 26 and sheet \"DANONE\" row 27.\n",
+        "model": "NUTRICIA3"
+      }
+    },
+    {
+      "testName": "No Data Except SingleRMS Fail",
+      "inputs": {
+        "fileName": "nodata-exceptsinglerms-fail.xlsx",
+        "applicationId": "1816178869795"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No product line data found.",
+        "model": "NUTRICIA3"
+      }
+    },
+    {
+      "testName": "Invalid CommodityCode MultipleRows Fail",
+      "inputs": {
+        "fileName": "invalidcommoditycode-multiplerows-fail.xlsx",
+        "applicationId": "1816178869798"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product code is invalid in sheet \"DANONE\" row 25, sheet \"DANONE\" row 26 and sheet \"DANONE\" row 27.\n",
+        "model": "NUTRICIA3"
+      }
+    },
+    {
+      "testName": "Only MandatoryData Is Filled Pass",
+      "inputs": {
+        "fileName": "onlymandatorydataisfilled-pass.xlsx",
+        "applicationId": "1816178869804"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "NUTRICIA3"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader Noofpkgs Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-noofpkgs-unparse.xlsx",
+        "applicationId": "1816178869801"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader CommodityCode Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-commoditycode-unparse.xlsx",
+        "applicationId": "1816178869813"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader Desc Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-desc-unparse.xlsx",
+        "applicationId": "1816178869816"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData MultipleRows With Multiple Locations All Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
+        "applicationId": "1816178869819"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product description is missing in sheet \"DANONE\" row 25, sheet \"DANONE\" row 26 and sheet \"DANONE\" row 27.\nNo of packages is missing in sheet \"DANONE\" row 25, sheet \"DANONE\" row 26 and sheet \"DANONE\" row 27.\nTotal net weight is missing in sheet \"DANONE\" row 25, sheet \"DANONE\" row 26 and sheet \"DANONE\" row 27.\n",
+        "model": "NUTRICIA3"
+      }
+    },
+    {
+      "testName": "All MandatoryData Is Missing Fail",
+      "inputs": {
+        "fileName": "allmandatorydataismissing-fail.xlsx",
+        "applicationId": "1816178869822"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product description is missing in sheet \"DANONE\" row 25, sheet \"DANONE\" row 26, sheet \"DANONE\" row 27 in addition to 2 other locations.\nNo of packages is missing in sheet \"DANONE\" row 25, sheet \"DANONE\" row 26, sheet \"DANONE\" row 27 in addition to 2 other locations.\nTotal net weight is missing in sheet \"DANONE\" row 25, sheet \"DANONE\" row 26, sheet \"DANONE\" row 27 in addition to 2 other locations.\n",
+        "model": "NUTRICIA3"
+      }
+    },
+    
+    {
+      "testName": "Missing MandatoryHeader Noofpkgs Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-noofpkgs-unparse.xlsx",
+        "applicationId": "1816178869828"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    }
+  ]
+}
