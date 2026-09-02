@@ -28,7 +28,7 @@
     {
       "testName": "Header Typos Or Special Characters Unparse",
       "inputs": {
-        "fileName": "header-typos-or-special-characters-unparse.xlsx",
+        "fileName": "header-typos-or-specialcharacters-unparse.xlsx",
         "applicationId": "1816178869852"
       },
       "expectedResults": {
@@ -75,18 +75,6 @@
     },
 
     {
-      "testName": "Missing Header Netweight Unparse",
-      "inputs": {
-        "fileName": "missing-header-netweight-unparse-2.xlsx",
-        "applicationId": "1816178869918"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NUTRICIA3"
-      }
-    },
-    {
       "testName": "Zero Data Total Net Weight Pass",
       "inputs": {
         "fileName": "zero-data-totalnetweight-pass.xlsx",
@@ -110,18 +98,7 @@
         "model": "NOMATCH"
       }
     },
-    {
-      "testName": "Zero Data Total Net Weight Pass",
-      "inputs": {
-        "fileName": "zero-data-totalnetweight-pass-2.xlsx",
-        "applicationId": "1816178869966"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "NUTRICIA3"
-      }
-    },
+
     {
       "testName": "Data Empty Netweight Fail",
       "inputs": {

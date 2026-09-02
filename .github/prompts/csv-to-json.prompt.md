@@ -34,26 +34,7 @@ Derive `MODEL_FOLDER` per-row by removing trailing digits from the `ModelName` v
 
 - Remove file extension (.xlsx, .csv, .pdf)
 - Replace underscores with spaces (e.g., "Test_Case" → "Test Case")
-- Split camelCase into words using a **two-pass** rule:
-  1. Insert a space before an uppercase letter that starts a new word when preceded by another uppercase letter (handles acronym-word boundaries): `RMSHas` → `RMS Has`
-  2. Insert a space before an uppercase letter when preceded by a lowercase letter or digit: `HasWrong` → `Has Wrong`, `3Digits` → `3 Digits`
-- Apply known abbreviation normalisation **after** splitting (see table below). This corrects mixed-case variants that appear in filenames.
-
-#### Known Abbreviations (normalise to the canonical form shown)
-
-| As written in filename | Canonical form | Notes                                   |
-| ---------------------- | -------------- | --------------------------------------- |
-| `Rms`, `rms`           | `RMS`          | Registered Market Supplier reference    |
-| `Gb`, `gb`             | `GB`           | Great Britain                           |
-| `Coo`, `coo`, `CoO`    | `CoO`          | Country of Origin                       |
-| `Tc`, `tc`             | `TC`           | Test Case prefix                        |
-| `Uom`, `uom`           | `UOM`          | Unit of Measure                         |
-| `Kgs`, `kgs`           | `KGS`          | Kilograms                               |
-| `Nirms`, `nirms`       | `NIRMS`        | Northern Ireland Retail Movement Scheme |
-| `Spl`                  | `Special`      | Expand abbreviation to full word        |
-| `Noofpkgs`             | `No Of Pkgs`   | Number of Packages                      |
-
-> If a filename contains an unrecognised abbreviation that produces an unclear test name, flag it in the unmatched rows report for manual review rather than guessing.
+- Do **not** split camelCase or apply any other transformations
 
 ### 2. File Names (inputs.fileName)
 
