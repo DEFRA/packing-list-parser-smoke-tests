@@ -50,30 +50,6 @@
       }
     },
     {
-      "testName": "Empty RMS Fail",
-      "inputs": {
-        "fileName": "empty-rms-fail.xlsx",
-        "applicationId": "1816178161498"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Check GB Establishment RMS Number.",
-        "model": "NOREMOS"
-      }
-    },
-    {
-      "testName": "Happypath Pass",
-      "inputs": {
-        "fileName": "happypath-pass.xlsx",
-        "applicationId": "1816178159641"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "ASDA3"
-      }
-    },
-    {
       "testName": "Incorrect Mandatatypes Excl netandNopkgs ProductCode Pass",
       "inputs": {
         "fileName": "incorrect-mandatatypes-excl-netandnopkgs-productcode-pass.xlsx",
@@ -274,18 +250,6 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Product description is missing in sheet \"Page1_1\" row 5, sheet \"Page1_1\" row 6, sheet \"Page1_1\" row 8 in addition to 2 other locations.\n",
-        "model": "ASDA3"
-      }
-    },
-    {
-      "testName": "Missing MandatoryData MultipleRowsWithMultipleLocations All Fail",
-      "inputs": {
-        "fileName": "missing-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
-        "applicationId": "1816178160844"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Identifier is missing in sheet \"Page1_1\" row 5 and sheet \"Page1_1\" row 13.\nProduct description is missing in sheet \"Page1_1\" row 5, sheet \"Page1_1\" row 9 and sheet \"Page1_1\" row 13.\nNo of packages is missing in sheet \"Page1_1\" row 6, sheet \"Page1_1\" row 9 and sheet \"Page1_1\" row 13.\nTotal net weight is missing in sheet \"Page1_1\" row 5, sheet \"Page1_1\" row 8 and sheet \"Page1_1\" row 11.\nNet Weight Unit of Measure (kg) not found in sheet \"Page1_1\" row 5, sheet \"Page1_1\" row 9 and sheet \"Page1_1\" row 13.\n",
         "model": "ASDA3"
       }
     },

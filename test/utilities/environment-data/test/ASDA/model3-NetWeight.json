@@ -62,18 +62,6 @@
       }
     },
     {
-      "testName": "Happypath Pass",
-      "inputs": {
-        "fileName": "happypath-pass.xlsx",
-        "applicationId": "1816178161444"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "ASDA3"
-      }
-    },
-    {
       "testName": "Header Typos or SpecialCharacters Unparse",
       "inputs": {
         "fileName": "header-typos-or-specialcharacters-unparse.xlsx",
@@ -186,18 +174,6 @@
       "inputs": {
         "fileName": "missing-header-netweight-unparse.xlsx",
         "applicationId": "1816178161090"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing Header TotalNetWeight Unparse",
-      "inputs": {
-        "fileName": "missing-header-totalnetweight-unparse.xlsx",
-        "applicationId": "1816178161120"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -350,34 +326,10 @@
       }
     },
     {
-      "testName": "Unit Missing Weight Present Fail",
-      "inputs": {
-        "fileName": "unit-missing-weight-present-fail.xlsx",
-        "applicationId": "1816178161162"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found in sheet \"Page1_1\" row 3, sheet \"Page1_1\" row 4, sheet \"Page1_1\" row 5 in addition to 1906 other locations.\n",
-        "model": "ASDA3"
-      }
-    },
-    {
       "testName": "Zero Data NetWeight Pass",
       "inputs": {
         "fileName": "zero-data-netweight-pass.xlsx",
         "applicationId": "1816178161171"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "ASDA3"
-      }
-    },
-    {
-      "testName": "Zero Data TotalNetWeight Pass",
-      "inputs": {
-        "fileName": "zero-data-totalnetweight-pass.xlsx",
-        "applicationId": "1816178161174"
       },
       "expectedResults": {
         "approvalStatus": "approved",

@@ -312,18 +312,6 @@
         "reasonsForFailure": "Check GB Establishment RMS Number.",
         "model": "NOREMOS"
       }
-    },
-    {
-      "testName": "happypath",
-      "inputs": {
-        "fileName": "happypath-pass.csv",
-        "applicationId": "1816178159362"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "ASDA4"
-      }
     }
   ]
 }

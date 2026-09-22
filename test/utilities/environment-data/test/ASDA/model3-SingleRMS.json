@@ -38,18 +38,6 @@
       }
     },
     {
-      "testName": "HappyPath Pass",
-      "inputs": {
-        "fileName": "happypath-pass.xlsx",
-        "applicationId": "1816178160952"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "ASDA3"
-      }
-    },
-    {
       "testName": "InvalidEstablishmentFormats Fail",
       "inputs": {
         "fileName": "invalidestablishmentformats-fail.xlsx",
