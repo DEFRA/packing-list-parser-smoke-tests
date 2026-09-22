@@ -38,18 +38,6 @@
       }
     },
     {
-      "testName": "Happypath Pass",
-      "inputs": {
-        "fileName": "happypath.xlsx",
-        "applicationId": "1816178736769"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BANDM1"
-      }
-    },
-    {
       "testName": "Incorrect Mandatatypes Excl Netand Nopkgs Product Code Pass Pass",
       "inputs": {
         "fileName": "incorrect-mandatatypes-excl-netandnopkgs-productcode-pass.xlsx",

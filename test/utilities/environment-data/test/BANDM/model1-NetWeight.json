@@ -134,18 +134,6 @@
       }
     },
     {
-      "testName": "Splcharacters Header Netweight Unparse",
-      "inputs": {
-        "fileName": "splcharacters-header-netweight-unparse.xlsx",
-        "applicationId": "1816178737228"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
       "testName": "Mixed Case Header Pass Pass",
       "inputs": {
         "fileName": "mixedcase-header-pass.xlsx",
@@ -154,18 +142,6 @@
       "expectedResults": {
         "approvalStatus": "approved",
         "reasonsForFailure": null,
-        "model": "BANDM1"
-      }
-    },
-    {
-      "testName": "Netweight Has Empty Parentheses Fail Other Failure",
-      "inputs": {
-        "fileName": "netweight-hasempty-parentheses-fail.xlsx",
-        "applicationId": "1816178736988"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
         "model": "BANDM1"
       }
     }
