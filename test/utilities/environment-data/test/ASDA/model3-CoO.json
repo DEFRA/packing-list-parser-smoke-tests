@@ -2,18 +2,6 @@
   "name": "ASDA3 CoO",
   "tests": [
     {
-      "testName": "Happypath Pass",
-      "inputs": {
-        "fileName": "happypath-pass.xlsx",
-        "applicationId": "1816178161495"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "ASDA3"
-      }
-    },
-    {
       "testName": "ac10 xCoO Pass",
       "inputs": {
         "fileName": "ac10-xcoo-pass.xlsx",

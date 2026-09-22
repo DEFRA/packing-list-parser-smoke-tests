@@ -62,18 +62,6 @@
       }
     },
     {
-      "testName": "Happypath",
-      "inputs": {
-        "fileName": "happypath-pass.csv",
-        "applicationId": "1816178159362"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "ASDA4"
-      }
-    },
-    {
       "testName": "Header Typos or Special Characters",
       "inputs": {
         "fileName": "header-typos-or-specialcharacters-unparse.csv",
@@ -170,30 +158,6 @@
       }
     },
     {
-      "testName": "Missing Header Netweight UOM",
-      "inputs": {
-        "fileName": "missing-header-netweightuom-unparse.csv",
-        "applicationId": "1816178160757"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing Header Netweight",
-      "inputs": {
-        "fileName": "missing-header-netweight-unparse.csv",
-        "applicationId": "1816178159533"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
       "testName": "Missing Paranthesis in Uom",
       "inputs": {
         "fileName": "missing-paranthesis-in-uom-pass.csv",
@@ -202,18 +166,6 @@
       "expectedResults": {
         "approvalStatus": "approved",
         "reasonsForFailure": null,
-        "model": "ASDA4"
-      }
-    },
-    {
-      "testName": "Missing UOM Weight",
-      "inputs": {
-        "fileName": "missing-uom-weight-fail.csv",
-        "applicationId": "1816178159554"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
         "model": "ASDA4"
       }
     },

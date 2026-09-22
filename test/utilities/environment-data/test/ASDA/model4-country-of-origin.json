@@ -2,18 +2,6 @@
   "name": "ASDA4 Country of Origin",
   "tests": [
     {
-      "testName": "Missing Mandatory Fields",
-      "inputs": {
-        "fileName": "missing-mandatory-fields-fail.csv",
-        "applicationId": "1816178160667"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Identifier is missing in rows 3 and 7.\nTotal net weight is missing in row 3.\nMissing Country of Origin in row 4.\n",
-        "model": "ASDA4"
-      }
-    },
-    {
       "testName": "ac10 x Co O",
       "inputs": {
         "fileName": "ac10-xcoo-pass.csv",

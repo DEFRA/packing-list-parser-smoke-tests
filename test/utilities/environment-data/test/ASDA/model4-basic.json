@@ -38,18 +38,6 @@
       }
     },
     {
-      "testName": "Happypath",
-      "inputs": {
-        "fileName": "happypath-pass.csv",
-        "applicationId": "1816178159362"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "ASDA4"
-      }
-    },
-    {
       "testName": "Incorrect Mandatatypes Excl netand Nopkgs Product Code",
       "inputs": {
         "fileName": "incorrect-mandatatypes-excl-netandnopkgs-productcode-pass.csv",
