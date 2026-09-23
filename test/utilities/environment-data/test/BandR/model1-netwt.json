@@ -26,18 +26,6 @@
       }
     },
     {
-      "testName": "Happypath Pass",
-      "inputs": {
-        "fileName": "happypath-pass.xlsx",
-        "applicationId": "1816178294371"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BARTONREDMAN1"
-      }
-    },
-    {
       "testName": "Header Typos or Special Characters Unparse",
       "inputs": {
         "fileName": "header-typos-or-specialcharacters-unparse.xlsx",

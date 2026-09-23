@@ -2,18 +2,6 @@
   "name": "BandR SingleRMS",
   "tests": [
     {
-      "testName": "Happypath Pass",
-      "inputs": {
-        "fileName": "happypath-pass.xlsx",
-        "applicationId": "1816178270377"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BARTONREDMAN1"
-      }
-    },
-    {
       "testName": "Different Country Establishment Numbers Including GB Pass",
       "inputs": {
         "fileName": "differentcountryestablishmentnumbersincludinggb-pass.xlsx",

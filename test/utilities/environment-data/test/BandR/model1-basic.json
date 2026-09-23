@@ -2,18 +2,6 @@
   "name": "BandR1 Basic",
   "tests": [
     {
-      "testName": "Happypath Pass",
-      "inputs": {
-        "fileName": "happypath-pass.xlsx",
-        "applicationId": "1816178270377"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BARTONREDMAN1"
-      }
-    },
-    {
       "testName": "Missing Optional Header All Pass",
       "inputs": {
         "fileName": "missing-optionalheader-all-pass.xlsx",

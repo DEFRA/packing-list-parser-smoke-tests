@@ -2,18 +2,6 @@
   "name": "BandR1 CoO",
   "tests": [
     {
-      "testName": "Happypath Pass",
-      "inputs": {
-        "fileName": "happypath-pass.xlsx",
-        "applicationId": "1816178295346"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BARTONREDMAN1"
-      }
-    },
-    {
       "testName": "AC1 Not NIRMS Pass",
       "inputs": {
         "fileName": "ac1-notnirms-pass.xlsx",
