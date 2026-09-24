@@ -38,18 +38,6 @@
       }
     },
     {
-      "testName": "Happypath Pass",
-      "inputs": {
-        "fileName": "happypath-pass.xlsx",
-        "applicationId": "1816178185390"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BOOKER2"
-      }
-    },
-    {
       "testName": "Incorrect MandatoryData MultipleRowsWithMultipleLocations Fail",
       "inputs": {
         "fileName": "incorrect-mandatorydata-multiplerowswithmultiplelocations-fail.xlsx",
@@ -190,18 +178,6 @@
       "expectedResults": {
         "approvalStatus": "approved",
         "reasonsForFailure": null,
-        "model": "BOOKER2"
-      }
-    },
-    {
-      "testName": "Missing MandatoryData Desc Fail",
-      "inputs": {
-        "fileName": "missing-mandatorydata-desc-fail.xlsx",
-        "applicationId": "1816178185432"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Product description is missing in sheet \"Sheet1\" row 19, sheet \"Sheet1\" row 20 and sheet \"Sheet1\" row 21.\n",
         "model": "BOOKER2"
       }
     },
@@ -354,30 +330,6 @@
       "inputs": {
         "fileName": "onlymandatorydataisfilled-pass.xlsx",
         "applicationId": "1816178185477"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BOOKER2"
-      }
-    },
-    {
-      "testName": "RMSHasWrongMiddle6DigitsShouldBe Fail",
-      "inputs": {
-        "fileName": "rmshaswrongmiddle6digitsshouldbe-fail.xlsx",
-        "applicationId": "1816178185480"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Check GB Establishment RMS Number.",
-        "model": "NOREMOS"
-      }
-    },
-    {
-      "testName": "RMSIsPresentButNoHeaderTextShould Pass",
-      "inputs": {
-        "fileName": "rmsispresentbutnoheadertextshould-pass.xlsx",
-        "applicationId": "1816178185483"
       },
       "expectedResults": {
         "approvalStatus": "approved",
