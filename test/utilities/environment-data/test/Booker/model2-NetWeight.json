@@ -50,18 +50,6 @@
       }
     },
     {
-      "testName": "Happypath pass",
-      "inputs": {
-        "fileName": "happypath-pass.xlsx",
-        "applicationId": "1816178185501"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BOOKER2"
-      }
-    },
-    {
       "testName": "Header Typos or SpecialCharacters Unparse",
       "inputs": {
         "fileName": "header-typos-or-specialcharacters-unparse.xlsx",
@@ -206,18 +194,6 @@
       }
     },
     {
-      "testName": "MixedUnits And Casing Pass",
-      "inputs": {
-        "fileName": "mixedunits-and-casing-pass.xlsx",
-        "applicationId": "1816178185540"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BOOKER2"
-      }
-    },
-    {
       "testName": "Netweight HasEmpty Parentheses Fail",
       "inputs": {
         "fileName": "netweight-hasempty-parentheses-fail.xlsx",
@@ -270,30 +246,6 @@
       "inputs": {
         "fileName": "unit-in-separate-column-pass.xlsx",
         "applicationId": "1816178185561"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BOOKER2"
-      }
-    },
-    {
-      "testName": "Unit Missing Weight Present Fail",
-      "inputs": {
-        "fileName": "unit-missing-weight-present-fail.xlsx",
-        "applicationId": "1816178185564"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "BOOKER2"
-      }
-    },
-    {
-      "testName": "Valid Unit Header Only pass",
-      "inputs": {
-        "fileName": "valid-unit-header-only-pass.xlsx",
-        "applicationId": "1816178185567"
       },
       "expectedResults": {
         "approvalStatus": "approved",

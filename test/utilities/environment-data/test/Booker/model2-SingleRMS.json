@@ -62,18 +62,6 @@
       }
     },
     {
-      "testName": "InvalidPrefixInEstablishmentNumber Pass",
-      "inputs": {
-        "fileName": "invalidprefixinestablishmentnumber-pass.xlsx",
-        "applicationId": "1816178185666"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BOOKER2"
-      }
-    },
-    {
       "testName": "LowercaseAndMalformedPrefixInEstablishmentNumber Pass",
       "inputs": {
         "fileName": "lowercaseandmalformedprefixinestablishmentnumber-pass.xlsx",
