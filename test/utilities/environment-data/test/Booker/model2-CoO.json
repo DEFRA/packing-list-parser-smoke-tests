@@ -137,11 +137,11 @@
       "testName": "ac6 NullCoO Fail",
       "inputs": {
         "fileName": "ac6-nullcoo-fail.xlsx",
-        "applicationId": "1816178184355"
+        "applicationId": "1816178987218"
       },
       "expectedResults": {
         "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Sheet1\" row 278.\nMissing Country of Origin in sheet \"Sheet1\" row 19.\n",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Sheet1\" row 19.\n",
         "model": "BOOKER2"
       }
     },
@@ -161,11 +161,11 @@
       "testName": "ac8 NullCoOMultiple Fail",
       "inputs": {
         "fileName": "ac8-nullcoomultiple-fail.xlsx",
-        "applicationId": "1816178184370"
+        "applicationId": "1816178987236"
       },
       "expectedResults": {
         "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in sheet \"Sheet1\" row 278.\nMissing Country of Origin in sheet \"Sheet1\" row 19, sheet \"Sheet1\" row 20, sheet \"Sheet1\" row 21 in addition to 1 other locations.\n",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Sheet1\" row 19, sheet \"Sheet1\" row 20, sheet \"Sheet1\" row 21 in addition to 1 other locations.\n",
         "model": "BOOKER2"
       }
     },
