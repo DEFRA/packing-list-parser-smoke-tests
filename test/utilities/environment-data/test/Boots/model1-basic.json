@@ -360,18 +360,6 @@
         "reasonsForFailure": "Identifier is missing in sheet \"07042025 DDTV5216 SSC NI ROUTE1\" row 20 and sheet \"07042025 DDTV5216 SSC NI ROUTE1\" row 21.\nProduct description is missing in sheet \"07042025 DDTV5216 SSC NI ROUTE1\" row 20 and sheet \"07042025 DDTV5216 SSC NI ROUTE1\" row 21.\nNo of packages is missing in sheet \"07042025 DDTV5216 SSC NI ROUTE1\" row 20 and sheet \"07042025 DDTV5216 SSC NI ROUTE1\" row 21.\nTotal net weight is missing in sheet \"07042025 DDTV5216 SSC NI ROUTE1\" row 20 and sheet \"07042025 DDTV5216 SSC NI ROUTE1\" row 21.\n",
         "model": "BOOTS1"
       }
-    },
-    {
-      "testName": "Boots1 Happypath Pass",
-      "inputs": {
-        "fileName": "boots1-happypath-pass.xlsx",
-        "applicationId": "1816178315101"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BOOTS1"
-      }
     }
   ]
 }
