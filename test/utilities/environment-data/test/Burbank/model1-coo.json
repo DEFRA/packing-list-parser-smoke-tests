@@ -116,8 +116,8 @@
         "applicationId": "1816178310847"
       },
       "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Revised\" row 46 and sheet \"Revised\" row 47.\n",
         "model": "BURBANK1"
       }
     },
