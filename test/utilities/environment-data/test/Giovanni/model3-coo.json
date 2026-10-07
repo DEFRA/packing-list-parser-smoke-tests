@@ -116,16 +116,17 @@
         "applicationId": "1816178295610"
       },
       "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in page 1 row 1, page 1 row 3 and page 1 row 4.\n",
         "model": "GIOVANNI3"
+
       }
     },
     {
       "testName": "ac11 Prohibited Item Fail",
       "inputs": {
-        "fileName": "ac11-prohibiteditem-fail.pdf",
-        "applicationId": "1816178295619"
+        "fileName": "ac11-prohibiteditem-failupdated.pdf",
+        "applicationId": "1816178988823"
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
@@ -136,8 +137,8 @@
     {
       "testName": "ac12 Prohibited Item Multiple Fail",
       "inputs": {
-        "fileName": "ac12-prohibiteditem-multiple-fail.pdf",
-        "applicationId": "1816178295622"
+        "fileName": "ac12-prohibiteditem-multiple-failupdated.pdf",
+        "applicationId": "1816178988826"
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
@@ -160,8 +161,8 @@
     {
       "testName": "ac14 Prohibited Item Null Treatment Multiple Fail",
       "inputs": {
-        "fileName": "ac14-prohibiteditemnulltreatment-multiple-fail.pdf",
-        "applicationId": "1816178295628"
+        "fileName": "ac14-prohibiteditemnulltreatment-multiple-failupdated.pdf",
+        "applicationId": "1816178988829"
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
