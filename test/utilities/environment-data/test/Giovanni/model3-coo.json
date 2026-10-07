@@ -116,16 +116,16 @@
         "applicationId": "1816178295610"
       },
       "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in page 1 row 1, page 1 row 3 and page 1 row 4.\n",
         "model": "GIOVANNI3"
       }
     },
     {
       "testName": "ac11 Prohibited Item Fail",
       "inputs": {
-        "fileName": "ac11-prohibiteditem-fail.pdf",
-        "applicationId": "1816178295619"
+        "fileName": "ac11-prohibiteditem-failupdated.pdf",
+        "applicationId": "1816179014305"
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
@@ -141,7 +141,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 1 other locations.\n",
+        "reasonsForFailure": "Prohibited item identified on the packing list in page 1 row 3 and page 1 row 4.\n",
         "model": "GIOVANNI3"
       }
     },
@@ -165,7 +165,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 1 other locations.\n",
+        "reasonsForFailure": "Prohibited item identified on the packing list in page 1 row 1, page 1 row 3 and page 1 row 4.\n",
         "model": "GIOVANNI3"
       }
     },
