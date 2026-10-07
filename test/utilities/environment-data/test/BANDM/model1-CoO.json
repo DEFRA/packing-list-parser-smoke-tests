@@ -9,7 +9,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in sheet \"NIRMS\" row 21.\n",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"NIRMS\" row 20.\n",
         "model": "BANDM1"
       }
     },
@@ -21,7 +21,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"NIRMS\" row 22.\n",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"NIRMS\" row 21.\n",
         "model": "BANDM1"
       }
     },
@@ -33,7 +33,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in sheet \"NIRMS\" row 21, sheet \"NIRMS\" row 22 and sheet \"NIRMS\" row 23.\n",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21 and sheet \"NIRMS\" row 22.\n",
         "model": "BANDM1"
       }
     },
@@ -45,7 +45,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"NIRMS\" row 21, sheet \"NIRMS\" row 22 and sheet \"NIRMS\" row 23.\n",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21 and sheet \"NIRMS\" row 22.\n",
         "model": "BANDM1"
       }
     },
@@ -57,7 +57,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"NIRMS\" row 21, sheet \"NIRMS\" row 22 and sheet \"NIRMS\" row 23.\n",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21 and sheet \"NIRMS\" row 22.\n",
         "model": "BANDM1"
       }
     },
@@ -69,7 +69,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"NIRMS\" row 24, sheet \"NIRMS\" row 25 and sheet \"NIRMS\" row 26.\n",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"NIRMS\" row 23, sheet \"NIRMS\" row 24 and sheet \"NIRMS\" row 25.\n",
         "model": "BANDM1"
       }
     },
@@ -81,7 +81,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"NIRMS\" row 27.\n",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"NIRMS\" row 26.\n",
         "model": "BANDM1"
       }
     },
@@ -93,7 +93,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"NIRMS\" row 29 and sheet \"NIRMS\" row 30.\nProhibited item identified on the packing list in sheet \"NIRMS\" row 28.\n",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"NIRMS\" row 28 and sheet \"NIRMS\" row 29.\nProhibited item identified on the packing list in sheet \"NIRMS\" row 27.\n",
         "model": "BANDM1"
       }
     },
