@@ -9,7 +9,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Identifier is missing in sheet \"NIRMS\" row 19, sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21 in addition to 36 other locations.\nProduct description is missing in sheet \"NIRMS\" row 19, sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21 in addition to 36 other locations.\nNo of packages is missing in sheet \"NIRMS\" row 19, sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21 in addition to 36 other locations.\nTotal net weight is missing in sheet \"NIRMS\" row 19, sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21 in addition to 36 other locations.\n",
+        "reasonsForFailure": "Identifier is missing in sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21, sheet \"NIRMS\" row 22 in addition to 36 other locations.\nProduct description is missing in sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21, sheet \"NIRMS\" row 22 in addition to 36 other locations.\nNo of packages is missing in sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21, sheet \"NIRMS\" row 22 in addition to 36 other locations.\nTotal net weight is missing in sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21, sheet \"NIRMS\" row 22 in addition to 36 other locations.\n",
         "model": "BANDM1"
       }
     },
@@ -69,7 +69,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Multiple GB Place of Dispatch (Establishment) numbers found on packing list.\nProduct code is invalid in sheet \"NIRMS\" row 19, sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21 in addition to 36 other locations.\nNo of packages is invalid in sheet \"NIRMS\" row 19, sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21 in addition to 36 other locations.\nTotal net weight is invalid in sheet \"NIRMS\" row 19, sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21 in addition to 36 other locations.\n",
+        "reasonsForFailure": "Multiple GB Place of Dispatch (Establishment) numbers found on packing list.\nProduct code is invalid in sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21, sheet \"NIRMS\" row 22 in addition to 36 other locations.\nNo of packages is invalid in sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21, sheet \"NIRMS\" row 22 in addition to 36 other locations.\nTotal net weight is invalid in sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21, sheet \"NIRMS\" row 22 in addition to 36 other locations.\n",
         "model": "BANDM1"
       }
     },
@@ -177,7 +177,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "No of packages is invalid in sheet \"NIRMS\" row 19, sheet \"NIRMS\" row 20 and sheet \"NIRMS\" row 21.\n",
+        "reasonsForFailure": "No of packages is invalid in sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21 and sheet \"NIRMS\" row 22.\n",
         "model": "BANDM1"
       }
     },
@@ -189,7 +189,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Product code is invalid in sheet \"NIRMS\" row 19, sheet \"NIRMS\" row 20 and sheet \"NIRMS\" row 21.\n",
+        "reasonsForFailure": "Product code is invalid in sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21 and sheet \"NIRMS\" row 22.\n",
         "model": "BANDM1"
       }
     },
@@ -213,7 +213,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Identifier is missing in sheet \"NIRMS\" row 19, sheet \"NIRMS\" row 20 and sheet \"NIRMS\" row 21.\n",
+        "reasonsForFailure": "Identifier is missing in sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21 and sheet \"NIRMS\" row 22.\n",
         "model": "BANDM1"
       }
     },
@@ -225,7 +225,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Product description is missing in sheet \"NIRMS\" row 19, sheet \"NIRMS\" row 20 and sheet \"NIRMS\" row 21.\n",
+        "reasonsForFailure": "Product description is missing in sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21 and sheet \"NIRMS\" row 22.\n",
         "model": "BANDM1"
       }
     },
@@ -237,7 +237,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Multiple GB Place of Dispatch (Establishment) numbers found on packing list.\nIdentifier is missing in sheet \"NIRMS\" row 19, sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21 in addition to 36 other locations.\nProduct description is missing in sheet \"NIRMS\" row 19, sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21 in addition to 36 other locations.\nNo of packages is missing in sheet \"NIRMS\" row 19, sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21 in addition to 36 other locations.\nTotal net weight is missing in sheet \"NIRMS\" row 19, sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21 in addition to 36 other locations.\n",
+        "reasonsForFailure": "Multiple GB Place of Dispatch (Establishment) numbers found on packing list.\nIdentifier is missing in sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21, sheet \"NIRMS\" row 22 in addition to 36 other locations.\nProduct description is missing in sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21, sheet \"NIRMS\" row 22 in addition to 36 other locations.\nNo of packages is missing in sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21, sheet \"NIRMS\" row 22 in addition to 36 other locations.\nTotal net weight is missing in sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21, sheet \"NIRMS\" row 22 in addition to 36 other locations.\n",
         "model": "BANDM1"
       }
     },
@@ -249,7 +249,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "No of packages is missing in sheet \"NIRMS\" row 19, sheet \"NIRMS\" row 20 and sheet \"NIRMS\" row 21.\n",
+        "reasonsForFailure": "No of packages is missing in sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21 and sheet \"NIRMS\" row 22.\n",
         "model": "BANDM1"
       }
     },
@@ -261,7 +261,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Total net weight is missing in sheet \"NIRMS\" row 19, sheet \"NIRMS\" row 20 and sheet \"NIRMS\" row 21.\n",
+        "reasonsForFailure": "Total net weight is missing in sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21 and sheet \"NIRMS\" row 22.\n",
         "model": "BANDM1"
       }
     },
