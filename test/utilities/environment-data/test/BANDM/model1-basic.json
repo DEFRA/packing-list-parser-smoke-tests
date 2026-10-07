@@ -40,7 +40,7 @@
     {
       "testName": "Happypath Pass",
       "inputs": {
-        "fileName": "happypath-pass.xlsx",
+        "fileName": "happypath.xlsx",
         "applicationId": "1816178989033"
       },
       "expectedResults": {
