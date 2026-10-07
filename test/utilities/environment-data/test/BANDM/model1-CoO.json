@@ -2,10 +2,118 @@
   "name": "BANDM1 CoO",
   "tests": [
     {
-      "testName": "Ac1 Null Nirms Fail Other Failure",
+      "testName": "ac6 NullCoO Fail",
       "inputs": {
-        "fileName": "ac1-nullnirms-fail.xlsx",
-        "applicationId": "1816178737153"
+        "fileName": "ac6-nullcoo-fail.xlsx",
+        "applicationId": "1816178989228"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"NIRMS\" row 21.\n",
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "ac7 InvalidCoO Fail",
+      "inputs": {
+        "fileName": "ac7-invalidcoo-fail.xlsx",
+        "applicationId": "1816178989231"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"NIRMS\" row 22.\n",
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "ac8 NullCoOMultiple Fail",
+      "inputs": {
+        "fileName": "ac8-nullcoomultiple-fail.xlsx",
+        "applicationId": "1816178989234"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"NIRMS\" row 21, sheet \"NIRMS\" row 22 and sheet \"NIRMS\" row 23.\n",
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "ac9 InvalidCoOMultiple Fail",
+      "inputs": {
+        "fileName": "ac9-invalidcoomultiple-fail.xlsx",
+        "applicationId": "1816178989237"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"NIRMS\" row 21, sheet \"NIRMS\" row 22 and sheet \"NIRMS\" row 23.\n",
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "ac11 HighRiskCoOTreatmentTypeSpecified Fail",
+      "inputs": {
+        "fileName": "ac11-highriskcootreatmenttypespecified-fail.xlsx",
+        "applicationId": "1816178989240"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"NIRMS\" row 21, sheet \"NIRMS\" row 22 and sheet \"NIRMS\" row 23.\n",
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "ac12 HighRiskCoOTreatmentTypeSpecifiedMultiple Fail",
+      "inputs": {
+        "fileName": "ac12-highriskcootreatmenttypespecifiedmultiple-fail.xlsx",
+        "applicationId": "1816178989243"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"NIRMS\" row 24, sheet \"NIRMS\" row 25 and sheet \"NIRMS\" row 26.\n",
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "ac13 HighRiskCoOTreatmentTypeNotSpecified Fail",
+      "inputs": {
+        "fileName": "ac13-highriskcootreatmenttypenotspecified-fail.xlsx",
+        "applicationId": "1816178989246"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"NIRMS\" row 27.\n",
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "ac14 HighRiskCoOTreatmentTypeNotSpecified COO InvalidMultiple Fail",
+      "inputs": {
+        "fileName": "ac14-highriskcootreatmenttypenotspecified-coo-invalidmultiple-fail.xlsx",
+        "applicationId": "1816178989249"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"NIRMS\" row 29 and sheet \"NIRMS\" row 30.\nProhibited item identified on the packing list in sheet \"NIRMS\" row 28.\n",
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "ac15 HighRiskCoOTreatmentTypeNotSpecifiedMultiple Fail",
+      "inputs": {
+        "fileName": "ac15-highriskcootreatmenttypenotspecifiedmultiple-fail.xlsx",
+        "applicationId": "1816178989252"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"NIRMS\" row 34, sheet \"NIRMS\" row 35 and sheet \"NIRMS\" row 36.\n",
+        "model": "BANDM1"
+      }
+    },
+    {
+      "testName": "BlanketNirms MissingStatement Fail",
+      "inputs": {
+        "fileName": "blanketnirms-missingstatement-fail.xlsx",
+        "applicationId": "1816178989258"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -14,58 +122,10 @@
       }
     },
     {
-      "testName": "Ac2 Null Co O Fail Other Failure",
+      "testName": "BlanketNirms StatementPrecedence Pass",
       "inputs": {
-        "fileName": "ac2-nullcoo-fail.xlsx",
-        "applicationId": "1816178737156"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in sheet \"Sheet1\" row 20.\n",
-        "model": "BANDM1"
-      }
-    },
-    {
-      "testName": "Ac3 Invalid Co O Fail Other Failure",
-      "inputs": {
-        "fileName": "ac3-invalidcoo-fail.xlsx",
-        "applicationId": "1816178737159"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Sheet1\" row 21 and sheet \"Sheet1\" row 24.\n",
-        "model": "BANDM1"
-      }
-    },
-    {
-      "testName": "Ac4 Null Co O Multiple Fail Other Failure",
-      "inputs": {
-        "fileName": "ac4-nullcoomultiple-fail.xlsx",
-        "applicationId": "1816178737162"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in sheet \"Sheet1\" row 20, sheet \"Sheet1\" row 21 and sheet \"Sheet1\" row 23.\n",
-        "model": "BANDM1"
-      }
-    },
-    {
-      "testName": "Ac5 Invalid Co O Multiple Fail Other Failure",
-      "inputs": {
-        "fileName": "ac5-invalidcoomultiple-fail.xlsx",
-        "applicationId": "1816178737165"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Sheet1\" row 21, sheet \"Sheet1\" row 22, sheet \"Sheet1\" row 23 in addition to 2 other locations.\n",
-        "model": "BANDM1"
-      }
-    },
-    {
-      "testName": "Ac6 X Co O Pass(1) Pass",
-      "inputs": {
-        "fileName": "ac6-xcoo-pass1.xlsx",
-        "applicationId": "1816178737168"
+        "fileName": "blanketnirms-statementprecedence-pass.xlsx",
+        "applicationId": "1816178989255"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -74,14 +134,14 @@
       }
     },
     {
-      "testName": "Ac11 Null Treatment Type Fail Other Failure",
+      "testName": "Happypath Pass",
       "inputs": {
-        "fileName": "ac11-nulltreatmenttype-fail.xlsx",
-        "applicationId": "1816178737171"
+        "fileName": "happypath.xlsx",
+        "applicationId": "1816178989033"
       },
       "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Identifier is missing in sheet \"Sheet1\" row 21 and sheet \"Sheet1\" row 22.\n",
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
         "model": "BANDM1"
       }
     }
