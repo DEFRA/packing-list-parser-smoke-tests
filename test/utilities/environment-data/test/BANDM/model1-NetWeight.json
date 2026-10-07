@@ -21,7 +21,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Total net weight is invalid in sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21 and sheet \"NON-NIRMS\" row 10.\n",
+        "reasonsForFailure": "Total net weight is invalid in sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21 and sheet \"NON-NIRMS\" row 9.\n",
         "model": "BANDM1"
       }
     },
@@ -33,7 +33,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Total net weight is missing in sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21 and sheet \"NON-NIRMS\" row 10.\n",
+        "reasonsForFailure": "Total net weight is missing in sheet \"NIRMS\" row 20, sheet \"NIRMS\" row 21 and sheet \"NON-NIRMS\" row 9.\n",
         "model": "BANDM1"
       }
     },

@@ -105,7 +105,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"NIRMS\" row 34, sheet \"NIRMS\" row 35 and sheet \"NIRMS\" row 36.\n",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"NIRMS\" row 33, sheet \"NIRMS\" row 34 and sheet \"NIRMS\" row 35.\n",
         "model": "BANDM1"
       }
     },
