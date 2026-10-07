@@ -81,7 +81,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Revised\" row 47.\n",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Revised\" row 47 and sheet \"Revised\" row 48.\n",
         "model": "BARTONREDMAN1"
       }
     },
@@ -116,16 +116,16 @@
         "applicationId": "1816178295373"
       },
       "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Revised\" row 46 and sheet \"Revised\" row 47.\n",
         "model": "BARTONREDMAN1"
       }
     },
     {
       "testName": "AC11 High Risk Co O Treatment Type Specified Fail",
       "inputs": {
-        "fileName": "ac11-highriskcootreatmenttypespecified-fail.xlsx",
-        "applicationId": "1816178310676"
+        "fileName": "ac11-highriskcootreatmenttypespecified-fail1.xlsx",
+        "applicationId": "1816179014299"
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
@@ -141,7 +141,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Revised\" row 46, sheet \"Revised\" row 47, sheet \"Revised\" row 48 in addition to 1 other locations.\n",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Revised\" row 48 and sheet \"Revised\" row 49.\n",
         "model": "BARTONREDMAN1"
       }
     },
@@ -149,7 +149,7 @@
       "testName": "AC13 High Risk Co O Treatment Type Not Specified Fail",
       "inputs": {
         "fileName": "ac13-highriskcootreatmenttypenotspecified-fail.xlsx",
-        "applicationId": "1816178310685"
+        "applicationId": "1816179014302"
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
@@ -165,7 +165,7 @@
       },
       "expectedResults": {
         "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Revised\" row 46, sheet \"Revised\" row 47, sheet \"Revised\" row 48 in addition to 1 other locations.\n",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Revised\" row 48 and sheet \"Revised\" row 49.\n",
         "model": "BARTONREDMAN1"
       }
     }
