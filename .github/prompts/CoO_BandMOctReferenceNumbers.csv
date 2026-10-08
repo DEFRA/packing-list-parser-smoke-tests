@@ -1,0 +1,22 @@
+CoO_BandMOct,ac6_NullCoO_Fail.xlsx,1816178989228,rejected_coo,"Missing Country of Origin in sheet ""NIRMS"" row 19.
+"
+CoO_BandMOct,ac7_InvalidCoO_Fail.xlsx,1816178989231,rejected_coo,"Invalid Country of Origin ISO Code in sheet ""NIRMS"" row 20.
+"
+CoO_BandMOct,ac8_NullCoOMultiple_Fail.xlsx,1816178989234,rejected_coo,"Missing Country of Origin in sheet ""NIRMS"" row 19, sheet ""NIRMS"" row 20 and sheet ""NIRMS"" row 21.
+"
+CoO_BandMOct,ac9_InvalidCoOMultiple_Fail.xlsx,1816178989237,rejected_coo,"Invalid Country of Origin ISO Code in sheet ""NIRMS"" row 19, sheet ""NIRMS"" row 20 and sheet ""NIRMS"" row 21.
+"
+CoO_BandMOct,ac11_HighRiskCoOTreatmentTypeSpecified_Fail.xlsx,1816178989240,rejected_ineligible,"Prohibited item identified on the packing list in sheet ""NIRMS"" row 19, sheet ""NIRMS"" row 20 and sheet ""NIRMS"" row 21.
+"
+CoO_BandMOct,ac12_HighRiskCoOTreatmentTypeSpecifiedMultiple_Fail.xlsx,1816178989243,rejected_ineligible,"Prohibited item identified on the packing list in sheet ""NIRMS"" row 22, sheet ""NIRMS"" row 23 and sheet ""NIRMS"" row 24.
+"
+CoO_BandMOct,ac13_HighRiskCoOTreatmentTypeNotSpecified_Fail.xlsx,1816178989246,rejected_ineligible,"Prohibited item identified on the packing list in sheet ""NIRMS"" row 25.
+"
+CoO_BandMOct,ac14_HighRiskCoOTreatmentTypeNotSpecified_COO_InvalidMultiple_Fail.xlsx,1816178989249,rejected_ineligible,"Invalid Country of Origin ISO Code in sheet ""NIRMS"" row 27 and sheet ""NIRMS"" row 28.
+Prohibited item identified on the packing list in sheet ""NIRMS"" row 26.
+"
+CoO_BandMOct,ac15_HighRiskCoOTreatmentTypeNotSpecifiedMultiple_Fail.xlsx,1816178989252,rejected_ineligible,"Prohibited item identified on the packing list in sheet ""NIRMS"" row 32, sheet ""NIRMS"" row 33 and sheet ""NIRMS"" row 34.
+"
+CoO_BandMOct,BlanketNirms_MissingStatement_Fail.xlsx,1816178989258,rejected_other,"NIRMS/Non-NIRMS goods not specified.
+"
+CoO_BandMOct,BlanketNirms_StatementPrecedence_Pass.xlsx,1816178989255,approved,

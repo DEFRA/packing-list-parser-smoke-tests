@@ -1,0 +1,10 @@
+netweight_BandMOct,Accepted_Header_Variant_Pass.xlsx,1816178989207,approved,
+netweight_BandMOct,Alpha_Numeric_TotalNetWeight_Fail.xlsx,1816178989210,rejected_other,"Total net weight is invalid in sheet ""NIRMS"" row 19, sheet ""NIRMS"" row 20 and sheet ""NON-NIRMS"" row 9.
+"
+netweight_BandMOct,Data_empty_Netweight_Fail.xlsx,1816178989213,rejected_other,"Total net weight is missing in sheet ""NIRMS"" row 19, sheet ""NIRMS"" row 20 and sheet ""NON-NIRMS"" row 9.
+"
+netweight_BandMOct,Header_Typos_Unparse.xlsx,1816178989216,rejected_other,
+netweight_BandMOct,Incorrect_NetweightData_All_Fail.xlsx,1816178989219,rejected_other,"Total net weight is invalid in sheet ""NIRMS"" row 19, sheet ""NIRMS"" row 20, sheet ""NIRMS"" row 21 in addition to 36 other locations.
+"
+netweight_BandMOct,Missing_Header_Netweight_Unparse.xlsx,1816178989222,rejected_other,
+netweight_BandMOct,Zero_Data_TotalNetWeight_Pass.xlsx,1816178989225,approved,
