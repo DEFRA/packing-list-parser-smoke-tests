@@ -1,6 +1,8 @@
 import allure from 'allure-commandline'
 import { getSpecs } from './test/utilities/profile-utils.js'
 
+process.env.WDIO_USE_NATIVE_FETCH ||= '1'
+
 const debug = process.env.DEBUG
 const oneMinute = 60 * 1000
 const oneHour = 60 * 60 * 1000
