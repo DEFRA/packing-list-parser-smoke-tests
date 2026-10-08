@@ -8,8 +8,8 @@
         "applicationId": "1816178159470"
       },
       "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in rows 3, 4 and 5.\n",
         "model": "ASDA4"
       }
     },

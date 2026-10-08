@@ -8,8 +8,8 @@
         "applicationId": "1816178208610"
       },
       "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"DR SCHAR - R\" row 46, sheet \"FLETCHERS - R\" row 46, sheet \"GRUPO BIMBO - G\" row 46 in addition to 1 other locations.\n",
         "model": "FOWLERWELCH2"
       }
     },
