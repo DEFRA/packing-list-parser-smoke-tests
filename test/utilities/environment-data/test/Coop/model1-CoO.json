@@ -8,8 +8,8 @@
         "applicationId": "1816178159110"
       },
       "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Input Packing Sheet\" row 13 and sheet \"Input Packing Sheet\" row 14.\n",
         "model": "COOP1"
       }
     },

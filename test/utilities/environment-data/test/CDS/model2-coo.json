@@ -8,8 +8,8 @@
         "applicationId": "1816178234071"
       },
       "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"77100 - Packing List\" row 4 and sheet \"77100 - Packing List\" row 5.\n",
         "model": "CDS2"
       }
     },
