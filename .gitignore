@@ -11,4 +11,3 @@ coverage
 allure-report/
 allure-results/
 FAILED
-test/utilities/config.js
