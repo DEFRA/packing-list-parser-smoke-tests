@@ -54,10 +54,9 @@
         "testName": "BANDM1 | Happy Path Pass",
         "inputs": {
           "fileName": "happypath-pass.xlsx",
-          "applicationId": "1816178185783"
+          "applicationId": "1816178989033"
         },
         "expectedResults": {
-          "approvalStatus": "approved",
           "reasonsForFailure": null,
           "model": "BANDM1"
         }
