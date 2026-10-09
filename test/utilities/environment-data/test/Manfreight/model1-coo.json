@@ -116,8 +116,8 @@
         "applicationId": "1816178709685"
       },
       "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Enter_your_data\" row 5 and sheet \"Enter_your_data\" row 6.\n",
         "model": "MANFREIGHT2"
       }
     },

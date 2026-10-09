@@ -116,8 +116,8 @@
         "applicationId": "1816178401282"
       },
       "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 1 other locations.\n",
         "model": "MANDS1"
       }
     }
