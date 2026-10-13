@@ -92,8 +92,8 @@
         "applicationId": "1816178870092"
       },
       "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"DANONE\" row 25 and sheet \"DANONE\" row 26.\n",
         "model": "NUTRICIA3"
       }
     },
