@@ -116,8 +116,8 @@
         "applicationId": "1816178621884"
       },
       "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"DR SCHAR UK LTD - R\" row 50 and sheet \"DR SCHAR UK LTD - R\" row 51.\n",
         "model": "WARRENS2"
       }
     },

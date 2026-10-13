@@ -116,8 +116,8 @@
         "applicationId": "1816178345086"
       },
       "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"MAIN20DEL 23032026\" row 15, sheet \"MAIN20DEL 23032026\" row 16 and sheet \"MAIN20DEL 23032026\" row 17.\n",
         "model": "NISA2"
       }
     },
