@@ -5,10 +5,21 @@
  * and attach results to Allure reports.
  */
 import allureReporter from '@wdio/allure-reporter'
+import { Agent } from 'undici'
 import { apiKey } from '../utilities/config.js'
 
 const MAX_RETRIES = 3
 const RETRY_DELAY_MS = 1000
+
+// The target CDP environment can take longer than undici's default 10s connect
+// timeout to establish a connection, which surfaces as "fetch failed"
+// (UND_ERR_CONNECT_TIMEOUT). Use a dispatcher with a longer timeout.
+const CONNECT_TIMEOUT_MS = Number(process.env.CONNECT_TIMEOUT_MS) || 30000
+const dispatcher = new Agent({
+  connect: { timeout: CONNECT_TIMEOUT_MS },
+  headersTimeout: CONNECT_TIMEOUT_MS,
+  bodyTimeout: CONNECT_TIMEOUT_MS
+})
 
 /**
  * Sleep for a given number of milliseconds.
@@ -44,11 +55,12 @@ class Endpoint {
     return await this.executeWithRetry(async () => {
       const response = apiKey
         ? await fetch(url, {
+            dispatcher,
             headers: {
               'x-api-key': apiKey
             }
           })
-        : await fetch(url)
+        : await fetch(url, { dispatcher })
       return response
     })
   }
@@ -78,6 +90,7 @@ class Endpoint {
     return await this.executeWithRetry(async () => {
       const response = await fetch(url, {
         method: 'POST',
+        dispatcher,
         headers,
         body: payload
       })

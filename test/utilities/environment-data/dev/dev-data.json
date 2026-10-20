@@ -721,6 +721,30 @@
           "reasonsForFailure": "No product line data found.",
           "model": "BOOTS1"
         }
+      },
+      {
+        "testName": "Gousto1 | Happypath Pass",
+        "inputs": {
+          "fileName": "happypath.xlsx",
+          "applicationId": "1816179164293"
+        },
+        "expectedResults": {
+          "approvalStatus": "approved",
+          "reasonsForFailure": null,
+          "model": "GOUSTO1"
+        }
+      },
+      {
+        "testName": "Gousto1 | DescriptionHasDoubleQuotesShould Pass",
+        "inputs": {
+          "fileName": "descriptionhasdoublequotesshould-pass.xlsx",
+          "applicationId": "1816179138340"
+        },
+        "expectedResults": {
+          "approvalStatus": "approved",
+          "reasonsForFailure": null,
+          "model": "GOUSTO1"
+        }
       }
     ]
   }

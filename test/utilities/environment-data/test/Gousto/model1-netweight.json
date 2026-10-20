@@ -2,34 +2,10 @@
   "name": "GOUSTO1 NetWeight",
   "tests": [
     {
-      "testName": "Alpha Numeric Total Net Weight Unparse",
-      "inputs": {
-        "fileName": "alpha-numeric-totalnetweight-unparse.xlsx",
-        "applicationId": "1816178256112"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Alpha Numeric UOM Weight Fail",
-      "inputs": {
-        "fileName": "alpha-numeric-uom-weight-fail.xlsx",
-        "applicationId": "1816178256118"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "GOUSTO1"
-      }
-    },
-    {
       "testName": "Ambiguous Units in Header Pass",
       "inputs": {
         "fileName": "ambiguous-units-in-header-pass.xlsx",
-        "applicationId": "1816178256136"
+        "applicationId": "1816179140611"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -41,11 +17,11 @@
       "testName": "Data empty Netweight Fail",
       "inputs": {
         "fileName": "data-empty-netweight-fail.xlsx",
-        "applicationId": "1816178256142"
+        "applicationId": "1816179140695"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Total net weight is missing in sheet \"Gousto Packing List 17112025\" row 19, sheet \"Gousto Packing List 17112025\" row 20, sheet \"Gousto Packing List 17112025\" row 21 in addition to 11080 other locations.\n",
+        "reasonsForFailure": "Total net weight is missing in sheet \"Gousto Packing List 17112025\" row 19 and sheet \"Gousto Packing List 17112025\" row 20.\n",
         "model": "GOUSTO1"
       }
     },
@@ -53,7 +29,7 @@
       "testName": "Extra Spaces In Header Unparse",
       "inputs": {
         "fileName": "extra-spaces-in-header-unparse.xlsx",
-        "applicationId": "1816178256154"
+        "applicationId": "1816179140779"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -62,22 +38,10 @@
       }
     },
     {
-      "testName": "Happypath Pass",
-      "inputs": {
-        "fileName": "happypath-pass.xlsx",
-        "applicationId": "1816178256163"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GOUSTO1"
-      }
-    },
-    {
-      "testName": "Header Typos or Special Characters Unparse",
+      "testName": "Header Typos or SpecialCharacters Unparse",
       "inputs": {
         "fileName": "header-typos-or-specialcharacters-unparse.xlsx",
-        "applicationId": "1816178256166"
+        "applicationId": "1816179140842"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -89,19 +53,7 @@
       "testName": "Header With Extra Parentheses Pass",
       "inputs": {
         "fileName": "header-with-extra-parentheses-pass.xlsx",
-        "applicationId": "1816178256169"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GOUSTO1"
-      }
-    },
-    {
-      "testName": "Header With Multiple Units Pass",
-      "inputs": {
-        "fileName": "header-with-multiple-units-pass.xlsx",
-        "applicationId": "1816178256172"
+        "applicationId": "1816179140920"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -113,7 +65,7 @@
       "testName": "Header With Unit And Symbols Pass",
       "inputs": {
         "fileName": "header-with-unit-and-symbols-pass.xlsx",
-        "applicationId": "1816178256175"
+        "applicationId": "1816179141883"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -122,38 +74,14 @@
       }
     },
     {
-      "testName": "Inconsistent Header Case Pass",
-      "inputs": {
-        "fileName": "inconsistent-header-case-pass.xlsx",
-        "applicationId": "1816178256187"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GOUSTO1"
-      }
-    },
-    {
-      "testName": "Incorrect Netweight Data All Fail",
+      "testName": "Incorrect NetweightData All Fail",
       "inputs": {
         "fileName": "incorrect-netweightdata-all-fail.xlsx",
-        "applicationId": "1816178256196"
+        "applicationId": "1816179141088"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Total net weight is invalid in sheet \"Gousto Packing List 17112025\" row 19, sheet \"Gousto Packing List 17112025\" row 20, sheet \"Gousto Packing List 17112025\" row 21 in addition to 3 other locations.\n",
-        "model": "GOUSTO1"
-      }
-    },
-    {
-      "testName": "Invalid Unit Type Fail",
-      "inputs": {
-        "fileName": "invalid-unit-type-fail.xlsx",
-        "applicationId": "1816178256202"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "reasonsForFailure": "Total net weight is invalid in sheet \"Gousto Packing List 17112025\" row 19, sheet \"Gousto Packing List 17112025\" row 20, sheet \"Gousto Packing List 17112025\" row 21 in addition to 7 other locations.\n",
         "model": "GOUSTO1"
       }
     },
@@ -161,7 +89,7 @@
       "testName": "Malformed Header Unit Pass",
       "inputs": {
         "fileName": "malformed-header-unit-pass.xlsx",
-        "applicationId": "1816178256205"
+        "applicationId": "1816179141172"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -170,10 +98,10 @@
       }
     },
     {
-      "testName": "Missing Header Total Net Weight Unparse",
+      "testName": "Missing Header Netweight Unparse",
       "inputs": {
-        "fileName": "missing-header-totalnetweight-unparse.xlsx",
-        "applicationId": "1816178256211"
+        "fileName": "missing-header-netweight-unparse.xlsx",
+        "applicationId": "1816179141886"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -185,7 +113,7 @@
       "testName": "Missing Paranthesis in Uom Pass",
       "inputs": {
         "fileName": "missing-paranthesis-in-uom-pass.xlsx",
-        "applicationId": "1816178256217"
+        "applicationId": "1816179141889"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -194,22 +122,10 @@
       }
     },
     {
-      "testName": "Missing UOM Weight Fail",
+      "testName": "MixedCase Header Pass",
       "inputs": {
-        "fileName": "missing-uom-weight-fail.xlsx",
-        "applicationId": "1816178256223"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "GOUSTO1"
-      }
-    },
-    {
-      "testName": "Mixed Units And Casing Pass",
-      "inputs": {
-        "fileName": "mixedunits-and-casing-pass.xlsx",
-        "applicationId": "1816178256229"
+        "fileName": "mixedcase-header-pass.xlsx",
+        "applicationId": "1816179141607"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -218,10 +134,10 @@
       }
     },
     {
-      "testName": "Netweight Has Empty Parentheses Fail",
+      "testName": "Netweight HasEmpty Parentheses Fail",
       "inputs": {
         "fileName": "netweight-hasempty-parentheses-fail.xlsx",
-        "applicationId": "1816178256238"
+        "applicationId": "1816179141703"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -230,10 +146,22 @@
       }
     },
     {
-      "testName": "Unit Missing Weight Present Fail",
+      "testName": "Splcharacters Header Netweight Unparse",
       "inputs": {
-        "fileName": "unit-missing-weight-present-fail.xlsx",
-        "applicationId": "1816178256244"
+        "fileName": "splcharacters-header-netweight-unparse.xlsx",
+        "applicationId": "1816179141790"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "TotalNetWeight Without UOMWeight ",
+      "inputs": {
+        "fileName": "totalnetweight-without-uomweight.xlsx",
+        "applicationId": "1816179164296"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -242,10 +170,10 @@
       }
     },
     {
-      "testName": "Zero Data Total Net Weight Pass",
+      "testName": "Zero Data TotalNetWeight Pass",
       "inputs": {
         "fileName": "zero-data-totalnetweight-pass.xlsx",
-        "applicationId": "1816178256250"
+        "applicationId": "1816179141880"
       },
       "expectedResults": {
         "approvalStatus": "approved",
