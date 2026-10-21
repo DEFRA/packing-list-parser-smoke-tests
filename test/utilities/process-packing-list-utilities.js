@@ -1,7 +1,7 @@
-import devData from './environment-data/dev/dev-data.json' with { type: 'json' }
+import devData from './environment-data/dev/dev-data.json'
 import testData from './environment-data/test/test-data.js'
-import perfTestData from './environment-data/perf-test/perf-test-data.json' with { type: 'json' }
-import prodData from './environment-data/prod/prod-data.json' with { type: 'json' }
+import perfTestData from './environment-data/perf-test/perf-test-data.json'
+import prodData from './environment-data/prod/prod-data.json'
 import { baseUrl, defaultEstablishmentId, environmentToTest } from './config.js'
 import { parseModelProfile } from './profile-utils.js'
 
