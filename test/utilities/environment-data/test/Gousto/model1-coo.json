@@ -2,22 +2,130 @@
   "name": "GOUSTO1 CoO",
   "tests": [
     {
-      "testName": "ac10 Prohibited Item Null Treatment Multiple Fail",
+      "testName": "ac6 NullCoO Fail",
       "inputs": {
-        "fileName": "ac10-prohibiteditemnulltreatmentmultiple-fail.xlsx",
-        "applicationId": "1816178256073"
+        "fileName": "ac6-nullcoo-fail.xlsx",
+        "applicationId": "1816179142030"
       },
       "expectedResults": {
-        "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Gousto Packing List 17112025\" row 19, sheet \"Gousto Packing List 17112025\" row 20, sheet \"Gousto Packing List 17112025\" row 21 in addition to 1 other locations.\n",
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Gousto Packing List 17112025\" row 19 and sheet \"Gousto Packing List 17112025\" row 20.\n",
         "model": "GOUSTO1"
       }
     },
     {
-      "testName": "ac1 Null Nirms Fail",
+      "testName": "ac7 InvalidCoO Fail",
       "inputs": {
-        "fileName": "ac1-nullnirms-fail.xlsx",
-        "applicationId": "1816178256076"
+        "fileName": "ac7-invalidcoo-fail.xlsx",
+        "applicationId": "1816179141997"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Gousto Packing List 17112025\" row 19 and sheet \"Gousto Packing List 17112025\" row 20.\n",
+        "model": "GOUSTO1"
+      }
+    },
+    {
+      "testName": "ac8 NullCoOMultiple Fail",
+      "inputs": {
+        "fileName": "ac8-nullcoomultiple-fail.xlsx",
+        "applicationId": "1816179142000"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in sheet \"Gousto Packing List 17112025\" row 19, sheet \"Gousto Packing List 17112025\" row 20 and sheet \"Gousto Packing List 17112025\" row 21.\n",
+        "model": "GOUSTO1"
+      }
+    },
+    {
+      "testName": "ac9 InvalidCoOMultiple Fail",
+      "inputs": {
+        "fileName": "ac9-invalidcoomultiple-fail.xlsx",
+        "applicationId": "1816179142003"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Gousto Packing List 17112025\" row 19, sheet \"Gousto Packing List 17112025\" row 20 and sheet \"Gousto Packing List 17112025\" row 21.\n",
+        "model": "GOUSTO1"
+      }
+    },
+    {
+      "testName": "ac10 xCoO Fail",
+      "inputs": {
+        "fileName": "ac10-xcoo-fail.xlsx",
+        "applicationId": "1816179164299"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Gousto Packing List 17112025\" row 19 and sheet \"Gousto Packing List 17112025\" row 20.\n",
+        "model": "GOUSTO1"
+      }
+    },
+    {
+      "testName": "ac11 HighRiskCoOTreatmentTypeSpecified Fail",
+      "inputs": {
+        "fileName": "ac11-highriskcootreatmenttypespecified-fail.xlsx",
+        "applicationId": "1816179142009"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Gousto Packing List 17112025\" row 19.\n",
+        "model": "GOUSTO1"
+      }
+    },
+    {
+      "testName": "ac12 HighRiskCoOTreatmentTypeSpecifiedMultiple Fail",
+      "inputs": {
+        "fileName": "ac12-highriskcootreatmenttypespecifiedmultiple-fail.xlsx",
+        "applicationId": "1816179142012"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Gousto Packing List 17112025\" row 19, sheet \"Gousto Packing List 17112025\" row 20 and sheet \"Gousto Packing List 17112025\" row 21.\n",
+        "model": "GOUSTO1"
+      }
+    },
+    {
+      "testName": "ac13 HighRiskCoOTreatmentTypeNotSpecified Fail",
+      "inputs": {
+        "fileName": "ac13-highriskcootreatmenttypenotspecified-fail.xlsx",
+        "applicationId": "1816179142033"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Gousto Packing List 17112025\" row 19.\n",
+        "model": "GOUSTO1"
+      }
+    },
+    {
+      "testName": "ac14 HighRiskCoOTreatmentTypeNotSpecified COO InvalidMultiple Fail",
+      "inputs": {
+        "fileName": "ac14-highriskcootreatmenttypenotspecified-coo-invalidmultiple-fail.xlsx",
+        "applicationId": "1816179142015"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Gousto Packing List 17112025\" row 21.\nProhibited item identified on the packing list in sheet \"Gousto Packing List 17112025\" row 19 and sheet \"Gousto Packing List 17112025\" row 20.\n",
+        "model": "GOUSTO1"
+      }
+    },
+    {
+      "testName": "ac15 HighRiskCoOTreatmentTypeNotSpecifiedMultiple Fail",
+      "inputs": {
+        "fileName": "ac15-highriskcootreatmenttypenotspecifiedmultiple-fail.xlsx",
+        "applicationId": "1816179142018"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Gousto Packing List 17112025\" row 19, sheet \"Gousto Packing List 17112025\" row 20 and sheet \"Gousto Packing List 17112025\" row 21.\n",
+        "model": "GOUSTO1"
+      }
+    },
+    {
+      "testName": "BlanketNirmsDeclaration Missing Fail",
+      "inputs": {
+        "fileName": "blanketnirmsdeclaration-missing-fail.xlsx",
+        "applicationId": "1816179142021"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -26,58 +134,10 @@
       }
     },
     {
-      "testName": "ac2 Null Co O Fail",
+      "testName": "BlanketNirmsDeclaration Present Pass",
       "inputs": {
-        "fileName": "ac2-nullcoo-fail.xlsx",
-        "applicationId": "1816178256079"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in sheet \"Gousto Packing List 17112025\" row 19.\n",
-        "model": "GOUSTO1"
-      }
-    },
-    {
-      "testName": "ac3 Invalid Co O Fail",
-      "inputs": {
-        "fileName": "ac3-invalidcoo-fail.xlsx",
-        "applicationId": "1816178256082"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Gousto Packing List 17112025\" row 19.\n",
-        "model": "GOUSTO1"
-      }
-    },
-    {
-      "testName": "ac4 Null Co OMultiple Fail",
-      "inputs": {
-        "fileName": "ac4-nullcoomultiple-fail.xlsx",
-        "applicationId": "1816178256085"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Missing Country of Origin in sheet \"Gousto Packing List 17112025\" row 19, sheet \"Gousto Packing List 17112025\" row 20, sheet \"Gousto Packing List 17112025\" row 21 in addition to 1 other locations.\n",
-        "model": "GOUSTO1"
-      }
-    },
-    {
-      "testName": "ac5 Invalid Co OMultiple Fail",
-      "inputs": {
-        "fileName": "ac5-invalidcoomultiple-fail.xlsx",
-        "applicationId": "1816178256088"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"Gousto Packing List 17112025\" row 19, sheet \"Gousto Packing List 17112025\" row 20, sheet \"Gousto Packing List 17112025\" row 21 in addition to 1 other locations.\n",
-        "model": "GOUSTO1"
-      }
-    },
-    {
-      "testName": "ac6 XCo O Pass",
-      "inputs": {
-        "fileName": "ac6-xcoo-pass.xlsx",
-        "applicationId": "1816178256178"
+        "fileName": "blanketnirmsdeclaration-present-pass.xlsx",
+        "applicationId": "1816179142024"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -86,38 +146,14 @@
       }
     },
     {
-      "testName": "ac7 Prohibited Item Fail",
+      "testName": "BlanketNirmsDeclaration WrongWording Fail",
       "inputs": {
-        "fileName": "ac7-prohibiteditem-fail.xlsx",
-        "applicationId": "1816178256091"
+        "fileName": "blanketnirmsdeclaration-wrongwording-fail.xlsx",
+        "applicationId": "1816179142027"
       },
       "expectedResults": {
-        "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Gousto Packing List 17112025\" row 19.\n",
-        "model": "GOUSTO1"
-      }
-    },
-    {
-      "testName": "ac8 Prohibited Item Multiple Fail",
-      "inputs": {
-        "fileName": "ac8-prohibiteditemmultiple-fail.xlsx",
-        "applicationId": "1816178256094"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Gousto Packing List 17112025\" row 19, sheet \"Gousto Packing List 17112025\" row 20, sheet \"Gousto Packing List 17112025\" row 21 in addition to 1 other locations.\n",
-        "model": "GOUSTO1"
-      }
-    },
-    {
-      "testName": "ac9 Prohibited Item Null Treatment Fail",
-      "inputs": {
-        "fileName": "ac9-prohibiteditemnulltreatment-fail.xlsx",
-        "applicationId": "1816178256097"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_ineligible",
-        "reasonsForFailure": "Prohibited item identified on the packing list in sheet \"Gousto Packing List 17112025\" row 19.\n",
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified.\n",
         "model": "GOUSTO1"
       }
     }
