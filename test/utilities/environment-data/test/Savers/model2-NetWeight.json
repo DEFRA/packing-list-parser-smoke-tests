@@ -1,0 +1,77 @@
+{
+  "name": "SAVERS2 NetWeight",
+  "tests": [
+    {
+      "testName": "Happypath Pass",
+      "inputs": {
+        "fileName": "happypath-pass.csv",
+        "applicationId": "REPLACE_ME"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "Missing UOM Weight Fail",
+      "inputs": {
+        "fileName": "missing-uom-weight-fail.csv",
+        "applicationId": "REPLACE_ME"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "Invalid Unit Type Fail",
+      "inputs": {
+        "fileName": "invalid-unit-type-fail.csv",
+        "applicationId": "REPLACE_ME"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "Incorrect NetweightData All Fail",
+      "inputs": {
+        "fileName": "incorrect-netweightdata-all-fail.csv",
+        "applicationId": "REPLACE_ME"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Total net weight is invalid in rows 3, 4 and 5.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader Netweight Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-netweight-unparse.csv",
+        "applicationId": "REPLACE_ME"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Filler Rows Dropped Pass",
+      "inputs": {
+        "fileName": "filler-rows-dropped-pass.csv",
+        "applicationId": "REPLACE_ME"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAVERS2"
+      }
+    }
+  ]
+}

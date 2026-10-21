@@ -1,0 +1,65 @@
+{
+  "name": "SAVERS2 CoO",
+  "tests": [
+    {
+      "testName": "NotNirms Pass",
+      "inputs": {
+        "fileName": "notnirms-pass.csv",
+        "applicationId": "REPLACE_ME"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "NullNirms Fail",
+      "inputs": {
+        "fileName": "nullnirms-fail.csv",
+        "applicationId": "REPLACE_ME"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in rows 3, 4 and 5.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "NullCoO Fail",
+      "inputs": {
+        "fileName": "nullcoo-fail.csv",
+        "applicationId": "REPLACE_ME"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in rows 3, 4 and 5.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "InvalidCoO Fail",
+      "inputs": {
+        "fileName": "invalidcoo-fail.csv",
+        "applicationId": "REPLACE_ME"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in rows 3, 4 and 5.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "HighRiskCoOTreatmentTypeSpecified Fail",
+      "inputs": {
+        "fileName": "highriskcootreatmenttypespecified-fail.csv",
+        "applicationId": "REPLACE_ME"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in rows 3, 4 and 5.\n",
+        "model": "SAVERS2"
+      }
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+RMS,RMS-GB-000247-002,,ENTER BU ID,SVNI,,,2544,5329
+export invoice no.,item,item description,uk commodity code,eu commodity code,case weight (kgs),country of origin,case quantity,net weight (kgs),nirms / sps item,nature of product,type of treatment
+158827257,1212,HARMONY HAIRSPRAY FIRM 225ML,9999999999,3305900000,2.68,GB,1,2.680,No,Ambient,Unprocessed
+158827257,3632,HERMESETAS ORIGINAL 300S,8888888888,2106909849,0.34,GB,1,0.340,No,Ambient,Processed
