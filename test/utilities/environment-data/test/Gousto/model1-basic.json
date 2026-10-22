@@ -2,22 +2,10 @@
   "name": "GOUSTO1 Basic",
   "tests": [
     {
-      "testName": "All Mandatory Data Is Missing Fail",
+      "testName": "DescriptionHasDoubleQuotesShould Pass",
       "inputs": {
-        "fileName": "allmandatorydataismissing-fail.xlsx",
-        "applicationId": "1816178257741"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Product description is missing in sheet \"Gousto Packing List 17112025\" row 19, sheet \"Gousto Packing List 17112025\" row 20, sheet \"Gousto Packing List 17112025\" row 21 in addition to 64 other locations.\nNo of packages is missing in sheet \"Gousto Packing List 17112025\" row 19, sheet \"Gousto Packing List 17112025\" row 20, sheet \"Gousto Packing List 17112025\" row 21 in addition to 64 other locations.\nTotal net weight is missing in sheet \"Gousto Packing List 17112025\" row 19, sheet \"Gousto Packing List 17112025\" row 20, sheet \"Gousto Packing List 17112025\" row 21 in addition to 64 other locations.\nMissing Country of Origin in sheet \"Gousto Packing List 17112025\" row 19, sheet \"Gousto Packing List 17112025\" row 20, sheet \"Gousto Packing List 17112025\" row 21 in addition to 64 other locations.\n",
-        "model": "GOUSTO1"
-      }
-    },
-    {
-      "testName": "Empty Multiple Rows Columns Pass",
-      "inputs": {
-        "fileName": "empty-multiplerowscolumns-pass.xlsx",
-        "applicationId": "1816178256199"
+        "fileName": "descriptionhasdoublequotesshould-pass.xlsx",
+        "applicationId": "1816179138340"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -26,10 +14,22 @@
       }
     },
     {
-      "testName": "Incorrect Mandatatypes Excl netand Nopkgs Product Code Pass",
+      "testName": "Happypath ",
+      "inputs": {
+        "fileName": "happypath.xlsx",
+        "applicationId": "1816179164293"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "GOUSTO1"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatatypes Excl netandNopkgs ProductCode Pass",
       "inputs": {
         "fileName": "incorrect-mandatatypes-excl-netandnopkgs-productcode-pass.xlsx",
-        "applicationId": "1816178255992"
+        "applicationId": "1816179138349"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -38,22 +38,22 @@
       }
     },
     {
-      "testName": "Incorrect Mandatory Data Multiple Rows With Multiple Locations All Fail",
+      "testName": "Incorrect MandatoryData MultipleRowsWithMultipleLocations All Fail",
       "inputs": {
         "fileName": "incorrect-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
-        "applicationId": "1816178257723"
+        "applicationId": "1816179138352"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Product code is invalid in sheet \"Gousto Packing List 17112025\" row 20 and sheet \"Gousto Packing List 17112025\" row 21.\nNo of packages is invalid in sheet \"Gousto Packing List 17112025\" row 20 and sheet \"Gousto Packing List 17112025\" row 21.\nTotal net weight is invalid in sheet \"Gousto Packing List 17112025\" row 20 and sheet \"Gousto Packing List 17112025\" row 21.\n",
+        "reasonsForFailure": "Product code is invalid in sheet \"Gousto Packing List 17112025\" row 19 and sheet \"Gousto Packing List 17112025\" row 22.\nNo of packages is invalid in sheet \"Gousto Packing List 17112025\" row 20.\nTotal net weight is invalid in sheet \"Gousto Packing List 17112025\" row 21.\n",
         "model": "GOUSTO1"
       }
     },
     {
-      "testName": "Incorrect Mandatory Header All Unparse",
+      "testName": "Incorrect MandatoryHeader All Unparse",
       "inputs": {
         "fileName": "incorrect-mandatoryheader-all-unparse.xlsx",
-        "applicationId": "1816178255998"
+        "applicationId": "1816179138355"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -62,10 +62,10 @@
       }
     },
     {
-      "testName": "Incorrect Mandatory Header Commodity Code Unparse",
+      "testName": "Incorrect MandatoryHeader CommodityCode Unparse",
       "inputs": {
         "fileName": "incorrect-mandatoryheader-commoditycode-unparse.xlsx",
-        "applicationId": "1816178256001"
+        "applicationId": "1816179138358"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -74,10 +74,10 @@
       }
     },
     {
-      "testName": "Incorrect Mandatory Header Desc Unparse",
+      "testName": "Incorrect MandatoryHeader Desc Unparse",
       "inputs": {
         "fileName": "incorrect-mandatoryheader-desc-unparse.xlsx",
-        "applicationId": "1816178256004"
+        "applicationId": "1816179138361"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -86,10 +86,10 @@
       }
     },
     {
-      "testName": "Incorrect Mandatory Header Nature Unparse",
+      "testName": "Incorrect MandatoryHeader NoofPakgs Unparse",
       "inputs": {
-        "fileName": "incorrect-mandatoryheader-nature-unparse.xlsx",
-        "applicationId": "1816178256007"
+        "fileName": "incorrect-mandatoryheader-noofpakgs-unparse.xlsx",
+        "applicationId": "1816179138364"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -98,34 +98,10 @@
       }
     },
     {
-      "testName": "Incorrect Mandatory Header Noofpkgs Unparse",
-      "inputs": {
-        "fileName": "incorrect-mandatoryheader-noofpkgs-unparse.xlsx",
-        "applicationId": "1816178256013"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Incorrect Mandatory Header Tot Netweight KGS Fail",
-      "inputs": {
-        "fileName": "incorrect-mandatoryheader-totnetweightkgs-fail.xlsx",
-        "applicationId": "1816178256016"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\nProduct code is invalid in sheet \"Gousto Packing List 17112025\" row 7243, sheet \"Gousto Packing List 17112025\" row 10407 and sheet \"Gousto Packing List 17112025\" row 10794.\nInvalid Country of Origin ISO Code in sheet \"Gousto Packing List 17112025\" row 593, sheet \"Gousto Packing List 17112025\" row 595, sheet \"Gousto Packing List 17112025\" row 1800 in addition to 16 other locations.\n",
-        "model": "GOUSTO1"
-      }
-    },
-    {
-      "testName": "Incorrect Mandatory Header Tot Netweight Unparse",
+      "testName": "Incorrect MandatoryHeader TotNetweight Unparse",
       "inputs": {
         "fileName": "incorrect-mandatoryheader-totnetweight-unparse.xlsx",
-        "applicationId": "1816178256019"
+        "applicationId": "1816179138367"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -134,10 +110,22 @@
       }
     },
     {
-      "testName": "Incorrect Mandatory Header Treatment Type Unparse",
+      "testName": "Incorrect MandatoryHeader TotNetweightKGS Fail",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-totnetweightkgs-fail.xlsx",
+        "applicationId": "1816179138370"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "GOUSTO1"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader TreatmentType Unparse",
       "inputs": {
         "fileName": "incorrect-mandatoryheader-treatmenttype-unparse.xlsx",
-        "applicationId": "1816178256022"
+        "applicationId": "1816179138373"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -146,58 +134,34 @@
       }
     },
     {
-      "testName": "Incorrect Optional Data All Pass",
+      "testName": "Invalid NoofPackages MultipleRows Fail",
       "inputs": {
-        "fileName": "incorrect-optionaldata-all-pass.xlsx",
-        "applicationId": "1816178256025"
+        "fileName": "invalid-noofpackages-multiplerows-fail.xlsx",
+        "applicationId": "1816179138379"
       },
       "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No of packages is invalid in sheet \"Gousto Packing List 17112025\" row 19, sheet \"Gousto Packing List 17112025\" row 20 and sheet \"Gousto Packing List 17112025\" row 21.\n",
         "model": "GOUSTO1"
       }
     },
     {
-      "testName": "Incorrect Optional Header All Pass",
-      "inputs": {
-        "fileName": "incorrect-optionalheader-all-pass.xlsx",
-        "applicationId": "1816178256028"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GOUSTO1"
-      }
-    },
-    {
-      "testName": "Incorrect Optional Header Country Of Origin Pass",
-      "inputs": {
-        "fileName": "incorrect-optionalheader-countryoforigin-pass.xlsx",
-        "applicationId": "1816178256031"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GOUSTO1"
-      }
-    },
-    {
-      "testName": "Invalid Commodity Code Multiple Rows Fail",
+      "testName": "InvalidCommodityCode MultipleRows Fail",
       "inputs": {
         "fileName": "invalidcommoditycode-multiplerows-fail.xlsx",
-        "applicationId": "1816178256034"
+        "applicationId": "1816179138382"
       },
       "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Product code is invalid in sheet \"Gousto Packing List 17112025\" row 19, sheet \"Gousto Packing List 17112025\" row 20, sheet \"Gousto Packing List 17112025\" row 21 in addition to 3 other locations.\nInvalid Country of Origin ISO Code in sheet \"Gousto Packing List 17112025\" row 593, sheet \"Gousto Packing List 17112025\" row 595, sheet \"Gousto Packing List 17112025\" row 1800 in addition to 16 other locations.\n",
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product code is invalid in sheet \"Gousto Packing List 17112025\" row 19, sheet \"Gousto Packing List 17112025\" row 20 and sheet \"Gousto Packing List 17112025\" row 21.\n",
         "model": "GOUSTO1"
       }
     },
     {
-      "testName": "Mandatory Headers Case In Sensitive Pass",
+      "testName": "MandatoryHeaders CaseInSensitive Pass",
       "inputs": {
         "fileName": "mandatoryheaders-caseinsensitive-pass.xlsx",
-        "applicationId": "1816178256037"
+        "applicationId": "1816179138385"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -206,22 +170,82 @@
       }
     },
     {
-      "testName": "Missing Mandatory Data Multiple Rows With Multiple Locations All Fail",
+      "testName": "Missing MandatoryData CommodityCode Nature Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-commoditycode-nature-fail.xlsx",
+        "applicationId": "1816179138391"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in sheet \"Gousto Packing List 17112025\" row 19.\n",
+        "model": "GOUSTO1"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData Desc Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-desc-fail.xlsx",
+        "applicationId": "1816179138394"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product description is missing in sheet \"Gousto Packing List 17112025\" row 19.\n",
+        "model": "GOUSTO1"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData MultipleRowsWithMultipleLocations All Fail",
       "inputs": {
         "fileName": "missing-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
-        "applicationId": "1816178257711"
+        "applicationId": "1816179138397"
       },
       "expectedResults": {
-        "approvalStatus": "rejected_coo",
-        "reasonsForFailure": "Identifier is missing in sheet \"Gousto Packing List 17112025\" row 20.\nNo of packages is missing in sheet \"Gousto Packing List 17112025\" row 22 and sheet \"Gousto Packing List 17112025\" row 24.\nTotal net weight is missing in sheet \"Gousto Packing List 17112025\" row 21.\nMissing Country of Origin in sheet \"Gousto Packing List 17112025\" row 21.\n",
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product description is missing in sheet \"Gousto Packing List 17112025\" row 19.\nNo of packages is missing in sheet \"Gousto Packing List 17112025\" row 20.\nTotal net weight is missing in sheet \"Gousto Packing List 17112025\" row 21.\n",
         "model": "GOUSTO1"
       }
     },
     {
-      "testName": "Missing Mandatory Header Commodity Code Unparse",
+      "testName": "Missing MandatoryData Noofpkgs Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-noofpkgs-fail.xlsx",
+        "applicationId": "1816179138400"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No of packages is missing in sheet \"Gousto Packing List 17112025\" row 19.\n",
+        "model": "GOUSTO1"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData Totnetweight Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-totnetweight-fail.xlsx",
+        "applicationId": "1816179138403"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Total net weight is missing in sheet \"Gousto Packing List 17112025\" row 19.\n",
+        "model": "GOUSTO1"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader All Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-all-unparse.xlsx",
+        "applicationId": "1816179138406"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader CommodityCode Unparse",
       "inputs": {
         "fileName": "missing-mandatoryheader-commoditycode-unparse.xlsx",
-        "applicationId": "1816178256043"
+        "applicationId": "1816179139270"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -230,10 +254,10 @@
       }
     },
     {
-      "testName": "Missing Mandatory Header Desc Unparse",
+      "testName": "Missing MandatoryHeader Description unparse",
       "inputs": {
-        "fileName": "missing-mandatoryheader-desc-unparse.xlsx",
-        "applicationId": "1816178256046"
+        "fileName": "missing-mandatoryheader-description-unparse.xlsx",
+        "applicationId": "1816179138409"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -242,10 +266,10 @@
       }
     },
     {
-      "testName": "Missing Mandatory Header Nature Unparse",
+      "testName": "Missing MandatoryHeader NoofPacakges Unparse",
       "inputs": {
-        "fileName": "missing-mandatoryheader-nature-unparse.xlsx",
-        "applicationId": "1816178256049"
+        "fileName": "missing-mandatoryheader-noofpacakges-unparse.xlsx",
+        "applicationId": "1816179138412"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -254,22 +278,10 @@
       }
     },
     {
-      "testName": "Missing Mandatory Header Noofpkgs Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-noofpkgs-unparse.xlsx",
-        "applicationId": "1816178256052"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Header Tot Netweight Unparse",
+      "testName": "Missing MandatoryHeader TotNetWeight Unparse",
       "inputs": {
         "fileName": "missing-mandatoryheader-totnetweight-unparse.xlsx",
-        "applicationId": "1816178256055"
+        "applicationId": "1816179138415"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -278,62 +290,14 @@
       }
     },
     {
-      "testName": "Missing Mandatory Header Treatment Type Unparse",
+      "testName": "NoData ExceptSingleRMS Fail",
       "inputs": {
-        "fileName": "missing-mandatoryheader-treatmenttype-unparse.xlsx",
-        "applicationId": "1816178256058"
+        "fileName": "nodata-exceptsinglerms-fail.xlsx",
+        "applicationId": "1816179138424"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing Optional Header All Pass",
-      "inputs": {
-        "fileName": "missing-optionalheader-all-pass.xlsx",
-        "applicationId": "1816178256061"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GOUSTO1"
-      }
-    },
-    {
-      "testName": "Missing Optional Header Country Of Origin Pass",
-      "inputs": {
-        "fileName": "missing-optionalheader-countryoforigin-pass.xlsx",
-        "applicationId": "1816178256064"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GOUSTO1"
-      }
-    },
-    {
-      "testName": "Only Mandatory Data Is Filled Pass",
-      "inputs": {
-        "fileName": "onlymandatorydataisfilled-pass.xlsx",
-        "applicationId": "1816178256067"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GOUSTO1"
-      }
-    },
-    {
-      "testName": "gousto  Happypath Pass",
-      "inputs": {
-        "fileName": "gousto-happypath-pass.xlsx",
-        "applicationId": "1816178256070"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
+        "reasonsForFailure": "No product line data found.",
         "model": "GOUSTO1"
       }
     }

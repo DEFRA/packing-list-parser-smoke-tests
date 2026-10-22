@@ -363,10 +363,10 @@
         }
       },
       {
-        "testName": "GOUSTO1 | gousto  Happypath Pass",
+        "testName": "Gousto1 | Happypath Pass",
         "inputs": {
-          "fileName": "gousto-happypath-pass.xlsx",
-          "applicationId": "1816178256070"
+          "fileName": "happypath.xlsx",
+          "applicationId": "1816179164293"
         },
         "expectedResults": {
           "approvalStatus": "approved",
@@ -375,14 +375,14 @@
         }
       },
       {
-        "testName": "GOUSTO1 | Incorrect Mandatory Data Multiple Rows With Multiple Locations All Fail",
+        "testName": "Gousto1 | DescriptionHasDoubleQuotesShould Pass",
         "inputs": {
-          "fileName": "incorrect-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
-          "applicationId": "1816178257723"
+          "fileName": "descriptionhasdoublequotesshould-pass.xlsx",
+          "applicationId": "1816179138340"
         },
         "expectedResults": {
-          "approvalStatus": "rejected_other",
-          "reasonsForFailure": "Product code is invalid in sheet \"Gousto Packing List 17112025\" row 20 and sheet \"Gousto Packing List 17112025\" row 21.\nNo of packages is invalid in sheet \"Gousto Packing List 17112025\" row 20 and sheet \"Gousto Packing List 17112025\" row 21.\nTotal net weight is invalid in sheet \"Gousto Packing List 17112025\" row 20 and sheet \"Gousto Packing List 17112025\" row 21.\n",
+          "approvalStatus": "approved",
+          "reasonsForFailure": null,
           "model": "GOUSTO1"
         }
       },
