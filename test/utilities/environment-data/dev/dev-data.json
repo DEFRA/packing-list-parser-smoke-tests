@@ -317,8 +317,8 @@
       {
         "testName": "GIOVANNI1 | Happypath Pass",
         "inputs": {
-          "fileName": "happypath-pass.xlsx",
-          "applicationId": "1816178184229"
+          "fileName": "incorrect-optionalheader-all-pass.xlsx",
+          "applicationId": "1816179164197"
         },
         "expectedResults": {
           "approvalStatus": "approved",
@@ -329,8 +329,8 @@
       {
         "testName": "GIOVANNI1 | All Mandatory Data Is Missing Fail",
         "inputs": {
-          "fileName": "allmandatorydataismissing-fail.xlsx",
-          "applicationId": "1816178184220"
+          "fileName": "missing-mandatorydata-all-fail.xlsx",
+          "applicationId": "1816178184277"
         },
         "expectedResults": {
           "approvalStatus": "rejected_other",

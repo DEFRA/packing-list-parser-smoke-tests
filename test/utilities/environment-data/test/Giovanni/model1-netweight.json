@@ -17,7 +17,7 @@
       "testName": "Alpha Numeric UOM Weight Fail",
       "inputs": {
         "fileName": "alpha-numeric-uom-weight-fail.xlsx",
-        "applicationId": "1816178210581"
+        "applicationId": "1816179164275"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -29,7 +29,7 @@
       "testName": "Ambiguous Units in Header Pass",
       "inputs": {
         "fileName": "ambiguous-units-in-header-pass.xlsx",
-        "applicationId": "1816178210584"
+        "applicationId": "1816179214732"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -50,18 +50,6 @@
       }
     },
     {
-      "testName": "Happypath Pass",
-      "inputs": {
-        "fileName": "happypath-pass.xlsx",
-        "applicationId": "1816178210593"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GIOVANNI1"
-      }
-    },
-    {
       "testName": "Header Typos or Special Characters Unparse",
       "inputs": {
         "fileName": "header-typos-or-specialcharacters-unparse.xlsx",
@@ -77,7 +65,7 @@
       "testName": "Header With Extra Parentheses Pass",
       "inputs": {
         "fileName": "header-with-extra-parentheses-pass.xlsx",
-        "applicationId": "1816178210599"
+        "applicationId": "1816179214735"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -89,7 +77,7 @@
       "testName": "Header With Multiple Units Pass",
       "inputs": {
         "fileName": "header-with-multiple-units-pass.xlsx",
-        "applicationId": "1816178210602"
+        "applicationId": "1816179214738"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -101,7 +89,7 @@
       "testName": "Header With Unit And Comment Pass",
       "inputs": {
         "fileName": "header-with-unit-and-comment-pass.xlsx",
-        "applicationId": "1816178210605"
+        "applicationId": "1816179214741"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -113,7 +101,7 @@
       "testName": "Header With Unit And Symbols Pass",
       "inputs": {
         "fileName": "header-with-unit-and-symbols-pass.xlsx",
-        "applicationId": "1816178210608"
+        "applicationId": "1816179214744"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -125,7 +113,7 @@
       "testName": "Incorrect Netweight Data All Fail",
       "inputs": {
         "fileName": "incorrect-netweightdata-all-fail.xlsx",
-        "applicationId": "1816178210611"
+        "applicationId": "1816179214747"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -137,7 +125,7 @@
       "testName": "Invalid Unit Type Fail",
       "inputs": {
         "fileName": "invalid-unit-type-fail.xlsx",
-        "applicationId": "1816178210614"
+        "applicationId": "1816179214753"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -149,7 +137,7 @@
       "testName": "Malformed Header Unit Pass",
       "inputs": {
         "fileName": "malformed-header-unit-pass.xlsx",
-        "applicationId": "1816178210617"
+        "applicationId": "1816179214756"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -173,7 +161,7 @@
       "testName": "Missing Paranthesis in Uom Pass",
       "inputs": {
         "fileName": "missing-paranthesis-in-uom-pass.xlsx",
-        "applicationId": "1816178210623"
+        "applicationId": "1816179214759"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -185,7 +173,7 @@
       "testName": "Mixed Case Header Pass",
       "inputs": {
         "fileName": "mixedcase-header-pass.xlsx",
-        "applicationId": "1816178210626"
+        "applicationId": "1816179214762"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -197,7 +185,7 @@
       "testName": "Mixed Units And Casing Pass",
       "inputs": {
         "fileName": "mixedunits-and-casing-pass.xlsx",
-        "applicationId": "1816178210629"
+        "applicationId": "1816179214765"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -209,7 +197,7 @@
       "testName": "Netweight Has Empty Parentheses Fail",
       "inputs": {
         "fileName": "netweight-hasempty-parentheses-fail.xlsx",
-        "applicationId": "1816178210632"
+        "applicationId": "1816179214768"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -245,7 +233,7 @@
       "testName": "Unit Missing Weight Present Fail",
       "inputs": {
         "fileName": "unit-missing-weight-present-fail.xlsx",
-        "applicationId": "1816178210653"
+        "applicationId": "1816179214771"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -257,7 +245,7 @@
       "testName": "Valid Unit Kilograms Pass",
       "inputs": {
         "fileName": "valid-unit-kilograms-pass.xlsx",
-        "applicationId": "1816178210665"
+        "applicationId": "1816179214777"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -269,7 +257,7 @@
       "testName": "Zero Data Total Net Weight Pass",
       "inputs": {
         "fileName": "zero-data-totalnetweight-pass.xlsx",
-        "applicationId": "1816178210674"
+        "applicationId": "1816179214780"
       },
       "expectedResults": {
         "approvalStatus": "approved",
