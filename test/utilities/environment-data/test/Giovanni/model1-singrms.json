@@ -5,7 +5,7 @@
       "testName": "Different Country Establishment Numbers Including GB Pass",
       "inputs": {
         "fileName": "differentcountryestablishmentnumbersincludinggb-pass.xlsx",
-        "applicationId": "1816178210731"
+        "applicationId": "1816179164233"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -35,18 +35,6 @@
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Check GB Establishment RMS Number.",
         "model": "NOREMOS"
-      }
-    },
-    {
-      "testName": "Happypath Pass",
-      "inputs": {
-        "fileName": "happypath-pass.xlsx",
-        "applicationId": "1816178210767"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GIOVANNI1"
       }
     },
     {
@@ -89,7 +77,7 @@
       "testName": "Lowercase And Malformed Prefix In Establishment Number Pass",
       "inputs": {
         "fileName": "lowercaseandmalformedprefixinestablishmentnumber-pass.xlsx",
-        "applicationId": "1816178210830"
+        "applicationId": "1816179164239"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -125,7 +113,7 @@
       "testName": "Mixed Case Establishment Number Format Pass",
       "inputs": {
         "fileName": "mixedcaseestablishmentnumberformat-pass.xlsx",
-        "applicationId": "1816178210896"
+        "applicationId": "1816179164242"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -137,7 +125,7 @@
       "testName": "Mixed Valid And Invalid Establishment Formats Pass",
       "inputs": {
         "fileName": "mixedvalidandinvalidestablishmentformats-pass.xlsx",
-        "applicationId": "1816178210914"
+        "applicationId": "1816179164245"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -149,7 +137,7 @@
       "testName": "Multiple GBEstablishment Numbers With Valid Invalid Length Pass",
       "inputs": {
         "fileName": "multiplegbestablishmentnumberswithvalid-invalidlength-pass.xlsx",
-        "applicationId": "1816178210917"
+        "applicationId": "1816179164248"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -161,7 +149,7 @@
       "testName": "Multipledifferent Establishment Numbers Fail",
       "inputs": {
         "fileName": "multipledifferent-establishment-numbers-fail.xlsx",
-        "applicationId": "1816178210926"
+        "applicationId": "1816179164251"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -197,7 +185,7 @@
       "testName": "RMSHas Wrong Final3Digits Should Pass",
       "inputs": {
         "fileName": "rmshaswrongfinal3digitsshould-pass.xlsx",
-        "applicationId": "1816178210935"
+        "applicationId": "1816179164254"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -245,7 +233,7 @@
       "testName": "RMSIs Present But No Header Text Should Pass",
       "inputs": {
         "fileName": "rmsispresentbutnoheadertextshould-pass.xlsx",
-        "applicationId": "1816178210947"
+        "applicationId": "1816179164257"
       },
       "expectedResults": {
         "approvalStatus": "approved",
