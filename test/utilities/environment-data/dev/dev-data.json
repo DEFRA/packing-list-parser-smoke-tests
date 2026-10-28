@@ -5,8 +5,8 @@
       {
         "testName": "ASDA3 | Happypath Pass",
         "inputs": {
-          "fileName": "happypath-pass.xlsx",
-          "applicationId": "1816178161495"
+          "fileName": "changeincolumnposition-pass.xlsx",
+          "applicationId": "1816178161504"
         },
         "expectedResults": {
           "approvalStatus": "approved",
@@ -29,8 +29,8 @@
       {
         "testName": "ASDA4 | Happypath",
         "inputs": {
-          "fileName": "happypath-pass.csv",
-          "applicationId": "1816178159362"
+          "fileName": "empty-multiplerowscolumns-pass.csv",
+          "applicationId": "1816178160037"
         },
         "expectedResults": {
           "approvalStatus": "approved",
@@ -53,7 +53,7 @@
       {
         "testName": "BANDM1 | Happy Path Pass",
         "inputs": {
-          "fileName": "happypath-pass.xlsx",
+          "fileName": "happypath.xlsx",
           "applicationId": "1816178989033"
         },
         "expectedResults": {
@@ -63,46 +63,22 @@
         }
       },
       {
-        "testName": "BANDM1 | ac1 Null Nirms Fail",
+        "testName": "BANDM1 | ac6 NullCoO Fail",
         "inputs": {
-          "fileName": "ac1-nullnirms-fail.xlsx",
-          "applicationId": "1816178185735"
+          "fileName": "ac6-nullcoo-fail.xlsx",
+          "applicationId": "1816178989228"
         },
         "expectedResults": {
-          "approvalStatus": "rejected_other",
-          "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified.\n",
+          "approvalStatus": "rejected_coo",
+          "reasonsForFailure": "Missing Country of Origin in sheet \"NIRMS\" row 20.\n",
           "model": "BANDM1"
-        }
-      },
-      {
-        "testName": "BANDR | Happypath Pass",
-        "inputs": {
-          "fileName": "happypath-pass.xlsx",
-          "applicationId": "1816178270377"
-        },
-        "expectedResults": {
-          "approvalStatus": "approved",
-          "reasonsForFailure": null,
-          "model": "BARTONREDMAN1"
-        }
-      },
-      {
-        "testName": "BANDR | Different Country Establishment Numbersexcludes GB Fail",
-        "inputs": {
-          "fileName": "differentcountryestablishmentnumbersexcludesgb-fail.xlsx",
-          "applicationId": "1816178270383"
-        },
-        "expectedResults": {
-          "approvalStatus": "rejected_other",
-          "reasonsForFailure": "Check GB Establishment RMS Number.",
-          "model": "NOREMOS"
         }
       },
       {
         "testName": "BANDR1 | Happypath Pass",
         "inputs": {
-          "fileName": "happypath-pass.xlsx",
-          "applicationId": "1816178295346"
+          "fileName": "missing-optionalheader-all-pass.xlsx",
+          "applicationId": "1816178295385"
         },
         "expectedResults": {
           "approvalStatus": "approved",
@@ -125,8 +101,8 @@
       {
         "testName": "BOOKER2 | Happypath pass",
         "inputs": {
-          "fileName": "happypath-pass.xlsx",
-          "applicationId": "1816178185501"
+          "fileName": "descriptionhasdoublequotesshould-pass.xlsx",
+          "applicationId": "1816178185384"
         },
         "expectedResults": {
           "approvalStatus": "approved",
@@ -137,12 +113,12 @@
       {
         "testName": "BOOKER2 | Missing MandatoryData Desc Fail",
         "inputs": {
-          "fileName": "missing-mandatorydata-desc-fail.xlsx",
-          "applicationId": "1816178185432"
+          "fileName": "missing-mandatorydata-descriptionofgoods-fail.xlsx",
+          "applicationId": "1816178185438"
         },
         "expectedResults": {
           "approvalStatus": "rejected_other",
-          "reasonsForFailure": "Product description is missing in sheet \"Sheet1\" row 19, sheet \"Sheet1\" row 20 and sheet \"Sheet1\" row 21.\n",
+          "reasonsForFailure": "Product description is missing in sheet \"Sheet1\" row 19.\n",
           "model": "BOOKER2"
         }
       },
@@ -437,8 +413,8 @@
       {
         "testName": "MANDS1 | HappyPath",
         "inputs": {
-          "fileName": "happypath.pdf",
-          "applicationId": "1816178160535"
+          "fileName": "mandatoryheaders-caseinsensitive-pass.pdf",
+          "applicationId": "1816178405542"
         },
         "expectedResults": {
           "approvalStatus": "approved",
@@ -509,8 +485,8 @@
       {
         "testName": "NISA2 | happypath Pass",
         "inputs": {
-          "fileName": "happypath-pass.xlsx",
-          "applicationId": "1816178233675"
+          "fileName": "happypathnisa2updated-pass.xlsx",
+          "applicationId": "1816178344855"
         },
         "expectedResults": {
           "approvalStatus": "approved",
@@ -521,12 +497,12 @@
       {
         "testName": "NISA2 | Missing Mandatory Data Desc Fail.xlsx",
         "inputs": {
-          "fileName": "missing-mandatorydata-desc-failxlsx.xlsx",
-          "applicationId": "1816178234140"
+          "fileName": "missing-mandatorydata-desc-fail.xlsx",
+          "applicationId": "1816178349067"
         },
         "expectedResults": {
           "approvalStatus": "rejected_other",
-          "reasonsForFailure": "Product description is missing in sheet \"MAIN20DD DEL 04082025\" row 14, sheet \"MAIN20DD DEL 04082025\" row 15 and sheet \"MAIN20DD DEL 04082025\" row 16.\n",
+          "reasonsForFailure": "Product description is missing in sheet \"MAIN20DEL 23032026\" row 15, sheet \"MAIN20DEL 23032026\" row 16, sheet \"MAIN20DEL 23032026\" row 17 in addition to 1 other locations.\n",
           "model": "NISA2"
         }
       },
@@ -677,8 +653,8 @@
       {
         "testName": "WARRENS2 | Warrens2 Happypath Pass",
         "inputs": {
-          "fileName": "warrens2-happypath-pass.xlsx",
-          "applicationId": "1816178257390"
+          "fileName": "happypath-pass.xlsx",
+          "applicationId": "1816178595898"
         },
         "expectedResults": {
           "approvalStatus": "approved",
@@ -690,19 +666,19 @@
         "testName": "WARRENS2 | All Mandatory Data Is Missing Fail",
         "inputs": {
           "fileName": "allmandatorydataismissing-fail.xlsx",
-          "applicationId": "1816178256010"
+          "applicationId": "1816178595892"
         },
         "expectedResults": {
           "approvalStatus": "rejected_other",
-          "reasonsForFailure": "No product line data found.",
+          "reasonsForFailure": "Identifier is missing in sheet \"DR SCHAR UK LTD - R\" row 50, sheet \"DR SCHAR UK LTD - R\" row 51, sheet \"DR SCHAR UK LTD - R\" row 52 in addition to 7 other locations.\nProduct description is missing in sheet \"DR SCHAR UK LTD - R\" row 50, sheet \"DR SCHAR UK LTD - R\" row 51, sheet \"DR SCHAR UK LTD - R\" row 52 in addition to 7 other locations.\nNo of packages is missing in sheet \"DR SCHAR UK LTD - R\" row 50, sheet \"DR SCHAR UK LTD - R\" row 51, sheet \"DR SCHAR UK LTD - R\" row 52 in addition to 7 other locations.\nTotal net weight is missing in sheet \"DR SCHAR UK LTD - R\" row 50, sheet \"DR SCHAR UK LTD - R\" row 51, sheet \"DR SCHAR UK LTD - R\" row 52 in addition to 7 other locations.\n",
           "model": "WARRENS2"
         }
       },
       {
         "testName": "Boots1 | Happypath Pass",
         "inputs": {
-          "fileName": "boots1-happypath-pass.xlsx",
-          "applicationId": "1816178315101"
+          "fileName": "descriptionhasdoublequotesshould-pass.xlsx",
+          "applicationId": "1816178315095"
         },
         "expectedResults": {
           "approvalStatus": "approved",
