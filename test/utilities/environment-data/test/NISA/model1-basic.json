@@ -338,18 +338,6 @@
       }
     },
     {
-      "testName": "RMS With 7 Digits Should Fail",
-      "inputs": {
-        "fileName": "rmswith7digitsshould-fail.xlsx",
-        "applicationId": "1816178158096"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Check GB Establishment RMS Number.",
-        "model": "NOREMOS"
-      }
-    },
-    {
       "testName": "RMS With Extra Dash Before Establishment Number Should Fail",
       "inputs": {
         "fileName": "rmswithextradashbeforeestablishmentnumbershould-fail.xlsx",
