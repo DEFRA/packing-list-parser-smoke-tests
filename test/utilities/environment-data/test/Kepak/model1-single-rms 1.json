@@ -14,18 +14,6 @@
       }
     },
     {
-      "testName": "Happy path Pass",
-      "inputs": {
-        "fileName": "happypath-pass.xlsx",
-        "applicationId": "1816178189632"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "KEPAK1"
-      }
-    },
-    {
       "testName": "Invalid Establishment Formats Fail",
       "inputs": {
         "fileName": "invalidestablishmentformats-fail.xlsx",

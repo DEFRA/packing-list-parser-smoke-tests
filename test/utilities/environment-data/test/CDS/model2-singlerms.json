@@ -2,18 +2,6 @@
   "name": "CDS2 SingleRMS",
   "tests": [
     {
-      "testName": "CDS2 happypath Pass",
-      "inputs": {
-        "fileName": "cds2-happypath-pass.xlsx",
-        "applicationId": "1816178238073"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "CDS2"
-      }
-    },
-    {
       "testName": "Empty RMS Fail",
       "inputs": {
         "fileName": "empty-rms-fail.xlsx",

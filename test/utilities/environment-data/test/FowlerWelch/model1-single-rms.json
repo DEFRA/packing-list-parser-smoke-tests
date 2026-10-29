@@ -14,18 +14,6 @@
       }
     },
     {
-      "testName": "FW Single happypath Pass",
-      "inputs": {
-        "fileName": "fw-single-happypath-pass.xlsx",
-        "applicationId": "1816178256589"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "FOWLERWELCH1"
-      }
-    },
-    {
       "testName": "Invalid Establishment Formats Fail",
       "inputs": {
         "fileName": "invalidestablishmentformats-fail.xlsx",

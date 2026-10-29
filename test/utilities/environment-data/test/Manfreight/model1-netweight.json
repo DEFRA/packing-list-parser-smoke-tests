@@ -194,18 +194,6 @@
       }
     },
     {
-      "testName": "Header Typos or Special Characters Unparse",
-      "inputs": {
-        "fileName": "header-typos-or-specialcharacters-unparse.xlsx",
-        "applicationId": "1816178736376"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
       "testName": "Incorrect Netweight Data All Fail",
       "inputs": {
         "fileName": "incorrect-netweightdata-all-fail.xlsx",

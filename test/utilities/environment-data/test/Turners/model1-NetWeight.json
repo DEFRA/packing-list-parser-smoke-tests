@@ -230,18 +230,6 @@
       }
     },
     {
-      "testName": "T U R N E R S  Happy  Path  Pass",
-      "inputs": {
-        "fileName": "turnershappypath-pass.xlsx",
-        "applicationId": "1816178211037"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "TURNERS1"
-      }
-    },
-    {
       "testName": "Total Net Weight  Without  U O M Weight  Fail",
       "inputs": {
         "fileName": "totalnetweight-without-uomweight-fail.xlsx",

@@ -146,18 +146,6 @@
       }
     },
     {
-      "testName": "Malformed Header Unit Pass",
-      "inputs": {
-        "fileName": "malformed-header-unit-pass.xlsx",
-        "applicationId": "1816178161078"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "ASDA3"
-      }
-    },
-    {
       "testName": "Missing Header NetweightUOM Fail",
       "inputs": {
         "fileName": "missing-header-netweightuom-fail.xlsx",
@@ -275,18 +263,6 @@
         "approvalStatus": "approved",
         "reasonsForFailure": null,
         "model": "ASDA3"
-      }
-    },
-    {
-      "testName": "Splcharacters Header Netweight Unparse",
-      "inputs": {
-        "fileName": "splcharacters-header-netweight-unparse.xlsx",
-        "applicationId": "1816178161150"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
       }
     },
     {

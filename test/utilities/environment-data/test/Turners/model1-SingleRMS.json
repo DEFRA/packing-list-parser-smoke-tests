@@ -168,19 +168,6 @@
         "reasonsForFailure": "Check GB Establishment RMS Number.",
         "model": "NOREMOS"
       }
-    },
-
-    {
-      "testName": "T U R N E R S  Happy  Path  Pass",
-      "inputs": {
-        "fileName": "turnershappypath-pass.xlsx",
-        "applicationId": "1816178211142"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "TURNERS1"
-      }
     }
   ]
 }

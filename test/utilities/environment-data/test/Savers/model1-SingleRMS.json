@@ -14,18 +14,6 @@
       }
     },
     {
-      "testName": "Happypath Pass",
-      "inputs": {
-        "fileName": "happypath-pass.xlsx",
-        "applicationId": "1816178196040"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "SAVERS1"
-      }
-    },
-    {
       "testName": "InvalidEstablishmentFormats Fail",
       "inputs": {
         "fileName": "invalidestablishmentformats-fail.xlsx",

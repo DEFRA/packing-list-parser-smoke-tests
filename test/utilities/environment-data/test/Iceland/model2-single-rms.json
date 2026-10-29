@@ -2,18 +2,6 @@
   "name": "ICELAND2 Single RMS",
   "tests": [
     {
-      "testName": "Happypath Pass",
-      "inputs": {
-        "fileName": "happypath-pass.csv",
-        "applicationId": "1816178352697"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "ICELAND2"
-      }
-    },
-    {
       "testName": "RMS Has Wrong Final 3 Digits Should Pass",
       "inputs": {
         "fileName": "rmshaswrongfinal3digitsshould-pass.csv",

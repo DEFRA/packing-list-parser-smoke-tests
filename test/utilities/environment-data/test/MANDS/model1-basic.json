@@ -2,6 +2,18 @@
   "name": "MANDS1 Basic",
   "tests": [
     {
+      "testName": "Happypath Pass",
+      "inputs": {
+        "fileName": "happypath-pass.pdf",
+        "applicationId": "1816178405740"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "MANDS1"
+      }
+    },
+    {
       "testName": "Missing Mandatory Data Commodity Code Fail",
       "inputs": {
         "fileName": "missing-mandatorydata-commoditycode-fail.pdf",

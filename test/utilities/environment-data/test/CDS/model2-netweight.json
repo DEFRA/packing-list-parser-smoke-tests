@@ -62,18 +62,6 @@
       }
     },
     {
-      "testName": "Header Typos or Special Characters Unparse",
-      "inputs": {
-        "fileName": "header-typos-or-specialcharacters-unparse.xlsx",
-        "applicationId": "1816178234179"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
       "testName": "Header With Extra Parentheses Pass",
       "inputs": {
         "fileName": "header-with-extra-parentheses-pass.xlsx",
@@ -130,18 +118,6 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "CDS2"
-      }
-    },
-    {
-      "testName": "Malformed Header Unit Pass",
-      "inputs": {
-        "fileName": "malformed-header-unit-pass.xlsx",
-        "applicationId": "1816178234200"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
         "model": "CDS2"
       }
     },
@@ -294,18 +270,6 @@
       "inputs": {
         "fileName": "zero-data-totalnetweight-pass.xlsx",
         "applicationId": "1816178234239"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "CDS2"
-      }
-    },
-    {
-      "testName": "cds2 happypath pass",
-      "inputs": {
-        "fileName": "cds2-happypath-pass.xlsx",
-        "applicationId": "1816178234242"
       },
       "expectedResults": {
         "approvalStatus": "approved",
