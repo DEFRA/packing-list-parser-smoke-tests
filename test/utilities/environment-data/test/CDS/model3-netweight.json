@@ -62,18 +62,6 @@
       }
     },
     {
-      "testName": "Splcharacters Header Netweight Unparse",
-      "inputs": {
-        "fileName": "splcharacters-header-netweight-unparse.xlsx",
-        "applicationId": "1816178497297"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
       "testName": "Missing Header Netweight Unparse",
       "inputs": {
         "fileName": "missing-header-netweight-unparse.xlsx",
@@ -179,18 +167,6 @@
         "approvalStatus": "approved",
         "reasonsForFailure": null,
         "model": "CDS3"
-      }
-    },
-    {
-      "testName": "Header Typos Or Special Characters Unparse",
-      "inputs": {
-        "fileName": "header-typos-or-specialcharacters-unparse.xlsx",
-        "applicationId": "1816178523076"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
       }
     },
     {

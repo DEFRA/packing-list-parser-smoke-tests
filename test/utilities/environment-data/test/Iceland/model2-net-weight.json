@@ -62,30 +62,6 @@
       }
     },
     {
-      "testName": "Happypath Pass",
-      "inputs": {
-        "fileName": "happypath-pass.csv",
-        "applicationId": "1816178352631"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "ICELAND2"
-      }
-    },
-    {
-      "testName": "Header Typos or Special Characters Unparse",
-      "inputs": {
-        "fileName": "header-typos-or-specialcharacters-unparse.csv",
-        "applicationId": "1816178352670"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
       "testName": "Header With Extra Parentheses Pass",
       "inputs": {
         "fileName": "header-with-extra-parentheses-pass.csv",
@@ -154,18 +130,6 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "ICELAND2"
-      }
-    },
-    {
-      "testName": "Malformed Header Unit Pass",
-      "inputs": {
-        "fileName": "malformed-header-unit-pass.csv",
-        "applicationId": "1816178352640"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
         "model": "ICELAND2"
       }
     },

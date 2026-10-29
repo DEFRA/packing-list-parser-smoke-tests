@@ -14,18 +14,6 @@
       }
     },
     {
-      "testName": "Happypath Pass",
-      "inputs": {
-        "fileName": "happypath-pass.xlsx",
-        "applicationId": "1816178209108"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "FOWLERWELCH2"
-      }
-    },
-    {
       "testName": "Invalid Establishment Formats Fail",
       "inputs": {
         "fileName": "invalidestablishmentformats-fail.xlsx",

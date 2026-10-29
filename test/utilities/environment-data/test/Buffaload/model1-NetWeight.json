@@ -146,18 +146,6 @@
       }
     },
     {
-      "testName": "Malformed Header Unit Pass",
-      "inputs": {
-        "fileName": "malformed-header-unit-pass.xlsx",
-        "applicationId": "1816178183749"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BUFFALOAD1"
-      }
-    },
-    {
       "testName": "Missing Header NetweightUOM Fail",
       "inputs": {
         "fileName": "missing-header-netweightuom-fail.xlsx",

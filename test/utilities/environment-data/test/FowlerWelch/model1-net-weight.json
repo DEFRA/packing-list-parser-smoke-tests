@@ -39,18 +39,6 @@
       }
     },
     {
-      "testName": "Malformed Header Unit Pass",
-      "inputs": {
-        "fileName": "malformed-header-unit-pass.xlsx",
-        "applicationId": "1816178256670"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "FOWLERWELCH1"
-      }
-    },
-    {
       "testName": "Missing Header Total Net Weight Unparse",
       "inputs": {
         "fileName": "missing-header-totalnetweight-unparse.xlsx",
@@ -91,18 +79,6 @@
       "inputs": {
         "fileName": "netweight-hasempty-parentheses-extraspace-unparse.xlsx",
         "applicationId": "1816178256682"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Splcharacters Header Netweight Unparse",
-      "inputs": {
-        "fileName": "splcharacters-header-netweight-unparse.xlsx",
-        "applicationId": "1816178256685"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",

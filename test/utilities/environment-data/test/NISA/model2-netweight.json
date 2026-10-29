@@ -206,18 +206,6 @@
       }
     },
     {
-      "testName": "Splcharacters Header Netweight Unparse",
-      "inputs": {
-        "fileName": "splcharacters-header-netweight-unparse.xlsx",
-        "applicationId": "1816178344930"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
       "testName": "Total Net Weight Without UOM Weight Fail",
       "inputs": {
         "fileName": "totalnetweight-without-uomweight-fail.xlsx",

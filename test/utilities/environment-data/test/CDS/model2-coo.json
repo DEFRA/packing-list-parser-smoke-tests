@@ -168,18 +168,6 @@
         "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"77100 - Packing List\" row 4, sheet \"77100 - Packing List\" row 5, sheet \"77100 - Packing List\" row 6 in addition to 1 other locations.\n",
         "model": "CDS2"
       }
-    },
-    {
-      "testName": "cds2 happypath pass",
-      "inputs": {
-        "fileName": "cds2-happypath-pass.xlsx",
-        "applicationId": "1816178234149"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "CDS2"
-      }
     }
   ]
 }

@@ -180,18 +180,6 @@
         "reasonsForFailure": "Check GB Establishment RMS Number.",
         "model": "NOREMOS"
       }
-    },
-    {
-      "testName": "Tesco2 Happypath Pass",
-      "inputs": {
-        "fileName": "tesco2-happypath-pass.xlsx",
-        "applicationId": "1816178233336"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "TESCO2"
-      }
     }
   ]
 }

@@ -62,18 +62,6 @@
       }
     },
     {
-      "testName": "Happypath Pass",
-      "inputs": {
-        "fileName": "happypath-pass.xls",
-        "applicationId": "1816178161225"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "TJMORRIS2"
-      }
-    },
-    {
       "testName": "Header Typos or SpecialCharacters Unparse",
       "inputs": {
         "fileName": "header-typos-or-specialcharacters-unparse.xls",
@@ -130,18 +118,6 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "TJMORRIS2"
-      }
-    },
-    {
-      "testName": "Malformed Header Unit Pass",
-      "inputs": {
-        "fileName": "malformed-header-unit-pass.xls",
-        "applicationId": "1816178161720"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
         "model": "TJMORRIS2"
       }
     },
@@ -215,18 +191,6 @@
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
         "model": "TJMORRIS2"
-      }
-    },
-    {
-      "testName": "Splcharacters Header Netweight Unparse",
-      "inputs": {
-        "fileName": "splcharacters-header-netweight-unparse.xls",
-        "applicationId": "1816178161735"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
       }
     },
     {

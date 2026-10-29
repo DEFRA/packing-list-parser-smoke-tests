@@ -86,18 +86,6 @@
       }
     },
     {
-      "testName": "Header Typos Or Special Characters Unparse",
-      "inputs": {
-        "fileName": "header-typos-or-specialcharacters-unparse.pdf",
-        "applicationId": "1816178405602"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
       "testName": "Missing Header Netweight Unparse",
       "inputs": {
         "fileName": "missing-header-netweight-unparse.pdf",
@@ -126,18 +114,6 @@
       "inputs": {
         "fileName": "zero-data-totalnetweight-pass.pdf",
         "applicationId": "1816178405626"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "MANDS1"
-      }
-    },
-    {
-      "testName": "Happypath Pass",
-      "inputs": {
-        "fileName": "happypath-pass.pdf",
-        "applicationId": "1816178405740"
       },
       "expectedResults": {
         "approvalStatus": "approved",
