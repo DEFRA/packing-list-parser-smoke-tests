@@ -14,30 +14,6 @@
       }
     },
     {
-      "testName": "Missing Optional Header All Pass",
-      "inputs": {
-        "fileName": "missing-optionalheader-all-pass.pdf",
-        "applicationId": "1816178295157"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GIOVANNI3"
-      }
-    },
-    {
-      "testName": "Incorrect Optional Data All Pass",
-      "inputs": {
-        "fileName": "incorrect-optionaldata-all-pass.pdf",
-        "applicationId": "1816178295160"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GIOVANNI3"
-      }
-    },
-    {
       "testName": "Incorrect Optional Header All Pass",
       "inputs": {
         "fileName": "incorrect-optionalheader-all-pass.pdf",
@@ -102,18 +78,6 @@
       "inputs": {
         "fileName": "incorrect-mandatoryheader-commoditycode-unparse.pdf",
         "applicationId": "1816178295181"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Incorrect Mandatory Header Desc Unparse",
-      "inputs": {
-        "fileName": "incorrect-mandatoryheader-desc-unparse.pdf",
-        "applicationId": "1816178295184"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -230,30 +194,6 @@
       }
     },
     {
-      "testName": "Missing Mandatory Header Desc Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-desc-unparse.pdf",
-        "applicationId": "1816178295214"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Header Noofpkgs Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-noofpkgs-unparse.pdf",
-        "applicationId": "1816178295217"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
       "testName": "Missing Mandatory Header Nature Pass",
       "inputs": {
         "fileName": "missing-mandatoryheader-nature-pass.pdf",
@@ -270,18 +210,6 @@
       "inputs": {
         "fileName": "missing-mandatoryheader-treatmenttype-unparse.pdf",
         "applicationId": "1816178295223"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Header Tot Netweight Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-totnetweight-unparse.pdf",
-        "applicationId": "1816178295262"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",

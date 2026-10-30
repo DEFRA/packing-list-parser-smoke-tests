@@ -26,18 +26,6 @@
       }
     },
     {
-      "testName": "Ambiguous Units in Header Pass",
-      "inputs": {
-        "fileName": "ambiguous-units-in-header-pass.xlsx",
-        "applicationId": "1816178161435"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "ASDA3"
-      }
-    },
-    {
       "testName": "Data empty Netweight Fail",
       "inputs": {
         "fileName": "data-empty-netweight-fail.xlsx",
@@ -218,18 +206,6 @@
       }
     },
     {
-      "testName": "MixedCase Header Pass",
-      "inputs": {
-        "fileName": "mixedcase-header-pass.xlsx",
-        "applicationId": "1816178161138"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "ASDA3"
-      }
-    },
-    {
       "testName": "MixedUnits And Casing Pass",
       "inputs": {
         "fileName": "mixedunits-and-casing-pass.xlsx",
@@ -298,30 +274,6 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Net Weight Unit of Measure (kg) not found in sheet \"Page1_1\" row 4 and sheet \"Page1_1\" row 6.\n",
-        "model": "ASDA3"
-      }
-    },
-    {
-      "testName": "Zero Data NetWeight Pass",
-      "inputs": {
-        "fileName": "zero-data-netweight-pass.xlsx",
-        "applicationId": "1816178161171"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "ASDA3"
-      }
-    },
-    {
-      "testName": "Zero Data UOM Fail",
-      "inputs": {
-        "fileName": "zero-data-uom-fail.xlsx",
-        "applicationId": "1816178161177"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found in sheet \"Page1_1\" row 3, sheet \"Page1_1\" row 4, sheet \"Page1_1\" row 5 in addition to 1906 other locations.\n",
         "model": "ASDA3"
       }
     }

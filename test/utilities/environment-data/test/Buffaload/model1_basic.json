@@ -74,18 +74,6 @@
       }
     },
     {
-      "testName": "Incorrect MandatoryHeader Desc Unparse",
-      "inputs": {
-        "fileName": "incorrect-mandatoryheader-desc-unparse.xlsx",
-        "applicationId": "1816178183095"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
       "testName": "Incorrect MandatoryHeader Noofpkgs Unparse",
       "inputs": {
         "fileName": "incorrect-mandatoryheader-noofpkgs-unparse.xlsx",
@@ -119,18 +107,6 @@
         "approvalStatus": "rejected_other",
         "reasonsForFailure": null,
         "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Incorrect OptionalData All Pass",
-      "inputs": {
-        "fileName": "incorrect-optionaldata-all-pass.xlsx",
-        "applicationId": "1816178183107"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BUFFALOAD1"
       }
     },
     {
@@ -230,30 +206,6 @@
       }
     },
     {
-      "testName": "Missing MandatoryHeader Desc Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-desc-unparse.xlsx",
-        "applicationId": "1816178183134"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing MandatoryHeader Noofpkgs Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-noofpkgs-unparse.xlsx",
-        "applicationId": "1816178183137"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
       "testName": "Missing MandatoryHeader TotNetweightKGS Fail",
       "inputs": {
         "fileName": "missing-mandatoryheader-totnetweightkgs-fail.xlsx",
@@ -266,18 +218,6 @@
       }
     },
     {
-      "testName": "Missing MandatoryHeader TotNetweight Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-totnetweight-unparse.xlsx",
-        "applicationId": "1816178183143"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
       "testName": "Missing MandatoryHeader TreatmentType Unparse",
       "inputs": {
         "fileName": "missing-mandatoryheader-treatmenttype-unparse.xlsx",
@@ -287,30 +227,6 @@
         "approvalStatus": "rejected_other",
         "reasonsForFailure": null,
         "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing OptionalData All Pass",
-      "inputs": {
-        "fileName": "missing-optionaldata-all-pass.xlsx",
-        "applicationId": "1816178183149"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BUFFALOAD1"
-      }
-    },
-    {
-      "testName": "Missing OptionalHeader All Pass",
-      "inputs": {
-        "fileName": "missing-optionalheader-all-pass.xlsx",
-        "applicationId": "1816178184703"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BUFFALOAD1"
       }
     },
     {

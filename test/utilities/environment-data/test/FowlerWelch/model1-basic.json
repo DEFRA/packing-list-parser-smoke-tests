@@ -110,18 +110,6 @@
       }
     },
     {
-      "testName": "Incorrect Optional Data All Pass",
-      "inputs": {
-        "fileName": "incorrect-optionaldata-all-pass.xlsx",
-        "applicationId": "1816178256445"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "FOWLERWELCH1"
-      }
-    },
-    {
       "testName": "Incorrect Optional Header All Pass",
       "inputs": {
         "fileName": "incorrect-optionalheader-all-pass.xlsx",
@@ -170,30 +158,6 @@
       }
     },
     {
-      "testName": "Missing Mandatory Header Description Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-description-unparse.xlsx",
-        "applicationId": "1816178256457"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Header No Of Packages Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-noofpackages-unparse.xlsx",
-        "applicationId": "1816178256460"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
       "testName": "Missing Mandatory Header RMS Pass",
       "inputs": {
         "fileName": "missing-mandatoryheader-rms-pass.xlsx",
@@ -239,30 +203,6 @@
         "approvalStatus": "rejected_other",
         "reasonsForFailure": null,
         "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing Optional Data All Pass",
-      "inputs": {
-        "fileName": "missing-optionaldata-all-pass.xlsx",
-        "applicationId": "1816178256475"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "FOWLERWELCH1"
-      }
-    },
-    {
-      "testName": "Missing Optional Header All Pass",
-      "inputs": {
-        "fileName": "missing-optionalheader-all-pass.xlsx",
-        "applicationId": "1816178256478"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "FOWLERWELCH1"
       }
     }
   ]

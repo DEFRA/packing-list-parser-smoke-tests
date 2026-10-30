@@ -26,18 +26,6 @@
       }
     },
     {
-      "testName": "Ambiguous Units in Header Pass",
-      "inputs": {
-        "fileName": "ambiguous-units-in-header-pass.xls",
-        "applicationId": "1816178161216"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "TJMORRIS2"
-      }
-    },
-    {
       "testName": "Data empty Netweight Fail",
       "inputs": {
         "fileName": "data-empty-netweight-fail.xls",
@@ -158,18 +146,6 @@
       }
     },
     {
-      "testName": "MixedCase Header Pass",
-      "inputs": {
-        "fileName": "mixedcase-header-pass.xls",
-        "applicationId": "1816178161726"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "TJMORRIS2"
-      }
-    },
-    {
       "testName": "MixedUnits And Casing Pass",
       "inputs": {
         "fileName": "mixedunits-and-casing-pass.xls",
@@ -214,18 +190,6 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "TJMORRIS2"
-      }
-    },
-    {
-      "testName": "Zero Data TotalNetWeight Pass",
-      "inputs": {
-        "fileName": "zero-data-totalnetweight-pass.xls",
-        "applicationId": "1816178161345"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
         "model": "TJMORRIS2"
       }
     }

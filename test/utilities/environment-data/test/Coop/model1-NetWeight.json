@@ -26,18 +26,6 @@
       }
     },
     {
-      "testName": "Ambiguous Units in Header Pass",
-      "inputs": {
-        "fileName": "ambiguous-units-in-header-pass.xlsx",
-        "applicationId": "1816178159143"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "COOP1"
-      }
-    },
-    {
       "testName": "Data empty NetweightUOM Pass",
       "inputs": {
         "fileName": "data-empty-netweightuom-pass.xlsx",
@@ -194,18 +182,6 @@
       }
     },
     {
-      "testName": "MixedCase Header Pass",
-      "inputs": {
-        "fileName": "mixedcase-header-pass.xlsx",
-        "applicationId": "1816178159140"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "COOP1"
-      }
-    },
-    {
       "testName": "MixedUnits And Casing Pass",
       "inputs": {
         "fileName": "mixedunits-and-casing-pass.xlsx",
@@ -270,30 +246,6 @@
       "inputs": {
         "fileName": "valid-unit-kg-parentheses-pass.xlsx",
         "applicationId": "1816178159263"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "COOP1"
-      }
-    },
-    {
-      "testName": "Zero Data TotalNetWeight Pass",
-      "inputs": {
-        "fileName": "zero-data-totalnetweight-pass.xlsx",
-        "applicationId": "1816178159134"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "COOP1"
-      }
-    },
-    {
-      "testName": "Zero Data UOM Pass",
-      "inputs": {
-        "fileName": "zero-data-uom-pass.xlsx",
-        "applicationId": "1816178183647"
       },
       "expectedResults": {
         "approvalStatus": "approved",

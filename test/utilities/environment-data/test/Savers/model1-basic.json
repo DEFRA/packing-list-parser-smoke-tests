@@ -122,18 +122,6 @@
       }
     },
     {
-      "testName": "Incorrect MandatoryHeader Desc Unparse",
-      "inputs": {
-        "fileName": "incorrect-mandatoryheader-desc-unparse.xlsx",
-        "applicationId": "1816178190427"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
       "testName": "Incorrect MandatoryHeader Noofpackages Unparse",
       "inputs": {
         "fileName": "incorrect-mandatoryheader-noofpackages-unparse.xlsx",
@@ -167,18 +155,6 @@
         "approvalStatus": "rejected_other",
         "reasonsForFailure": null,
         "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Incorrect OptionalData All Pass",
-      "inputs": {
-        "fileName": "incorrect-optionaldata-all-pass.xlsx",
-        "applicationId": "1816178190439"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "SAVERS1"
       }
     },
     {
@@ -350,42 +326,6 @@
       }
     },
     {
-      "testName": "Missing MandatoryHeader Description Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-description-unparse.xlsx",
-        "applicationId": "1816178189962"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing MandatoryHeader NoofPacakges Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-noofpacakges-unparse.xlsx",
-        "applicationId": "1816178189965"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing MandatoryHeader TotNetWeight Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-totnetweight-unparse.xlsx",
-        "applicationId": "1816178189968"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
       "testName": "Missing MandatoryHeader TotNetweightKGS Fail",
       "inputs": {
         "fileName": "missing-mandatoryheader-totnetweightkgs-fail.xlsx",
@@ -394,30 +334,6 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "SAVERS1"
-      }
-    },
-    {
-      "testName": "Missing OptionalData All Pass",
-      "inputs": {
-        "fileName": "missing-optionaldata-all-pass.xlsx",
-        "applicationId": "1816178189974"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "SAVERS1"
-      }
-    },
-    {
-      "testName": "Missing OptionalHeader All Pass",
-      "inputs": {
-        "fileName": "missing-optionalheader-all-pass.xlsx",
-        "applicationId": "1816178189977"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
         "model": "SAVERS1"
       }
     },

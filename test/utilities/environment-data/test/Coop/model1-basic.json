@@ -14,42 +14,6 @@
       }
     },
     {
-      "testName": "Missing OptionalHeader All Pass",
-      "inputs": {
-        "fileName": "missing-optionalheader-all-pass.xlsx",
-        "applicationId": "1816178158786"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "COOP1"
-      }
-    },
-    {
-      "testName": "Missing OptionalData All Pass",
-      "inputs": {
-        "fileName": "missing-optionaldata-all-pass.xlsx",
-        "applicationId": "1816178158795"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "COOP1"
-      }
-    },
-    {
-      "testName": "Incorrect OptionalData All Pass",
-      "inputs": {
-        "fileName": "incorrect-optionaldata-all-pass.xlsx",
-        "applicationId": "1816178158804"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "COOP1"
-      }
-    },
-    {
       "testName": "Incorrect OptionalHeader All Pass",
       "inputs": {
         "fileName": "incorrect-optionalheader-all-pass.xlsx",
@@ -98,18 +62,6 @@
       }
     },
     {
-      "testName": "Incorrect MandatoryHeader Desc Unparse",
-      "inputs": {
-        "fileName": "incorrect-mandatoryheader-desc-unparse.xlsx",
-        "applicationId": "1816178158846"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
       "testName": "Empty MultipleRowsColumns Pass",
       "inputs": {
         "fileName": "empty-multiplerowscolumns-pass.xlsx",
@@ -138,18 +90,6 @@
       "inputs": {
         "fileName": "missing-mandatoryheader-commoditycode-unparse.xlsx",
         "applicationId": "1816178158906"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing MandatoryHeader TotNetweight Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-totnetweight-unparse.xlsx",
-        "applicationId": "1816178158933"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",

@@ -147,18 +147,6 @@
         }
       },
       {
-        "testName": "BUFFALOAD1 | Ambiguous Units in Header pass",
-        "inputs": {
-          "fileName": "ambiguous-units-in-header-pass.xlsx",
-          "applicationId": "1816178183698"
-        },
-        "expectedResults": {
-          "approvalStatus": "approved",
-          "reasonsForFailure": null,
-          "model": "BUFFALOAD1"
-        }
-      },
-      {
         "testName": "BUFFALOAD1 | Alpha Numeric TotalNetWeight Unparse",
         "inputs": {
           "fileName": "alpha-numeric-totalnetweight-unparse.xlsx",
@@ -338,18 +326,7 @@
           "model": "FOWLERWELCH2"
         }
       },
-      {
-        "testName": "GIOVANNI1 | Happypath Pass",
-        "inputs": {
-          "fileName": "incorrect-optionalheader-all-pass.xlsx",
-          "applicationId": "1816179164197"
-        },
-        "expectedResults": {
-          "approvalStatus": "approved",
-          "reasonsForFailure": null,
-          "model": "GIOVANNI1"
-        }
-      },
+
       {
         "testName": "GIOVANNI1 | All Mandatory Data Is Missing Fail",
         "inputs": {

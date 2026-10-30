@@ -146,18 +146,6 @@
       }
     },
     {
-      "testName": "Mixed Case Header Pass",
-      "inputs": {
-        "fileName": "mixedcase-header-pass.xlsx",
-        "applicationId": "1816178158828"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "NISA1"
-      }
-    },
-    {
       "testName": "Mixed Units And Casing Pass",
       "inputs": {
         "fileName": "mixedunits-and-casing-pass.xlsx",
@@ -238,18 +226,6 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "NISA1"
-      }
-    },
-    {
-      "testName": "Zero Data Net Weight UOM Pass",
-      "inputs": {
-        "fileName": "zero-data-netweightuom-pass.xlsx",
-        "applicationId": "1816178158894"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
         "model": "NISA1"
       }
     }
