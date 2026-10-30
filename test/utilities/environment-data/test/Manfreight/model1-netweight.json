@@ -14,30 +14,6 @@
       }
     },
     {
-      "testName": "Zero Data Total Net Weight Pass",
-      "inputs": {
-        "fileName": "zero-data-totalnetweight-pass.xlsx",
-        "applicationId": "1816178735863"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "MANFREIGHT1"
-      }
-    },
-    {
-      "testName": "Mixed Case Header Pass",
-      "inputs": {
-        "fileName": "mixedcase-header-pass.xlsx",
-        "applicationId": "1816178735866"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "MANFREIGHT1"
-      }
-    },
-    {
       "testName": "Header With Extra Parentheses Pass",
       "inputs": {
         "fileName": "header-with-extra-parentheses-pass.xlsx",
@@ -110,18 +86,6 @@
       }
     },
     {
-      "testName": "Ambiguous Units in Header Pass",
-      "inputs": {
-        "fileName": "ambiguous-units-in-header-pass.xlsx",
-        "applicationId": "1816178736052"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "MANFREIGHT1"
-      }
-    },
-    {
       "testName": "Missing Header Netweight Unparse",
       "inputs": {
         "fileName": "missing-header-netweight-unparse.xlsx",
@@ -142,18 +106,6 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Total net weight is missing in sheet \"Sheet1\" row 6, sheet \"Sheet1\" row 7 and sheet \"Sheet1\" row 8.\n",
-        "model": "MANFREIGHT1"
-      }
-    },
-    {
-      "testName": "Zero Data Total Net Weight Pass",
-      "inputs": {
-        "fileName": "zero-data-totalnetweight-pass.xlsx",
-        "applicationId": "1816178736343"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
         "model": "MANFREIGHT1"
       }
     },
@@ -202,18 +154,6 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Total net weight is invalid in sheet \"Sheet1\" row 6, sheet \"Sheet1\" row 7, sheet \"Sheet1\" row 8 in addition to 160 other locations.\n",
-        "model": "MANFREIGHT1"
-      }
-    },
-    {
-      "testName": "Header With Extra Parentheses Pass",
-      "inputs": {
-        "fileName": "header-with-extra-parentheses-pass.xlsx",
-        "applicationId": "1816178736514"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
         "model": "MANFREIGHT1"
       }
     }

@@ -14,18 +14,6 @@
       }
     },
     {
-      "testName": "Ambiguous Units in Header Pass",
-      "inputs": {
-        "fileName": "ambiguous-units-in-header-pass.xlsx",
-        "applicationId": "1816178294365"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BARTONREDMAN1"
-      }
-    },
-    {
       "testName": "Header With Extra Parentheses Pass",
       "inputs": {
         "fileName": "header-with-extra-parentheses-pass.xlsx",

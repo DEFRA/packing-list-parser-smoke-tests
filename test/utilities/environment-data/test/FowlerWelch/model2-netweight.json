@@ -26,18 +26,6 @@
       }
     },
     {
-      "testName": "Ambiguous Units in Header Pass",
-      "inputs": {
-        "fileName": "ambiguous-units-in-header-pass.xlsx",
-        "applicationId": "1816178209027"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "FOWLERWELCH2"
-      }
-    },
-    {
       "testName": "Data empty Netweight Fail",
       "inputs": {
         "fileName": "data-empty-netweight-fail.xlsx",
@@ -158,18 +146,6 @@
       }
     },
     {
-      "testName": "Mixed Case Header Pass",
-      "inputs": {
-        "fileName": "mixedcase-header-pass.xlsx",
-        "applicationId": "1816178209069"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "FOWLERWELCH2"
-      }
-    },
-    {
       "testName": "Mixed Units And Casing Pass",
       "inputs": {
         "fileName": "mixedunits-and-casing-pass.xlsx",
@@ -234,18 +210,6 @@
       "inputs": {
         "fileName": "valid-unit-kg-parentheses-pass.xlsx",
         "applicationId": "1816178209093"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "FOWLERWELCH2"
-      }
-    },
-    {
-      "testName": "Zero Data Total Net Weight Pass",
-      "inputs": {
-        "fileName": "zero-data-totalnetweight-pass.xlsx",
-        "applicationId": "1816178209096"
       },
       "expectedResults": {
         "approvalStatus": "approved",

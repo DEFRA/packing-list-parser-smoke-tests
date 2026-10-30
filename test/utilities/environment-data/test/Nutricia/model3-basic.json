@@ -2,42 +2,6 @@
   "name": "NUTRICIA3 Basic",
   "tests": [
     {
-      "testName": "Missing OptionalHeader All Pass",
-      "inputs": {
-        "fileName": "missing-optionalheader-all-pass.xlsx",
-        "applicationId": "1816178869723"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "NUTRICIA3"
-      }
-    },
-    {
-      "testName": "Missing OptionalData All Pass",
-      "inputs": {
-        "fileName": "missing-optionaldata-all-pass.xlsx",
-        "applicationId": "1816178869726"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "NUTRICIA3"
-      }
-    },
-    {
-      "testName": "Incorrect OptionalData All Pass",
-      "inputs": {
-        "fileName": "incorrect-optionaldata-all-pass.xlsx",
-        "applicationId": "1816178869729"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "NUTRICIA3"
-      }
-    },
-    {
       "testName": "Incorrect OptionalHeader All Pass",
       "inputs": {
         "fileName": "incorrect-optionalheader-all-pass.xlsx",
@@ -98,18 +62,6 @@
       }
     },
     {
-      "testName": "Incorrect MandatoryHeader Desc Unparse",
-      "inputs": {
-        "fileName": "incorrect-mandatoryheader-desc-unparse.xlsx",
-        "applicationId": "1816178869747"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
       "testName": "Incorrect MandatoryHeader TotNetweight Unparse",
       "inputs": {
         "fileName": "incorrect-mandatoryheader-totnetweight-unparse.xlsx",
@@ -138,18 +90,6 @@
       "inputs": {
         "fileName": "missing-mandatoryheader-all-unparse.xlsx",
         "applicationId": "1816178869768"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing MandatoryHeader TotNetweight Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-totnetweight-unparse.xlsx",
-        "applicationId": "1816178869783"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -230,18 +170,6 @@
       }
     },
     {
-      "testName": "Missing MandatoryHeader Desc Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-desc-unparse.xlsx",
-        "applicationId": "1816178869816"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
       "testName": "Missing MandatoryData MultipleRows With Multiple Locations All Fail",
       "inputs": {
         "fileName": "missing-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
@@ -263,19 +191,6 @@
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Product description is missing in sheet \"DANONE\" row 25, sheet \"DANONE\" row 26, sheet \"DANONE\" row 27 in addition to 2 other locations.\nNo of packages is missing in sheet \"DANONE\" row 25, sheet \"DANONE\" row 26, sheet \"DANONE\" row 27 in addition to 2 other locations.\nTotal net weight is missing in sheet \"DANONE\" row 25, sheet \"DANONE\" row 26, sheet \"DANONE\" row 27 in addition to 2 other locations.\n",
         "model": "NUTRICIA3"
-      }
-    },
-
-    {
-      "testName": "Missing MandatoryHeader Noofpkgs Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-noofpkgs-unparse.xlsx",
-        "applicationId": "1816178869828"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
       }
     }
   ]

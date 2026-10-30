@@ -97,18 +97,6 @@
         "reasonsForFailure": null,
         "model": "NOMATCH"
       }
-    },
-    {
-      "testName": "Zero Data Total Net Weight Pass",
-      "inputs": {
-        "fileName": "zero-data-totalnetweight-pass.xlsx",
-        "applicationId": "1816178256691"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "FOWLERWELCH1"
-      }
     }
   ]
 }

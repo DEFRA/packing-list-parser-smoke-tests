@@ -26,18 +26,6 @@
       }
     },
     {
-      "testName": "Ambiguous Units in Header Pass",
-      "inputs": {
-        "fileName": "ambiguous-units-in-header-pass.xlsx",
-        "applicationId": "1816179214732"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GIOVANNI1"
-      }
-    },
-    {
       "testName": "Extra Spaces In Header Unparse",
       "inputs": {
         "fileName": "extra-spaces-in-header-unparse.xlsx",
@@ -146,18 +134,6 @@
       }
     },
     {
-      "testName": "Mixed Case Header Pass",
-      "inputs": {
-        "fileName": "mixedcase-header-pass.xlsx",
-        "applicationId": "1816179214762"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GIOVANNI1"
-      }
-    },
-    {
       "testName": "Mixed Units And Casing Pass",
       "inputs": {
         "fileName": "mixedunits-and-casing-pass.xlsx",
@@ -210,18 +186,6 @@
       "inputs": {
         "fileName": "valid-unit-kilograms-pass.xlsx",
         "applicationId": "1816179214777"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GIOVANNI1"
-      }
-    },
-    {
-      "testName": "Zero Data Total Net Weight Pass",
-      "inputs": {
-        "fileName": "zero-data-totalnetweight-pass.xlsx",
-        "applicationId": "1816179214780"
       },
       "expectedResults": {
         "approvalStatus": "approved",

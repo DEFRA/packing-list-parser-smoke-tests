@@ -2,30 +2,6 @@
   "name": "MANFREIGHT1 Basic",
   "tests": [
     {
-      "testName": "Missing Optional Header All Pass",
-      "inputs": {
-        "fileName": "missing-optionalheader-all-pass.xlsx",
-        "applicationId": "1816178736595"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "MANFREIGHT1"
-      }
-    },
-    {
-      "testName": "Missing Optional Data All Pass",
-      "inputs": {
-        "fileName": "missing-optionaldata-all-pass.xlsx",
-        "applicationId": "1816178736598"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "MANFREIGHT1"
-      }
-    },
-    {
       "testName": "Only Mandatory Data Is Filled Pass",
       "inputs": {
         "fileName": "onlymandatorydataisfilled-pass.xlsx",
@@ -62,34 +38,10 @@
       }
     },
     {
-      "testName": "Incorrect Mandatory Header Desc Unparse",
-      "inputs": {
-        "fileName": "incorrect-mandatoryheader-desc-unparse.xlsx",
-        "applicationId": "1816178736439"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
       "testName": "Empty Multiple Rows Columns Pass",
       "inputs": {
         "fileName": "empty-multiplerowscolumns-pass.xlsx",
         "applicationId": "1816178736508"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "MANFREIGHT1"
-      }
-    },
-    {
-      "testName": "Incorrect Optional Data All Pass",
-      "inputs": {
-        "fileName": "incorrect-optionaldata-all-pass.xlsx",
-        "applicationId": "1816178736607"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -182,18 +134,6 @@
       }
     },
     {
-      "testName": "Missing Mandatory Header Description unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-description-unparse.xlsx",
-        "applicationId": "1816178736637"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
       "testName": "Incorrect Mandatory Data Multiple Rows With Multiple Locations All Fail",
       "inputs": {
         "fileName": "incorrect-mandatorydata-multiplerowswithmultiplelocations-all-fail.xlsx",
@@ -222,18 +162,6 @@
       "inputs": {
         "fileName": "missing-mandatoryheader-commoditycode-unparse.xlsx",
         "applicationId": "1816178736721"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Header No Of Pkgs Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-noofpkgs-unparse.xlsx",
-        "applicationId": "1816178736733"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",

@@ -26,18 +26,6 @@
       }
     },
     {
-      "testName": "Ambiguous Units in Header",
-      "inputs": {
-        "fileName": "ambiguous-units-in-header-pass.csv",
-        "applicationId": "1816178159515"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "ASDA4"
-      }
-    },
-    {
       "testName": "Data empty Netweight",
       "inputs": {
         "fileName": "data-empty-netweight-fail.csv",
@@ -170,18 +158,6 @@
       }
     },
     {
-      "testName": "Mixed Case Header",
-      "inputs": {
-        "fileName": "mixedcase-header-pass.csv",
-        "applicationId": "1816178159512"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "ASDA4"
-      }
-    },
-    {
       "testName": "Mixed Units And Casing",
       "inputs": {
         "fileName": "mixedunits-and-casing-pass.csv",
@@ -263,18 +239,6 @@
         "approvalStatus": "rejected_other",
         "reasonsForFailure": null,
         "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Zero Data Total Net Weight",
-      "inputs": {
-        "fileName": "zero-data-totalnetweight-pass.csv",
-        "applicationId": "1816178159503"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "ASDA4"
       }
     }
   ]

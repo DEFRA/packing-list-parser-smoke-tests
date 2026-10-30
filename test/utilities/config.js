@@ -4,4 +4,4 @@ export const baseUrl =
 export const defaultEstablishmentId =
   process.env.defaultEstablishmentId || '30614e2b-b895-ee11-be37-000d3aba36b2'
 export const environmentToTest = process.env.ENVIRONMENT || 'test'
-export const apiKey = process.env.apiKey || null
+export const apiKey = process.env.apiKey || 'JM2cxnmz9p93C2n38IZ3yYM6NjD7rFAi'

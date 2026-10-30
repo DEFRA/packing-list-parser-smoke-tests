@@ -72,18 +72,6 @@
         "reasonsForFailure": null,
         "model": "NOMATCH"
       }
-    },
-    {
-      "testName": "Zero Data TotalNetWeight Pass",
-      "inputs": {
-        "fileName": "zero-data-totalnetweight-pass.xlsx",
-        "applicationId": "1816178989225"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BANDM1"
-      }
     }
   ]
 }

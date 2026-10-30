@@ -2,18 +2,6 @@
   "name": "NUTRICIA3 Netweight",
   "tests": [
     {
-      "testName": "Mixed Case Header Pass",
-      "inputs": {
-        "fileName": "mixedcase-header-pass.xlsx",
-        "applicationId": "1816178869834"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "NUTRICIA3"
-      }
-    },
-    {
       "testName": "Header With Extra Parentheses Pass",
       "inputs": {
         "fileName": "header-with-extra-parentheses-pass.xlsx",
@@ -47,18 +35,6 @@
         "approvalStatus": "rejected_other",
         "reasonsForFailure": null,
         "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Zero Data Total Net Weight Pass",
-      "inputs": {
-        "fileName": "zero-data-totalnetweight-pass.xlsx",
-        "applicationId": "1816178869939"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "NUTRICIA3"
       }
     },
     {

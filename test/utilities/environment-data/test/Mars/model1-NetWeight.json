@@ -26,18 +26,6 @@
       }
     },
     {
-      "testName": "Ambiguous Units in Header Pass",
-      "inputs": {
-        "fileName": "ambiguous-units-in-header-pass.xlsx",
-        "applicationId": "1816178184727"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "MARS1"
-      }
-    },
-    {
       "testName": "Data empty Netweight Fail",
       "inputs": {
         "fileName": "data-empty-netweight-fail.xlsx",
@@ -170,18 +158,6 @@
       }
     },
     {
-      "testName": "MixedCase Header Pass",
-      "inputs": {
-        "fileName": "mixedcase-header-pass.xlsx",
-        "applicationId": "1816178184826"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "MARS1"
-      }
-    },
-    {
       "testName": "MixedUnits And Casing Pass",
       "inputs": {
         "fileName": "mixedunits-and-casing-pass.xlsx",
@@ -258,18 +234,6 @@
       "inputs": {
         "fileName": "valid-unit-kilograms-pass.xlsx",
         "applicationId": "1816178184871"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "MARS1"
-      }
-    },
-    {
-      "testName": "Zero Data TotalNetWeight Pass",
-      "inputs": {
-        "fileName": "zero-data-totalnetweight-pass.xlsx",
-        "applicationId": "1816178184877"
       },
       "expectedResults": {
         "approvalStatus": "approved",

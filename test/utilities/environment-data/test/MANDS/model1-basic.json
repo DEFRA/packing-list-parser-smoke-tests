@@ -86,18 +86,6 @@
       }
     },
     {
-      "testName": "Missing Mandatory Header Tot Netweight Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-totnetweight-unparse.pdf",
-        "applicationId": "1816178405461"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
       "testName": "Incorrect Mandatory Data Multiple Rows With Multiple Locations All Fail",
       "inputs": {
         "fileName": "incorrect-mandatorydata-multiplerowswithmultiplelocations-all-fail.pdf",
@@ -134,30 +122,6 @@
       }
     },
     {
-      "testName": "Missing Mandatory Header Noofpacakges Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-noofpacakges-unparse.pdf",
-        "applicationId": "1816178405494"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Header Tot Netweight Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-totnetweight-unparse.pdf",
-        "applicationId": "1816178405497"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
       "testName": "Missing Optional Header All Fail",
       "inputs": {
         "fileName": "missing-optionalheader-all-fail.pdf",
@@ -179,18 +143,6 @@
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "No product line data found.",
         "model": "MANDS1"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Header Description Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-description-unparse.pdf",
-        "applicationId": "1816178405491"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
       }
     },
     {

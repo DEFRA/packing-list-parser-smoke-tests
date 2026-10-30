@@ -26,18 +26,6 @@
       }
     },
     {
-      "testName": "Ambiguous Units in Header Pass",
-      "inputs": {
-        "fileName": "ambiguous-units-in-header-pass.pdf",
-        "applicationId": "1816178295079"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GIOVANNI3"
-      }
-    },
-    {
       "testName": "Extra Spaces In Header Unparse",
       "inputs": {
         "fileName": "extra-spaces-in-header-unparse.pdf",

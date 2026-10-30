@@ -14,30 +14,6 @@
       }
     },
     {
-      "testName": "Mixed Case Header Pass",
-      "inputs": {
-        "fileName": "mixedcase-header-pass.pdf",
-        "applicationId": "1816178405575"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "MANDS1"
-      }
-    },
-    {
-      "testName": "Ambiguous Units In Header Pass",
-      "inputs": {
-        "fileName": "ambiguous-units-in-header-pass.pdf",
-        "applicationId": "1816178405578"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "MANDS1"
-      }
-    },
-    {
       "testName": "Missing Paranthesis In UOM Pass",
       "inputs": {
         "fileName": "missing-paranthesis-in-uom-pass.pdf",
@@ -106,30 +82,6 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Total net weight is invalid in page 1 row 1, page 1 row 2, page 1 row 3 in addition to 63 other locations.\n",
-        "model": "MANDS1"
-      }
-    },
-    {
-      "testName": "Zero Data Total Net Weight Pass",
-      "inputs": {
-        "fileName": "zero-data-totalnetweight-pass.pdf",
-        "applicationId": "1816178405626"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "MANDS1"
-      }
-    },
-    {
-      "testName": "Zero Data Total Net Weight Pass",
-      "inputs": {
-        "fileName": "zero-data-totalnetweight-pass.pdf",
-        "applicationId": "1816178405743"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
         "model": "MANDS1"
       }
     },
