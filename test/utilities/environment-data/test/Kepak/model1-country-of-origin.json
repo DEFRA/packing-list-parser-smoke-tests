@@ -92,8 +92,8 @@
         "applicationId": "1816178189740"
       },
       "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in sheet \"KEPAK\" row 23 and sheet \"KEPAK\" row 24.\n",
         "model": "KEPAK1"
       }
     },

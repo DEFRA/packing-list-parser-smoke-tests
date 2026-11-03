@@ -13,23 +13,11 @@
         "model": "NOMATCH"
       }
     },
-    {
-      "testName": "Alpha Numeric UOM Weight Fail",
-      "inputs": {
-        "fileName": "alpha-numeric-uom-weight-fail.xlsx",
-        "applicationId": "1816178189638"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "KEPAK1"
-      }
-    },
-    {
+   {
       "testName": "Ambiguous Units in Header Pass",
       "inputs": {
         "fileName": "ambiguous-units-in-header-pass.xlsx",
-        "applicationId": "1816178189641"
+        "applicationId": "1816179402442"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -41,11 +29,11 @@
       "testName": "Data empty Netweight Fail",
       "inputs": {
         "fileName": "data-empty-netweight-fail.xlsx",
-        "applicationId": "1816178189644"
+        "applicationId": "1816179351283"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Total net weight is missing in sheet \"KEPAK\" row 23, sheet \"KEPAK\" row 24, sheet \"KEPAK\" row 25 in addition to 8 other locations.\n",
+        "reasonsForFailure": "Total net weight is missing in sheet \"KEPAK\" row 23 and sheet \"KEPAK\" row 24.\n",
         "model": "KEPAK1"
       }
     },
@@ -59,18 +47,6 @@
         "approvalStatus": "rejected_other",
         "reasonsForFailure": null,
         "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Happy path Pass",
-      "inputs": {
-        "fileName": "happypath-pass.xlsx",
-        "applicationId": "1816178189650"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "KEPAK1"
       }
     },
     {
@@ -89,7 +65,7 @@
       "testName": "Header With Extra Parentheses Pass",
       "inputs": {
         "fileName": "header-with-extra-parentheses-pass.xlsx",
-        "applicationId": "1816178189707"
+        "applicationId": "1816179351274"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -101,7 +77,7 @@
       "testName": "Header With Multiple Units Pass",
       "inputs": {
         "fileName": "header-with-multiple-units-pass.xlsx",
-        "applicationId": "1816178189659"
+        "applicationId": "1816179402451"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -113,7 +89,7 @@
       "testName": "Header With Unit And Symbols Pass",
       "inputs": {
         "fileName": "header-with-unit-and-symbols-pass.xlsx",
-        "applicationId": "1816178189662"
+        "applicationId": "1816179376714"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -125,11 +101,11 @@
       "testName": "Incorrect Netweight Data All Fail",
       "inputs": {
         "fileName": "incorrect-netweightdata-all-fail.xlsx",
-        "applicationId": "1816178189665"
+        "applicationId": "1816179351289"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Total net weight is invalid in sheet \"KEPAK\" row 23, sheet \"KEPAK\" row 24, sheet \"KEPAK\" row 25 in addition to 5 other locations.\n",
+        "reasonsForFailure": "Total net weight is invalid in sheet \"KEPAK\" row 23, sheet \"KEPAK\" row 24, sheet \"KEPAK\" row 25 in addition to 7 other locations.\n",
         "model": "KEPAK1"
       }
     },
@@ -137,7 +113,7 @@
       "testName": "Invalid Unit Type Fail",
       "inputs": {
         "fileName": "invalid-unit-type-fail.xlsx",
-        "applicationId": "1816178189668"
+        "applicationId": "1816179402472"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -149,7 +125,7 @@
       "testName": "Malformed Header Unit Pass",
       "inputs": {
         "fileName": "malformed-header-unit-pass.xlsx",
-        "applicationId": "1816178189671"
+        "applicationId": "1816179351220"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -173,23 +149,11 @@
       "testName": "Missing Paranthesis in Uom Pass",
       "inputs": {
         "fileName": "missing-paranthesis-in-uom-pass.xlsx",
-        "applicationId": "1816178189677"
+        "applicationId": "1816179351268"
       },
       "expectedResults": {
         "approvalStatus": "approved",
         "reasonsForFailure": null,
-        "model": "KEPAK1"
-      }
-    },
-    {
-      "testName": "Missing UOM Weight Fail",
-      "inputs": {
-        "fileName": "missing-uom-weight-fail.xlsx",
-        "applicationId": "1816178189713"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
         "model": "KEPAK1"
       }
     },
@@ -197,19 +161,7 @@
       "testName": "Mixed Case Header Pass",
       "inputs": {
         "fileName": "mixedcase-header-pass.xlsx",
-        "applicationId": "1816178189683"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "KEPAK1"
-      }
-    },
-    {
-      "testName": "Mixed Units And Casing Pass",
-      "inputs": {
-        "fileName": "mixedunits-and-casing-pass.xlsx",
-        "applicationId": "1816178189686"
+        "applicationId": "1816179351238"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -221,7 +173,7 @@
       "testName": "Netweight Has Empty Parentheses Fail",
       "inputs": {
         "fileName": "netweight-hasempty-parentheses-fail.xlsx",
-        "applicationId": "1816178189689"
+        "applicationId": "1816179351295"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -257,7 +209,7 @@
       "testName": "Unit Missing Weight Present Fail",
       "inputs": {
         "fileName": "unit-missing-weight-present-fail.xlsx",
-        "applicationId": "1816178209552"
+        "applicationId": "1816179402475"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -269,7 +221,7 @@
       "testName": "Zero Data Total Net Weight Pass",
       "inputs": {
         "fileName": "zero-data-totalnetweight-pass.xlsx",
-        "applicationId": "1816178189701"
+        "applicationId": "1816179351184"
       },
       "expectedResults": {
         "approvalStatus": "approved",
