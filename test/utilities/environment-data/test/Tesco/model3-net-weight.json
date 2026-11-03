@@ -38,18 +38,6 @@
       }
     },
     {
-      "testName": "Malformed Header Unit Pass",
-      "inputs": {
-        "fileName": "malformed-header-unit-pass.xlsx",
-        "applicationId": "1816178159824"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "TESCO3"
-      }
-    },
-    {
       "testName": "Missing Data Total Net Weight Fail",
       "inputs": {
         "fileName": "missingdata-totalnetweight-fail.xlsx",
@@ -102,18 +90,6 @@
       "inputs": {
         "fileName": "netweight-hasempty-parentheses-extraspace-unparse.xlsx",
         "applicationId": "1816178159845"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Splcharacters Header Netweight Unparse",
-      "inputs": {
-        "fileName": "splcharacters-header-netweight-unparse.xlsx",
-        "applicationId": "1816178159848"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",

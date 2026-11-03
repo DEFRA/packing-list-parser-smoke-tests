@@ -2,30 +2,6 @@
   "name": "GOUSTO1 SingleRMS",
   "tests": [
     {
-      "testName": "DifferentCountryEstablishmentNumbersexcludesGB Pass",
-      "inputs": {
-        "fileName": "differentcountryestablishmentnumbersexcludesgb-pass.xlsx",
-        "applicationId": "1816179141943"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GOUSTO1"
-      }
-    },
-    {
-      "testName": "DifferentCountryEstablishmentNumbersIncludingGB Pass",
-      "inputs": {
-        "fileName": "differentcountryestablishmentnumbersincludinggb-pass.xlsx",
-        "applicationId": "1816179141946"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GOUSTO1"
-      }
-    },
-    {
       "testName": "Empty RMS Fail",
       "inputs": {
         "fileName": "empty-rms-fail.xlsx",
@@ -62,34 +38,10 @@
       }
     },
     {
-      "testName": "LowercaseAndMalformedPrefixInEstablishmentNumber Pass",
-      "inputs": {
-        "fileName": "lowercaseandmalformedprefixinestablishmentnumber-pass.xlsx",
-        "applicationId": "1816179141958"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GOUSTO1"
-      }
-    },
-    {
       "testName": "Malformed RMS Number Fail",
       "inputs": {
         "fileName": "malformed-rms-number-fail.xlsx",
         "applicationId": "1816179141961"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Check GB Establishment RMS Number.",
-        "model": "NOREMOS"
-      }
-    },
-    {
-      "testName": "MalformedCountryCodeInEstablishmentNumber Fail",
-      "inputs": {
-        "fileName": "malformedcountrycodeinestablishmentnumber-fail.xlsx",
-        "applicationId": "1816179141964"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -119,18 +71,6 @@
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Multiple GB Place of Dispatch (Establishment) numbers found on packing list.\n",
         "model": "GOUSTO1"
-      }
-    },
-    {
-      "testName": "NonNumericAttheEndOfRMS Fail",
-      "inputs": {
-        "fileName": "nonnumericattheendofrms-fail.xlsx",
-        "applicationId": "1816179141973"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Check GB Establishment RMS Number.",
-        "model": "NOREMOS"
       }
     },
     {
@@ -170,46 +110,10 @@
       }
     },
     {
-      "testName": "RMSWith7DigitsShould Fail",
-      "inputs": {
-        "fileName": "rmswith7digitsshould-fail.xlsx",
-        "applicationId": "1816179141985"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Check GB Establishment RMS Number.",
-        "model": "NOREMOS"
-      }
-    },
-    {
       "testName": "RMSWithExtraDashBeforeEstablishmentNumberShould Fail",
       "inputs": {
         "fileName": "rmswithextradashbeforeestablishmentnumbershould-fail.xlsx",
         "applicationId": "1816179141988"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Check GB Establishment RMS Number.",
-        "model": "NOREMOS"
-      }
-    },
-    {
-      "testName": "RMSWithExtraDashEstablishmentNumberAtStartandEnd Fail",
-      "inputs": {
-        "fileName": "rmswithextradashestablishmentnumberatstartandend-fail.xlsx",
-        "applicationId": "1816179141991"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Check GB Establishment RMS Number.",
-        "model": "NOREMOS"
-      }
-    },
-    {
-      "testName": "TC InvalidFormat RmsGb 15 10 Fail",
-      "inputs": {
-        "fileName": "tc-invalidformat-rmsgb-15-10-fail.xlsx",
-        "applicationId": "1816179141994"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",

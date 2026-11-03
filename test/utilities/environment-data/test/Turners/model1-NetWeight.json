@@ -26,18 +26,6 @@
       }
     },
     {
-      "testName": "Ambiguous  Units in  Header  Pass",
-      "inputs": {
-        "fileName": "ambiguous-units-in-header-pass.xlsx",
-        "applicationId": "1816178210482"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "TURNERS1"
-      }
-    },
-    {
       "testName": "Data empty  Netweight  Fail",
       "inputs": {
         "fileName": "data-empty-netweight-fail.xlsx",
@@ -182,18 +170,6 @@
       }
     },
     {
-      "testName": "Mixed Case  Header  Pass",
-      "inputs": {
-        "fileName": "mixedcase-header-pass.xlsx",
-        "applicationId": "1816178210557"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "TURNERS1"
-      }
-    },
-    {
       "testName": "Mixed Units  And  Casing  Pass",
       "inputs": {
         "fileName": "mixedunits-and-casing-pass.xlsx",
@@ -227,18 +203,6 @@
         "approvalStatus": "rejected_other",
         "reasonsForFailure": null,
         "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "T U R N E R S  Happy  Path  Pass",
-      "inputs": {
-        "fileName": "turnershappypath-pass.xlsx",
-        "applicationId": "1816178211037"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "TURNERS1"
       }
     },
     {

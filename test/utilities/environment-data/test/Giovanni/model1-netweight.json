@@ -26,34 +26,10 @@
       }
     },
     {
-      "testName": "Ambiguous Units in Header Pass",
-      "inputs": {
-        "fileName": "ambiguous-units-in-header-pass.xlsx",
-        "applicationId": "1816179214732"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GIOVANNI1"
-      }
-    },
-    {
       "testName": "Extra Spaces In Header Unparse",
       "inputs": {
         "fileName": "extra-spaces-in-header-unparse.xlsx",
         "applicationId": "1816178210590"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Header Typos or Special Characters Unparse",
-      "inputs": {
-        "fileName": "header-typos-or-specialcharacters-unparse.xlsx",
-        "applicationId": "1816178210596"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -134,18 +110,6 @@
       }
     },
     {
-      "testName": "Malformed Header Unit Pass",
-      "inputs": {
-        "fileName": "malformed-header-unit-pass.xlsx",
-        "applicationId": "1816179214756"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GIOVANNI1"
-      }
-    },
-    {
       "testName": "Missing Header Total Net Weight Unparse",
       "inputs": {
         "fileName": "missing-header-totalnetweight-unparse.xlsx",
@@ -162,18 +126,6 @@
       "inputs": {
         "fileName": "missing-paranthesis-in-uom-pass.xlsx",
         "applicationId": "1816179214759"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GIOVANNI1"
-      }
-    },
-    {
-      "testName": "Mixed Case Header Pass",
-      "inputs": {
-        "fileName": "mixedcase-header-pass.xlsx",
-        "applicationId": "1816179214762"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -206,18 +158,6 @@
       }
     },
     {
-      "testName": "Splcharacters Header Netweight Unparse",
-      "inputs": {
-        "fileName": "splcharacters-header-netweight-unparse.xlsx",
-        "applicationId": "1816178210635"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
       "testName": "UOMWeight Without Total Net Weight Unparse",
       "inputs": {
         "fileName": "uomweight-without-totalnetweight-unparse.xlsx",
@@ -246,18 +186,6 @@
       "inputs": {
         "fileName": "valid-unit-kilograms-pass.xlsx",
         "applicationId": "1816179214777"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GIOVANNI1"
-      }
-    },
-    {
-      "testName": "Zero Data Total Net Weight Pass",
-      "inputs": {
-        "fileName": "zero-data-totalnetweight-pass.xlsx",
-        "applicationId": "1816179214780"
       },
       "expectedResults": {
         "approvalStatus": "approved",

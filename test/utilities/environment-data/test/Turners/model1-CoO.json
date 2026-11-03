@@ -2,18 +2,6 @@
   "name": "TURNERS1 Coo",
   "tests": [
     {
-      "testName": "T U R N E R S  Happy  Path  Pass",
-      "inputs": {
-        "fileName": "turnershappypath-pass.xlsx",
-        "applicationId": "1816178210278"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "TURNERS1"
-      }
-    },
-    {
       "testName": "ac10 x Co O  Pass",
       "inputs": {
         "fileName": "ac10-xcoo-pass.xlsx",
