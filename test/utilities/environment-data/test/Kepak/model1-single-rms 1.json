@@ -2,6 +2,30 @@
   "name": "KEPAK1 Single RMS Validation",
   "tests": [
     {
+      "testName": "Different Country Establishment Numbers Including GB Pass",
+      "inputs": {
+        "fileName": "differentcountryestablishmentnumbersincludinggb-pass.xlsx",
+        "applicationId": "1816179350905"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "KEPAK1"
+      }
+    },
+    {
+      "testName": "Different Country Establishment Numbersexcludes GB Fail",
+      "inputs": {
+        "fileName": "differentcountryestablishmentnumbersexcludesgb-fail.xlsx",
+        "applicationId": "1816178209579"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
       "testName": "Empty RMS Fail",
       "inputs": {
         "fileName": "empty-rms-fail.xlsx",
@@ -38,6 +62,42 @@
       }
     },
     {
+      "testName": "Invalid Prefix In Establishment Number Fail",
+      "inputs": {
+        "fileName": "invalidprefixinestablishmentnumber-fail.xlsx",
+        "applicationId": "1816178209582"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "Lowercase And Malformed Prefix In Establishment Number Pass",
+      "inputs": {
+        "fileName": "lowercaseandmalformedprefixinestablishmentnumber-pass.xlsx",
+        "applicationId": "1816179351127"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "KEPAK1"
+      }
+    },
+    {
+      "testName": "Malformed Country Code In Establishment Number Fail",
+      "inputs": {
+        "fileName": "malformedcountrycodeinestablishmentnumber-fail.xlsx",
+        "applicationId": "1816178209588"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
       "testName": "Malformed RMS Number Fail",
       "inputs": {
         "fileName": "malformed-rms-number-fail.xlsx",
@@ -53,7 +113,7 @@
       "testName": "Mixed Case Establishment Number Format Pass",
       "inputs": {
         "fileName": "mixedcaseestablishmentnumberformat-pass.xlsx",
-        "applicationId": "1816178189569"
+        "applicationId": "1816179351130"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -65,7 +125,19 @@
       "testName": "Mixed Valid And Invalid Establishment Formats Pass",
       "inputs": {
         "fileName": "mixedvalidandinvalidestablishmentformats-pass.xlsx",
-        "applicationId": "1816178189572"
+        "applicationId": "1816179350941"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "KEPAK1"
+      }
+    },
+    {
+      "testName": "Multiple GB Establishment Numbers With Valid Invalid Length Pass",
+      "inputs": {
+        "fileName": "multiplegbestablishmentnumberswithvalid-invalidlength-pass.xlsx",
+        "applicationId": "1816179351139"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -101,7 +173,7 @@
       "testName": "RMS Has Wrong Final3 Digits Should Pass",
       "inputs": {
         "fileName": "rmshaswrongfinal3digitsshould-pass.xlsx",
-        "applicationId": "1816178209645"
+        "applicationId": "1816179351136"
       },
       "expectedResults": {
         "approvalStatus": "approved",
@@ -149,7 +221,7 @@
       "testName": "RMS Is Present But No Header Text Should Pass",
       "inputs": {
         "fileName": "rmsispresentbutnoheadertextshould-pass.xlsx",
-        "applicationId": "1816178209660"
+        "applicationId": "1816179351151"
       },
       "expectedResults": {
         "approvalStatus": "approved",
