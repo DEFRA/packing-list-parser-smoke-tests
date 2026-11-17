@@ -1,0 +1,125 @@
+{
+  "name": "GREGGS1 CoO",
+  "tests": [
+    {
+      "testName": "ac1 NotNirms Pass",
+      "inputs": {
+        "fileName": "ac1-notnirms-pass.pdf",
+        "applicationId": "1816179456580"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "ac2 NullNirms Fail",
+      "inputs": {
+        "fileName": "ac2-nullnirms-fail.pdf",
+        "applicationId": "1816179456583"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in page 1 row 2, page 1 row 3 and page 1 row 4.\n",
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "ac3 InvalidNirms Fail",
+      "inputs": {
+        "fileName": "ac3-invalidnirms-fail.pdf",
+        "applicationId": "1816179456586"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in page 1 row 2, page 1 row 3 and page 1 row 4.\n",
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "ac4 NullNirmsMultiple Fail",
+      "inputs": {
+        "fileName": "ac4-nullnirmsmultiple-fail.pdf",
+        "applicationId": "1816179456604"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in page 1 row 2, page 1 row 3, page 1 row 4 in addition to 1 other locations.\n",
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "ac5 InvalidNirmsMultiple Fail",
+      "inputs": {
+        "fileName": "ac5-invalidnirmsmultiple-fail.pdf",
+        "applicationId": "1816179456607"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in page 1 row 2, page 1 row 3 and page 1 row 4.\n",
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "ac6 NullCoO Fail",
+      "inputs": {
+        "fileName": "ac6-nullcoo-fail.pdf",
+        "applicationId": "1816179456589"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in page 1 row 2, page 1 row 3 and page 1 row 4.\n",
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "ac7 InvalidCoO Fail",
+      "inputs": {
+        "fileName": "ac7-invalidcoo-fail.pdf",
+        "applicationId": "1816179456592"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in page 1 row 2 and page 1 row 4.\n",
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "ac8 NullCoOMultiple Fail",
+      "inputs": {
+        "fileName": "ac8-nullcoomultiple-fail.pdf",
+        "applicationId": "1816179456595"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in page 1 row 2, page 1 row 3, page 1 row 4 in addition to 1 other locations.\n",
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "ac9 InvalidCoOMultiple Fail",
+      "inputs": {
+        "fileName": "ac9-invalidcoomultiple-fail.pdf",
+        "applicationId": "1816179456598"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in page 1 row 2 and page 1 row 4.\n",
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "ac10 xCoO Fail",
+      "inputs": {
+        "fileName": "ac10-xcoo-fail.pdf",
+        "applicationId": "1816179481990"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in page 1 row 2, page 1 row 3 and page 1 row 4.\n",
+        "model": "GREGGS1"
+      }
+    }
+  ]
+}

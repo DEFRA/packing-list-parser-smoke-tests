@@ -1,0 +1,101 @@
+{
+  "name": "GREGGS1 SingleRMS",
+  "tests": [
+    {
+      "testName": "Empty RMS Fail",
+      "inputs": {
+        "fileName": "empty-rms-fail.pdf",
+        "applicationId": "1816179456610"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "InvalidEstablishmentFormats Fail",
+      "inputs": {
+        "fileName": "invalidestablishmentformats-fail.pdf",
+        "applicationId": "1816179456613"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "Malformed RMS Number Fail",
+      "inputs": {
+        "fileName": "malformed-rms-number-fail.pdf",
+        "applicationId": "1816179456616"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "MixedCaseEstablishmentNumberFormat Pass",
+      "inputs": {
+        "fileName": "mixedcaseestablishmentnumberformat-pass.pdf",
+        "applicationId": "1816179456619"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "RMSHasWrongFinal3DigitsShould Pass",
+      "inputs": {
+        "fileName": "rmshaswrongfinal3digitsshould-pass.pdf",
+        "applicationId": "1816179456622"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "RMSHasWrongMiddle6DigitsShouldBe Unparse",
+      "inputs": {
+        "fileName": "rmshaswrongmiddle6digitsshouldbe-unparse.pdf",
+        "applicationId": "1816179456625"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "RMSHasWrongRegexWithAdditionalHyphenShouldBe Fail",
+      "inputs": {
+        "fileName": "rmshaswrongregexwithadditionalhyphenshouldbe-fail.pdf",
+        "applicationId": "1816179456634"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    },
+    {
+      "testName": "RMSWithExtraDashBeforeEstablishmentNumberShould Fail",
+      "inputs": {
+        "fileName": "rmswithextradashbeforeestablishmentnumbershould-fail.pdf",
+        "applicationId": "1816179456628"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Check GB Establishment RMS Number.",
+        "model": "NOREMOS"
+      }
+    }
+  ]
+}

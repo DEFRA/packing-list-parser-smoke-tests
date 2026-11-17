@@ -1,0 +1,269 @@
+{
+  "name": "GREGGS1 Basic",
+  "tests": [
+    {
+      "testName": "AllMandatoryDataIsMissing Fail",
+      "inputs": {
+        "fileName": "allmandatorydataismissing-fail.pdf",
+        "applicationId": "1816179456382"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in page 1 row 2, page 1 row 3, page 1 row 4 in addition to 36 other locations.\nProduct description is missing in page 1 row 3, page 1 row 5, page 1 row 7 in addition to 22 other locations.\nTotal net weight is missing in page 1 row 2, page 1 row 3, page 1 row 4 in addition to 36 other locations.\n",
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "DescriptionHasDoubleQuotesShould pass",
+      "inputs": {
+        "fileName": "descriptionhasdoublequotesshould-pass.pdf",
+        "applicationId": "1816179481984"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "Happypath Pass",
+      "inputs": {
+        "fileName": "happypath-pass.pdf",
+        "applicationId": "1816179456391"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatatypes Excl netandNopkgs ProductCode Pass",
+      "inputs": {
+        "fileName": "incorrect-mandatatypes-excl-netandnopkgs-productcode-pass.pdf",
+        "applicationId": "1816179456394"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryData MultipleRowsWithMultipleLocations All Fail",
+      "inputs": {
+        "fileName": "incorrect-mandatorydata-multiplerowswithmultiplelocations-all-fail.pdf",
+        "applicationId": "1816179456397"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Total net weight is invalid in page 1 row 3, page 1 row 4 and page 1 row 5.\n",
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader All Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-all-unparse.pdf",
+        "applicationId": "1816179456400"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader Desc Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-desc-unparse.pdf",
+        "applicationId": "1816179456403"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader NoofPakgs Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-noofpakgs-unparse.pdf",
+        "applicationId": "1816179456406"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader TotNetweight Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-totnetweight-unparse.pdf",
+        "applicationId": "1816179456409"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader TotNetweightKGS Fail",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-totnetweightkgs-fail.pdf",
+        "applicationId": "1816179456412"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader TreatmentType Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-treatmenttype-unparse.pdf",
+        "applicationId": "1816179456415"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect OptionalHeader All Pass",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-all-pass.pdf",
+        "applicationId": "1816179456421"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "MandatoryHeaders CaseInSensitive Pass",
+      "inputs": {
+        "fileName": "mandatoryheaders-caseinsensitive-pass.pdf",
+        "applicationId": "1816179456463"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData Desc Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-desc-fail.pdf",
+        "applicationId": "1816179456427"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product description is missing in page 1 row 3.\n",
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData MultipleRowsWithMultipleLocations All Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-multiplerowswithmultiplelocations-all-fail.pdf",
+        "applicationId": "1816179456430"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in page 1 row 5.\nTotal net weight is missing in page 1 row 4.\n",
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData Totnetweight Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-totnetweight-fail.pdf",
+        "applicationId": "1816179456436"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Total net weight is missing in page 1 row 2, page 1 row 3 and page 1 row 4.\n",
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader All Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-all-unparse.pdf",
+        "applicationId": "1816179456439"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader Description unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-description-unparse.pdf",
+        "applicationId": "1816179456442"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader NoofPacakges Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-noofpacakges-unparse.pdf",
+        "applicationId": "1816179456445"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryHeader TotNetWeight Unparse",
+      "inputs": {
+        "fileName": "missing-mandatoryheader-totnetweight-unparse.pdf",
+        "applicationId": "1816179456448"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing OptionalHeader All Pass",
+      "inputs": {
+        "fileName": "missing-optionalheader-all-pass.pdf",
+        "applicationId": "1816179456466"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "NoData ExceptSingleRMS Fail",
+      "inputs": {
+        "fileName": "nodata-exceptsinglerms-fail.pdf",
+        "applicationId": "1816179456454"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in page 1 row 2, page 1 row 3, page 1 row 4 in addition to 36 other locations.\nProduct description is missing in page 1 row 3, page 1 row 5, page 1 row 7 in addition to 22 other locations.\nTotal net weight is missing in page 1 row 2, page 1 row 3, page 1 row 4 in addition to 36 other locations.\nNIRMS/Non-NIRMS goods not specified in page 1 row 2, page 1 row 3, page 1 row 4 in addition to 36 other locations.\n",
+        "model": "GREGGS1"
+      }
+    }
+  ]
+}

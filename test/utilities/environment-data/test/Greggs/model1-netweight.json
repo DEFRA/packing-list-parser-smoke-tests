@@ -1,0 +1,161 @@
+{
+  "name": "GREGGS1 NetWeight",
+  "tests": [
+    {
+      "testName": "Ambiguous Units in Header Pass",
+      "inputs": {
+        "fileName": "ambiguous-units-in-header-pass.pdf",
+        "applicationId": "1816179456538"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "Header With Extra Parentheses Pass",
+      "inputs": {
+        "fileName": "header-with-extra-parentheses-pass.pdf",
+        "applicationId": "1816179456544"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "Header With Multiple Units",
+      "inputs": {
+        "fileName": "header-with-multiple-units.pdf",
+        "applicationId": "1816179456547"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "Header With Unit And Symbols Pass",
+      "inputs": {
+        "fileName": "header-with-unit-and-symbols-pass.pdf",
+        "applicationId": "1816179456550"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "Incorrect NetweightData All Fail",
+      "inputs": {
+        "fileName": "incorrect-netweightdata-all-fail.pdf",
+        "applicationId": "1816179456553"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Total net weight is invalid in page 1 row 3, page 1 row 4, page 1 row 5 in addition to 28 other locations.\n",
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "Missing Header Netweight Unparse",
+      "inputs": {
+        "fileName": "missing-header-netweight-unparse.pdf",
+        "applicationId": "1816179456556"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing Paranthesis in Uom Pass",
+      "inputs": {
+        "fileName": "missing-paranthesis-in-uom-pass.pdf",
+        "applicationId": "1816179456559"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "MixedCase Header Pass",
+      "inputs": {
+        "fileName": "mixedcase-header-pass.pdf",
+        "applicationId": "1816179456562"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "Netweight HasEmpty Parentheses Fail",
+      "inputs": {
+        "fileName": "netweight-hasempty-parentheses-fail.pdf",
+        "applicationId": "1816179456565"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "sData empty Netweight Fail",
+      "inputs": {
+        "fileName": "sdata-empty-netweight-fail.pdf",
+        "applicationId": "1816179456568"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Total net weight is missing in page 1 row 2, page 1 row 3 and page 1 row 4.\n",
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "TotalNetWeight Without UOMWeight",
+      "inputs": {
+        "fileName": "totalnetweight-without-uomweight.pdf",
+        "applicationId": "1816179456577"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "Valid Unit KG Parentheses",
+      "inputs": {
+        "fileName": "valid-unit-kg-parentheses.pdf",
+        "applicationId": "1816179456571"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "GREGGS1"
+      }
+    },
+    {
+      "testName": "Zero Data TotalNetWeight Pass",
+      "inputs": {
+        "fileName": "zero-data-totalnetweight-pass.pdf",
+        "applicationId": "1816179456574"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "GREGGS1"
+      }
+    }
+  ]
+}
