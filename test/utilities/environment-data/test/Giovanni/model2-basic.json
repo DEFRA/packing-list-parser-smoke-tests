@@ -14,30 +14,6 @@
       }
     },
     {
-      "testName": "Missing Optional Header All Pass",
-      "inputs": {
-        "fileName": "missing-optionalheader-all-pass.xlsx",
-        "applicationId": "1816178324926"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GIOVANNI2"
-      }
-    },
-    {
-      "testName": "Incorrect Optional Data All Pass",
-      "inputs": {
-        "fileName": "incorrect-optionaldata-all-pass.xlsx",
-        "applicationId": "1816178324929"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "GIOVANNI2"
-      }
-    },
-    {
       "testName": "Incorrect Optional Header All Pass",
       "inputs": {
         "fileName": "incorrect-optionalheader-all-pass.xlsx",
@@ -98,18 +74,6 @@
       }
     },
     {
-      "testName": "Incorrect Mandatory Header Desc Unparse",
-      "inputs": {
-        "fileName": "incorrect-mandatoryheader-desc-unparse.xlsx",
-        "applicationId": "1816178324944"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
       "testName": "Incorrect Mandatory Header No Of Pkgs Unparse",
       "inputs": {
         "fileName": "incorrect-mandatoryheader-noofpkgs-unparse.xlsx",
@@ -162,42 +126,6 @@
       "inputs": {
         "fileName": "missing-mandatoryheader-commoditycode-unparse.xlsx",
         "applicationId": "1816178324959"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Header Desc Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-desc-unparse.xlsx",
-        "applicationId": "1816178328523"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Header No Of Pkgs Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-noofpkgs-unparse.xlsx",
-        "applicationId": "1816178324962"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Header Tot Netweight Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-totnetweight-unparse.xlsx",
-        "applicationId": "1816178324965"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",

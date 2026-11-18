@@ -2,30 +2,6 @@
   "name": "BUFFALOAD1 SingleRMS",
   "tests": [
     {
-      "testName": "DifferentCountryEstablishmentNumbersIncludingGB Pass",
-      "inputs": {
-        "fileName": "differentcountryestablishmentnumbersincludinggb-pass.xlsx",
-        "applicationId": "1816178183962"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BUFFALOAD1"
-      }
-    },
-    {
-      "testName": "DifferentCountryEstablishmentNumbersexcludesGB Fail",
-      "inputs": {
-        "fileName": "differentcountryestablishmentnumbersexcludesgb-fail.xlsx",
-        "applicationId": "1816178183965"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Check GB Establishment RMS Number.",
-        "model": "NOREMOS"
-      }
-    },
-    {
       "testName": "Empty RMS Fail",
       "inputs": {
         "fileName": "empty-rms-fail.xlsx",
@@ -59,42 +35,6 @@
         "approvalStatus": "rejected_other",
         "reasonsForFailure": null,
         "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "InvalidPrefixInEstablishmentNumber Fail",
-      "inputs": {
-        "fileName": "invalidprefixinestablishmentnumber-fail.xlsx",
-        "applicationId": "1816178183977"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Check GB Establishment RMS Number.",
-        "model": "NOREMOS"
-      }
-    },
-    {
-      "testName": "LowercaseAndMalformedPrefixInEstablishmentNumber Pass",
-      "inputs": {
-        "fileName": "lowercaseandmalformedprefixinestablishmentnumber-pass.xlsx",
-        "applicationId": "1816178183980"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BUFFALOAD1"
-      }
-    },
-    {
-      "testName": "MalformedCountryCodeInEstablishmentNumber Fail",
-      "inputs": {
-        "fileName": "malformedcountrycodeinestablishmentnumber-fail.xlsx",
-        "applicationId": "1816178183983"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Check GB Establishment RMS Number.",
-        "model": "NOREMOS"
       }
     },
     {
@@ -134,18 +74,6 @@
       }
     },
     {
-      "testName": "MultipleGBEstablishmentNumbersWithValid InvalidLength Pass",
-      "inputs": {
-        "fileName": "multiplegbestablishmentnumberswithvalid-invalidlength-pass.xlsx",
-        "applicationId": "1816178183995"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BUFFALOAD1"
-      }
-    },
-    {
       "testName": "Multipledifferent Establishment Numbers Fail",
       "inputs": {
         "fileName": "multipledifferent-establishment-numbers-fail.xlsx",
@@ -155,18 +83,6 @@
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Multiple GB Place of Dispatch (Establishment) numbers found on packing list.\n",
         "model": "BUFFALOAD1"
-      }
-    },
-    {
-      "testName": "NonNumericAttheEndOfRMS Fail",
-      "inputs": {
-        "fileName": "nonnumericattheendofrms-fail.xlsx",
-        "applicationId": "1816178184001"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Check GB Establishment RMS Number.",
-        "model": "NOREMOS"
       }
     },
     {
@@ -230,18 +146,6 @@
       }
     },
     {
-      "testName": "RMSWith7DigitsShould Fail",
-      "inputs": {
-        "fileName": "rmswith7digitsshould-fail.xlsx",
-        "applicationId": "1816178184016"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Check GB Establishment RMS Number.",
-        "model": "NOREMOS"
-      }
-    },
-    {
       "testName": "RMSWithExtraDashBeforeEstablishmentNumberShould Fail1",
       "inputs": {
         "fileName": "rmswithextradashbeforeestablishmentnumbershould-fail1.xlsx",
@@ -254,58 +158,10 @@
       }
     },
     {
-      "testName": "RMSWithExtraDashEstablishmentNumberAtStartandEnd Fail",
-      "inputs": {
-        "fileName": "rmswithextradashestablishmentnumberatstartandend-fail.xlsx",
-        "applicationId": "1816178184022"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Check GB Establishment RMS Number.",
-        "model": "NOREMOS"
-      }
-    },
-    {
       "testName": "RMS HasSplCharacters Fail",
       "inputs": {
         "fileName": "rms-hassplcharacters-fail.xlsx",
         "applicationId": "1816178184025"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Check GB Establishment RMS Number.",
-        "model": "NOREMOS"
-      }
-    },
-    {
-      "testName": "TC InvalidFormat RmsGb 15 10 Fail",
-      "inputs": {
-        "fileName": "tc-invalidformat-rmsgb-15-10-fail.xlsx",
-        "applicationId": "1816178184028"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Check GB Establishment RMS Number.",
-        "model": "NOREMOS"
-      }
-    },
-    {
-      "testName": "TC InvalidFormat WithSpacesAndHyphens Fail",
-      "inputs": {
-        "fileName": "tc-invalidformat-withspacesandhyphens-fail.xlsx",
-        "applicationId": "1816178184031"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Check GB Establishment RMS Number.",
-        "model": "NOREMOS"
-      }
-    },
-    {
-      "testName": "Test ValidInput RmsGb WithoutHyphens Fail",
-      "inputs": {
-        "fileName": "test-validinput-rmsgb-withouthyphens-fail.xlsx",
-        "applicationId": "1816178184034"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",

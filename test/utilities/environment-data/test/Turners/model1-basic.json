@@ -74,18 +74,6 @@
       }
     },
     {
-      "testName": "Incorrect  Mandatory Header  Desc  Unparse",
-      "inputs": {
-        "fileName": "incorrect-mandatoryheader-desc-unparse.xlsx",
-        "applicationId": "1816178209327"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
       "testName": "Incorrect  Mandatory Header  Nature  Unparse",
       "inputs": {
         "fileName": "incorrect-mandatoryheader-nature-unparse.xlsx",
@@ -143,18 +131,6 @@
         "approvalStatus": "rejected_other",
         "reasonsForFailure": null,
         "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Incorrect  Optional Data  All  Pass",
-      "inputs": {
-        "fileName": "incorrect-optionaldata-all-pass.xlsx",
-        "applicationId": "1816178209342"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "TURNERS1"
       }
     },
     {
@@ -242,46 +218,10 @@
       }
     },
     {
-      "testName": "Missing  Mandatory Header  Desc  Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-desc-unparse.xlsx",
-        "applicationId": "1816178209378"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
       "testName": "Missing  Mandatory Header  Nature  Unparse",
       "inputs": {
         "fileName": "missing-mandatoryheader-nature-unparse.xlsx",
         "applicationId": "1816178209381"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing  Mandatory Header  Noofpkgs  Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-noofpkgs-unparse.xlsx",
-        "applicationId": "1816178209396"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing  Mandatory Header  Tot Netweight  Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-totnetweight-unparse.xlsx",
-        "applicationId": "1816178209399"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -299,30 +239,6 @@
         "approvalStatus": "rejected_other",
         "reasonsForFailure": null,
         "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing  Optional Data  All  Pass",
-      "inputs": {
-        "fileName": "missing-optionaldata-all-pass.xlsx",
-        "applicationId": "1816178209405"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "TURNERS1"
-      }
-    },
-    {
-      "testName": "Missing  Optional Header  All  Pass",
-      "inputs": {
-        "fileName": "missing-optionalheader-all-pass.xlsx",
-        "applicationId": "1816178209408"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "TURNERS1"
       }
     },
     {

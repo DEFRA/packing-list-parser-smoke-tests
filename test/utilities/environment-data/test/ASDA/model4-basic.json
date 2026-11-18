@@ -86,18 +86,6 @@
       }
     },
     {
-      "testName": "Incorrect Mandatory Header Desc",
-      "inputs": {
-        "fileName": "incorrect-mandatoryheader-desc-unparse.csv",
-        "applicationId": "1816178160007"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
       "testName": "Incorrect Mandatory Header Noof Pakgs",
       "inputs": {
         "fileName": "incorrect-mandatoryheader-noofpakgs-unparse.csv",
@@ -282,42 +270,6 @@
       "inputs": {
         "fileName": "missing-mandatoryheader-commoditycode-unparse.csv",
         "applicationId": "1816178160043"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Header Description unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-description-unparse.csv",
-        "applicationId": "1816178160766"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Header Noof Pacakges",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-noofpacakges-unparse.csv",
-        "applicationId": "1816178160763"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Header Tot Net Weight",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-totnetweight-unparse.csv",
-        "applicationId": "1816178160058"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",

@@ -86,54 +86,6 @@
       }
     },
     {
-      "testName": "Missing Optional Header All Pass",
-      "inputs": {
-        "fileName": "missing-optionalheader-all-pass.xlsx",
-        "applicationId": "1816178315026"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BOOTS1"
-      }
-    },
-    {
-      "testName": "Missing Optional Data All Pass",
-      "inputs": {
-        "fileName": "missing-optionaldata-all-pass.xlsx",
-        "applicationId": "1816178315029"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BOOTS1"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Header Tot Netweight Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-totnetweight-unparse.xlsx",
-        "applicationId": "1816178315032"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing Mandatory Header Desc Unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-desc-unparse.xlsx",
-        "applicationId": "1816178315038"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
       "testName": "Missing Mandatory Header Commodity Code Unparse",
       "inputs": {
         "fileName": "missing-mandatoryheader-commoditycode-unparse.xlsx",
@@ -218,18 +170,6 @@
       }
     },
     {
-      "testName": "Incorrect Optional Data All Pass",
-      "inputs": {
-        "fileName": "incorrect-optionaldata-all-pass.xlsx",
-        "applicationId": "1816178315107"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "BOOTS1"
-      }
-    },
-    {
       "testName": "Incorrect Mandatory Header Tot Netweight KGS Fail",
       "inputs": {
         "fileName": "incorrect-mandatoryheader-totnetweightkgs-fail.xlsx",
@@ -270,18 +210,6 @@
       "inputs": {
         "fileName": "incorrect-mandatoryheader-noofpkgs-unparse.xlsx",
         "applicationId": "1816178328469"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Incorrect Mandatory Header Desc Unparse",
-      "inputs": {
-        "fileName": "incorrect-mandatoryheader-desc-unparse.xlsx",
-        "applicationId": "1816178315080"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",

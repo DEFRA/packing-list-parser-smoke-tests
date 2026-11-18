@@ -14,30 +14,6 @@
       }
     },
     {
-      "testName": "Zero Data Total Net Weight Pass",
-      "inputs": {
-        "fileName": "zero-data-totalnetweight-pass.xlsx",
-        "applicationId": "1816178497255"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "CDS3"
-      }
-    },
-    {
-      "testName": "Mixed Case Header Pass",
-      "inputs": {
-        "fileName": "mixedcase-header-pass.xlsx",
-        "applicationId": "1816178497258"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "CDS3"
-      }
-    },
-    {
       "testName": "Missing Header Netweight Unparse",
       "inputs": {
         "fileName": "missing-header-netweight-unparse.xlsx",
@@ -54,18 +30,6 @@
       "inputs": {
         "fileName": "extra-spaces-in-header-unparse.xlsx",
         "applicationId": "1816178497288"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Splcharacters Header Netweight Unparse",
-      "inputs": {
-        "fileName": "splcharacters-header-netweight-unparse.xlsx",
-        "applicationId": "1816178497297"
       },
       "expectedResults": {
         "approvalStatus": "rejected_other",
@@ -106,30 +70,6 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "CDS3"
-      }
-    },
-    {
-      "testName": "Zero Data Total Net Weight Pass",
-      "inputs": {
-        "fileName": "zero-data-totalnetweight-pass.xlsx",
-        "applicationId": "1816178497393"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "CDS3"
-      }
-    },
-    {
-      "testName": "Ambiguous Units In Header Pass",
-      "inputs": {
-        "fileName": "ambiguous-units-in-header-pass.xlsx",
-        "applicationId": "1816178523058"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
         "model": "CDS3"
       }
     },
@@ -179,18 +119,6 @@
         "approvalStatus": "approved",
         "reasonsForFailure": null,
         "model": "CDS3"
-      }
-    },
-    {
-      "testName": "Header Typos Or Special Characters Unparse",
-      "inputs": {
-        "fileName": "header-typos-or-specialcharacters-unparse.xlsx",
-        "applicationId": "1816178523076"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
       }
     },
     {

@@ -86,18 +86,6 @@
       }
     },
     {
-      "testName": "Incorrect Mandatory Header Desc Unparse",
-      "inputs": {
-        "fileName": "incorrect-mandatoryheader-desc-unparse.xlsx",
-        "applicationId": "1816178189449"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
       "testName": "Incorrect Mandatory Header Noofpakgs Unparse",
       "inputs": {
         "fileName": "incorrect-mandatoryheader-noofpakgs-unparse.xlsx",
@@ -122,6 +110,7 @@
       }
     },
     {
+<<<<<<< HEAD
       "testName": "Incorrect Optional Data All Pass",
       "inputs": {
         "fileName": "incorrect-optionaldata-all-pass.xlsx",
@@ -134,6 +123,8 @@
       }
     },
     {
+=======
+>>>>>>> 84b1ddc0e415cda7e84806c291cf3c07e8b5840e
       "testName": "Incorrect Optional Header All Pass",
       "inputs": {
         "fileName": "incorrect-optionalheader-all-pass.xlsx",

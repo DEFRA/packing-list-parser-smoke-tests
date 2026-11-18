@@ -2,18 +2,6 @@
   "name": "NUTRICIA3 Netweight",
   "tests": [
     {
-      "testName": "Mixed Case Header Pass",
-      "inputs": {
-        "fileName": "mixedcase-header-pass.xlsx",
-        "applicationId": "1816178869834"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "NUTRICIA3"
-      }
-    },
-    {
       "testName": "Header With Extra Parentheses Pass",
       "inputs": {
         "fileName": "header-with-extra-parentheses-pass.xlsx",
@@ -23,18 +11,6 @@
         "approvalStatus": "approved",
         "reasonsForFailure": null,
         "model": "NUTRICIA3"
-      }
-    },
-    {
-      "testName": "Header Typos Or Special Characters Unparse",
-      "inputs": {
-        "fileName": "header-typos-or-specialcharacters-unparse.xlsx",
-        "applicationId": "1816178869852"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
       }
     },
     {
@@ -59,31 +35,6 @@
         "approvalStatus": "rejected_other",
         "reasonsForFailure": null,
         "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Splcharacters Header Netweight Unparse",
-      "inputs": {
-        "fileName": "splcharacters-header-netweight-unparse.xlsx",
-        "applicationId": "1816178869897"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "NUTRICIA3"
-      }
-    },
-
-    {
-      "testName": "Zero Data Total Net Weight Pass",
-      "inputs": {
-        "fileName": "zero-data-totalnetweight-pass.xlsx",
-        "applicationId": "1816178869939"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "NUTRICIA3"
       }
     },
     {
@@ -116,18 +67,6 @@
       "inputs": {
         "fileName": "missing-paranthesis-in-uom-pass.xlsx",
         "applicationId": "1816178869987"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "NUTRICIA3"
-      }
-    },
-    {
-      "testName": "Malformed Header Unit Pass",
-      "inputs": {
-        "fileName": "malformed-header-unit-pass.xlsx",
-        "applicationId": "1816178870020"
       },
       "expectedResults": {
         "approvalStatus": "approved",

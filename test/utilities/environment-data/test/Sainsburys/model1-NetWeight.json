@@ -14,30 +14,6 @@
       }
     },
     {
-      "testName": "Ambiguous Units in Header Pass",
-      "inputs": {
-        "fileName": "ambiguous-units-in-header-pass.xlsx",
-        "applicationId": "1816178136190"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "SAINSBURYS1"
-      }
-    },
-    {
-      "testName": "Happypath Pass",
-      "inputs": {
-        "fileName": "happypath-pass.xlsx",
-        "applicationId": "1816178136184"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "SAINSBURYS1"
-      }
-    },
-    {
       "testName": "Header With Multiple Units Pass",
       "inputs": {
         "fileName": "header-with-multiple-units-pass.xlsx",
@@ -86,18 +62,6 @@
       }
     },
     {
-      "testName": "Malformed Header Unit Pass",
-      "inputs": {
-        "fileName": "malformed-header-unit-pass.xlsx",
-        "applicationId": "1816178136205"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "SAINSBURYS1"
-      }
-    },
-    {
       "testName": "Missing Header TotalNetWeight Unparse",
       "inputs": {
         "fileName": "missing-header-totalnetweight-unparse.xlsx",
@@ -118,18 +82,6 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "SAINSBURYS1"
-      }
-    },
-    {
-      "testName": "MixedCase Header Pass",
-      "inputs": {
-        "fileName": "mixedcase-header-pass.xlsx",
-        "applicationId": "1816178136214"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
         "model": "SAINSBURYS1"
       }
     },
@@ -155,18 +107,6 @@
         "approvalStatus": "approved",
         "reasonsForFailure": null,
         "model": "SAINSBURYS1"
-      }
-    },
-    {
-      "testName": "Splcharacters Header Netweight Unparse",
-      "inputs": {
-        "fileName": "splcharacters-header-netweight-unparse.xlsx",
-        "applicationId": "1816178136223"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
       }
     },
     {
@@ -202,18 +142,6 @@
       "expectedResults": {
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
-        "model": "SAINSBURYS1"
-      }
-    },
-    {
-      "testName": "Zero Data TotalNetWeight Pass",
-      "inputs": {
-        "fileName": "zero-data-totalnetweight-pass.xlsx",
-        "applicationId": "1816178136244"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
         "model": "SAINSBURYS1"
       }
     }

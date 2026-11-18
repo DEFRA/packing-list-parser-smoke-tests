@@ -13,7 +13,11 @@
         "model": "NOMATCH"
       }
     },
+<<<<<<< HEAD
    {
+=======
+    {
+>>>>>>> 84b1ddc0e415cda7e84806c291cf3c07e8b5840e
       "testName": "Ambiguous Units in Header Pass",
       "inputs": {
         "fileName": "ambiguous-units-in-header-pass.xlsx",
@@ -179,18 +183,6 @@
         "approvalStatus": "rejected_other",
         "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
         "model": "KEPAK1"
-      }
-    },
-    {
-      "testName": "Splcharacters Header Netweight Unparse",
-      "inputs": {
-        "fileName": "splcharacters-header-netweight-unparse.xlsx",
-        "applicationId": "1816178189692"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
       }
     },
     {

@@ -1,0 +1,185 @@
+{
+  "name": "SAVERS2 COO",
+  "tests": [
+    {
+      "testName": "ac1 NotNirms Pass",
+      "inputs": {
+        "fileName": "ac1-notnirms-pass.csv",
+        "applicationId": "1816179456682"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "ac2 NullNirms Fail",
+      "inputs": {
+        "fileName": "ac2-nullnirms-fail.csv",
+        "applicationId": "1816179479440"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in rows 12 and 13.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "ac3 InvalidNirms Fail",
+      "inputs": {
+        "fileName": "ac3-invalidnirms-fail.csv",
+        "applicationId": "1816179456685"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in rows 12, 13 and 14.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "ac4 NullNirmsMultiple Fail",
+      "inputs": {
+        "fileName": "ac4-nullnirmsmultiple-fail.csv",
+        "applicationId": "1816179456688"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "NIRMS/Non-NIRMS goods not specified in rows 12, 13 and 14.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "ac5 InvalidNirmsMultiple Fail",
+      "inputs": {
+        "fileName": "ac5-invalidnirmsmultiple-fail.csv",
+        "applicationId": "1816179468283"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Invalid entry for NIRMS/Non-NIRMS goods in rows 12, 13 and 14.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "ac6 NullCoO Fail",
+      "inputs": {
+        "fileName": "ac6-nullcoo-fail.csv",
+        "applicationId": "1816179456694"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in rows 12 and 13.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "ac7 InvalidCoO Fail",
+      "inputs": {
+        "fileName": "ac7-invalidcoo-fail.csv",
+        "applicationId": "1816179456697"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in rows 12, 13 and 14.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "ac8 NullCoOMultiple Fail",
+      "inputs": {
+        "fileName": "ac8-nullcoomultiple-fail.csv",
+        "applicationId": "1816179456700"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Missing Country of Origin in rows 12, 13 and 14.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "ac9 InvalidCoOMultiple Fail",
+      "inputs": {
+        "fileName": "ac9-invalidcoomultiple-fail.csv",
+        "applicationId": "1816179456703"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in rows 12, 13 and 14.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "ac10 xCoO Fail",
+      "inputs": {
+        "fileName": "ac10xcoofail.csv",
+        "applicationId": "1816179529285"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in rows 12, 13 and 14.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "ac11 HighRiskCoOTreatmentTypeSpecified Fail",
+      "inputs": {
+        "fileName": "ac11-highriskcootreatmenttypespecified-fail.csv",
+        "applicationId": "1816179481633"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in rows 12 and 13.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "ac12 HighRiskCoOTreatmentTypeSpecifiedMultiple Fail",
+      "inputs": {
+        "fileName": "ac12-highriskcootreatmenttypespecifiedmultiple-fail.csv",
+        "applicationId": "1816179456709"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in rows 12, 13 and 14.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "ac13 HighRiskCoOTreatmentTypeNotSpecified Fail",
+      "inputs": {
+        "fileName": "ac13-highriskcootreatmenttypenotspecified-fail.csv",
+        "applicationId": "1816179456712"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in rows 12 and 13.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "ac14 HighRiskCoOTreatmentTypeNotSpecifiedMultiple Fail",
+      "inputs": {
+        "fileName": "ac14-highriskcootreatmenttypenotspecifiedmultiple-fail.csv",
+        "applicationId": "1816179481951"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_coo",
+        "reasonsForFailure": "Invalid Country of Origin ISO Code in rows 12, 13 and 14.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "ac15 HighRiskCoOTreatmentTypeNotSpecifiedInvalidCOO Fail",
+      "inputs": {
+        "fileName": "ac15-highriskcootreatmenttypenotspecifiedinvalidcoo-fail.csv",
+        "applicationId": "1816179481954"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_ineligible",
+        "reasonsForFailure": "Prohibited item identified on the packing list in rows 12, 13 and 14.\n",
+        "model": "SAVERS2"
+      }
+    }
+  ]
+}

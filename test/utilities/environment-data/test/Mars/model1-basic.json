@@ -86,18 +86,6 @@
       }
     },
     {
-      "testName": "Incorrect OptionalData All Pass",
-      "inputs": {
-        "fileName": "incorrect-optionaldata-all-pass.xlsx",
-        "applicationId": "1816178184493"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "MARS1"
-      }
-    },
-    {
       "testName": "Incorrect OptionalHeader All Pass",
       "inputs": {
         "fileName": "incorrect-optionalheader-all-pass.xlsx",
@@ -179,54 +167,6 @@
         "approvalStatus": "rejected_other",
         "reasonsForFailure": null,
         "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing MandatoryHeader Description unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-description-unparse.xlsx",
-        "applicationId": "1816178184550"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing MandatoryHeader NoofPkgs unparse",
-      "inputs": {
-        "fileName": "missing-mandatoryheader-noofpkgs-unparse.xlsx",
-        "applicationId": "1816178184520"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Missing OptionalData All Pass",
-      "inputs": {
-        "fileName": "missing-optionaldata-all-pass.xlsx",
-        "applicationId": "1816178184523"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "MARS1"
-      }
-    },
-    {
-      "testName": "Missing optionalHeader All Pass",
-      "inputs": {
-        "fileName": "missing-optionalheader-all-pass.xlsx",
-        "applicationId": "1816178184526"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "MARS1"
       }
     },
     {

@@ -1,0 +1,305 @@
+{
+  "name": "SAVERS2 Basic",
+  "tests": [
+    {
+      "testName": "Missing MandatoryData MultipleRowsWithMultipleLocations All Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-multiplerowswithmultiplelocations-all-fail.csv",
+        "applicationId": "1816179403318"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in rows 12, 13 and 14.\nProduct description is missing in rows 12, 13 and 14.\nNo of packages is missing in rows 12, 13 and 14.\nTotal net weight is missing in rows 12, 13 and 14.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "AllMandatoryDataIsMissing Fail",
+      "inputs": {
+        "fileName": "allmandatorydataismissing-fail.csv",
+        "applicationId": "1816179403321"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in rows 12, 13, 14 in addition to 5 other locations.\nProduct description is missing in rows 12, 13, 14 in addition to 5 other locations.\nNo of packages is missing in rows 12, 13, 14 in addition to 5 other locations.\nTotal net weight is missing in rows 12, 13, 14 in addition to 5 other locations.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "NoData ExceptSingleRMS Fail",
+      "inputs": {
+        "fileName": "nodata-exceptsinglerms-fail.csv",
+        "applicationId": "1816179403324"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No product line data found.",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryData MultipleRowsWithMultipleLocations All Fail",
+      "inputs": {
+        "fileName": "incorrect-mandatorydata-multiplerowswithmultiplelocations-all-fail.csv",
+        "applicationId": "1816179403390"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product code is invalid in rows 12, 13, 14 in addition to 1 other locations.\nNo of packages is invalid in rows 12, 13, 14 in addition to 1 other locations.\nTotal net weight is invalid in rows 12, 13, 14 in addition to 1 other locations.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "Incorrect OptionalHeader All Pass",
+      "inputs": {
+        "fileName": "incorrect-optionalheader-all-pass.csv",
+        "applicationId": "1816179507397"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "DescriptionHasDoubleQuotesShould Pass",
+      "inputs": {
+        "fileName": "descriptionhasdoublequotesshould-pass.csv",
+        "applicationId": "1816179481960"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader Noofpakgs Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-noofpakgs-unparse.csv",
+        "applicationId": "1816179481963"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader TreatmentType Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-treatmenttype-unparse.csv",
+        "applicationId": "1816179481966"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader TotNetweight Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-totnetweight-unparse.csv",
+        "applicationId": "1816179481969"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Empty MultipleRowsColumns Pass",
+      "inputs": {
+        "fileName": "empty-multiplerowscolumns-pass.csv",
+        "applicationId": "1816179481972"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryData MultipleRowsWithMultipleLocations All Fail",
+      "inputs": {
+        "fileName": "incorrect-mandatorydata-multiplerowswithmultiplelocations-all-fail.csv",
+        "applicationId": "1816179481975"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product code is invalid in rows 12, 13, 14 in addition to 1 other locations.\nNo of packages is invalid in rows 12, 13, 14 in addition to 1 other locations.\nTotal net weight is invalid in rows 12, 13, 14 in addition to 1 other locations.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "InvalidCommodityCode MultipleRows Fail",
+      "inputs": {
+        "fileName": "invalidcommoditycode-multiplerows-fail.csv",
+        "applicationId": "1816179481978"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product code is invalid in rows 12, 13, 14 in addition to 1 other locations.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader All Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-all-unparse.csv",
+        "applicationId": "1816179507403"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader TotNetweightKGS Fail",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-totnetweightkgs-fail.csv",
+        "applicationId": "1816179507406"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData Desc Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-desc-fail.csv",
+        "applicationId": "1816179507412"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product description is missing in rows 12, 13 and 14.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData CommodityCode Nature Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-commoditycode-nature-fail.csv",
+        "applicationId": "1816179507415"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in rows 12, 13 and 14.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData Noofpkgs Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-noofpkgs-fail.csv",
+        "applicationId": "1816179507433"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No of packages is missing in rows 12, 13 and 14.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "Incorrect Mandatatypes Excl netandNopkgs ProductCode Pass",
+      "inputs": {
+        "fileName": "incorrect-mandatatypes-excl-netandnopkgs-productcode-pass.csv",
+        "applicationId": "1816179529255"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "Invalid NoofPackages MultipleRows Fail",
+      "inputs": {
+        "fileName": "invalid-noofpackages-multiplerows-fail.csv",
+        "applicationId": "1816179529264"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No of packages is invalid in rows 12, 13, 14 in addition to 1 other locations.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData Desc Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-desc-fail.csv",
+        "applicationId": "1816179529270"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product description is missing in rows 12, 13 and 14.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "Invalid NoofPackages MultipleRows Fail",
+      "inputs": {
+        "fileName": "invalid-noofpackages-multiplerows-fail.csv",
+        "applicationId": "1816179529264"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "No of packages is invalid in rows 12, 13, 14 in addition to 1 other locations.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData Desc Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-desc-fail.csv",
+        "applicationId": "1816179529270"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Product description is missing in rows 12, 13 and 14.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData CommodityCode Nature Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-commoditycode-nature-fail.csv",
+        "applicationId": "1816179529273"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Identifier is missing in rows 12, 13 and 14.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "Incorrect MandatoryHeader CommodityCode Unparse",
+      "inputs": {
+        "fileName": "incorrect-mandatoryheader-commoditycode-unparse.csv",
+        "applicationId": "1816179529276"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Missing MandatoryData Totnetweight Fail",
+      "inputs": {
+        "fileName": "missing-mandatorydata-totnetweight-fail.csv",
+        "applicationId": "1816179529279"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Total net weight is missing in rows 12, 13 and 14.\n",
+        "model": "SAVERS2"
+      }
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "name": "SAVERS2 Netweight",
+  "tests": [
+    {
+      "testName": "Data empty Netweight Fail",
+      "inputs": {
+        "fileName": "data-empty-netweight-fail.csv",
+        "applicationId": "1816179430234"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Total net weight is missing in rows 12, 13 and 14.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "Incorrect NetweightData All Fail",
+      "inputs": {
+        "fileName": "incorrect-netweightdata-all-fail.csv",
+        "applicationId": "1816179430246"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Total net weight is invalid in rows 12, 13, 14 in addition to 5 other locations.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "Header With Unit And Symbols Pass",
+      "inputs": {
+        "fileName": "header-with-unit-and-symbols-pass.csv",
+        "applicationId": "1816179430273"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "Missing Header Netweight Unparse",
+      "inputs": {
+        "fileName": "missing-header-netweight-unparse.csv",
+        "applicationId": "1816179430306"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Extra Spaces In Header Unparse",
+      "inputs": {
+        "fileName": "extra-spaces-in-header-unparse.csv",
+        "applicationId": "1816179430330"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Header With Unit And Symbols Pass",
+      "inputs": {
+        "fileName": "header-with-unit-and-symbols-pass.csv",
+        "applicationId": "1816179456469"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "Header With Extra Parentheses Pass",
+      "inputs": {
+        "fileName": "header-with-extra-parentheses-pass.csv",
+        "applicationId": "1816179456472"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "Netweight HasEmpty Parentheses Fail",
+      "inputs": {
+        "fileName": "netweight-hasempty-parentheses-fail.csv",
+        "applicationId": "1816179456481"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "Extra Spaces In Header Unparse",
+      "inputs": {
+        "fileName": "extra-spaces-in-header-unparse.csv",
+        "applicationId": "1816179456499"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": null,
+        "model": "NOMATCH"
+      }
+    },
+    {
+      "testName": "Header With Multiple Units Pass",
+      "inputs": {
+        "fileName": "header-with-multiple-units-pass.csv",
+        "applicationId": "1816179456520"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "Alpha Numeric TotalNetWeight Fail",
+      "inputs": {
+        "fileName": "alpha-numeric-totalnetweight-fail.csv",
+        "applicationId": "1816179456667"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Total net weight is invalid in rows 12, 13 and 14.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "TotalNetWeight Without UOMWeight Fail",
+      "inputs": {
+        "fileName": "totalnetweight-without-uomweight-fail.csv",
+        "applicationId": "1816179456676"
+      },
+      "expectedResults": {
+        "approvalStatus": "rejected_other",
+        "reasonsForFailure": "Net Weight Unit of Measure (kg) not found.\n",
+        "model": "SAVERS2"
+      }
+    },
+    {
+      "testName": "Valid Unit KG Parentheses Pass",
+      "inputs": {
+        "fileName": "valid-unit-kg-parentheses-pass.csv",
+        "applicationId": "1816179456679"
+      },
+      "expectedResults": {
+        "approvalStatus": "approved",
+        "reasonsForFailure": null,
+        "model": "SAVERS2"
+      }
+    }
+  ]
+}

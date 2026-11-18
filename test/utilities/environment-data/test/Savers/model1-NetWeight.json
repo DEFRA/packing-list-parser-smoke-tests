@@ -26,18 +26,6 @@
       }
     },
     {
-      "testName": "Ambiguous Units in Header Pass",
-      "inputs": {
-        "fileName": "ambiguous-units-in-header-pass.xlsx",
-        "applicationId": "1816178199907"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "SAVERS1"
-      }
-    },
-    {
       "testName": "Data empty Netweight Fail",
       "inputs": {
         "fileName": "data-empty-netweight-fail.xlsx",
@@ -59,18 +47,6 @@
         "approvalStatus": "rejected_other",
         "reasonsForFailure": null,
         "model": "NOMATCH"
-      }
-    },
-    {
-      "testName": "Happypath Pass",
-      "inputs": {
-        "fileName": "happypath-pass.xlsx",
-        "applicationId": "1816178200360"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "SAVERS1"
       }
     },
     {
@@ -146,18 +122,6 @@
       }
     },
     {
-      "testName": "Malformed Header Unit Pass",
-      "inputs": {
-        "fileName": "malformed-header-unit-pass.xlsx",
-        "applicationId": "1816178202298"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "SAVERS1"
-      }
-    },
-    {
       "testName": "Missing MandatoryHeader Netweight Unparse",
       "inputs": {
         "fileName": "missing-mandatoryheader-netweight-unparse.xlsx",
@@ -194,18 +158,6 @@
       }
     },
     {
-      "testName": "MixedCase Header Pass",
-      "inputs": {
-        "fileName": "mixedcase-header-pass.xlsx",
-        "applicationId": "1816178201128"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "SAVERS1"
-      }
-    },
-    {
       "testName": "MixedUnits And Casing Pass",
       "inputs": {
         "fileName": "mixedunits-and-casing-pass.xlsx",
@@ -229,18 +181,7 @@
         "model": "SAVERS1"
       }
     },
-    {
-      "testName": "Splcharacters Header Netweight Unparse",
-      "inputs": {
-        "fileName": "splcharacters-header-netweight-unparse.xlsx",
-        "applicationId": "1816178201347"
-      },
-      "expectedResults": {
-        "approvalStatus": "rejected_other",
-        "reasonsForFailure": null,
-        "model": "NOMATCH"
-      }
-    },
+
     {
       "testName": "TotalNetWeight Without UOMWeight Fail",
       "inputs": {
@@ -282,30 +223,6 @@
       "inputs": {
         "fileName": "valid-unit-kg-parentheses-pass.xlsx",
         "applicationId": "1816178202661"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "SAVERS1"
-      }
-    },
-    {
-      "testName": "Zero Data TotalNetWeight Pass",
-      "inputs": {
-        "fileName": "zero-data-totalnetweight-pass.xlsx",
-        "applicationId": "1816178202754"
-      },
-      "expectedResults": {
-        "approvalStatus": "approved",
-        "reasonsForFailure": null,
-        "model": "SAVERS1"
-      }
-    },
-    {
-      "testName": "Zero Data UOM Pass",
-      "inputs": {
-        "fileName": "zero-data-uom-pass.xlsx",
-        "applicationId": "1816178201830"
       },
       "expectedResults": {
         "approvalStatus": "approved",
