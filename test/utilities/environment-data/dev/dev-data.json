@@ -628,6 +628,30 @@
         }
       },
       {
+        "testName": "SAVERS2 | DescriptionHasDoubleQuotesShould Pass",
+        "inputs": {
+          "fileName": "descriptionhasdoublequotesshould-pass.csv",
+          "applicationId": "1816179481960"
+        },
+        "expectedResults": {
+          "approvalStatus": "approved",
+          "reasonsForFailure": null,
+          "model": "SAVERS2"
+        }
+      },
+      {
+        "testName": "SAVERS2 | InvalidCommodityCode MultipleRows Fail",
+        "inputs": {
+          "fileName": "invalidcommoditycode-multiplerows-fail.csv",
+          "applicationId": "1816179481978"
+        },
+        "expectedResults": {
+          "approvalStatus": "rejected_other",
+          "reasonsForFailure": "Product code is invalid in rows 12, 13, 14 in addition to 1 other locations.\n",
+          "model": "SAVERS2"
+        }
+      },
+      {
         "testName": "TESCO2 | Tesco2 Happypath Pass",
         "inputs": {
           "fileName": "tesco2-happypath-pass.xlsx",
